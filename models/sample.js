@@ -26,6 +26,5 @@ module.exports = class SampleTable extends Sequelize.Model {
 
   static associate(db) {
     // 데이터 베이스 관계 설정에 필요함
-    // db.NewTable;
   }
 };
