@@ -7,11 +7,10 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
-const db = require("./models/index.js");
-
 dotenv.config();
 
 const api = require("./routes/index.js");
+const { sequelize } = require("./models/index.js");
 
 const app = express();
 
@@ -23,7 +22,7 @@ app.set(
 );
 
 app.use((req, res, next) => {
-  if (process.env.NODE_ENV === "production") morgan("dev")(req, res, next);
+  if (process.env.NODE_ENV === "production") morgan("combined")(req, res, next);
   else morgan("dev")(req, res, next);
 });
 // "public"폴더에 프론트를 구현할 겁니다.
@@ -46,36 +45,16 @@ app.use(
   })
 );
 
-app.use("/api", api);
-
-// 밑의 db도 uesr 라우터 쪽으로 옮기는게 좋을듯
-db.userdb.sequelize
+sequelize
   .sync({ force: false })
-  // db 서버와 연결한다, force는 설정된 테이블을 강제로 생성한다.
-  // 우리가 express 서버에서 설정한 테이블 데이터와 실제 DB서버의 테이블 데이터가 다를 경우에 서버의 테이블을 새로 생성하기 위해 사용한다.
-  .then((data) => {
-    console.log(`db connected`);
+  .then(() => {
+    console.log("db connected");
   })
   .catch((err) => {
     console.error(err);
   });
 
-// userdb create 양식
-
-// db.userdb.UserTable.create({
-//   userId: "0",
-//   pw: "1234",
-//   name: "kjk",
-//   isManager: 0,
-// });
-
-// userdb select 양식
-
-// db.userdb.UserTable.findOne({ where: { id: 1 } })
-//   .then((data) => {
-//     console.log(data.dataValues);
-//   })
-//   .catch((err) => console.error(err));
+app.use("/api", api);
 
 app.listen(app.get("port"), () => {
   console.log(app.get("port") + "서버 열렸다");

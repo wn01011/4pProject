@@ -47,4 +47,21 @@ function createJwt(name, key) {
 }
 /*****************************/
 
+// userdb create 양식
+
+// db.UserTable.create({
+//   userId: "0",
+//   pw: "1234",
+//   name: "kjk",
+//   isManager: 0,
+// });
+
+// userdb select 양식
+
+// db.UserTable.findOne({ where: { id: 1 } })
+//   .then((data) => {
+//     console.log(data.dataValues);
+//   })
+//   .catch((err) => console.error(err));
+
 module.exports = router;
