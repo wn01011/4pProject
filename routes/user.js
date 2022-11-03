@@ -2,6 +2,7 @@ const { Router } = require("express");
 const crypto = require("crypto-js");
 const jwt = require("jsonwebtoken");
 const db = require("../models/index.js");
+const dotenv = require("dotenv");
 
 const router = Router();
 

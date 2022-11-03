@@ -1,0 +1,223 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 325px 0 325px;
+}
+
+#header {
+  background-color: #fff;
+  height: 10rem;
+  width: 100%;
+}
+
+.admin-logo {
+  width: 10rem;
+  padding-left: 45px;
+}
+
+.admin-logout {
+  width: 70px;
+  padding: 0.3rem;
+  color: black;
+  background: transparent;
+  font-size: 0.8rem;
+  font-family: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  position: absolute;
+  right: 2em;
+  top: 1em;
+}
+
+#row {
+  display: flex;
+  flex-direction: row;
+  border-top: 3px solid rgba(220, 220, 220, 0.438);
+}
+
+.col-4 {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+}
+
+#admin-sidebar {
+  width: 250px;
+  padding: 50px 0 50px 0;
+  background-color: #c2eaec;
+}
+
+#admin-sidebar > nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-left: 40px;
+  font-weight: bolder;
+}
+
+#admin-sidebar > nav > nav {
+  padding-left: 70px;
+}
+
+.col-8 {
+  padding: 50px;
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#item-0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#dashboard1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 400px;
+}
+
+#dashboard2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 400px;
+  margin-bottom: 50px;
+}
+
+#item-1-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#sth-manage1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 400px;
+}
+
+#sth-manage2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 400px;
+  margin-bottom: 50px;
+}
+
+#item-1-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#cat-manage1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 400px;
+}
+
+#cat-manage2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 400px;
+  margin-bottom: 50px;
+}
+
+/* ///////////////////////////// 2022.11.03.수 예나 */
+
+#item-2-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#order-manage1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 400px;
+}
+
+#order-manage2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 400px;
+  margin-bottom: 50px;
+}
+
+#uparrow {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: yellow;
+  opacity: 0.7;
+}
