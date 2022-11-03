@@ -50,7 +50,7 @@ app.use("/api", api);
 
 // 밑의 db도 uesr 라우터 쪽으로 옮기는게 좋을듯
 db.userdb.sequelize
-  .sync({ force: false })
+  .sync({ force: true })
   // db 서버와 연결한다, force는 설정된 테이블을 강제로 생성한다.
   // 우리가 express 서버에서 설정한 테이블 데이터와 실제 DB서버의 테이블 데이터가 다를 경우에 서버의 테이블을 새로 생성하기 위해 사용한다.
   .then((data) => {
