@@ -47,20 +47,9 @@ function createJwt(name, key) {
 }
 /*****************************/
 
-db.userdb.sequelize
-  .sync({ force: false })
-  // db 서버와 연결한다, force는 설정된 테이블을 강제로 생성한다.
-  // 우리가 express 서버에서 설정한 테이블 데이터와 실제 DB서버의 테이블 데이터가 다를 경우에 서버의 테이블을 새로 생성하기 위해 사용한다.
-  .then((data) => {
-    console.log(`db connected`);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
-
 // userdb create 양식
 
-// db.userdb.UserTable.create({
+// db.UserTable.create({
 //   userId: "0",
 //   pw: "1234",
 //   name: "kjk",
@@ -69,7 +58,7 @@ db.userdb.sequelize
 
 // userdb select 양식
 
-// db.userdb.UserTable.findOne({ where: { id: 1 } })
+// db.UserTable.findOne({ where: { id: 1 } })
 //   .then((data) => {
 //     console.log(data.dataValues);
 //   })
