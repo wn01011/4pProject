@@ -6,11 +6,12 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const path = require("path");
-
+const fs = require("fs");
 dotenv.config();
 
 const api = require("./routes/index.js");
 const { sequelize } = require("./models/index.js");
+const db = require("./models/index.js");
 
 const app = express();
 
@@ -20,6 +21,18 @@ app.set(
     ? process.env.PORT
     : process.env.DEV_PORT
 );
+
+fs.readFile("./product.json", "utf-8", function (err, data) {
+  if (err) {
+    console.error(err.message);
+  } else {
+    if (data) {
+      JSON.parse(data).forEach((item) => {
+        // console.log(item);
+      });
+    }
+  }
+});
 
 app.use((req, res, next) => {
   if (process.env.NODE_ENV === "production") morgan("combined")(req, res, next);
