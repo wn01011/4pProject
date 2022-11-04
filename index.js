@@ -6,11 +6,11 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const path = require("path");
-
 dotenv.config();
 
 const api = require("./routes/index.js");
 const { sequelize } = require("./models/index.js");
+const db = require("./models/index.js");
 
 const app = express();
 
