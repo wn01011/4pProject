@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  word-break: break-all;
-  text-overflow: ellipsis;
 }
 html,
 body {
@@ -14,6 +12,7 @@ a {
   color: black;
   text-decoration: none;
 }
+
 input:focus {
   outline: none;
 }
@@ -23,6 +22,7 @@ li {
 .marketClearLogo {
   width: 110px;
 }
+
 .icon_small {
   width: 25px;
 }

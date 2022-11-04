@@ -10,9 +10,15 @@ function includeHTML(divContainer, urlHTML) {
   xhttp.open("GET", urlHTML, true);
   xhttp.send();
 }
-includeHTML(document.getElementById("header_include"), "/header.html");
-includeHTML(document.getElementById("footer_include"), "/footer.html");
 // header footer를 include하는 함수입니다.
+
+includeHTML(document.getElementById("header_include"), "header.html");
+includeHTML(document.getElementById("how"), "how.html");
+includeHTML(document.getElementById("main-slider"), "mainSlide.html");
+includeHTML(document.getElementById("md-recommend"), "recommend.html");
+includeHTML(document.getElementById("plus-deal"), "plus.html");
+// includeHTML(document.getElementById("footer_include"), "footer.html");
+// item slide html include하는 함수입니다.
 
 window.onscroll = function () {
   if (
@@ -24,4 +30,3 @@ window.onscroll = function () {
     document.getElementById("header_scroll").classList.remove("on");
   }
 };
-// 스크롤을 내리면 변경된 header가 나타나게 하는 함수입니다.
