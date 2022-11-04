@@ -4,103 +4,155 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>detail</title>
-    <link rel="stylesheet" href="./CSS/detail.css" />
+    <link rel="stylesheet" href="/product/CSS/detail.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/style.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div id="header_include"></div>
     <div class="detail">
-      <div id="banner">
-        <img src="./imges/detailImg/banner_detail.jpg" alt="" />
-      </div>
-      <div id="vegetable">
-        <div id="item-head"><h1>채소</h1></div>
-        <div id="item">
-          <ul>
-            <li>전체보기</li>
-            <li>브로콜리&#183;파프리카&#183;양배추</li>
-            <li>콩나물&#183;버섯</li>
-          </ul>
-          <ul>
-            <li>친환경</li>
-            <li>양파&#183;대파&#183;마늘&#183;배추</li>
-          </ul>
-          <ul>
-            <li>고구마&#183;감자&#183;당근</li>
-            <li>오이&#183;호박&#183;고추</li>
-          </ul>
-          <ul>
-            <li>시금치&#183;쌈채소&#183;나물</li>
-            <li>냉동&#183;이색&#183;간편채소</li>
-          </ul>
+      <div class="detail">
+        <div id="banner">
+          <img src="/product/imges/detailImg/banner_detail.jpg" alt="" />
+        </div>
+        <div id="vegetable">
+          <div id="item-head"><h1>채소</h1></div>
+          <div id="item">
+            <ul>
+              <li>전체보기</li>
+              <li>브로콜리&#183;파프리카&#183;양배추</li>
+              <li>콩나물&#183;버섯</li>
+            </ul>
+            <ul>
+              <li>친환경</li>
+              <li>양파&#183;대파&#183;마늘&#183;배추</li>
+            </ul>
+            <ul>
+              <li>고구마&#183;감자&#183;당근</li>
+              <li>오이&#183;호박&#183;고추</li>
+            </ul>
+            <ul>
+              <li>시금치&#183;쌈채소&#183;나물</li>
+              <li>냉동&#183;이색&#183;간편채소</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div id="filter">
-        <ul>
-          <p>필터</p>
-        </ul>
-        <ul id="brand">
-          <li>가나다 순</li>
-        </ul>
-        <ul id="check">
-          <li>
-            <img
-              src="/public/product/imges/detailImg/check-circle.svg"
-              alt=""
-            /><a href="">김구원 선생</a>
-          </li>
-          <li>
-            <img
-              src="/public/product/imges/detailImg/check-circle.svg"
-              alt=""
-            /><a href="">네뗴</a>
-          </li>
-          <li>
-            <img
-              src="/public/product/imges/detailImg/check-circle.svg"
-              alt=""
-            /><a href="">달콘</a>
-          </li>
-          <li>
-            <img
-              src="/public/product/imges/detailImg/check-circle.svg"
-              alt=""
-            /><a href="">달콤한 밤의 여왕</a>
-          </li>
-          <li>
-            <img
-              src="/public/product/imges/detailImg/check-circle.svg"
-              alt=""
-            /><a href="">맛꾼푸드</a>
-          </li>
-          <li>
-            <img
-              src="/public/product/imges/detailImg/check-circle.svg"
-              alt=""
-            /><a href="">씨뜰리에</a>
-          </li>
-          <li>
-            <img
-              src="/public/product/imges/detailImg/check-circle.svg"
-              alt=""
-            /><a href="">야채랑</a>
-          </li>
-          <li>
-            <img
-              src="/public/product/imges/detailImg/check-circle.svg"
-              alt=""
-            /><a href="">저스트그린</a>
-          </li>
-        </ul>
-        <div class="more">
-          <a href="#"
-            >브랜드 더보기
-            <img src="/public/product/imges/detailImg/right.svg" alt=""
-          /></a>
+      <div class="products">
+        <div id="filter">
+          <ul>
+            <p>필터</p>
+          </ul>
+          <ul id="brand">
+            <li>브랜드</li>
+            <li>가나다 순</li>
+          </ul>
+          <ul id="check">
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >김구원 선생</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >네뗴</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >달콘</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >달콤한 밤의 여왕</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >맛꾼푸드</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >씨뜰리에</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >야채랑</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >저스트그린</a
+              >
+            </li>
+          </ul>
+          <div class="more">
+            <a href="#">브랜드 더보기 </a>
+            <img src="/product/imges/detailImg/right.svg" alt="" />
+          </div>
+          <ul id="check">
+            <li>가격</li>
+          </ul>
+          <ul id="check">
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >2,590원 미만</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >2,590원 ~ 3,800원</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >3,800원 ~ 5,490원</a
+              >
+            </li>
+            <li>
+              <img src="/product/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >5,490원 이상</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="list">
+          <div class="list-header">
+            <ul>
+              <li>총 487건</li>
+            </ul>
+            <ul>
+              <li><a href="#"> 추천순 </a></li>
+              <li><a href="#"> 신상품순 </a></li>
+              <li><a href="#"> 판매량순 </a></li>
+              <li><a href="#"> 혜택순 </a></li>
+              <li><a href="#"> 낮은 가격순 </a></li>
+              <li><a href="#"> 높은 가격순 </a></li>
+            </ul>
+          </div>
+          <div id="item-list"></div>
         </div>
       </div>
     </div>
     <div id="footer_include"></div>
-    <script src="./JS/includehtml.js"></script>
+    <script src="/product/JS/includehtml.js"></script>
   </body>
 </html>

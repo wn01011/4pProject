@@ -11,8 +11,12 @@ function includeHTML(divContainer, urlHTML) {
   xhttp.send();
 }
 
-includeHTML(document.getElementById("header_include"), "../header.html");
-includeHTML(document.getElementById("footer_include"), "../footer.html");
+includeHTML(document.getElementById("header_include"), "header.html");
+includeHTML(document.getElementById("how"), "how.html");
+includeHTML(document.getElementById("main-slider"), "mainSlide.html");
+includeHTML(document.getElementById("md-recommend"), "recommend.html");
+includeHTML(document.getElementById("plus-deal"), "plus.html");
+includeHTML(document.getElementById("footer_include"), "footer.html");
 // item slide html include하는 함수입니다.
 
 window.onscroll = function () {
