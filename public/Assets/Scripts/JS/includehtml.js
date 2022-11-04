@@ -10,6 +10,7 @@ function includeHTML(divContainer, urlHTML) {
   xhttp.open("GET", urlHTML, true);
   xhttp.send();
 }
+// header footer를 include하는 함수입니다.
 
 includeHTML(document.getElementById("header_include"), "header.html");
 includeHTML(document.getElementById("how"), "how.html");

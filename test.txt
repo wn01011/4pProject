@@ -1,0 +1,9 @@
+git add .
+// 바뀐 모든 항목을 등록한다
+git commit -m "message"
+// message 를 담아서 커밋을 한다.
+git push
+// 실제로 보낸다.
+
+git checkout "branch-name"
+//branch 바꾸기 kws
