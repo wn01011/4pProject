@@ -13,6 +13,22 @@ router
     res.send("post로 요청을 보냈군요?");
   });
 
+async function setImages() {
+  let len = 0;
+  await fs.readdir("./Images", (err, datas) => {
+    len = datas.length;
+    for (let i = 1; i <= len; ++i) {
+      router.get(`/download${i}`, (req, res) => {
+        fs.readFile("./Images/" + i + ".jpg", (err, data) => {
+          res.writeHead(200, { "Content-Type": "text/html" });
+          res.end(data);
+        });
+      });
+    }
+  });
+}
+setImages();
+
 // product.json 파일 넣는 곳
 // fs.readFile("./product.json", "utf-8", function (err, data) {
 //   if (err) {
