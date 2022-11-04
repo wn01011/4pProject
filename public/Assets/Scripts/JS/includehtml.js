@@ -10,8 +10,8 @@ function includeHTML(divContainer, urlHTML) {
   xhttp.open("GET", urlHTML, true);
   xhttp.send();
 }
-includeHTML(document.getElementById("header_include"), "/public/header.html");
-includeHTML(document.getElementById("footer_include"), "/public/footer.html");
+includeHTML(document.getElementById("header_include"), "/header.html");
+includeHTML(document.getElementById("footer_include"), "/footer.html");
 // header footer를 include하는 함수입니다.
 
 window.onscroll = function () {
