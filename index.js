@@ -6,12 +6,11 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const path = require("path");
-
-//const db = require("./models/index.js");
-
 dotenv.config();
 
 const api = require("./routes/index.js");
+const { sequelize } = require("./models/index.js");
+const db = require("./models/index.js");
 
 const app = express();
 
@@ -23,7 +22,7 @@ app.set(
 );
 
 app.use((req, res, next) => {
-  if (process.env.NODE_ENV === "production") morgan("dev")(req, res, next);
+  if (process.env.NODE_ENV === "production") morgan("combined")(req, res, next);
   else morgan("dev")(req, res, next);
 });
 // "public"폴더에 프론트를 구현할 겁니다.
@@ -45,6 +44,15 @@ app.use(
     name: "session",
   })
 );
+
+sequelize
+  .sync({ force: false })
+  .then(() => {
+    console.log("db connected");
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 app.use("/api", api);
 
