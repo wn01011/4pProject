@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
-const db = require("./models/index.js");
+//const db = require("./models/index.js");
 
 dotenv.config();
 
