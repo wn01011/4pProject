@@ -5,9 +5,6 @@ function includeHTML(divContainer, urlHTML) {
       if (this.status == 200) {
         divContainer.innerHTML = this.responseText;
       }
-      if (this.status == 404) {
-        divContainer.innerHTML = "페이지를 찾을 수 없습니다.";
-      }
     }
   };
   xhttp.open("GET", urlHTML, true);
@@ -16,3 +13,16 @@ function includeHTML(divContainer, urlHTML) {
 
 includeHTML(document.getElementById("header_include"), "header.html");
 includeHTML(document.getElementById("footer_include"), "footer.html");
+// header footer를 include하는 함수입니다.
+
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 180 ||
+    document.documentElement.scrollTop > 180
+  ) {
+    document.getElementById("header_scroll").classList.add("on");
+  } else {
+    document.getElementById("header_scroll").classList.remove("on");
+  }
+};
+// 스크롤을 내리면 변경된 header가 나타나게 하는 함수입니다.
