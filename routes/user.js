@@ -2,7 +2,6 @@ const { Router } = require("express");
 const crypto = require("crypto-js");
 const jwt = require("jsonwebtoken");
 const db = require("../models/index.js");
-const dotenv = require("dotenv");
 
 const router = Router();
 
@@ -47,6 +46,22 @@ function createJwt(name, key) {
   return tempJwt;
 }
 /*****************************/
+// userdb create 양식
+
+// db.UserTable.create({
+//   userId: "0",
+//   pw: "1234",
+//   name: "kjk",
+//   isManager: 0,
+// });
+
+// userdb select 양식
+
+// db.UserTable.findOne({ where: { id: 1 } })
+//   .then((data) => {
+//     console.log(data.dataValues);
+//   })
+//   .catch((err) => console.error(err));
 
 db.userdb.sequelize
   .sync({ force: false })
