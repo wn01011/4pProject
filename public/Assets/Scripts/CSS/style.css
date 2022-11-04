@@ -1,10 +1,11 @@
 /* 메인 페이지에 대한 css 입니다. */
+html,
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  width: 100%;
+  z-index: 1;
+  min-height: 100%;
 }
 
 ul,
@@ -17,7 +18,7 @@ li {
 p {
   margin: 0;
 }
-
+/* ==========  */
 /* @keyframes slide {
   0% {
     transform: translateX(1900px);
@@ -65,7 +66,7 @@ p {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  top: 150px;
+  top: 350px;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -88,7 +89,7 @@ p {
   display: flex;
   transition: 4s ease-in-out;
 }
-
+/* ===================== */
 h1 {
   display: flex;
   justify-content: center;
@@ -165,25 +166,7 @@ h1 {
   top: 260px;
   cursor: pointer;
 }
-/*  */
-/* #all {
-  display: flex;
-  width: 1100px;
-  align-items: center;
-} */
 
-/* #all img {
-  background-color: rgba(250, 250, 250);
-  border: 1px solid rgba(130, 129, 129, 0.2);
-  border-radius: 100%;
-  padding: 10px;
-  cursor: pointer;
-  width: 30px;
-  position: relative;
-  right: -100px;
-  top: 100px;
-} */
-/* s */
 #item-name {
   margin-top: 10px;
   cursor: pointer;
@@ -199,7 +182,7 @@ h1 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  top: 676px;
+  top: 850px;
   left: 0;
   justify-content: center;
   align-items: center;
@@ -227,13 +210,13 @@ h1 {
 }
 /* ============= */
 
-#bener {
+#banner {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-#bener img {
+#banner img {
   width: 1090px;
 }
 
@@ -260,7 +243,7 @@ h1 {
   height: 100px;
   display: flex;
   flex-wrap: wrap;
-  top: 1412px;
+  top: 1570px;
   left: 0;
   justify-content: center;
   align-items: center;
@@ -322,17 +305,13 @@ h1 {
   color: rgb(109, 174, 182);
 }
 
-/* #item-recommend ul li:clicked {
-  background-color: rgba(180, 245, 254);
-} */
-
 #sub-slider-btn3 {
   position: absolute;
   width: 100%;
   height: 100px;
   display: flex;
   flex-wrap: wrap;
-  top: 2130px;
+  top: 2300px;
   left: 0;
   justify-content: center;
   align-items: center;
