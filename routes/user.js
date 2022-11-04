@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const crypto = require("crypto-js");
 const jwt = require("jsonwebtoken");
-const db = require("../models/index.js");
+//const db = require("../models/index.js");
 
 const router = Router();
 
@@ -46,7 +46,6 @@ function createJwt(name, key) {
   return tempJwt;
 }
 /*****************************/
-
 // userdb create 양식
 
 // db.UserTable.create({
