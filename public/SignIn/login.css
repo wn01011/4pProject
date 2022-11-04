@@ -4,6 +4,9 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+button {
+  cursor: pointer;
+}
 #login_contents {
   display: flex;
   justify-content: center;
