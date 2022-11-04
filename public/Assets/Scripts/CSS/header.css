@@ -209,6 +209,7 @@ li {
   font-size: 14px;
 }
 #header_scroll {
+  background-color: white;
   margin: 0;
   top: 0;
   display: none;
