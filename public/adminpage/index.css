@@ -14,7 +14,7 @@ body {
 
 .admin-logo {
   width: 10rem;
-  padding-left: 45px;
+  padding-left: 6%;
 }
 
 .admin-logout {
@@ -107,7 +107,7 @@ h4 {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
+  height: 350px;
 }
 
 .tg {
@@ -151,6 +151,19 @@ h4 {
   vertical-align: top;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.page-item {
+  padding: 0 5px 0 5px;
+  margin: 0 2px 0 2px;
+  border: 1px solid #d8eef6;
+  border-radius: 0.3rem;
+}
+
 #dashboard2 {
   display: flex;
   flex-direction: column;
@@ -161,7 +174,7 @@ h4 {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
+  height: 350px;
   margin-bottom: 50px;
 }
 
@@ -184,22 +197,43 @@ h4 {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 300px;
+  height: 400px;
+  margin-bottom: 50px;
 }
 
-#sth-manage2 {
+#regi-before {
   display: flex;
+  flex-direction: row;
+}
+
+#sell-regi {
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   border: 1px dashed gainsboro;
-
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 500px;
-  margin-bottom: 50px;
+  height: 750px;
+  margin-bottom: 100px;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+#pojang {
+  width: 5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  top: 1.8rem;
+  right: 11.5rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  background: transparent;
+  font-size: 0.9rem;
 }
 
 #item-1-2 {
@@ -221,12 +255,12 @@ h4 {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 500px;
+  height: 400px;
   margin-bottom: 50px;
 }
 
 #category-manage2 {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -235,6 +269,64 @@ h4 {
   color: black;
   width: 600px;
   height: 100px;
+}
+
+#category-big {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+}
+#category-big > li {
+  padding: 10px;
+}
+#dropdown-category {
+  display: none;
+  width: 130px;
+  right: -130px;
+  top: -2px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 1;
+}
+#category-big:hover #dropdown-category {
+  display: block;
+}
+.dropdown-item a {
+  display: flex;
+  justify-content: space-between;
+}
+
+#category-small {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+}
+#category-small > li {
+  padding: 10px;
+}
+#dropdown-category-s {
+  display: none;
+  width: 130px;
+  right: -130px;
+  top: -2px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 14px;
+  font-weight: bold;
+}
+#category-small:hover #dropdown-category-s {
+  display: block;
+}
+.s-dropdown-item a {
+  display: flex;
+  justify-content: space-between;
 }
 
 #item-2 {
@@ -274,7 +366,7 @@ h4 {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 500px;
+  height: 400px;
   margin-bottom: 50px;
 }
 
@@ -288,7 +380,7 @@ h4 {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 500px;
+  height: 400px;
   margin-bottom: 50px;
 }
 
@@ -338,7 +430,7 @@ h4 {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 500px;
+  height: 400px;
   margin-bottom: 50px;
 }
 
@@ -352,7 +444,7 @@ h4 {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 500px;
+  height: 400px;
   margin-bottom: 50px;
 }
 
@@ -366,7 +458,7 @@ h4 {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 500px;
+  height: 400px;
   margin-bottom: 50px;
 }
 

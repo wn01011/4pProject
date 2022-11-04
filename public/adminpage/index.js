@@ -8,3 +8,14 @@ document.addEventListener("scroll", () => {
     uparrow.classList.remove("active");
   }
 });
+
+const sellRegi = document.getElementById("sell-regi"),
+  btnRegi = document.querySelector("regi-before-go");
+
+btnRegi.addEventListener(
+  "click",
+  function () {
+    sellRegi.classList.toggle("hidden");
+  },
+  false
+);
