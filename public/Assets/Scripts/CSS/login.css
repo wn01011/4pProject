@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#login_contents {
+  display: flex;
+  justify-content: center;
+}
+#login_contents_h1 {
+  display: inline;
+}
+#login_contents_h1 > h1 {
+  text-align: center;
+}
+#login_wrap {
+  width: 340px;
+}
+#login_input_box {
+  display: flex;
+  flex-direction: column;
+}
+#login_input_id {
+  width: 100%;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+}
+#login_input_pw {
+  width: 100%;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+}
+#find_id_password {
+  display: flex;
+  justify-content: end;
+}
+#find_id_password_center {
+  display: inline;
+}
+#login_btn_box {
+  display: flex;
+  flex-direction: column;
+}
+#sign_in_btn {
+  background-color: #c2eaec;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 20 0 0 20px;
+}
