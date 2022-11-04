@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const db = require("../models/index.js");
-
+const fs = require("fs");
 const router = Router();
 
 // "/api/product"
@@ -12,6 +12,23 @@ router
   .post((req, res) => {
     res.send("post로 요청을 보냈군요?");
   });
+
+// product.json 파일 넣는 곳
+// fs.readFile("./product.json", "utf-8", function (err, data) {
+//   if (err) {
+//     console.error(err.message);
+//   } else {
+//     if (data) {
+//       JSON.parse(data).forEach((item) => {
+//         try {
+//           db.ProductTable.create(item);
+//         } catch (err) {
+//           console.error(err);
+//         }
+//       });
+//     }
+//   }
+// });
 
 // productdb create 양식
 
