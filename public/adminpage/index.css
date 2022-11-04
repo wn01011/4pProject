@@ -9,7 +9,7 @@ body {
 #header {
   background-color: #fff;
   height: 10rem;
-  width: 100%;
+  width: 70%;
 }
 
 .admin-logo {
@@ -27,8 +27,8 @@ body {
   font-weight: bold;
   text-decoration: none;
   position: absolute;
-  right: 2em;
-  top: 1em;
+  right: 25em;
+  top: 2em;
 }
 
 #row {
@@ -41,11 +41,18 @@ body {
   display: flex;
   flex-direction: column;
   color: black;
+  margin-top: 80px;
 }
 
 a {
+  outline: none;
   text-decoration: none;
+  color: black;
   display: flex;
+}
+
+a:hover {
+  background: #d8eef6;
 }
 
 #admin-sidebar {
@@ -67,13 +74,18 @@ a {
 }
 
 .col-8 {
-  padding: 50px;
+  padding: 30px 20px 50px 150px;
 }
 
 h2,
 h3 {
   text-align: center;
   margin-top: 50px;
+}
+
+h4 {
+  text-align: center;
+  margin: 10px 0 10px 0;
 }
 
 #item-0 {
@@ -87,22 +99,65 @@ h3 {
 
 #dashboard1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
+  border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
   width: 700px;
   height: 400px;
 }
 
+.tg {
+  border-collapse: collapse;
+  border: 1px solid #bbb;
+  border-spacing: 0;
+}
+
+.tg .tg-selti {
+  background-color: #f7e8e8;
+  border: 1px solid #bbb;
+  color: #493f3f;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: top;
+  padding: 10px 12px;
+}
+
+.tg .tg-db-lineodd {
+  background-color: #ffffff;
+  text-align: center;
+  border: 1px solid #bbb;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+.tg .tg-db-lineeven {
+  background-color: #e8f7ff;
+  text-align: center;
+  border: 1px solid #bbb;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
 #dashboard2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
+  border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
   width: 700px;
@@ -121,26 +176,29 @@ h3 {
 
 #sth-manage1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
+  border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
+  height: 300px;
 }
 
 #sth-manage2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
+  border: 1px dashed gainsboro;
+
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
+  height: 500px;
   margin-bottom: 50px;
 }
 
@@ -153,32 +211,40 @@ h3 {
   gap: 1.5rem;
 }
 
-#cat-manage1 {
+#category-manage1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
+  border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
-}
-
-#cat-manage2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 1em;
-  color: black;
-  width: 700px;
-  height: 400px;
+  height: 500px;
   margin-bottom: 50px;
 }
 
-/* ///////////////////////////// 2022.11.03.수 예나 */
+#category-manage2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed gainsboro;
+  border-radius: 1em;
+  color: black;
+  width: 600px;
+  height: 100px;
+}
+
+#item-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
 
 #item-2-1 {
   display: flex;
@@ -189,35 +255,138 @@ h3 {
   gap: 1.5rem;
 }
 
-#order-manage1 {
+#item-2-2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
-  border-radius: 1em;
-  color: black;
-  width: 700px;
-  height: 400px;
+  gap: 1.5rem;
 }
 
-#order-manage2 {
+#order-manage1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
+  border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
+  height: 500px;
   margin-bottom: 50px;
+}
+
+#del-manage1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed gainsboro;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 500px;
+  margin-bottom: 50px;
+}
+
+#item-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#item-3-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#item-3-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#item-3-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#ppl-manage1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed gainsboro;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 500px;
+  margin-bottom: 50px;
+}
+
+#qna-manage1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed gainsboro;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 500px;
+  margin-bottom: 50px;
+}
+
+#review-manage1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed gainsboro;
+  border-radius: 1em;
+  color: black;
+  width: 700px;
+  height: 500px;
+  margin-bottom: 50px;
+}
+
+#item-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
 }
 
 #uparrow {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  color: yellow;
+  color: gainsboro;
   opacity: 0.7;
+}
+
+#uparrow:hover {
+  background: white;
 }

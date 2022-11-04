@@ -18,7 +18,7 @@
     <!-- 여기까지 헤더 -->
     <div id="row">
       <div class="col-4">
-        <nav
+        <div
           id="admin-sidebar"
           class="h-100 flex-column align-items-stretch pe-4 border-end"
         >
@@ -42,7 +42,7 @@
             </nav>
             <a class="nav-link" href="#item-4">통계</a>
           </nav>
-        </nav>
+        </div>
       </div>
       <!-- 여기까지 사이드바 -->
       <div class="col-8">
@@ -55,8 +55,121 @@
         >
           <div id="item-0">
             <h2>대시보드</h2>
-            <div id="dashboard1">최근 들어온 주문 내역</div>
-            <div id="dashboard2">새로 작성된 리뷰<br />전체 리뷰 더보기 ></div>
+            <div id="dashboard1">
+              <h4>최근 들어온 주문 내역</h4>
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-selti" colspan="2">주문번호</th>
+                    <th class="tg-selti">상품명</th>
+                    <th class="tg-selti">브랜드명</th>
+                    <th class="tg-selti">카테고리</th>
+                    <th class="tg-selti">회원명</th>
+                    <th class="tg-selti">결제금액</th>
+                    <th class="tg-selti">수량</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-db-lineodd" colspan="2">01031395522</td>
+                    <td class="tg-db-lineodd">가래떡 맛있겠다 꿀 발라 먹...</td>
+                    <td class="tg-db-lineodd">경일푸드</td>
+                    <td class="tg-db-lineodd">빵떡</td>
+                    <td class="tg-db-lineodd">김선주</td>
+                    <td class="tg-db-lineodd">200,000</td>
+                    <td class="tg-db-lineodd">1</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-db-lineeven" colspan="2">히</td>
+                    <td class="tg-db-lineeven">히</td>
+                    <td class="tg-db-lineeven"></td>
+                    <td class="tg-db-lineeven"></td>
+                    <td class="tg-db-lineeven"></td>
+                    <td class="tg-db-lineeven"></td>
+                    <td class="tg-db-lineeven"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-db-lineodd" colspan="2">히</td>
+                    <td class="tg-db-lineodd">히</td>
+                    <td class="tg-db-lineodd"></td>
+                    <td class="tg-db-lineodd"></td>
+                    <td class="tg-db-lineodd"></td>
+                    <td class="tg-db-lineodd"></td>
+                    <td class="tg-db-lineodd"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-db-lineeven" colspan="2">히</td>
+                    <td class="tg-db-lineeven">히</td>
+                    <td class="tg-db-lineeven"></td>
+                    <td class="tg-db-lineeven"></td>
+                    <td class="tg-db-lineeven"></td>
+                    <td class="tg-db-lineeven"></td>
+                    <td class="tg-db-lineeven"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-db-lineodd" colspan="2">히</td>
+                    <td class="tg-db-lineodd">히</td>
+                    <td class="tg-db-lineodd"></td>
+                    <td class="tg-db-lineodd"></td>
+                    <td class="tg-db-lineodd"></td>
+                    <td class="tg-db-lineodd"></td>
+                    <td class="tg-db-lineodd"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div id="dashboard2">
+              <h4>새로 작성된 리뷰</h4>
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-selti">회원명</th>
+                    <th class="tg-selti">카테고리</th>
+                    <th class="tg-selti" colspan="2">상품명</th>
+                    <th class="tg-selti" colspan="2">제목</th>
+                    <th class="tg-selti" colspan="2">내용</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-db-lineodd">김정규</td>
+                    <td class="tg-db-lineodd">떡빵</td>
+                    <td class="tg-db-lineodd" colspan="2">가래떡</td>
+                    <td class="tg-db-lineodd" colspan="2">저기요</td>
+                    <td class="tg-db-lineodd" colspan="2">참나</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-db-lineeven">히</td>
+                    <td class="tg-db-lineeven">히</td>
+                    <td class="tg-db-lineeven" colspan="2"></td>
+                    <td class="tg-db-lineeven" colspan="2"></td>
+                    <td class="tg-db-lineeven" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-db-lineodd">히</td>
+                    <td class="tg-db-lineodd">히</td>
+                    <td class="tg-db-lineodd" colspan="2"></td>
+                    <td class="tg-db-lineodd" colspan="2"></td>
+                    <td class="tg-db-lineodd" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-db-lineeven">히</td>
+                    <td class="tg-db-lineeven">히</td>
+                    <td class="tg-db-lineeven" colspan="2"></td>
+                    <td class="tg-db-lineeven" colspan="2"></td>
+                    <td class="tg-db-lineeven" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-db-lineodd">히</td>
+                    <td class="tg-db-lineodd">히</td>
+                    <td class="tg-db-lineodd" colspan="2"></td>
+                    <td class="tg-db-lineodd" colspan="2"></td>
+                    <td class="tg-db-lineodd" colspan="2"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div id="item-1">
@@ -73,318 +186,45 @@
             </div>
             <div id="item-1-2">
               <h3>카테고리 관리</h3>
-              <div id="cat-manage1">카테고리 대분류 | 카테고리 소분류</div>
-              <div id="cat-manage2">
-                아.... 에라 모르겠다....... <br />박스 안에 넣어야 하는디
+              <div id="category-manage1">
+                카테고리 대분류 | 카테고리 소분류
+                <div id="category-manage2">아.... 에라 모르겠다.......</div>
               </div>
             </div>
           </div>
-          ////////////////////////////////// 2022.11.03.수 예나
           <div id="item-2">
             <h2>판매</h2>
             <div id="item-2-1">
               <h3>주문 관리</h3>
-              <div id="order-manage1">카테고리 대분류 | 카테고리 소분류</div>
-              <div id="order-manage2">
-                아.... 에라 모르겠다....... <br />박스 안에 넣어야 하는디
+              <div id="order-manage1">
+                주문번호 | 상품명 | 브랜드명 | 카테고리 | 회원명 | 결제금액 |
+                수량
               </div>
             </div>
-            <div id="item-2-1">
+            <div id="item-2-2">
               <h3>배송현황 관리</h3>
+              <div id="del-manage1">
+                주문번호 | 회원명 | 배송 상태(배송완료/배송중/배송대기중)
+              </div>
             </div>
           </div>
 
           <div id="item-3">
             <h2>CS</h2>
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum. Why do we use it? It is a long
-              established fact that a reader will be distracted by the readable
-              content of a page when looking at its layout. The point of using
-              Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making
-              it look like readable English. Many desktop publishing packages
-              and web page editors now use Lorem Ipsum as their default model
-              text, and a search for 'lorem ipsum' will uncover many web sites
-              still in their infancy. Various versions have evolved over the
-              years, sometimes by accident, sometimes on purpose (injected
-              humour and the like). Where does it come from? Contrary to popular
-              belief, Lorem Ipsum is not simply random text. It has roots in a
-              piece of classical Latin literature from 45 BC, making it over
-              2000 years old. Richard McClintock, a Latin professor at
-              Hampden-Sydney College in Virginia, looked up one of the more
-              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-              going through the cites of the word in classical literature,
-              discovered the undoubtable source. Lorem Ipsum comes from sections
-              1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
-              Extremes of Good and Evil) by Cicero, written in 45 BC. This book
-              is a treatise on the theory of ethics, very popular during the
-              Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-              amet..", comes from a line in section 1.10.32. The standard chunk
-              of Lorem Ipsum used since the 1500s is reproduced below for those
-              interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum
-              et Malorum" by Cicero are also reproduced in their exact original
-              form, accompanied by English versions from the 1914 translation by
-              H. Rackham. Where can I get some? There are many variations of
-              passages of Lorem Ipsum available, but the majority have suffered
-              alteration in some form, by injected humour, or randomised words
-              which don't look even slightly believable. If you are going to use
-              a passage of Lorem Ipsum, you need to be sure there isn't anything
-              embarrassing hidden in the middle of text. All the Lorem Ipsum
-              generators on the Internet tend to repeat predefined chunks as
-              necessary, making this the first true generator on the Internet.
-              It uses a dictionary of over 200 Latin words, combined with a
-              handful of model sentence structures, to generate Lorem Ipsum
-              which looks reasonable. The generated Lorem Ipsum is therefore
-              always free from repetition, injected humour, or
-              non-characteristic words etc. What is Lorem Ipsum? Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum. Why do we use
-              it? It is a long established fact that a reader will be distracted
-              by the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved over the years, sometimes by accident, sometimes on
-              purpose (injected humour and the like).
-            </p>
           </div>
           <div id="item-3-1">
             <h3>회원 관리</h3>
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum. Why do we use it? It is a long
-              established fact that a reader will be distracted by the readable
-              content of a page when looking at its layout. The point of using
-              Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making
-              it look like readable English. Many desktop publishing packages
-              and web page editors now use Lorem Ipsum as their default model
-              text, and a search for 'lorem ipsum' will uncover many web sites
-              still in their infancy. Various versions have evolved over the
-              years, sometimes by accident, sometimes on purpose (injected
-              humour and the like). Where does it come from? Contrary to popular
-              belief, Lorem Ipsum is not simply random text. It has roots in a
-              piece of classical Latin literature from 45 BC, making it over
-              2000 years old. Richard McClintock, a Latin professor at
-              Hampden-Sydney College in Virginia, looked up one of the more
-              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-              going through the cites of the word in classical literature,
-              discovered the undoubtable source. Lorem Ipsum comes from sections
-              1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
-              Extremes of Good and Evil) by Cicero, written in 45 BC. This book
-              is a treatise on the theory of ethics, very popular during the
-              Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-              amet..", comes from a line in section 1.10.32. The standard chunk
-              of Lorem Ipsum used since the 1500s is reproduced below for those
-              interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum
-              et Malorum" by Cicero are also reproduced in their exact original
-              form, accompanied by English versions from the 1914 translation by
-              H. Rackham. Where can I get some? There are many variations of
-              passages of Lorem Ipsum available, but the majority have suffered
-              alteration in some form, by injected humour, or randomised words
-              which don't look even slightly believable. If you are going to use
-              a passage of Lorem Ipsum, you need to be sure there isn't anything
-              embarrassing hidden in the middle of text. All the Lorem Ipsum
-              generators on the Internet tend to repeat predefined chunks as
-              necessary, making this the first true generator on the Internet.
-              It uses a dictionary of over 200 Latin words, combined with a
-              handful of model sentence structures, to generate Lorem Ipsum
-              which looks reasonable. The generated Lorem Ipsum is therefore
-              always free from repetition, injected humour, or
-              non-characteristic words etc. What is Lorem Ipsum? Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum. Why do we use
-              it? It is a long established fact that a reader will be distracted
-              by the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved over the years, sometimes by accident, sometimes on
-              purpose (injected humour and the like).
-            </p>
+            <div id="ppl-manage1">회원명 | 연락처 | 주소</div>
           </div>
           <div id="item-3-2">
             <h3>문의 관리</h3>
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum. Why do we use it? It is a long
-              established fact that a reader will be distracted by the readable
-              content of a page when looking at its layout. The point of using
-              Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making
-              it look like readable English. Many desktop publishing packages
-              and web page editors now use Lorem Ipsum as their default model
-              text, and a search for 'lorem ipsum' will uncover many web sites
-              still in their infancy. Various versions have evolved over the
-              years, sometimes by accident, sometimes on purpose (injected
-              humour and the like). Where does it come from? Contrary to popular
-              belief, Lorem Ipsum is not simply random text. It has roots in a
-              piece of classical Latin literature from 45 BC, making it over
-              2000 years old. Richard McClintock, a Latin professor at
-              Hampden-Sydney College in Virginia, looked up one of the more
-              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-              going through the cites of the word in classical literature,
-              discovered the undoubtable source. Lorem Ipsum comes from sections
-              1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
-              Extremes of Good and Evil) by Cicero, written in 45 BC. This book
-              is a treatise on the theory of ethics, very popular during the
-              Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-              amet..", comes from a line in section 1.10.32. The standard chunk
-              of Lorem Ipsum used since the 1500s is reproduced below for those
-              interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum
-              et Malorum" by Cicero are also reproduced in their exact original
-              form, accompanied by English versions from the 1914 translation by
-              H. Rackham. Where can I get some? There are many variations of
-              passages of Lorem Ipsum available, but the majority have suffered
-              alteration in some form, by injected humour, or randomised words
-              which don't look even slightly believable. If you are going to use
-              a passage of Lorem Ipsum, you need to be sure there isn't anything
-              embarrassing hidden in the middle of text. All the Lorem Ipsum
-              generators on the Internet tend to repeat predefined chunks as
-              necessary, making this the first true generator on the Internet.
-              It uses a dictionary of over 200 Latin words, combined with a
-              handful of model sentence structures, to generate Lorem Ipsum
-              which looks reasonable. The generated Lorem Ipsum is therefore
-              always free from repetition, injected humour, or
-              non-characteristic words etc. What is Lorem Ipsum? Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum. Why do we use
-              it? It is a long established fact that a reader will be distracted
-              by the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved over the years, sometimes by accident, sometimes on
-              purpose (injected humour and the like).
-            </p>
+            <div id="qna-manage1">회원명 | 제목 | 문의 내용</div>
           </div>
           <div id="item-3-3">
             <h3>리뷰 관리</h3>
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum. Why do we use it? It is a long
-              established fact that a reader will be distracted by the readable
-              content of a page when looking at its layout. The point of using
-              Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making
-              it look like readable English. Many desktop publishing packages
-              and web page editors now use Lorem Ipsum as their default model
-              text, and a search for 'lorem ipsum' will uncover many web sites
-              still in their infancy. Various versions have evolved over the
-              years, sometimes by accident, sometimes on purpose (injected
-              humour and the like). Where does it come from? Contrary to popular
-              belief, Lorem Ipsum is not simply random text. It has roots in a
-              piece of classical Latin literature from 45 BC, making it over
-              2000 years old. Richard McClintock, a Latin professor at
-              Hampden-Sydney College in Virginia, looked up one of the more
-              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-              going through the cites of the word in classical literature,
-              discovered the undoubtable source. Lorem Ipsum comes from sections
-              1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
-              Extremes of Good and Evil) by Cicero, written in 45 BC. This book
-              is a treatise on the theory of ethics, very popular during the
-              Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-              amet..", comes from a line in section 1.10.32. The standard chunk
-              of Lorem Ipsum used since the 1500s is reproduced below for those
-              interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum
-              et Malorum" by Cicero are also reproduced in their exact original
-              form, accompanied by English versions from the 1914 translation by
-              H. Rackham. Where can I get some? There are many variations of
-              passages of Lorem Ipsum available, but the majority have suffered
-              alteration in some form, by injected humour, or randomised words
-              which don't look even slightly believable. If you are going to use
-              a passage of Lorem Ipsum, you need to be sure there isn't anything
-              embarrassing hidden in the middle of text. All the Lorem Ipsum
-              generators on the Internet tend to repeat predefined chunks as
-              necessary, making this the first true generator on the Internet.
-              It uses a dictionary of over 200 Latin words, combined with a
-              handful of model sentence structures, to generate Lorem Ipsum
-              which looks reasonable. The generated Lorem Ipsum is therefore
-              always free from repetition, injected humour, or
-              non-characteristic words etc. What is Lorem Ipsum? Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum. Why do we use
-              it? It is a long established fact that a reader will be distracted
-              by the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved over the years, sometimes by accident, sometimes on
-              purpose (injected humour and the like).
-            </p>
+            <div id="review-manage1">
+              회원명 | 카테고리 | 상품명 | 제목 | 내용
+            </div>
           </div>
 
           <div id="item-4">
