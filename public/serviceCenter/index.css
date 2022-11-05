@@ -1,0 +1,43 @@
+#serviceCenter_contents {
+  display: flex;
+  justify-content: center;
+  padding: 50 0 50 0px;
+}
+#serviceCenter_contents_center {
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+}
+#serviceCenter_sidebar {
+  width: 20%;
+}
+#serviceCenter_sidebar_list {
+  border: 1px solid gainsboro;
+  padding-inline-start: 0px;
+  cursor: pointer;
+}
+
+#serviceCenter_sidebar_list > li {
+  padding: 15px;
+  color: gainsboro;
+  display: flex;
+  justify-content: space-between;
+}
+#serviceCenter_sidebar_list > li:hover {
+  background-color: #c2eaec;
+  color: black;
+}
+#serviceCenter_sidebar_list span {
+  color: #232323;
+}
+.path1 {
+  fill: rgb(23, 23, 23);
+}
+#serviceCenter_sidebar_list_item_2 {
+  border-top: 1px solid gainsboro;
+}
+#serviceCenter_main {
+  width: 75%;
+  border: 1px solid black;
+  background-color: #c2eaec;
+}
