@@ -2,6 +2,7 @@ const { Router } = require("express");
 const db = require("../models/index.js");
 const fs = require("fs");
 const path = require("path");
+const { rejects } = require("assert");
 const router = Router();
 
 // "/api/notice"
@@ -19,23 +20,24 @@ router
   .get((req, res) => {
     res.send();
   })
-  .post((req, res) => {
-    console.log(req.body);
-    try {
-      db.AskanswerTable.create({
-        userId: req.body.userId,
-        name: req.body.name,
-        isAnswer: 0,
-      });
-      res.send({
-        userId: req.body.userId,
-        name: req.body.name,
-        isAnswer: 0,
-        createData: getToday(),
-      });
-    } catch {
-      res.send("db askanswer 에러났다");
-    }
+  .post(async (req, res) => {
+    //   db.AskanswerTable.create({
+    //     userId: req.body.userId,
+    //     name: req.body.name,
+    //     isAnswer: 0,
+    //   });
+    //   res.send({
+    //     userId: req.body.userId,
+    //     name: req.body.name,
+    //     isAnswer: 0,
+    //     createdDate: getToday(),
+    //   });
+    const curData = new Promise(async (resolve, reject) => {
+      const data = await getAskAnswerTable(req.body.userId);
+      resolve(data);
+    }).then((data) => {
+      res.send(data);
+    });
   });
 
 function getToday() {
@@ -45,6 +47,15 @@ function getToday() {
   var day = ("0" + date.getDate()).slice(-2);
 
   return year + "." + month + "." + day;
+}
+
+function getAskAnswerTable(userId) {
+  db.AskanswerTable.findAll({
+    where: { userId: userId.toString() },
+  }).then((data) => {
+    console.log(data);
+    return data;
+  });
 }
 // askanswer create 양식
 
