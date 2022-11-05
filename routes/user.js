@@ -65,7 +65,7 @@ function createJwt(name, key) {
 
 // userdb create 양식
 
-// db.userdb.UserTable.create({
+// db.UserTable.create({
 //   userId: "0",
 //   pw: "1234",
 //   name: "kjk",
