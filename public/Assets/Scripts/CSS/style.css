@@ -28,12 +28,12 @@ p {
   }
 } */
 
-.main-slider {
+#main-slider {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 370px;
   overflow: hidden;
   position: relative;
@@ -43,7 +43,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 215vw;
   height: 370px;
   position: relative;
   left: -1920px;
@@ -79,7 +78,6 @@ p {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  top: 320px;
   justify-content: center;
   align-items: center;
   overflow: hidden;

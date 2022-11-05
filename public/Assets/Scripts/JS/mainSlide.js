@@ -1,6 +1,6 @@
 let slides = document.querySelector(".main-slider-img"),
   slide = document.querySelectorAll(".main-slider-img li"),
-  currentIdx = 0,
+  currentIdx = 1,
   slideCount = slide.length,
   slideWidth = 1920,
   slideMargin = 0,
