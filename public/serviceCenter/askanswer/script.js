@@ -1,19 +1,31 @@
 const askBtn = document.getElementById("askBtn");
 const tableList = document.getElementById("tableList");
+const tablePlaceHolder = document.getElementById("tablePlaceHolder");
 
 askBtn.onclick = () => {
-  axios
-    .post("/api/notice/askanswer", { userId: 1, name: "문의올린다." })
-    .then((data) => {
-      //   makeTableList(
-      //     data.data.name,
-      //     data.data.userId,
-      //     data.data.createdDate,
-      //     data.data.isAnswer
-      //   );
-      console.log(data);
-    });
+  // axios
+  //   .post("/api/notice/askanswer", { userId: 1, name: "문의올린다." })
+  //   .then((data) => {
+  //     if (data.data.length > 0) tablePlaceHolder.classList.add("off");
+  //     tableList.innerHTML = "";
+  //     data.data.forEach((item) => {
+  //       makeTableList(item.name, item.userId, item.createdAt, item.isAnswer);
+  //       console.log(item);
+  //     });
+  //   });
 };
+
+init();
+
+function init() {
+  axios.post("/api/notice/askanswer", { userId: 1 }).then((data) => {
+    if (data.data.length > 0) tablePlaceHolder.classList.add("off");
+    data.data.forEach((item) => {
+      makeTableList(item.name, item.userId, item.createdAt, item.isAnswer);
+      console.log(item);
+    });
+  });
+}
 
 function makeTableList(name, userId, createdDate, isAnswer) {
   const tempDiv = document.createElement("div");
@@ -22,7 +34,8 @@ function makeTableList(name, userId, createdDate, isAnswer) {
   const isAnswerDiv = document.createElement("div");
 
   nameDiv.innerText = name;
-  dateDiv.innerText = createdDate;
+  // YYYY-MM-DD : 10글자
+  dateDiv.innerText = createdDate.slice(0, 10);
   isAnswerDiv.innerText = isAnswer;
 
   tempDiv.style = `

@@ -32,12 +32,10 @@ router
     //     isAnswer: 0,
     //     createdDate: getToday(),
     //   });
-    const curData = new Promise(async (resolve, reject) => {
-      const data = await getAskAnswerTable(req.body.userId);
-      resolve(data);
-    }).then((data) => {
-      res.send(data);
+    const tempData = await db.AskanswerTable.findAll({
+      where: { userId: req.body.userId.toString() },
     });
+    res.send(tempData);
   });
 
 function getToday() {

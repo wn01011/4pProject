@@ -44,6 +44,9 @@ body {
   text-align: center;
   border-bottom: lightgrey solid 1px;
 }
+#tablePlaceHolder.off {
+  display: none;
+}
 #askBtnBox {
   width: 100%;
   display: flex;
