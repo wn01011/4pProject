@@ -1,16 +1,13 @@
 * {
-  word-break: break-all;
-  text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 html,
 body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 100%;
   z-index: 1;
 }
-
 a {
   color: black;
   text-decoration: none;
@@ -19,11 +16,9 @@ a {
 input:focus {
   outline: none;
 }
-
 li {
   list-style-type: none;
 }
-
 .marketClearLogo {
   width: 110px;
 }
@@ -214,6 +209,7 @@ li {
   font-size: 14px;
 }
 #header_scroll {
+  background-color: white;
   margin: 0;
   top: 0;
   display: none;
