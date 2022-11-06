@@ -1,4 +1,4 @@
-const itemList = document.getElementById("item-list");
+const itemList = document.getElementById("item-inner2");
 const categoriList = document.getElementById("item-list");
 
 getList();
@@ -22,11 +22,34 @@ async function getList() {
     itemList.appendChild(tempDiv);
     // const result = (await axios.get("/api/vegi")).data;
     // itemList.innerHTML = "";
+    const tempUl = document.createElement("ul");
+    tempUl.style = `
+    display: flex;
+    width: 800px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    `;
     const tempLi = document.createElement("li");
+    tempLi.style = `
+    width: 800px;
+    height: 450px;
+    display: flex;
+    `;
     tempLi.innerHTML = `<img src="/api/product/download20" alt="" />
-    <p>${data.data[0].name}</p>
-    <p>${data.data[0].price}</p>
-    <p>${data.data[0].info}</p>
+    <p>가격</p>
+    <p>가격</p>
+    <p>가격</p>
+    <span><img src="/imges/cart3.svg" alt="" /></span>
+    <img src="/api/product/download2" alt="" />
+    <p>가격</p>
+    <p>가격</p>
+    <p>가격</p>
+    <span><img src="/imges/cart3.svg" alt="" /></span>
+    <img src="/api/product/download20" alt="" />
+    <p>가격</p>
+    <p>가격</p>
+    <p>가격</p>
     <span><img src="/imges/cart3.svg" alt="" /></span>`;
 
     itemList.getElementsByTagName("ul")[0].append(tempLi);
@@ -53,8 +76,7 @@ axios.post("/api/product/getCategory", { category: "야채" }).then((data) => {
   `;
   tempDiv.appendChild(childDiv);
   itemList.appendChild(tempDiv);
-  // const result = (await axios.get("/api/vegi")).data;
-  // itemList.innerHTML = "";
+
   const tempLi = document.createElement("li");
   tempLi.innerHTML = `<img src="/api/product/download20" alt="" />
     <p>이름 : ${data.data[0].name}</p>

@@ -76,7 +76,7 @@ p {
 #main-slider-btn {
   position: absolute;
   width: 100%;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -85,6 +85,7 @@ p {
 
 .btn-inner {
   display: flex;
+
   width: 1300px;
   justify-content: space-between;
 }
@@ -92,13 +93,26 @@ p {
 .btn-inner img {
   display: flex;
   cursor: pointer;
-  width: 50px;
-  opacity: 0.35;
+  width: 30px;
+}
+
+.btn-left,
+.btn-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 100%;
+}
+
+#main-slider:hover #main-slider-btn {
+  display: flex;
+  transition: 4s ease-in-out;
 }
 
 /* #main-slider:hover img {
-  display: flex;
-  transition: 4s ease-in-out;
 } */
 /* ===================== */
 h1 {
@@ -119,6 +133,7 @@ h1 {
   margin: 0 650px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #item-inner {
@@ -127,7 +142,7 @@ h1 {
   height: 430px;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #item-img {
@@ -138,86 +153,128 @@ h1 {
   flex-wrap: wrap;
 }
 
-#item-img a {
-  width: 249px;
-  overflow: hidden;
-}
-
-#item-img a > img {
-  width: 249px;
-  height: 320px;
-  transition: all 0.5s ease-in-out;
-}
-
-#item-img:hover a > img {
-  transform: scale(1.03);
-}
-
-#item-info {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-
-#cart {
-  position: relative;
-  background-image: url("/imges/cart3.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px;
-  background-color: rgba(180, 245, 254, 0.4);
-  width: 20px;
-  height: 20px;
+#item-slider {
   display: flex;
   flex-wrap: wrap;
-  border-radius: 100%;
   justify-content: center;
-  align-content: center;
-  padding: 15px;
-  left: -328px;
-  top: -134px;
-  cursor: pointer;
+  align-items: center;
+  /* overflow: hidden; */
+  width: 100vw;
 }
 
-#item-name {
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-#price {
-  font-weight: bolder;
-  cursor: pointer;
-}
-
-#sub-slider-btn {
-  position: absolute;
-  width: 100%;
+#item-inner {
+  width: 1090px;
   display: flex;
   flex-wrap: wrap;
-  top: 850px;
-  left: 0;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: 400px;
 }
 
-.sub-btn-inner {
+#item-inner ul li a > img {
+  width: 249px;
+  height: 320px;
+}
+
+#item-inner ul:first-child {
   display: flex;
-  width: 1100px;
-  justify-content: space-between;
+  width: 1090px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.sub-btn-inner img {
+#item-inner ul:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1090px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* top: 30px; */
+}
+
+#items {
+  position: relative;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#item-inner ul li {
+  display: flex;
+  flex-wrap: wrap;
+  width: 249px;
+  height: 400px;
+  margin-right: 18px;
+}
+
+#item-inner ul li span::after {
+  position: absolute;
+  z-index: 1;
+}
+
+#item-inner ul li span a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(137, 234, 201, 0.4);
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -90px;
+  left: 132px;
+}
+
+#item-inner ul li span a > img {
+  width: 28px;
+  height: 28px;
+}
+
+#item-inner ul li p {
+  line-height: 2;
+}
+
+#btn {
+  display: flex;
+  width: 1200px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -265px;
+}
+
+#btn ul {
+  width: 1090px;
+}
+
+#btn ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
   background-color: rgba(250, 250, 250);
   border: 1px solid rgba(130, 129, 129, 0.2);
-  border-radius: 100%;
-  padding: 10px;
-  cursor: pointer;
-  width: 30px;
+  margin: 0;
 }
 
-.sub-btn-inner img:hover {
+#btn ul li img {
+  width: 20px;
+  height: 20px;
+}
+
+#btn ul li:hover {
   box-shadow: 1px 1px 3px #ccc;
   cursor: pointer;
+}
+
+#btn ul > #left {
+  display: none;
 }
 /* ============= */
 
@@ -359,13 +416,4 @@ h1 {
   border: 1px solid rgba(155, 154, 154, 0.5);
   background-color: white;
   margin-bottom: 70px;
-}
-
-#sub-all-btn3:hover {
-  cursor: pointer;
-}
-
-#item-inner {
-  display: flex;
-  justify-content: center;
 }
