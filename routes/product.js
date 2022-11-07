@@ -3,6 +3,7 @@ const db = require("../models/index.js");
 const fs = require("fs");
 const router = Router();
 
+console.log("프로덕트 라우트 안이다!!!!!!");
 // "/api/product"
 router
   .route("/")
@@ -10,7 +11,20 @@ router
     res.send();
   })
   .post((req, res) => {
-    res.send("post로 요청을 보냈군요?");
+    console.log("hi", req.body);
+    const tempSend = [];
+    db.ProductTable.findAll().then((data) => {
+      data.forEach((item) => {
+        if (
+          Object.values(item.dataValues.category[0]).includes(
+            `${req.body.data}`
+          )
+        ) {
+          tempSend.push(item.dataValues);
+        }
+      });
+      res.send(tempSend);
+    });
   });
 
 // product.json 파일 넣는 곳

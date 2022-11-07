@@ -53,6 +53,7 @@ a {
 
 a:hover {
   background: #d8eef6;
+  margin-left: 0;
 }
 
 #admin-sidebar {
@@ -65,12 +66,12 @@ a:hover {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  padding-left: 40px;
+  margin-left: 40px;
   font-weight: bolder;
 }
 
 #admin-sidebar > nav > nav {
-  padding-left: 70px;
+  margin-left: 70px;
 }
 
 .col-8 {
@@ -207,6 +208,10 @@ ul {
 }
 
 #sell-regi {
+  display: none;
+}
+
+#sell-regi.add {
   display: block;
   flex-direction: column;
   justify-content: center;
@@ -216,13 +221,68 @@ ul {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 750px;
+  height: 900px;
   margin-bottom: 100px;
 }
 
-.hidden {
+#regi-category-big {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+}
+#regi-category-big > li {
+  padding: 10px;
+}
+#regi-dropdown-category {
   display: none;
-  opacity: 0;
+  width: 130px;
+  right: 150px;
+  top: -2px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+#regi-category-big:hover #regi-dropdown-category {
+  display: block;
+}
+.regi-dropdown-item a {
+  display: flex;
+  justify-content: space-between;
+}
+
+#regi-category-small {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+}
+#regi-category-small > li {
+  padding: 10px;
+}
+#regi-dropdown-category-s {
+  display: none;
+  width: 130px;
+  right: 150px;
+  top: -2px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 1;
+}
+#regi-category-small:hover #regi-dropdown-category-s {
+  display: block;
+}
+.regi-s-dropdown-item a {
+  display: flex;
+  justify-content: space-between;
 }
 
 #pojang {
@@ -268,7 +328,7 @@ ul {
   border-radius: 1em;
   color: black;
   width: 600px;
-  height: 50px;
+  height: 100px;
 }
 
 #category-big {
@@ -293,6 +353,7 @@ ul {
   font-weight: bold;
   z-index: 1;
 }
+
 #category-big:hover #dropdown-category {
   display: block;
 }
@@ -472,6 +533,11 @@ ul {
 }
 
 #uparrow {
+  display: none;
+}
+
+.active {
+  display: block;
   position: fixed;
   bottom: 30px;
   right: 30px;
