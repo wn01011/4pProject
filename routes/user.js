@@ -2,9 +2,10 @@ const { Router } = require("express");
 const crypto = require("crypto-js");
 const jwt = require("jsonwebtoken");
 const db = require("../models/index.js");
-
+const dotenv = require("dotenv");
 const router = Router();
 
+dotenv.config();
 // 유저 정보 일단 담아둘 곳
 const users = [];
 
@@ -23,8 +24,37 @@ router
   .get((req, res) => {
     res.send();
   })
-  .post((req, res) => {
-    res.send();
+  .post(async (req, res) => {
+    console.log("받았어", req.body);
+    try {
+      const tempUser = await db.findOne({ where: { userId: req.body.id } });
+      // db
+      if (!tempUser) {
+        res.status(500);
+        res.send({ message: "no ID" });
+        return;
+      }
+      if (tempUser.userPw == crypto.SHA256(req.body.pw).toString()) {
+        const expireTime = "20";
+        res.cookie("clearLogin", createJwt(tempUser.id, process.env.ADMIN_PW));
+        res.send({
+          status: 200,
+          id: tempUser.id,
+          name: tempUser.name,
+        });
+        return;
+      }
+      res.status(500);
+      res.send({ message: "wrong password" });
+    } catch {
+      res.status(500);
+      res.send(error);
+    }
+
+    if (된다면) {
+      res.cookie();
+      res.send();
+    }
   });
 
 router

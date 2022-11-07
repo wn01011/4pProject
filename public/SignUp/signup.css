@@ -7,7 +7,9 @@
 input:focus {
   outline: none;
 }
-
+button {
+  cursor: pointer;
+}
 #signup_contents {
   display: flex;
   justify-content: center;
@@ -55,16 +57,15 @@ input:focus {
 #signup_board_id_input_input {
   border: none;
   font-size: 18px;
+  width: 100%;
 }
 #signup_board_id_deduplication {
   width: 120px;
-  border: 1px solid #c2eaec;
+  border: 2px solid #c2eaec;
   padding: 10px;
   margin-left: 10px;
-}
-#signup_board_id_deduplication_btn {
-  background: none;
-  border: none;
+  background-color: transparent;
+  border-radius: 3px;
 }
 #signup_board_pw {
   display: flex;
@@ -88,6 +89,7 @@ input:focus {
 }
 #signup_board_pw_input_input {
   border: none;
+  width: 100%;
   font-size: 18px;
 }
 #signup_board_pw_whitespace {
@@ -116,6 +118,7 @@ input:focus {
   flex: 1;
 }
 #signup_board_confirmpw_input_input {
+  width: 100%;
   border: none;
   font-size: 18px;
 }
@@ -146,6 +149,7 @@ input:focus {
 }
 #signup_board_name_input_input {
   border: none;
+  width: 100%;
   font-size: 18px;
 }
 #signup_board_name_whitespace {
@@ -174,14 +178,12 @@ input:focus {
   display: flex;
   justify-content: center;
   flex: 1;
-}
-#signup_board_address_btn_btn {
-  border: none;
+  /* border: none; */
   background: transparent;
   font-size: 18px;
   display: flex;
 }
-#signup_board_address_btn_btn_icon {
+#signup_board_address_btn_icon {
   display: flex;
   flex-direction: column;
   justify-content: center;

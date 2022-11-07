@@ -28,3 +28,13 @@ axios
 // 이에 대해 원하는 응답을 담당자에게 전달해주시면 담당자가 해당 응답을 전해주게 됩니다.
 // 응답은 then 이후의 data 에 담겨서 정달 되게 됩니다.
 // 응답 예시 data.data = {data : "로그인 가능"}
+
+// 로그아웃 기능
+document.getElementById("user_info_dropdown_logout").onclick =
+  async function () {
+    try {
+      const data = await axios.get("/api/user/logout");
+    } catch (error) {
+      console.error(error.response.data.message);
+    }
+  };

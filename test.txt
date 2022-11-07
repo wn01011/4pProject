@@ -7,3 +7,16 @@ git push
 
 git checkout "branch-name"
 //branch 바꾸기 kws
+
+현재 dev와 git의 dev는 다를 수있다.(업데이트)
+
+git checkout dev
+git fetch
+git pull
+
+git merge -Xtheirs dev(dev를 내것에다 덮어쓰기)
+
+git add .
+git commit -m "message"
+git push
+dev를 kws에다 덮어씌웠으니 git에다 전송

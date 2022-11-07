@@ -5,8 +5,54 @@ body {
   box-sizing: border-box;
   font-family: "Gothic A1", sans-serif;
 }
+#serviceCenter_contents {
+  display: flex;
+  justify-content: center;
+  padding: 50 0 50 0px;
+}
+#serviceCenter_contents_center {
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+}
+#serviceCenter_sidebar {
+  width: 20%;
+}
+#serviceCenter_sidebar_title {
+  margin-bottom: 40px;
+}
+#serviceCenter_sidebar_list {
+  border: 1px solid gainsboro;
+  padding-inline-start: 0px;
+  cursor: pointer;
+}
+
+#serviceCenter_sidebar_list > li {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+#serviceCenter_sidebar_list span {
+  color: #999;
+}
+#serviceCenter_sidebar_list a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.path1 {
+  fill: #999;
+}
+#serviceCenter_sidebar_list > li:hover {
+  background-color: #c2eaec;
+  color: #000;
+}
+
+#serviceCenter_sidebar_list_item_2 {
+  border-top: 1px solid gainsboro;
+}
 #askTable {
-  width: 80%;
+  width: 75%;
   margin: auto;
   margin-top: 30px;
 }
