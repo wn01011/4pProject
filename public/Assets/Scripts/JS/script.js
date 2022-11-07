@@ -12,6 +12,15 @@ axios
   .catch((err) => {
     console.error(err);
   });
+axios
+  .post("/api/product", { data: "건어물" })
+  .then((data) => {
+    console.log(data);
+    document.value = data.data[0].allergy;
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 //   만약 로그인에 대한 요청을 보내신다면
 // 1. 로그인을 위해 필요한 데이터를 담아서 서버로 보냅니다.

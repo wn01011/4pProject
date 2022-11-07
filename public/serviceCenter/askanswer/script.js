@@ -3,17 +3,16 @@ const tableList = document.getElementById("tableList");
 const tablePlaceHolder = document.getElementById("tablePlaceHolder");
 
 askBtn.onclick = () => {
-  // axios
-  //   .post("/api/notice/askanswer", { userId: 1, name: "문의올린다." })
-  //   .then((data) => {
-  //     if (data.data.length > 0) tablePlaceHolder.classList.add("off");
-  //     tableList.innerHTML = "";
-  //     data.data.forEach((item) => {
-  //       makeTableList(item.name, item.userId, item.createdAt, item.isAnswer);
-  //       console.log(item);
-  //     });
-  //   });
+  popup();
 };
+
+function popup() {
+  const url = "/serviceCenter/askanswer/popup.html";
+  const name = "popup test";
+  const option =
+    "width = 800, height = 800, top =100, left = 200, location = no";
+  window.open(url, name, option);
+}
 
 init();
 
