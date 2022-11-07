@@ -35,8 +35,11 @@ router
         return;
       }
       if (tempUser.userPw == crypto.SHA256(req.body.pw).toString()) {
+        console.log();
         const expireTime = "20";
-        res.cookie("clearLogin", createJwt(tempUser.id, process.env.ADMIN_PW));
+        res.cookie("clearLogin", createJwt(tempUser.id, process.env.ADMIN_PW), {
+          expires: expireTime + "s",
+        });
         res.send({
           status: 200,
           id: tempUser.id,
@@ -61,7 +64,7 @@ router
     console.log(req.body);
     db.UserTable.create({
       userId: req.body.id,
-      pw: req.body.pw,
+      pw: crypto.SHA256(req.body.pw).toString(),
       name: req.body.name,
       isManager: 0,
       address: req.body.address,

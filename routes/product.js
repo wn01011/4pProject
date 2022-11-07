@@ -7,6 +7,7 @@ const router = Router();
 const seq = require("sequelize");
 const op = seq.Op;
 
+console.log("프로덕트 라우트 안이다!!!!!!");
 // "/api/product"
 router
   .route("/")
@@ -14,6 +15,7 @@ router
     res.send();
   })
   .post((req, res) => {
+
     const tempSend = [];
     db.ProductTable.findAll().then((data) => {
       data.forEach((item) => {
@@ -46,7 +48,6 @@ router
 //   }
 // });
 
-// 이미지 처음에 불러오기
 async function setImages() {
   let len = 0;
   await fs.readdir("./Images", (err, datas) => {

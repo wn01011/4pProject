@@ -258,34 +258,45 @@
 
               <div id="sell-regi">
                 <h3>상품 등록</h3>
-                <div id="category-big">
+                <div id="regi-category-big">
                   <button type="button" class="big btn">
                     카테고리 대분류 추가
                   </button>
-                  <ul id="dropdown-category">
-                    <li><a class="dropdown-item" href="#">베이커리</a></li>
-                    <li><a class="dropdown-item" href="#">치즈</a></li>
-                    <li><a class="dropdown-item" href="#">음료</a></li>
+                  <ul id="regi-dropdown-category">
+                    <li><a class="regi-dropdown-item" href="#">베이커리</a></li>
+                    <li><a class="regi-dropdown-item" href="#">치즈</a></li>
+                    <li><a class="regi-dropdown-item" href="#">음료</a></li>
                   </ul>
                 </div>
-                <div id="category-small">
+                <div id="regi-category-small">
                   <button type="button" class="big btn">
                     카테고리 소분류 추가
                   </button>
-                  <ul id="dropdown-category-s">
-                    <li><a class="s-dropdown-item" href="#">빵</a></li>
-                    <li><a class="s-dropdown-item" href="#">체다치즈</a></li>
-                    <li><a class="s-dropdown-item" href="#">어쩌구</a></li>
+                  <ul id="regi-dropdown-category-s">
+                    <li><a class="regi-s-dropdown-item" href="#">빵</a></li>
+                    <li>
+                      <a class="regi-s-dropdown-item" href="#">체다치즈</a>
+                    </li>
+                    <li><a class="regi-s-dropdown-item" href="#">어쩌구</a></li>
                   </ul>
                 </div>
 
                 <form action="#">
+                  <br />
                   <label for="brand">브랜드명</label><br />
                   <input id="brandip" type="text" placeholder="브랜드명 입력" />
 
                   <br /><br />
                   <label for="sthname">상품명</label><br />
                   <input id="sthnameip" type="text" placeholder="상품명 입력" />
+
+                  <br /><br />
+                  <label for="delivery">배송</label><br />
+                  <input id="deliveryip" type="text" placeholder="샛별배송" />
+
+                  <br /><br />
+                  <label for="seller">판매자</label><br />
+                  <input id="sellerip" type="text" placeholder="컬리" />
 
                   <br /><br />
                   <select name="wrapup" id="pojang" class="active">
@@ -323,7 +334,8 @@
                   <input id="priceip" type="text" placeholder="판매가 입력" />
 
                   <br /><br />
-                  <button type="submit">등록</button>
+                  <button type="submit" id="regi-submit">등록</button>
+                  <br /><br />
                 </form>
               </div>
             </div>
@@ -343,8 +355,19 @@
                       <li><a class="dropdown-item" href="#">치즈</a></li>
                       <li><a class="dropdown-item" href="#">음료</a></li>
                       <li><hr class="dropdown-divider" /></li>
-                      <li><a class="dropdown-item" href="#">직접 입력</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#" id="b-cat-input"
+                          >직접 입력</a
+                        >
+                      </li>
                     </ul>
+                    <input
+                      id="bigcatip"
+                      type="text"
+                      placeholder="카테고리 대분류 입력"
+                    />
+                    <br />
+                    <button type="submit" id="b-cat-save">저장</button>
                   </div>
                   <div id="category-small">
                     <button type="button" class="big btn">
@@ -355,8 +378,19 @@
                       <li><a class="s-dropdown-item" href="#">체다치즈</a></li>
                       <li><a class="s-dropdown-item" href="#">어쩌구</a></li>
                       <li><hr class="s-dropdown-divider" /></li>
-                      <li><a class="s-dropdown-item" href="#">직접 입력</a></li>
+                      <li>
+                        <a class="s-dropdown-item" href="#" id="s-cat-input"
+                          >직접 입력</a
+                        >
+                      </li>
                     </ul>
+                    <input
+                      id="smallcatip"
+                      type="text"
+                      placeholder="카테고리 소분류 입력"
+                    />
+                    <br />
+                    <button type="submit" id="s-cat-save">저장</button>
                   </div>
                 </div>
               </div>

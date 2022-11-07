@@ -7,34 +7,310 @@
     <link rel="stylesheet" href="/Assets/Scripts/CSS/style.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    <!-- header -->
     <div id="header_include"></div>
-    <div id="main-slider"></div>
+    <!-- main slider -->
+    <div id="main-slider">
+      <div class="main-slider-img">
+        <li><img src="/imges/main1.jpg" alt="" /></li>
+        <li><img src="/imges/main2.jpg" alt="" /></li>
+        <li><img src="/imges/main3.jpg" alt="" /></li>
+        <li><img src="/imges/main4.jpg" alt="" /></li>
+        <li><img src="/imges/main5.jpg" alt="" /></li>
+        <li><img src="/imges/main6.jpg" alt="" /></li>
+        <li><img src="/imges/main7.jpg" alt="" /></li>
+      </div>
+      <div id="main-slider-btn">
+        <div class="btn-inner">
+          <div class="btn-left">
+            <img src="/imges/angle-left-solid.svg" alt="left" />
+          </div>
+          <div class="btn-right">
+            <img src="/imges/angle-right-solid.svg" alt="right" />
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- 이 상품 어때요? -->
-    <div id="how"></div>
+    <div id="how">
+      <div id="main-body">
+        <div id="item-head"><h1>이 상품 어때요?</h1></div>
+        <div id="item-slider">
+          <div id="item-inner">
+            <ul id="items">
+              <li>
+                <a href="/vegi_item/item.html"
+                  ><img src="api/product/download1" alt=""
+                /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+            </ul>
+            <div id="btn">
+              <ul>
+                <li class="left">
+                  <img src="/imges/chevron-left.svg" alt="" />
+                </li>
+                <li class="right">
+                  <img src="/imges/chevron-right.svg" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- 베너 광고 -->
     <div id="banner">
-      <img src="./imges/banner.jpg" alt="" />
+      <img src="/imges/banner.jpg" alt="" />
     </div>
     <!-- 플러스딜 -->
-    <div id="plus-deal"></div>
+    <div id="plus-deal">
+      <div id="main-body">
+        <div id="item-head">
+          <h1>
+            <a href="">
+              플러스딜 ➕
+              <img src="/imges/right.svg" alt=""
+            /></a>
+          </h1>
+          <p>쟁여두는 인기 아이템</p>
+        </div>
+        <div id="item-slider">
+          <div id="item-inner">
+            <ul id="items">
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="/imges/chevron-left.svg" alt="" /></a>
+                <p>전체보기</p>
+              </li>
+            </ul>
+            <div id="btn">
+              <ul>
+                <li class="left">
+                  <img src="/imges/chevron-left.svg" alt="" />
+                </li>
+                <li class="right">
+                  <img src="/imges/chevron-right.svg" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- MD의 추천 -->
-    <div id="md-recommend"></div>
+    <div id="md-recommend">
+      <div id="main-body">
+        <div id="item-head"><h1>MD의 추천</h1></div>
+        <div id="item-recommend">
+          <ul>
+            <li>채소</li>
+            <li>과일&#183;견과&#183;쌀</li>
+            <li>수산&#183;해산&#183;건어물</li>
+            <li>정육&#183;계란</li>
+          </ul>
+          <ul>
+            <li>국&#183;반찬&#183;메인요리</li>
+            <li>샐러드&#183;간편식</li>
+            <li>면&#183;양념&#183;오일</li>
+            <li>생수&#183;음료&#183;우유&#183;커피</li>
+          </ul>
+        </div>
+        <div id="item-slider">
+          <div id="item-inner">
+            <ul id="items">
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+              <li>
+                <a href=""><img src="api/product/download1" alt="" /></a>
+                <p>[하늬바람] 반건조 민어 260g(냉동)</p>
+                <p>9,900 원</p>
+                <span>
+                  <a href=""><img src="/imges/cart3.svg" alt="" /></a>
+                </span>
+              </li>
+            </ul>
+            <div id="btn">
+              <ul>
+                <li class="left">
+                  <img src="/imges/chevron-left.svg" alt="" />
+                </li>
+                <li class="right">
+                  <img src="/imges/chevron-right.svg" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="sub-all-btn3">
+          <p><a href=""> 수산&#183;해산&#183;건어물 전체보기</a></p>
+        </div>
+      </div>
+    </div>
     <!-- 베너 광고 -->
     <div id="banner">
-      <img src="./imges/banner2.jpg" alt="" />
+      <img src="/imges/banner2.jpg" alt="" />
     </div>
+    <!-- footer -->
     <div id="footer_include"></div>
     <script src="./Assets/Scripts/JS/script.js"></script>
     <script src="./Assets/Scripts/JS/mainSlide.js"></script>
     <script src="./Assets/Scripts/JS/includehtml.js"></script>
+
     <script src="./Assets/Scripts/JS/script.js"></script>
+
   </body>
 </html>
