@@ -3,6 +3,7 @@ axios
   .then((data) => {
     console.log(data);
     getList(data.data[1].img);
+    getList(data.data[1].manufacturer);
   })
   .catch((err) => {
     console.error(err);
@@ -12,9 +13,8 @@ const itemList = document.getElementById("item-image");
 const itemDelivery = document.getElementById("item-delivery");
 const itemName = document.getElementById("item-name");
 const categoriList = document.getElementById("item-list");
-console.log(itemList);
 
-async function getList(img, name) {
+async function getList(img, manufacturer) {
   try {
     const itemDiv = document.createElement("div");
     const itemImg = document.createElement("img");
@@ -33,13 +33,10 @@ async function getList(img, name) {
     hight:920px;`;
     itemImg.src = `/api/product/download${img}`;
 
-    itemInfoP = `
-    
-    `;
+    itemInfoP.innerText = `${manufacturer}`;
 
+    itemName.append(itemInfoP);
     itemDiv.append(itemImg);
-    itemName.append(itemImg);
-    itemDelivery.append(itemInfoP);
     itemList.append(itemDiv);
   } catch (error) {
     console.log(error);
