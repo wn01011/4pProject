@@ -48,7 +48,6 @@ router
 //   }
 // });
 
-// 이미지 처음에 불러오기
 async function setImages() {
   let len = 0;
   await fs.readdir("./Images", (err, datas) => {
