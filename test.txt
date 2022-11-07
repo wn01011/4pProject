@@ -1,0 +1,22 @@
+git add .
+// 바뀐 모든 항목을 등록한다
+git commit -m "message"
+// message 를 담아서 커밋을 한다.
+git push
+// 실제로 보낸다.
+
+git checkout "branch-name"
+//branch 바꾸기 kws
+
+현재 dev와 git의 dev는 다를 수있다.(업데이트)
+
+git checkout dev
+git fetch
+git pull
+
+git merge -Xtheirs dev(dev를 내것에다 덮어쓰기)
+
+git add .
+git commit -m "message"
+git push
+dev를 kws에다 덮어씌웠으니 git에다 전송

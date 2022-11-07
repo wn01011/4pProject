@@ -2,9 +2,10 @@ const { Router } = require("express");
 const crypto = require("crypto-js");
 const jwt = require("jsonwebtoken");
 const db = require("../models/index.js");
-
+const dotenv = require("dotenv");
 const router = Router();
 
+dotenv.config();
 // 유저 정보 일단 담아둘 곳
 const users = [];
 
@@ -23,8 +24,55 @@ router
   .get((req, res) => {
     res.send();
   })
-  .post((req, res) => {
+  .post(async (req, res) => {
+    console.log("받았어", req.body);
+    try {
+      const tempUser = await db.findOne({ where: { userId: req.body.id } });
+      // db
+      if (!tempUser) {
+        res.status(500);
+        res.send({ message: "no ID" });
+        return;
+      }
+      if (tempUser.userPw == crypto.SHA256(req.body.pw).toString()) {
+        console.log();
+        const expireTime = "20";
+        res.cookie("clearLogin", createJwt(tempUser.id, process.env.ADMIN_PW), {
+          expires: expireTime + "s",
+        });
+        res.send({
+          status: 200,
+          id: tempUser.id,
+          name: tempUser.name,
+        });
+        return;
+      }
+      res.status(500);
+      res.send({ message: "wrong password" });
+    } catch {
+      res.status(500);
+      res.send(error);
+    }
+  });
+
+router
+  .route("/regist")
+  .get((req, res) => {
     res.send();
+  })
+  .post((req, res) => {
+    console.log(req.body);
+    db.UserTable.create({
+      userId: req.body.id,
+      pw: crypto.SHA256(req.body.pw).toString(),
+      name: req.body.name,
+      isManager: 0,
+      address: req.body.address,
+      gender: req.body.gender,
+      birthday: `${req.body.birthday.year}-${req.body.birthday.month}-${req.body.birthday.day}`,
+    }).then((data) => {
+      res.send(data);
+    });
   });
 
 // 로그인에 대한 토큰일 필요해 보여서 토큰 여기에 생성
@@ -33,6 +81,7 @@ let jwtKey = "abcd";
 
 /*****************************/
 // jwt 생성 함수
+
 function createJwt(name, key) {
   // JWT 토큰 만료시간 지정
   const expireTime = "20";
@@ -63,20 +112,9 @@ function createJwt(name, key) {
 //   })
 //   .catch((err) => console.error(err));
 
-db.userdb.sequelize
-  .sync({ force: false })
-  // db 서버와 연결한다, force는 설정된 테이블을 강제로 생성한다.
-  // 우리가 express 서버에서 설정한 테이블 데이터와 실제 DB서버의 테이블 데이터가 다를 경우에 서버의 테이블을 새로 생성하기 위해 사용한다.
-  .then((data) => {
-    console.log(`db connected`);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
-
 // userdb create 양식
 
-// db.userdb.UserTable.create({
+// db.UserTable.create({
 //   userId: "0",
 //   pw: "1234",
 //   name: "kjk",

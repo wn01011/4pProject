@@ -1,7 +1,11 @@
 const { Router } = require("express");
 const db = require("../models/index.js");
 const fs = require("fs");
+const path = require("path");
+const { sequelize } = require("../models/index.js");
 const router = Router();
+const seq = require("sequelize");
+const op = seq.Op;
 
 console.log("프로덕트 라우트 안이다!!!!!!");
 // "/api/product"
@@ -11,7 +15,7 @@ router
     res.send();
   })
   .post((req, res) => {
-    console.log("hi", req.body);
+
     const tempSend = [];
     db.ProductTable.findAll().then((data) => {
       data.forEach((item) => {
@@ -43,6 +47,37 @@ router
 //     }
 //   }
 // });
+
+// 이미지 처음에 불러오기
+async function setImages() {
+  let len = 0;
+  await fs.readdir("./Images", (err, datas) => {
+    len = datas.length;
+    for (let i = 1; i <= len; ++i) {
+      router.get(`/download${i}`, (req, res) => {
+        fs.readFile("./Images/" + i + ".jpg", (err, data) => {
+          res.writeHead(200, { "Content-Type": "text/html" });
+          res.end(data);
+        });
+      });
+    }
+  });
+}
+setImages();
+
+// 이미지 인덱스로 등록하기
+// async function setImages(idx) {
+//   let len = 0;
+//   await fs.readdir("./Images", (err, datas) => {
+//     len = datas.length;
+//     router.get(`/download${idx}`, (req, res) => {
+//       fs.readFile("./Images/" + idx + ".jpg", (err, data) => {
+//         res.writeHead(200, { "Content-Type": "text/html" });
+//         res.end(data);
+//       });
+//     });
+//   });
+// }
 
 // productdb create 양식
 
