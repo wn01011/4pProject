@@ -27,12 +27,33 @@ router
     res.send();
   });
 
+router
+  .route("/regist")
+  .get((req, res) => {
+    res.send();
+  })
+  .post((req, res) => {
+    console.log(req.body);
+    db.UserTable.create({
+      userId: req.body.id,
+      pw: req.body.pw,
+      name: req.body.name,
+      isManager: 0,
+      address: req.body.address,
+      gender: req.body.gender,
+      birthday: `${req.body.birthday.year}-${req.body.birthday.month}-${req.body.birthday.day}`,
+    }).then((data) => {
+      res.send(data);
+    });
+  });
+
 // 로그인에 대한 토큰일 필요해 보여서 토큰 여기에 생성
 // 토큰에 대한 키.. 일단 만들어둠
 let jwtKey = "abcd";
 
 /*****************************/
 // jwt 생성 함수
+
 function createJwt(name, key) {
   // JWT 토큰 만료시간 지정
   const expireTime = "20";

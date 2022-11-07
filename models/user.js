@@ -22,6 +22,18 @@ module.exports = class UserTable extends Sequelize.Model {
           type: Sequelize.TINYINT(1), // mysql에선 boolean이 애초에 tinyint(1)로 변환된다.
           allowNull: false,
         },
+        address: {
+          type: Sequelize.STRING(255), // VARCHAR
+          allowNull: true,
+        },
+        gender: {
+          type: Sequelize.STRING(255), // VARCHAR
+          allowNull: true,
+        },
+        birthday: {
+          type: Sequelize.STRING(255), // VARCHAR
+          allowNull: true,
+        },
       },
       {
         sequelize, // 기본
