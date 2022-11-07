@@ -50,11 +50,6 @@ router
       res.status(500);
       res.send(error);
     }
-
-    if (된다면) {
-      res.cookie();
-      res.send();
-    }
   });
 
 router
