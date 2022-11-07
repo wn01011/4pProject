@@ -273,7 +273,7 @@ h1 {
   cursor: pointer;
 }
 
-#btn ul > #left {
+#btn ul > .left {
   display: none;
 }
 /* ============= */

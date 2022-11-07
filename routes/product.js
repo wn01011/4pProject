@@ -10,7 +10,19 @@ router
     res.send();
   })
   .post((req, res) => {
-    res.send("post로 요청을 보냈군요?");
+    const tempSend = [];
+    db.ProductTable.findAll().then((data) => {
+      data.forEach((item) => {
+        if (
+          Object.values(item.dataValues.category[0]).includes(
+            `${req.body.data}`
+          )
+        ) {
+          tempSend.push(item.dataValues);
+        }
+      });
+      res.send(tempSend);
+    });
   });
 
 // product.json 파일 넣는 곳

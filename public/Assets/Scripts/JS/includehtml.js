@@ -11,8 +11,8 @@ function includeHTML(divContainer, urlHTML) {
   xhttp.send();
 }
 
-includeHTML(document.getElementById("header_include"), "header.html");
-includeHTML(document.getElementById("footer_include"), "footer.html");
+includeHTML(document.getElementById("header_include"), "/header.html");
+includeHTML(document.getElementById("footer_include"), "/footer.html");
 // item slide html include하는 함수입니다.
 
 window.onscroll = function () {

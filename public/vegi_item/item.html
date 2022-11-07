@@ -4,10 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>detail</title>
-    <link rel="stylesheet" href="/Assets/Scripts/CSS/items.css" />
+    <link rel="stylesheet" href="./items.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
-
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
@@ -15,15 +14,13 @@
     <div class="detail">
       <div class="detail-inner">
         <div style="display: flex; width: 1050px">
-          <div class="item-image">
-            <img src="/api/product/download20" alt="" />
-          </div>
+          <div id="item-image" class="item-image"></div>
           <div class="item-info">
             <div class="item-info-ul1">
-              <div>
+              <div id="item-delivery">
                 <p>샛별배송</p>
               </div>
-              <div>
+              <div id="item-name">
                 <h2>그린빈스 (줄기콩)</h2>
               </div>
               <div>
@@ -155,7 +152,7 @@
       </div>
     </div>
     <div id="footer_include"></div>
-    <script src="/public/Assets/Scripts/JS/item.js"></script>
-    <script src="/public/Assets/Scripts/JS/includehtml.js"></script>
+    <script src="/Assets/Scripts/JS/includehtml.js"></script>
+    <script src="./item.js"></script>
   </body>
 </html>
