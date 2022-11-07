@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+button {
+  cursor: pointer;
+}
+#login_contents {
+  display: flex;
+  justify-content: center;
+}
+#login_contents_h1 {
+  display: inline;
+}
+#login_contents_h1 > h1 {
+  text-align: center;
+}
+#login_wrap {
+  width: 340px;
+}
+#login_input_box {
+  display: flex;
+  flex-direction: column;
+}
+#login_input_id {
+  width: 100%;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+#login_input_pw {
+  width: 100%;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  padding: 15px;
+}
+#find_id_password {
+  display: flex;
+  justify-content: end;
+  padding: 10 0 10 0px;
+}
+#find_id_password_center {
+  display: inline;
+}
+#find_id_password_id {
+  font-size: 3px;
+}
+#find_id_password_span {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-right: 1px solid gainsboro;
+}
+#find_id_password_password {
+  font-size: 3px;
+}
+#login_btn_box {
+  display: flex;
+  flex-direction: column;
+}
+#sign_in_btn {
+  background-color: #c2eaec;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 20 0 20 0px;
+  font-size: 18;
+  margin-bottom: 10px;
+  font-family: "Gothic A1", sans-serif;
+}
+
+#sign_up_btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20 0 20 0px;
+  font-size: 18;
+  font-family: "Gothic A1", sans-serif;
+}

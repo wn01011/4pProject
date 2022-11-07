@@ -1,0 +1,292 @@
+.asterisk {
+  color: #ff4f62;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input:focus {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+#signup_contents {
+  display: flex;
+  justify-content: center;
+}
+#signup_contents_center {
+  width: 640px;
+}
+#signup_contents_h1 {
+  text-align: center;
+}
+#signup_essential {
+  display: flex;
+  justify-content: end;
+  padding-bottom: 5px;
+}
+#signup_board {
+  border-top: 2px solid black;
+  border-bottom: 1px solid gainsboro;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+#signup_board > div {
+  padding: 10px;
+}
+#signup_board_id {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#signup_board_id_text {
+  width: 150px;
+  display: flex;
+}
+#signup_board_id_text_id {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_id_input {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 10px;
+  flex: 1;
+}
+#signup_board_id_input_input {
+  border: none;
+  font-size: 18px;
+  width: 100%;
+}
+#signup_board_id_deduplication {
+  width: 120px;
+  border: 2px solid #c2eaec;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: transparent;
+  border-radius: 3px;
+}
+#signup_board_pw {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#signup_board_pw_text {
+  width: 150px;
+  display: flex;
+}
+#signup_board_pw_text_pw {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_pw_input {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 10px;
+  flex: 1;
+}
+#signup_board_pw_input_input {
+  border: none;
+  width: 100%;
+  font-size: 18px;
+}
+#signup_board_pw_whitespace {
+  width: 120px;
+  padding: 10px;
+  margin-left: 10px;
+}
+#signup_board_confirmpw {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#signup_board_confirmpw_text {
+  width: 150px;
+  display: flex;
+}
+#signup_board_confirmpw_text_pw {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_confirmpw_input {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 10px;
+  flex: 1;
+}
+#signup_board_confirmpw_input_input {
+  width: 100%;
+  border: none;
+  font-size: 18px;
+}
+#signup_board_confirmpw_whitespace {
+  width: 120px;
+  padding: 10px;
+  margin-left: 10px;
+}
+#signup_board_name {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#signup_board_name_text {
+  width: 150px;
+  display: flex;
+}
+#signup_board_name_text_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_name_input {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 10px;
+  flex: 1;
+}
+#signup_board_name_input_input {
+  border: none;
+  width: 100%;
+  font-size: 18px;
+}
+#signup_board_name_whitespace {
+  width: 120px;
+  padding: 10px;
+  margin-left: 10px;
+}
+#signup_board_address {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#signup_board_address_text {
+  width: 150px;
+  display: flex;
+}
+#signup_board_address_text_address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_address_btn {
+  border: 2px solid #c2eaec;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  /* border: none; */
+  background: transparent;
+  font-size: 18px;
+  display: flex;
+}
+#signup_board_address_btn_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_address_whitespace {
+  width: 120px;
+  padding: 10px;
+  margin-left: 10px;
+}
+#signup_board_gender {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#signup_board_gender_text {
+  width: 150px;
+  display: flex;
+}
+#signup_board_gender_text_gender {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_gender_radiobox {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+input[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) dotted #c2eaec;
+}
+#signup_board_address_btn_btn_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_gender_whitespace {
+  width: 120px;
+  padding: 10px;
+  margin-left: 10px;
+}
+#signup_board_birthday {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#signup_board_birthday_text {
+  width: 150px;
+  display: flex;
+}
+#signup_board_birthday_text_birthday {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_birthday_inputbox {
+  border: 1px solid gainsboro;
+  width: 340px;
+  display: flex;
+  padding: 0 10 0 10px;
+}
+#signup_board_birthday_inputbox_year {
+  border: none;
+  text-align: center;
+  width: 33%;
+  padding: 10 0 10 0px;
+}
+#signup_board_birthday_inputbox_month {
+  border: none;
+  text-align: center;
+  width: 33%;
+  padding: 10 0 10 0px;
+}
+#signup_board_birthday_inputbox_day {
+  border: none;
+  text-align: center;
+  width: 33%;
+  padding: 10 0 10 0px;
+}
+.signup_board_birthday_inputbox_slash {
+  margin: 0 5 0 5px;
+  color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup_board_birthday_whitespace {
+  width: 120px;
+  padding: 10px;
+  margin-left: 10px;
+}
+#signup_btn {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+#signup_btn_btn {
+  color: white;
+  background-color: #c2eaec;
+  border-radius: 3px;
+  padding: 10 80 10 80;
+  border: none;
+  font-size: 20px;
+}

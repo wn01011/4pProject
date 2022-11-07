@@ -1,0 +1,93 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/ServiceCenter/index.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>고객센터</title>
+  </head>
+  <body>
+    <div id="header_include"></div>
+    <div id="serviceCenter_contents">
+      <div id="serviceCenter_contents_center">
+        <div id="serviceCenter_sidebar">
+          <div id="serviceCenter_sidebar_title"><h2>고객센터</h2></div>
+          <ul id="serviceCenter_sidebar_list">
+            <li id="serviceCenter_sidebar_list_item_1">
+              <a href="/serviceCenter"
+                ><span> 공지사항</span
+                ><svg
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    class="path1"
+                    d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li id="serviceCenter_sidebar_list_item_2">
+              <a href="/serviceCenter/askanswer"
+                ><span>1:1 문의</span
+                ><svg
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    class="path1"
+                    d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="serviceCenter_main">
+          <div id="serviceCenter_main_title">
+            <h2>공지사항</h2>
+            <span>마켓 클리어의 새로운 소식.</span>
+          </div>
+          <div id="serviceCenter_main_stylized">
+            <span id="serviceCenter_main_stylized_number">번호</span>
+            <span id="serviceCenter_main_stylized_title">제목</span>
+            <span id="serviceCenter_main_stylized_date">작성일</span>
+            <span id="serviceCenter_main_stylized_status">답변상태</span>
+          </div>
+          <div id="noticeList">
+            <!-- 
+            <div class="noticeList_item">
+              <span class="noticeList_number"></span>
+              <span class="noticeList_title"></span>
+              <span class="noticeList_date"></span>
+              <span class="noticeList_status"></span>
+            </div>
+           -->
+            <!-- 아래는 임시로 만든 것입니다.  -->
+            <div class="noticeList_item">
+              <span class="noticeList_number">1</span>
+              <span class="noticeList_title">1</span>
+              <span class="noticeList_date">1</span>
+              <span class="noticeList_status">1</span>
+            </div>
+          </div>
+          <div class="noticeList_paging">
+            <div></div>
+            <div></div>
+          </div>
+          <!-- page prev, next -->
+        </div>
+      </div>
+    </div>
+    <div id="footer_include"></div>
+    <script src="/Assets/Scripts/JS/includehtml.js"></script>
+  </body>
+</html>

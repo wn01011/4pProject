@@ -1,16 +1,13 @@
 * {
-  word-break: break-all;
-  text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 html,
 body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 100%;
   z-index: 222;
 }
-
 a {
   color: black;
   text-decoration: none;
@@ -19,11 +16,9 @@ a {
 input:focus {
   outline: none;
 }
-
 li {
   list-style-type: none;
 }
-
 .marketClearLogo {
   width: 110px;
 }
@@ -57,19 +52,26 @@ li {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+#sign_up.off {
+  display: none;
+}
 #sign_in {
   border-right: 1px solid gainsboro;
   padding-left: 20px;
   padding-right: 20px;
 }
-
-#service_center {
-  padding-left: 20px;
+#sign_in.off {
+  display: none;
+}
+#user_info {
+  display: none;
+}
+#user_info.on {
+  display: block;
   position: relative;
 }
-#service_center_dropdown {
-  display: block;
+#user_info_dropdown {
+  display: none;
   width: 130px;
   right: 0px;
   padding: 7px;
@@ -79,14 +81,32 @@ li {
   font-size: 12px;
   font-weight: bold;
 }
-#service_center:hover #service_center_dropdown {
+#user_info.on:hover #user_info_dropdown {
+  display: block;
+}
+#user_info_dropdown > div {
+  padding-bottom: 10px;
+}
+.service_center {
+  padding-left: 20px;
+  position: relative;
+}
+.service_center_dropdown {
+  display: none;
+  width: 130px;
+  right: 0px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 12px;
+  font-weight: bold;
+}
+.service_center:hover .service_center_dropdown {
   display: block;
 }
 
-#service_center_dropdown_notice {
-  padding-bottom: 10px;
-}
-#service_center_dropdown_QandA {
+.service_center_dropdown_notice {
   padding-bottom: 10px;
 }
 #header_main {
@@ -216,6 +236,7 @@ li {
   font-size: 14px;
 }
 #header_scroll {
+  background-color: white;
   margin: 0;
   top: 0;
   display: none;
