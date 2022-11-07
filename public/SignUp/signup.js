@@ -76,14 +76,14 @@ document.getElementById("signup_btn_btn").onclick = async () => {
   try {
     const data = await axios.post("/api/user/regist", {
       id: inputIdValue,
-      pw: inputPw,
-      name: inputName,
+      pw: inputPwValue,
+      name: inputNameValue,
       // address:,
-      gender: inputGender,
+      gender: inputGenderValue,
       birthday: {
-        year: inputYear,
-        month: inputMonth,
-        day: inputDay,
+        year: inputYearValue,
+        month: inputMonthValue,
+        day: inputDayValue,
       },
     });
   } catch (error) {
