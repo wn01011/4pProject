@@ -15,7 +15,6 @@ router
     res.send();
   })
   .post((req, res) => {
-
     const tempSend = [];
     db.ProductTable.findAll().then((data) => {
       data.forEach((item) => {
@@ -37,9 +36,18 @@ router
     res.send();
   })
   .post((req, res) => {
-    console.log(req.body);
+    const tempSend = [];
     db.ProductTable.findAll().then((data) => {
-      res.send(data);
+      data.forEach((item) => {
+        if (
+          Object.values(item.dataValues.category[0]).includes(
+            `${req.body.data}`
+          )
+        ) {
+          tempSend.push(item.dataValues);
+        }
+      });
+      res.send(tempSend);
     });
   });
 
@@ -53,19 +61,19 @@ router
 
 // product.json 파일 넣는 곳
 // fs.readFile("./product.json", "utf-8", function (err, data) {
-//   if (err) {
-//     console.error(err.message);
-//   } else {
-//     if (data) {
-//       JSON.parse(data).forEach((item) => {
-//         try {
-//           db.ProductTable.create(item);
-//         } catch (err) {
-//           console.error(err);
-//         }
-//       });
-//     }
-//   }
+// if (err) {
+// console.error(err.message);
+// } else {
+// if (data) {
+// JSON.parse(data).forEach((item) => {
+// try {
+// db.ProductTable.create(item);
+// } catch (err) {
+// console.error(err);
+// }
+// });
+// }
+// }
 // });
 
 async function setImages() {

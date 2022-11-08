@@ -1,3 +1,6 @@
+let currItemName = "";
+let currUserId = "1";
+// ===== 상품 =====
 let currImg = "";
 let currDelivery = "";
 let currName = "";
@@ -12,8 +15,6 @@ let currOrigin = "";
 axios
   .post("/api/product/", { data: "채소" })
   .then((data) => {
-    console.log(data.data[0].category[0]);
-    console.log(data);
     getList(
       data.data[0].img,
       data.data[0].delivery,
@@ -26,6 +27,25 @@ axios
       data.data[0].weight,
       data.data[0].origin
     );
+    currItemName = data.data[1].name;
+
+    currItemCategory = data.data[0].category[0];
+    // 상품 문의쪽 정보 불러오는 곳
+    axios
+      .post("/api/notice/productask", { productName: currItemName })
+      .then((data) => {
+        if (data.data.length > 0) askDefault.classList.add("off");
+        data.data.forEach((item) => {
+          createAskList(
+            item.name,
+            item.userId,
+            item.createdAt.slice(0, 10),
+            item.isAnswer,
+            item.text,
+            item.answerText
+          );
+        });
+      });
   })
   .catch((err) => {
     console.error(err);
@@ -169,3 +189,125 @@ async function getList(
     console.log(error);
   }
 }
+
+const askTable = document.getElementById("ask-table");
+const askDefault = document.getElementById("ask-default");
+
+function createAskList(title, user, date, state, q, a) {
+  // Q&A 간략 내용
+  const tempList = document.createElement("div");
+  const titleDiv = document.createElement("div");
+  const userDiv = document.createElement("div");
+  const dateDiv = document.createElement("div");
+  const stateDiv = document.createElement("div");
+
+  tempList.style = `
+    width : 100%;
+    display: flex;
+    cursor : pointer;
+  `;
+  titleDiv.style = `
+    text-align : center;
+    width : 60%;
+    padding : 10px 0px;
+    border-bottom: lightgrey solid 1px;
+  `;
+  userDiv.style = `
+    text-align : center;
+    width : 15%;
+    padding : 10px 0px;
+    border-bottom: lightgrey solid 1px;
+  `;
+  dateDiv.style = `
+    text-align : center;
+    width : 15%;
+    padding : 10px 0px;
+    border-bottom: lightgrey solid 1px;
+  `;
+  stateDiv.style = `
+    text-align : center;
+    width : 10%;
+    padding : 10px 0px;
+    border-bottom: lightgrey solid 1px;
+  `;
+
+  titleDiv.innerText = title;
+  userDiv.innerText = user;
+  dateDiv.innerText = date;
+  if (state == 0) stateDiv.innerText = "대기중";
+  else stateDiv.innerText = "답변완료";
+
+  tempList.appendChild(titleDiv);
+  tempList.appendChild(userDiv);
+  tempList.appendChild(dateDiv);
+  tempList.appendChild(stateDiv);
+  askTable.appendChild(tempList);
+
+  if (state == 0 && currUserId != user) return;
+  // Q&A 상세 내용
+  const detailDiv = document.createElement("div");
+  const detailQ = document.createElement("div");
+  const detailA = document.createElement("div");
+
+  detailDiv.classList.add("off");
+  tempList.onclick = () => {
+    detailDiv.classList.toggle("off");
+  };
+
+  detailQ.style = `
+    text-align : left;
+    width : 100%;
+    padding : 20px;
+    padding-left: 50px;
+    background-color: rgb(228, 228, 228);
+  `;
+
+  detailA.style = `
+    text-align : left;
+    width : 100%;
+    padding : 20px;
+    padding-left: 50px;
+    background-color: rgb(228, 228, 228);
+  `;
+
+  detailQ.innerText = "Q : " + q;
+  detailA.innerText = "A : " + a;
+  detailDiv.appendChild(detailQ);
+  detailDiv.appendChild(detailA);
+  tempList.after(detailDiv);
+}
+
+// 상품 문의 모달창
+const askModal = document.getElementById("ask-modal");
+const modalClose = document.getElementsByClassName("close-area")[0];
+const askBtn = document.getElementsByClassName("item-ask-btn")[0].children[0];
+modalClose.onclick = () => {
+  askModal.classList.toggle("off");
+};
+askBtn.onclick = () => {
+  askModal.classList.remove("off");
+};
+
+const modalSubmitBtn = document.getElementsByClassName("submit-area")[0];
+const modalTextArea = document.getElementById("modal-ask-area");
+const modalName = document.getElementById("modal-name");
+
+modalSubmitBtn.onclick = () => {
+  const name = modalName.value;
+  const value = modalTextArea.value;
+  if (name == "" || value == "") return;
+  axios
+    .post("/api/notice/modalask", {
+      userId: "2",
+      productName: currItemName,
+      name: name,
+      text: value,
+      answerText: undefined,
+      isAnswer: 0,
+    })
+    .then((data) => {
+      console.log(data);
+      askModal.classList.toggle("off");
+      window.location.reload();
+    });
+};
