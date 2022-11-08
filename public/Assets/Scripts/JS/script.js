@@ -1,18 +1,17 @@
 // 서버에 대한 요청 예시
-
 axios
-  .post("/api/product", { data: "과일" })
+  .post("/api/product", { data: "야채" })
   .then((data) => {
     console.log(data);
   })
   .catch((err) => {
     console.error(err);
   });
+
 axios
   .post("/api/product", { data: "건어물" })
   .then((data) => {
     console.log(data);
-    document.value = data.data[0].allergy;
   })
   .catch((err) => {
     console.error(err);
@@ -88,11 +87,11 @@ axios
 // 응답 예시 data.data = {data : "로그인 가능"}
 
 // 로그아웃 기능
-document.getElementById("user_info_dropdown_logout").onclick =
-  async function () {
-    try {
-      const data = await axios.get("/api/user/logout");
-    } catch (error) {
-      console.error(error.response.data.message);
-    }
-  };
+// document.getElementById("user_info_dropdown_logout").onclick =
+//   async function () {
+//     try {
+//       const data = await axios.get("/api/user/logout");
+//     } catch (error) {
+//       console.error(error.response.data.message);
+//     }
+//   };

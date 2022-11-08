@@ -1,22 +1,32 @@
-console.log("come");
-
 let subSlides = document.getElementById("items"),
   subslide = document.getElementById("items li"),
   currentIdx1 = 0,
   subslideWidth = 1090,
-  subslideMargin = 12,
+  subslideMargin = 29,
   leftBtn = document.getElementsByClassName("left"),
   rightBtn = document.getElementsByClassName("right");
 
-[...rightBtn].forEach((item, idx) => {
-  item.addEventListener("click", function () {
-    console.log("click");
+[...rightBtn].forEach((item) => {
+  item.onclick = function () {
     moveSlide1(currentIdx1 + 1);
-  });
+    console.log(currentIdx1);
+    if (currentIdx1 >= 1) {
+      console.log("hey");
+      leftBtn[0].style.display = "flex";
+    }
+  };
+});
 
-  leftBtn[idx].addEventListener("click", function () {
-    moveSlide1(currentIdx1 - 1);
-  });
+[...leftBtn].forEach((item) => {
+  item.onclick = function () {
+    console.log(currentIdx1);
+
+    if (currentIdx1 <= 0) {
+      return;
+    } else {
+      moveSlide1(currentIdx1 - 1);
+    }
+  };
 });
 
 // 이미지 슬라이드

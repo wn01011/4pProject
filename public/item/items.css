@@ -36,7 +36,7 @@ li {
 .item-info {
   display: flex;
   flex-wrap: wrap;
-  width: 610px;
+  width: 590px;
   justify-content: flex-start;
   margin-left: 40px;
 }
@@ -60,7 +60,7 @@ li {
 
 #item-ea {
   display: flex;
-  width: 88px;
+  width: 90px;
   height: 30px;
   border: 1px solid rgb(205, 204, 204);
   justify-content: space-between;
@@ -74,12 +74,13 @@ li {
   padding: 20 0 20 0px;
 }
 
-.item-select p {
+.item-select > p {
   width: 150px;
+  /* text-align: center; */
 }
 
 .item-select-inner {
-  width: 470px;
+  width: 440px;
   border: 1px solid rgb(205, 204, 204);
 }
 
@@ -90,7 +91,7 @@ li {
   flex-wrap: wrap;
   line-height: 2;
   padding: 10px;
-  width: 471px;
+  width: 440px;
 }
 
 .item-ea-price {
@@ -99,18 +100,29 @@ li {
   justify-content: space-between;
 }
 
+.item-select-ea span {
+  font-size: 15px;
+}
+
+#item-total-price span {
+  display: flex;
+  align-items: flex-end;
+}
+
 #item-ea button {
-  width: 30px;
+  width: 60px;
   height: 30px;
   background-color: rgb(223, 223, 223);
   border: none;
+  font-size: 20px;
 }
 
 .cart-dama button {
-  width: 300px;
-  color: rgb(205, 204, 204);
-  background-color: aquamarine;
-  padding: 10px 0px;
+  width: 440px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(137, 234, 201);
+  padding: 15px 0px;
+  border: rgb(72, 125, 108);
 }
 
 .item-ask {
@@ -198,12 +210,12 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 470px;
+  width: 420px;
   margin-left: 50px;
 }
 
 .c {
-  width: 620px;
+  width: 590px;
   display: flex;
   flex-wrap: wrap;
   /* justify-content: flex-start; */
