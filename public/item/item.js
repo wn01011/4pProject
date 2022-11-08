@@ -1,3 +1,14 @@
+let currImg = "";
+let currDelivery = "";
+let currName = "";
+let currDescription = "";
+let currPrice = "";
+let currManufacturer = "";
+let currPackage = "";
+let currUnit = "";
+let currWeight = "";
+let currOrigin = "";
+
 axios
   .post("/api/product/", { data: "채소" })
   .then((data) => {
