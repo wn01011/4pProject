@@ -18,6 +18,22 @@ axios
       data.data[1].origin
     );
     currItemName = data.data[1].name;
+    // 상품 문의쪽 정보 불러오는 곳
+    axios
+      .post("/api/notice/productask", { productName: currItemName })
+      .then((data) => {
+        if (data.data.length > 0) askDefault.classList.add("off");
+        data.data.forEach((item) => {
+          createAskList(
+            item.name,
+            item.userId,
+            item.createdAt.slice(0, 10),
+            item.isAnswer,
+            item.text,
+            item.answerText
+          );
+        });
+      });
   })
   .catch((err) => {
     console.error(err);
@@ -220,23 +236,6 @@ function createAskList(title, user, date, state, q, a) {
   detailDiv.appendChild(detailA);
   tempList.after(detailDiv);
 }
-
-// 상품 문의쪽 정보 불러오는 곳
-axios
-  .post("/api/notice/productask", { productName: "친환경 깐 생강 50g" })
-  .then((data) => {
-    if (data.data.length > 0) askDefault.classList.add("off");
-    data.data.forEach((item) => {
-      createAskList(
-        item.name,
-        item.userId,
-        item.createdAt.slice(0, 10),
-        item.isAnswer,
-        item.text,
-        item.answerText
-      );
-    });
-  });
 
 // 상품 문의 모달창
 const askModal = document.getElementById("ask-modal");
