@@ -61,6 +61,19 @@ router.route("/productask").post((req, res) => {
   });
 });
 
+router.route("/modalask").post((req, res) => {
+  db.ProductaskTable.create({
+    userId: req.body.userId,
+    productName: req.body.productName,
+    name: req.body.name,
+    text: req.body.text,
+    answerText: req.body.answerText,
+    isAnswer: req.body.isAnswer,
+  }).then((data) => {
+    res.send(data);
+  });
+});
+
 function getToday() {
   var date = new Date();
   var year = date.getFullYear();

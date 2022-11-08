@@ -1,3 +1,5 @@
+let currItemName = "";
+let currUserId = "1";
 axios
   .post("/api/product", { data: "채소" })
   .then((data) => {
@@ -15,6 +17,7 @@ axios
       data.data[1].weight,
       data.data[1].origin
     );
+    currItemName = data.data[1].name;
   })
   .catch((err) => {
     console.error(err);
@@ -184,7 +187,7 @@ function createAskList(title, user, date, state, q, a) {
   tempList.appendChild(stateDiv);
   askTable.appendChild(tempList);
 
-  if (state == 0) return;
+  if (state == 0 && currUserId != user) return;
   // Q&A 상세 내용
   const detailDiv = document.createElement("div");
   const detailQ = document.createElement("div");
@@ -220,7 +223,7 @@ function createAskList(title, user, date, state, q, a) {
 
 // 상품 문의쪽 정보 불러오는 곳
 axios
-  .post("/api/notice/productask", { productName: "유기농 딜 10g" })
+  .post("/api/notice/productask", { productName: "친환경 깐 생강 50g" })
   .then((data) => {
     if (data.data.length > 0) askDefault.classList.add("off");
     data.data.forEach((item) => {
@@ -234,3 +237,39 @@ axios
       );
     });
   });
+
+// 상품 문의 모달창
+const askModal = document.getElementById("ask-modal");
+const modalClose = document.getElementsByClassName("close-area")[0];
+const askBtn = document.getElementsByClassName("item-ask-btn")[0].children[0];
+modalClose.onclick = () => {
+  askModal.classList.toggle("off");
+};
+askBtn.onclick = () => {
+  askModal.classList.remove("off");
+};
+
+const modalSubmitBtn = document.getElementsByClassName("submit-area")[0];
+const modalTextArea = document.getElementById("modal-ask-area");
+const modalName = document.getElementById("modal-name");
+
+modalSubmitBtn.onclick = () => {
+  const name = modalName.value;
+  const value = modalTextArea.value;
+  if (name == "" || value == "") return;
+  axios
+    .post("/api/notice/modalask", {
+      userId: "2",
+      productName: currItemName,
+      name: name,
+      text: value,
+      answerText: undefined,
+      isAnswer: 0,
+    })
+    .then((data) => {
+      console.log(data);
+      askModal.classList.toggle("off");
+      window.location.reload();
+    });
+};
+//

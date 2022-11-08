@@ -146,13 +146,29 @@
       </div>
     </div>
     <!-- 문의 모달창 -->
-    <div id="ask-modal" class="modal-overlay">
+    <div id="ask-modal" class="modal-overlay off">
       <div class="modal-window">
         <div class="title">
-          <h2>모달 Test</h2>
+          <h2>상품 문의</h2>
         </div>
         <div class="close-area">X</div>
-        <div class="content">안뇽하세영</div>
+        <div class="content">
+          <input
+            type="text"
+            id="modal-name"
+            placeholder="문의 제목을 입력해주세요"
+          />
+          <textarea
+            name=""
+            id="modal-ask-area"
+            cols="30"
+            rows="10"
+            placeholder="문의 내용을 입력해주세요"
+          ></textarea>
+        </div>
+        <div id="submit">
+          <button class="submit-area">제출하기</button>
+        </div>
       </div>
     </div>
     <!-- ******************************************* -->
