@@ -21,41 +21,40 @@ router
   });
 
 // 로그인 들어왔을 때 예시
-router
-  .route("/login")
-  .get((req, res) => {
-    res.send();
-  })
-  .post(async (req, res) => {
-    try {
-      console.log(await db.findOne({ where: { userId: req.body.id } }));
-      const tempUser = await db.findOne({ where: { userId: req.body.id } });
-      // db
-      if (!tempUser) {
-        res.status(500);
-        res.send({ message: "no ID" });
-        return;
-      }
-      if (tempUser.userPw == crypto.SHA256(req.body.pw).toString()) {
-        console.log();
-        const expireTime = "20";
-        res.cookie("clearLogin", createJwt(tempUser.id, process.env.ADMIN_PW), {
-          expires: expireTime + "s",
-        });
-        res.send({
-          status: 200,
-          id: tempUser.id,
-          name: tempUser.name,
-        });
-        return;
-      }
-      res.status(500);
-      res.send({ message: "wrong password" });
-    } catch (error) {
-      res.status(500);
-      res.send(error);
+router.route("/login").post(async (req, res) => {
+  try {
+    const tempUser = await db.UserTable.findOne({
+      where: { userId: req.body.id },
+    });
+    // db
+    console.log(tempUser);
+    if (!tempUser) {
+      console.log("디비에 아이디 X");
+      res.send({ status: 402, message: "no ID" });
     }
-  });
+    console.log("디비에 아이디가 있넹");
+    if (tempUser.pw == crypto.SHA256(req.body.pw).toString()) {
+      console.log(tempUser.pw);
+      console.log(crypto.SHA256(req.body.pw).toString());
+      res.cookie(
+        "clearLogin",
+        createJwt(tempUser.userId, process.env.ADMIN_PW)
+      );
+      console.log("쿠키만듦");
+      res.send({
+        status: 200,
+        id: tempUser.id,
+        name: tempUser.name,
+      });
+      return;
+    } else {
+      res.send({ status: 402, message: "wrong password" });
+    }
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+});
 
 router.route("/deduplication").post(async (req, res) => {
   console.log("라우터에서 중복 체크 받음 : " + req.body.id);
@@ -78,8 +77,6 @@ router.route("/deduplication").post(async (req, res) => {
   }
 });
 
-const idCondition = /^(?=.*[0-9]+)[a-zA-Z][a-zA-Z0-9]{8,16}$/g;
-const pwCondition = /(?=.*[0-9])(?=.*[a-z])(?=.*\W)(?=\S+$).{8,20}/;
 router.route("/regist").post((req, res) => {
   console.log(req.body);
   db.UserTable.create({
@@ -104,6 +101,7 @@ let jwtKey = "abcd";
 
 function createJwt(name, key) {
   // JWT 토큰 만료시간 지정
+  console.log("createJwt 성공적으로 호출");
   const expireTime = "20";
   // 토큰 생성
   // sign(토큰 이름, 키, 헤더(옵션))

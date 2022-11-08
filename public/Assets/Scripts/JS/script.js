@@ -30,11 +30,3 @@ axios
 // 응답 예시 data.data = {data : "로그인 가능"}
 
 // 로그아웃 기능
-document.getElementById("user_info_dropdown_logout").onclick =
-  async function () {
-    try {
-      const data = await axios.get("/api/user/logout");
-    } catch (error) {
-      console.error(error.response.data.message);
-    }
-  };
