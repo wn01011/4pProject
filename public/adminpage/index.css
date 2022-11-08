@@ -44,6 +44,12 @@ body {
   margin-top: 80px;
 }
 
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+
 .nav-link {
   outline: none;
   text-decoration: none;
