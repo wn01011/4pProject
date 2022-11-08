@@ -85,7 +85,7 @@ async function getList(
   origin
 ) {
   try {
-    const itemDiv = document.createElement("div");
+    const itemDiv = document.("div");
     const itemImg = document.createElement("img");
     const itemInfoP = document.createElement("p");
     const itemInfoh2 = document.createElement("h2");
@@ -96,7 +96,7 @@ async function getList(
     const itemUnitP = document.createElement("p");
     const itemWeightP = document.createElement("p");
     const itemOriginP = document.createElement("p");
-    const itemSelectSpan = document.createElement("span");
+    const itemSelectSpan = document.("span");
     const itemSelectPrice = document.createElement("span");
     const itemTotalPrice = document.createElement("span");
     const itemSelectPriceLi = document.createElement("li");

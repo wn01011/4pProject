@@ -33,3 +33,62 @@ bCatInput.addEventListener("click", function () {
 bCatInput.addEventListener("click", function () {
   bCatSave.classList.add("bigdirsave");
 });
+
+// 아래는 DB 컴컴
+// Q&A 문의 관리
+
+axios
+  .post("/api/adminpage/qna", { productName: "" })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    throw error;
+  });
+
+//  이 아래로는.. 내일.. 수정하자...  create, formdata도 사용
+async function qnaList(name, productName, userId, createdAtt, isAnswer) {
+  try {
+    const tempGoodsDiv = document.createElement("div");
+    const tempGoodsDel = document.createElement("p");
+    const tempGoodsText = document.createElement("p");
+    const tempGoodsPrice = document.createElement("p");
+    const tempGoodsInfo = document.createElement("p");
+    const tempGoodsCart = document.createElement("img");
+
+    console.log(`/api/adminpage/qna`);
+
+    tempGoodsDel.innerText = `${delivery}`;
+    tempGoodsText.innerText = `${name}`;
+    tempGoodsPrice.innerText = `${price}원`;
+    tempGoodsInfo.innerText = `${description}`;
+
+    tempGoodsCart.style = `
+      width: 30px;
+      position: relative;
+      top: -41px;
+      left: 200px;
+      `;
+
+    goods.style = `
+      display: block;
+      `;
+
+    goodsText.style = `
+      line-height: 1.5;
+      `;
+
+    tempGoodsInfo.style = `
+      padding-bottom: 10px;
+      `;
+
+    goods.append(tempGoodsDiv);
+    goodsText.append(tempGoodsPrice);
+    goodsText.append(tempGoodsText);
+    goodsDel.append(tempGoodsDel);
+    goodsInfo.append(tempGoodsInfo);
+    goodsImg.after(tempGoodsCart);
+  } catch (error) {
+    console.log(error);
+  }
+}

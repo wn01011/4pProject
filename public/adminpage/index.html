@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Market Clear - 관리자 페이지</title>
+    <title>관리자 페이지</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +14,7 @@
       src="https://kit.fontawesome.com/a10ef0afa0.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div id="header">
@@ -619,58 +620,48 @@
             <table class="tg">
               <thead>
                 <tr>
-                  <th class="tg-selti" colspan="2">제목</th>
-                  <th class="tg-selti" colspan="2">상품명</th>
-                  <th class="tg-selti">작성자</th>
-                  <th class="tg-selti">작성일</th>
-                  <th class="tg-selti">답변상태</th>
+                  <th class="tg-qnamanage" colspan="2">제목</th>
+                  <th class="tg-qnamanage" colspan="2">상품명</th>
+                  <th class="tg-qnamanage">작성자</th>
+                  <th class="tg-qnamanage">작성일</th>
+                  <th class="tg-qnamanage">답변상태</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="tg-db-lineodd" colspan="2">
-                    가래떡가래떡가래떡가래떡
-                  </td>
-                  <td class="tg-db-lineodd" colspan="2">
-                    가래떡 맛있겠다 꿀 발라 먹...
-                  </td>
-                  <th class="tg-db-lineodd">고우석</th>
-                  <th class="tg-db-lineodd">연월일</th>
-                  <th class="tg-db-lineodd">대기중</th>
-                </tr>
-                <tr>
-                  <td class="tg-db-lineeven" colspan="2">가래떡가래떡</td>
-                  <td class="tg-db-lineeven" colspan="2"></td>
-                  <th class="tg-db-lineeven">고우석</th>
-                  <th class="tg-db-lineeven">연월일</th>
-                  <th class="tg-db-lineeven">대기중</th>
-                </tr>
-                <tr>
-                  <td class="tg-db-lineodd" colspan="2">
-                    가래떡가래떡가래떡가래떡
-                  </td>
-                  <td class="tg-db-lineodd" colspan="2">
-                    가래떡 맛있겠다 꿀 발라 먹...
-                  </td>
-                  <th class="tg-db-lineodd">고우석</th>
-                  <th class="tg-db-lineodd">연월일</th>
-                  <th class="tg-db-lineodd">대기중</th>
-                </tr>
-                <tr>
-                  <td class="tg-db-lineeven" colspan="2">가래떡가래떡</td>
-                  <td class="tg-db-lineeven" colspan="2"></td>
-                  <th class="tg-db-lineeven">고우석</th>
-                  <th class="tg-db-lineeven">연월일</th>
-                  <th class="tg-db-lineeven">대기중</th>
-                </tr>
-                <tr>
-                  <td class="tg-db-lineodd" colspan="2">
-                    가래떡가래떡가래떡가래떡
-                  </td>
                   <td class="tg-db-lineodd" colspan="2"></td>
-                  <th class="tg-db-lineodd">고우석</th>
-                  <th class="tg-db-lineodd">연월일</th>
-                  <th class="tg-db-lineodd">대기중</th>
+                  <td class="tg-db-lineodd" colspan="2"></td>
+                  <th class="tg-db-lineodd"></th>
+                  <th class="tg-db-lineodd"></th>
+                  <th class="tg-db-lineodd"></th>
+                </tr>
+                <tr>
+                  <td class="tg-db-lineeven" colspan="2"></td>
+                  <td class="tg-db-lineeven" colspan="2"></td>
+                  <th class="tg-db-lineeven"></th>
+                  <th class="tg-db-lineeven"></th>
+                  <th class="tg-db-lineeven"></th>
+                </tr>
+                <tr>
+                  <td class="tg-db-lineodd" colspan="2"></td>
+                  <td class="tg-db-lineodd" colspan="2"></td>
+                  <th class="tg-db-lineodd"></th>
+                  <th class="tg-db-lineodd"></th>
+                  <th class="tg-db-lineodd"></th>
+                </tr>
+                <tr>
+                  <td class="tg-db-lineeven" colspan="2"></td>
+                  <td class="tg-db-lineeven" colspan="2"></td>
+                  <th class="tg-db-lineeven"></th>
+                  <th class="tg-db-lineeven"></th>
+                  <th class="tg-db-lineeven"></th>
+                </tr>
+                <tr>
+                  <td class="tg-db-lineodd" colspan="2"></td>
+                  <td class="tg-db-lineodd" colspan="2"></td>
+                  <th class="tg-db-lineodd"></th>
+                  <th class="tg-db-lineodd"></th>
+                  <th class="tg-db-lineodd"></th>
                 </tr>
               </tbody>
             </table>
