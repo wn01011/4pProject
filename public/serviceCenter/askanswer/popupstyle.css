@@ -1,0 +1,48 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#bodyBox {
+  padding-top: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+#title {
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+#textDiv {
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+#textDiv > textarea {
+  width: 100%;
+  height: 300px;
+  border: none;
+  resize: none;
+  margin: 20px 0px;
+  padding: 20px;
+  outline: none;
+}
+#title > input {
+  border: none;
+  width: 100%;
+  padding: 15px;
+}
+#title > input:focus {
+  outline: none;
+}
+#foot {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding: 10px 0px;
+}
+#foot > button {
+}

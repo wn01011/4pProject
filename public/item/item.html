@@ -134,11 +134,43 @@
         </div>
         <div id="item-ask-tableTitle">
           <span>제목</span>
+          <span>작성자</span>
           <span>작성일</span>
           <span>답변상태</span>
         </div>
+        <!-- 문의 테이블  -->
+        <div id="ask-table">
+          <div id="ask-default">문의 사항이 없습니다.</div>
+        </div>
       </div>
     </div>
+    <!-- 문의 모달창 -->
+    <div id="ask-modal" class="modal-overlay off">
+      <div class="modal-window">
+        <div class="title">
+          <h2>상품 문의</h2>
+        </div>
+        <div class="close-area">X</div>
+        <div class="content">
+          <input
+            type="text"
+            id="modal-name"
+            placeholder="문의 제목을 입력해주세요"
+          />
+          <textarea
+            name=""
+            id="modal-ask-area"
+            cols="30"
+            rows="10"
+            placeholder="문의 내용을 입력해주세요"
+          ></textarea>
+        </div>
+        <div id="submit">
+          <button class="submit-area">제출하기</button>
+        </div>
+      </div>
+    </div>
+    <!-- ******************************************* -->
     <div id="footer_include"></div>
     <script src="/Assets/Scripts/JS/includehtml.js"></script>
     <script src="./item.js"></script>

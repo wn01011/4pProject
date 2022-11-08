@@ -7,6 +7,7 @@ const router = Router();
 const seq = require("sequelize");
 const op = seq.Op;
 
+console.log("프로덕트 라우트 안이다!!!!!!");
 // "/api/product"
 router
   .route("/")
@@ -14,6 +15,7 @@ router
     res.send();
   })
   .post((req, res) => {
+
     const tempSend = [];
     db.ProductTable.findAll().then((data) => {
       data.forEach((item) => {
