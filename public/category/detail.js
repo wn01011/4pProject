@@ -29,53 +29,59 @@ const goodsPrice = document.getElementById("goods-price");
 const goodsInfo = document.getElementById("goods-info");
 const goodsCart = document.getElementById("goods-cart");
 
+item();
+
+function item() {
+  axios.get("/api/product/category", { category: 0 }).then((data) => {
+    data.data.forEach((item) => {
+      getList(img, delivery, name, description, price);
+    });
+  });
+}
+
 async function getList(img, delivery, name, description, price) {
   try {
-    const product = (await axios.get("/api/product/category")).data;
+    const tempGoodsDiv = document.createElement("div");
+    const tempGoodsDel = document.createElement("p");
+    const tempGoodsText = document.createElement("p");
+    const tempGoodsPrice = document.createElement("p");
+    const tempGoodsInfo = document.createElement("p");
+    const tempGoodsCart = document.createElement("img");
 
-    product?.forEach((item) => {
-      const tempGoodsDiv = document.createElement("div");
-      const tempGoodsDel = document.createElement("p");
-      const tempGoodsText = document.createElement("p");
-      const tempGoodsPrice = document.createElement("p");
-      const tempGoodsInfo = document.createElement("p");
-      const tempGoodsCart = document.createElement("img");
+    console.log(`/api/product/download${img}`);
 
-      console.log(`/api/product/download${img}`);
+    goodsImg.src = `/api/product/download${img}`;
+    tempGoodsDel.innerText = `${delivery}`;
+    tempGoodsText.innerText = `${name}`;
+    tempGoodsPrice.innerText = `${price}원`;
+    tempGoodsInfo.innerText = `${description}`;
+    tempGoodsCart.src = `/imges/cart3.svg`;
 
-      goodsImg.src = `/api/product/download${img}`;
-      tempGoodsDel.innerText = `${delivery}`;
-      tempGoodsText.innerText = `${name}`;
-      tempGoodsPrice.innerText = `${price}원`;
-      tempGoodsInfo.innerText = `${description}`;
-      tempGoodsCart.src = `/imges/cart3.svg`;
-
-      tempGoodsCart.style = `
+    tempGoodsCart.style = `
     width: 30px;
     position: relative;
     top: -41px;
     left: 200px;
     `;
 
-      goods.style = `
+    goods.style = `
     display: block;
     `;
 
-      goodsText.style = `
+    goodsText.style = `
     line-height: 1.5;
     `;
 
-      tempGoodsInfo.style = `
+    tempGoodsInfo.style = `
     padding-bottom: 10px;
     `;
 
-      goods.append(tempGoodsDiv);
-      goodsText.append(tempGoodsPrice);
-      goodsText.append(tempGoodsText);
-      goodsDel.append(tempGoodsDel);
-      goodsInfo.append(tempGoodsInfo);
-      goodsImg.after(tempGoodsCart);
-    });
+    goods.append(tempGoodsDiv);
+    goodsText.append(tempGoodsPrice);
+    goodsText.append(tempGoodsText);
+    goodsDel.append(tempGoodsDel);
+    goodsInfo.append(tempGoodsInfo);
+    goodsImg.after(tempGoodsCart);
   } catch (error) {
     console.log(error);
   }
