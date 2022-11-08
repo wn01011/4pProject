@@ -1,23 +1,51 @@
 let currItemName = "";
 let currUserId = "1";
+// ===== 상품 =====
+let currImg = "";
+let currDelivery = "";
+let currName = "";
+let currDescription = "";
+let currPrice = "";
+let currManufacturer = "";
+let currPackage = "";
+let currUnit = "";
+let currWeight = "";
+let currOrigin = "";
+
 axios
-  .post("/api/product", { data: "채소" })
+  .post("/api/product/", { data: "채소" })
   .then((data) => {
-    console.log(data);
-    console.log(data.data[1].img);
     getList(
-      data.data[1].img,
-      data.data[1].delivery,
-      data.data[1].name,
-      data.data[1].description,
-      data.data[1].price,
-      data.data[1].manufacturer,
-      data.data[1].package,
-      data.data[1].unit,
-      data.data[1].weight,
-      data.data[1].origin
+      data.data[0].img,
+      data.data[0].delivery,
+      data.data[0].name,
+      data.data[0].description,
+      data.data[0].price,
+      data.data[0].manufacturer,
+      data.data[0].package,
+      data.data[0].unit,
+      data.data[0].weight,
+      data.data[0].origin
     );
     currItemName = data.data[1].name;
+
+    currItemCategory = data.data[0].category[0];
+    // 상품 문의쪽 정보 불러오는 곳
+    axios
+      .post("/api/notice/productask", { productName: currItemName })
+      .then((data) => {
+        if (data.data.length > 0) askDefault.classList.add("off");
+        data.data.forEach((item) => {
+          createAskList(
+            item.name,
+            item.userId,
+            item.createdAt.slice(0, 10),
+            item.isAnswer,
+            item.text,
+            item.answerText
+          );
+        });
+      });
   })
   .catch((err) => {
     console.error(err);
@@ -40,6 +68,9 @@ const itemPlus = document.getElementById("item-Plus");
 const itemEa = document.getElementById("item-count");
 const itemTotal = document.getElementById("item-total-price");
 const cartDamgi = document.getElementById("cart-damgi");
+const total = document.getElementById("total-price");
+const totalText = document.getElementById("total-price-text");
+const totalWonText = document.getElementById("total-price-won");
 
 async function getList(
   img,
@@ -67,8 +98,8 @@ async function getList(
     const itemOriginP = document.createElement("p");
     const itemSelectSpan = document.createElement("span");
     const itemSelectPrice = document.createElement("span");
-    const itemSelectPriceSpan = document.createElement("span");
     const itemTotalPrice = document.createElement("span");
+    const itemSelectPriceLi = document.createElement("li");
 
     itemImg.style = `
     width:420px;
@@ -84,10 +115,45 @@ async function getList(
     itemWeightP.innerText = `${weight}`;
     itemOriginP.innerText = `${origin}`;
     itemSelectSpan.innerText = `${name}`;
+    totalText.innerText = `총 상품금액:`;
     itemSelectPrice.innerText = `${price}원`;
-    itemSelectPriceSpan.innerText = `${price}원`;
+    total.innerText = `${price * 1}`;
+    totalWonText.innerText = "원";
+    itemTotal.style = `
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    `;
 
+    totalWonText.style = `
+    font-size: 15px;
+    font-weight: bold;
+    `;
+
+    totalText.style = `
+    width: 80px;
+    font-size: 13px;
+    `;
+
+    total.style = `
+    display:flex;
+    justify-content: flex-end;
+    font-size : 40px;
+    width: 140px;
+    font-weight : bold;
+    margin-right: 10px
+    `;
+
+    itemEa.style = `
+    width: 150px;
+    text-align: center;
+    `;
+
+    totalWonText.append(itemSelectPriceLi);
+    totalText.append(itemSelectPriceLi);
+    total.append(itemSelectPriceLi);
     itemSelect.append(itemSelectPrice);
+    itemSelect.append(itemSelectPriceLi);
     itemSelect.append(itemSelectSpan);
     itemOrigin.append(itemOriginP);
     itemWeight.append(itemWeightP);
@@ -101,12 +167,13 @@ async function getList(
     itemDiv.append(itemImg);
     itemList.append(itemDiv);
 
-    let count = 0;
+    let count = 1;
+    itemEa.innerText = count;
+
     itemPlus.onclick = () => {
       count++;
       itemEa.innerText = count;
-      itemTotalPrice.innerText = `총 상품금액: ${price * count} 원`;
-
+      total.innerText = `${price * count}`;
       itemTotal.append(itemTotalPrice);
     };
 
@@ -114,18 +181,7 @@ async function getList(
       if (count > 1) {
         count--;
         itemEa.innerText = count;
-        itemTotalPrice.innerText = `총 상품금액: ${price * count} 원`;
-
-        itemTotal.append(itemTotalPrice);
-      }
-    };
-
-    itemMinus.onclick = () => {
-      if (count > 1) {
-        count--;
-        itemEa.innerText = count;
-        itemTotalPrice.innerText = `총 상품금액: ${price * count} 원`;
-
+        total.innerText = `${price * count}`;
         itemTotal.append(itemTotalPrice);
       }
     };
@@ -221,23 +277,6 @@ function createAskList(title, user, date, state, q, a) {
   tempList.after(detailDiv);
 }
 
-// 상품 문의쪽 정보 불러오는 곳
-axios
-  .post("/api/notice/productask", { productName: "친환경 깐 생강 50g" })
-  .then((data) => {
-    if (data.data.length > 0) askDefault.classList.add("off");
-    data.data.forEach((item) => {
-      createAskList(
-        item.name,
-        item.userId,
-        item.createdAt.slice(0, 10),
-        item.isAnswer,
-        item.text,
-        item.answerText
-      );
-    });
-  });
-
 // 상품 문의 모달창
 const askModal = document.getElementById("ask-modal");
 const modalClose = document.getElementsByClassName("close-area")[0];
@@ -272,4 +311,3 @@ modalSubmitBtn.onclick = () => {
       window.location.reload();
     });
 };
-//

@@ -30,21 +30,50 @@ router
     });
   });
 
+router
+  .route("/category")
+  .get((req, res) => {
+    res.send();
+  })
+  .post((req, res) => {
+    const tempSend = [];
+    db.ProductTable.findAll().then((data) => {
+      data.forEach((item) => {
+        if (
+          Object.values(item.dataValues.category[0]).includes(
+            `${req.body.data}`
+          )
+        ) {
+          tempSend.push(item.dataValues);
+        }
+      });
+      res.send(tempSend);
+    });
+  });
+
+// router.get("/category", async (req, res) => {
+//   const tempItem = await db.ProductTable.findAll()({
+//     where: {
+//       category: item.dataValues.category[0],
+//     },
+//   });
+// });
+
 // product.json 파일 넣는 곳
 // fs.readFile("./product.json", "utf-8", function (err, data) {
-//   if (err) {
-//     console.error(err.message);
-//   } else {
-//     if (data) {
-//       JSON.parse(data).forEach((item) => {
-//         try {
-//           db.ProductTable.create(item);
-//         } catch (err) {
-//           console.error(err);
-//         }
-//       });
-//     }
-//   }
+// if (err) {
+// console.error(err.message);
+// } else {
+// if (data) {
+// JSON.parse(data).forEach((item) => {
+// try {
+// db.ProductTable.create(item);
+// } catch (err) {
+// console.error(err);
+// }
+// });
+// }
+// }
 // });
 
 async function setImages() {
