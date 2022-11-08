@@ -21,29 +21,19 @@ includeHTML(document.getElementById("footer_include"), "/footer.html");
 // item slide html include하는 함수입니다.
 
 function getCookie(cookieName) {
-  console.log("쿠키 가져오기 함수 실행");
   cookieName = `${cookieName}=`;
-  console.log(cookieName);
   let cookieData = document.cookie;
-  console.log("cookieData : ", cookieData);
   let cookieValue = "";
   let start = cookieData.indexOf(cookieName);
-  console.log("start : ", start);
   if (start !== -1) {
-    console.log("start는 -1이 아님");
     start += cookieName.length;
     let end = cookieData.indexOf(";", start);
-    console.log("end : ", end);
     if (end === -1) end = cookieData.length;
-    console.log("end : ");
     cookieValue = cookieData.substring(start, end);
-    console.log("cookieValue : ", cookieValue);
   }
   console.log("unescape : ", unescape(cookieValue));
   return cookieValue;
 }
-
-getCookie("clearLogin");
 
 window.onscroll = function () {
   if (
@@ -55,3 +45,34 @@ window.onscroll = function () {
     document.getElementById("header_scroll").classList.remove("on");
   }
 };
+let signup;
+let signin;
+let userinfo;
+let userinfotext;
+
+let loop = setInterval(() => {
+  let cookieResult = document.cookie;
+  signup = document.getElementById("sign_up");
+  signin = document.getElementById("sign_in");
+  userinfo = document.getElementById("user_info");
+  userinfotext = document.getElementById("user_info_text");
+  if (cookieResult) {
+    if (signup && signin && userinfo) {
+      signup.classList.add("off");
+      signin.classList.add("off");
+      userinfo.classList.add("on");
+      userinfotext.innerText =
+        document.cookie.split("=")[0] + " 님 어서오십시오.";
+      console.log("로드 완료");
+      clearInterval(loop);
+    }
+  }
+  // document.getElementById("user_info_dropdown_logout").onclick =
+  //   async function () {
+  //     try {
+  //       const data = await axios.get("/api/user/logout");
+  //     } catch (error) {
+  //       console.error(error.response.data.message);
+  //     }
+  //   };
+}, 50);

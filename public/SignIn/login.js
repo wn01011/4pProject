@@ -24,7 +24,6 @@ document.getElementById("sign_in_btn").onclick = async function (e) {
   } else if (data.data.status == 200) {
     // 로그인 성공 시
     alert("login 성공");
-
     location.href = "/index.html";
   }
 };

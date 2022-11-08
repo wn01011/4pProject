@@ -37,7 +37,7 @@ router.route("/login").post(async (req, res) => {
       console.log(tempUser.pw);
       console.log(crypto.SHA256(req.body.pw).toString());
       res.cookie(
-        "clearLogin",
+        tempUser.userId,
         createJwt(tempUser.userId, process.env.ADMIN_PW)
       );
       console.log("쿠키만듦");
@@ -48,7 +48,7 @@ router.route("/login").post(async (req, res) => {
       });
       return;
     } else {
-      res.send({ status: 402, message: "wrong password" });
+      res.send({ status: 402, message: "wrong password", name: tempUser.name });
     }
   } catch (error) {
     res.status(500);
