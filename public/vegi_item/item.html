@@ -14,80 +14,49 @@
     <div class="detail">
       <div class="detail-inner">
         <div style="display: flex; width: 1050px">
-          <div id="item-image" class="item-image">
-            <!-- <img src="/api/product/download20" alt="" /> -->
-          </div>
+          <div id="item-image" class="item-image"></div>
           <div class="item-info">
             <div class="item-info-ul1">
-              <div id="item-name">
-                <!-- <p>샛별배송</p> -->
-              </div>
-              <div>
-                <h2>그린빈스 (줄기콩)</h2>
-              </div>
-              <div>
-                <p>고소하고 많이 먹어도 질리지 않는 건강한 주머니 그린빈스</p>
-              </div>
-              <div>
-                <h2>4,600원</h2>
-              </div>
-              <div>
+              <div id="item-delivery"></div>
+              <div id="item-name"></div>
+              <div id="item-des"></div>
+              <div id="item-price"></div>
+              <!-- <div>
                 <p>로그인 후, 적립 혜택이 제공됩니다.</p>
-              </div>
+              </div> -->
             </div>
             <div class="item-info-ul">
               <div class="c">
                 <div class="a">
-                  <p>샛별</p>
-                </div>
-                <div class="b">
-                  <p>샛별배송</p>
-                  <p>23시 전 주문 시 내일 아침 7시 전 도착</p>
-                  <p>(대구·부산·울산 샛별배송 운영시간 별도 확인)</p>
-                </div>
-              </div>
-              <div class="c">
-                <div class="a">
                   <p>판매자</p>
                 </div>
-                <div class="b">
-                  <p>컬리</p>
-                </div>
+                <div class="b" id="item-sales"></div>
               </div>
               <div class="c">
                 <div class="a">
                   <p>포장타입</p>
                 </div>
-                <div class="b">
-                  <p>냉장(종이포장)</p>
-                  <p>택배배송은 에코포장이 스티로폼으로 대체됩니다.</p>
-                </div>
+                <div class="b" id="item-package"></div>
               </div>
               <div class="c">
                 <div class="a">
                   <p>판매단위</p>
                 </div>
-                <div class="b">
-                  <p>1팩</p>
-                </div>
+                <div class="b" id="item-unit"></div>
               </div>
               <div class="c">
                 <div class="a">
                   <p>중량/용량</p>
                 </div>
-                <div class="b">
-                  <p>100g</p>
-                </div>
+                <div class="b" id="item-weight"></div>
               </div>
               <div class="c">
                 <div class="a">
                   <p>원산지</p>
                 </div>
-                <div class="b">
-                  <p>국내산</p>
-                </div>
+                <div class="b" id="item-origin"></div>
               </div>
-              <div class="c">
+              <!-- <div class="c">
                 <div class="a">
                   <p>유통기한(또는 소비기한)정보</p>
                 </div>
@@ -105,22 +74,19 @@
                     있습니다.
                   </p>
                 </div>
-              </div>
+              </div> -->
               <div class="item-select">
                 <p>상품선택</p>
                 <div class="item-select-inner">
-                  <div class="item-select-ea">
-                    <span>그린빈스(줄기콩)</span>
+                  <div class="item-select-ea" id="item-select">
                     <div class="item-ea-price">
                       <div>
                         <div id="item-ea">
-                          <button>-</button>
-                          <p>1</p>
-                          <button>+</button>
+                          <button id="item-Minus">-</button>
+                          <p id="item-count">0</p>
+                          <button id="item-Plus">+</button>
                         </div>
-                        <div>
-                          <span>4,600원</span>
-                        </div>
+                        <div id="item-select-price"></div>
                       </div>
                     </div>
                   </div>
@@ -129,30 +95,83 @@
             </div>
             <div class="item-price">
               <div class="item-price-inner">
-                <div>
-                  <span>총 상품금액:</span>
+                <div id="item-total-price">
+                  <!-- <span>총 상품금액:</span>
                   <span>4,600</span>
-                  <span>원</span>
+                  <span>원</span> -->
                 </div>
                 <div class="cart-dama">
-                  <button>장바구니 담기</button>
+                  <button id="cart-damgi">장바구니 담기</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="item-hogi">
-          <div class="item-hogi-ul">
-            <ul>
-              <li><a href="">상품설명</a></li>
-              <li><a href="">상세정보</a></li>
-              <li><a href="">후기</a></li>
-              <li><a href="">문의</a></li>
-            </ul>
+        <div class="item-ask">
+          <div class="item-ask-head">
+            <li><a href="">문의</a></li>
           </div>
+        </div>
+
+        <div class="item-ask-under">
+          <div class="item-ask-text">
+            <h3>상품 문의</h3>
+            <p>
+              상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른
+              글은 사정동의 없이 담당 게시판으로 이동될 수 있습니다.
+            </p>
+            <p>
+              배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내
+              <a
+                href="/serviceCenter/askanswer/index.html"
+                style="text-decoration: underline"
+                >1:1 문의</a
+              >에 남겨주세요.
+            </p>
+          </div>
+          <div class="item-ask-btn">
+            <button>문의하기</button>
+          </div>
+        </div>
+        <div id="item-ask-tableTitle">
+          <span>제목</span>
+          <span>작성자</span>
+          <span>작성일</span>
+          <span>답변상태</span>
+        </div>
+        <!-- 문의 테이블  -->
+        <div id="ask-table">
+          <div id="ask-default">문의 사항이 없습니다.</div>
         </div>
       </div>
     </div>
+    <!-- 문의 모달창 -->
+    <div id="ask-modal" class="modal-overlay off">
+      <div class="modal-window">
+        <div class="title">
+          <h2>상품 문의</h2>
+        </div>
+        <div class="close-area">X</div>
+        <div class="content">
+          <input
+            type="text"
+            id="modal-name"
+            placeholder="문의 제목을 입력해주세요"
+          />
+          <textarea
+            name=""
+            id="modal-ask-area"
+            cols="30"
+            rows="10"
+            placeholder="문의 내용을 입력해주세요"
+          ></textarea>
+        </div>
+        <div id="submit">
+          <button class="submit-area">제출하기</button>
+        </div>
+      </div>
+    </div>
+    <!-- ******************************************* -->
     <div id="footer_include"></div>
     <script src="/Assets/Scripts/JS/includehtml.js"></script>
     <script src="./item.js"></script>

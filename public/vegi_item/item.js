@@ -1,9 +1,23 @@
+let currItemName = "";
+let currUserId = "1";
 axios
   .post("/api/product", { data: "채소" })
   .then((data) => {
     console.log(data);
-    getList(data.data[1].img);
-    getList(data.data[1].manufacturer);
+    console.log(data.data[1].img);
+    getList(
+      data.data[1].img,
+      data.data[1].delivery,
+      data.data[1].name,
+      data.data[1].description,
+      data.data[1].price,
+      data.data[1].manufacturer,
+      data.data[1].package,
+      data.data[1].unit,
+      data.data[1].weight,
+      data.data[1].origin
+    );
+    currItemName = data.data[1].name;
   })
   .catch((err) => {
     console.error(err);
@@ -12,93 +26,250 @@ axios
 const itemList = document.getElementById("item-image");
 const itemDelivery = document.getElementById("item-delivery");
 const itemName = document.getElementById("item-name");
-const categoriList = document.getElementById("item-list");
+const itemDes = document.getElementById("item-des");
+const itemPrice = document.getElementById("item-price");
+const itemSales = document.getElementById("item-sales");
+const itemPack = document.getElementById("item-package");
+const itemUnit = document.getElementById("item-unit");
+const itemWeight = document.getElementById("item-weight");
+const itemOrigin = document.getElementById("item-origin");
+const itemSelect = document.getElementById("item-select");
+const itemSelectPrice = document.getElementById("item-select-price");
+const itemMinus = document.getElementById("item-Minus");
+const itemPlus = document.getElementById("item-Plus");
+const itemEa = document.getElementById("item-count");
+const itemTotal = document.getElementById("item-total-price");
+const cartDamgi = document.getElementById("cart-damgi");
 
-async function getList(img, manufacturer) {
+async function getList(
+  img,
+  delivery,
+  name,
+  description,
+  price,
+  manufacturer,
+  package,
+  unit,
+  weight,
+  origin
+) {
   try {
     const itemDiv = document.createElement("div");
     const itemImg = document.createElement("img");
     const itemInfoP = document.createElement("p");
-    const itemInfoDiv2 = document.createElement("div");
-    const itemInfoLi = document.createElement("h2");
-    const itemInfoDiv3 = document.createElement("div");
+    const itemInfoh2 = document.createElement("h2");
     const itemInfo2P = document.createElement("p");
-    const itemInfoDiv4 = document.createElement("div");
-    const itemInfoLi2 = document.createElement("h2");
-    const itemInfoDiv5 = document.createElement("div");
-    const itemInfo3P = document.createElement("p");
+    const itemPrice_h2 = document.createElement("h2");
+    const itemSaleP = document.createElement("p");
+    const itemPackP = document.createElement("p");
+    const itemUnitP = document.createElement("p");
+    const itemWeightP = document.createElement("p");
+    const itemOriginP = document.createElement("p");
+    const itemSelectSpan = document.createElement("span");
+    const itemSelectPrice = document.createElement("span");
+    const itemSelectPriceSpan = document.createElement("span");
+    const itemTotalPrice = document.createElement("span");
 
     itemImg.style = `
     width:420px;
     hight:920px;`;
     itemImg.src = `/api/product/download${img}`;
+    itemInfoP.innerText = `${delivery}`;
+    itemInfoh2.innerText = `${name}`;
+    itemInfo2P.innerText = `${description}`;
+    itemPrice_h2.innerText = `${price}원`;
+    itemSaleP.innerText = `${manufacturer}`;
+    itemPackP.innerText = `${package}`;
+    itemUnitP.innerText = `${unit}`;
+    itemWeightP.innerText = `${weight}`;
+    itemOriginP.innerText = `${origin}`;
+    itemSelectSpan.innerText = `${name}`;
+    itemSelectPrice.innerText = `${price}원`;
+    itemSelectPriceSpan.innerText = `${price}원`;
 
-    itemInfoP.innerText = `${manufacturer}`;
-
-    itemName.append(itemInfoP);
+    itemSelect.append(itemSelectPrice);
+    itemSelect.append(itemSelectSpan);
+    itemOrigin.append(itemOriginP);
+    itemWeight.append(itemWeightP);
+    itemUnit.append(itemUnitP);
+    itemPack.append(itemPackP);
+    itemSales.append(itemSaleP);
+    itemPrice.append(itemPrice_h2);
+    itemDes.append(itemInfo2P);
+    itemName.append(itemInfoh2);
+    itemDelivery.append(itemInfoP);
     itemDiv.append(itemImg);
     itemList.append(itemDiv);
+
+    let count = 0;
+    itemPlus.onclick = () => {
+      count++;
+      itemEa.innerText = count;
+      itemTotalPrice.innerText = `총 상품금액: ${price * count} 원`;
+
+      itemTotal.append(itemTotalPrice);
+    };
+
+    itemMinus.onclick = () => {
+      if (count > 1) {
+        count--;
+        itemEa.innerText = count;
+        itemTotalPrice.innerText = `총 상품금액: ${price * count} 원`;
+
+        itemTotal.append(itemTotalPrice);
+      }
+    };
+
+    itemMinus.onclick = () => {
+      if (count > 1) {
+        count--;
+        itemEa.innerText = count;
+        itemTotalPrice.innerText = `총 상품금액: ${price * count} 원`;
+
+        itemTotal.append(itemTotalPrice);
+      }
+    };
   } catch (error) {
     console.log(error);
   }
 }
 
-// const itemList = document.getElementById("item-inner2");
-// const categoriList = document.getElementById("item-list");
+const askTable = document.getElementById("ask-table");
+const askDefault = document.getElementById("ask-default");
 
-// getList();
+function createAskList(title, user, date, state, q, a) {
+  // Q&A 간략 내용
+  const tempList = document.createElement("div");
+  const titleDiv = document.createElement("div");
+  const userDiv = document.createElement("div");
+  const dateDiv = document.createElement("div");
+  const stateDiv = document.createElement("div");
 
-// async function getList() {
-//   try {
-//     const tempDiv = document.createElement("div");
+  tempList.style = `
+    width : 100%;
+    display: flex;
+    cursor : pointer;
+  `;
+  titleDiv.style = `
+    text-align : center;
+    width : 60%;
+    padding : 10px 0px;
+    border-bottom: lightgrey solid 1px;
+  `;
+  userDiv.style = `
+    text-align : center;
+    width : 15%;
+    padding : 10px 0px;
+    border-bottom: lightgrey solid 1px;
+  `;
+  dateDiv.style = `
+    text-align : center;
+    width : 15%;
+    padding : 10px 0px;
+    border-bottom: lightgrey solid 1px;
+  `;
+  stateDiv.style = `
+    text-align : center;
+    width : 10%;
+    padding : 10px 0px;
+    border-bottom: lightgrey solid 1px;
+  `;
 
-//     const childDiv = document.createElement("div");
-//     childDiv.style = `
-//     width : 50px;
-//     height : 30px;
-//     background-color: pink;
-//   `;
-//     tempDiv.appendChild(childDiv);
-//     itemList.appendChild(tempDiv);
-//     // const result = (await axios.get("/api/vegi")).data;
-//     // itemList.innerHTML = "";
+  titleDiv.innerText = title;
+  userDiv.innerText = user;
+  dateDiv.innerText = date;
+  if (state == 0) stateDiv.innerText = "대기중";
+  else stateDiv.innerText = "답변완료";
 
-//     const tempUl = document.createElement("ul");
-//     tempUl.style = `
-//     display: flex;
-//     width: 800px;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     padding: 20px;
-//     `;
-//     const tempLi = document.createElement("li");
-//     tempLi.style = `
-//     width: 290px;
-//     height: 450px;
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     `;
-//     tempLi.innerHTML = `<img src="/api/product/download20" alt="" />
-//     <p>가격</p>
-//     <p>가격</p>
-//     <p>가격</p>
-//     <span><img src="/imges/cart3.svg" alt="" /></span>
-//     <img src="/api/product/download2" alt="" />
-//     <p>가격</p>
-//     <p>가격</p>
-//     <p>가격</p>
-//     <span><img src="/imges/cart3.svg" alt="" /></span>
-//     <img src="/api/product/download20" alt="" />
-//     <p>가격</p>
-//     <p>가격</p>
-//     <p>가격</p>
-//     <span><img src="/imges/cart3.svg" alt="" /></span>`;
+  tempList.appendChild(titleDiv);
+  tempList.appendChild(userDiv);
+  tempList.appendChild(dateDiv);
+  tempList.appendChild(stateDiv);
+  askTable.appendChild(tempList);
 
-//     itemList.getElementsByTagName("ul")[0].append(tempLi);
-//     const productItem = document.createElement("div");
-//     const innerItem = document.createElement("div");
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
+  if (state == 0 && currUserId != user) return;
+  // Q&A 상세 내용
+  const detailDiv = document.createElement("div");
+  const detailQ = document.createElement("div");
+  const detailA = document.createElement("div");
+
+  detailDiv.classList.add("off");
+  tempList.onclick = () => {
+    detailDiv.classList.toggle("off");
+  };
+
+  detailQ.style = `
+    text-align : left;
+    width : 100%;
+    padding : 20px;
+    padding-left: 50px;
+    background-color: rgb(228, 228, 228);
+  `;
+
+  detailA.style = `
+    text-align : left;
+    width : 100%;
+    padding : 20px;
+    padding-left: 50px;
+    background-color: rgb(228, 228, 228);
+  `;
+
+  detailQ.innerText = "Q : " + q;
+  detailA.innerText = "A : " + a;
+  detailDiv.appendChild(detailQ);
+  detailDiv.appendChild(detailA);
+  tempList.after(detailDiv);
+}
+
+// 상품 문의쪽 정보 불러오는 곳
+axios
+  .post("/api/notice/productask", { productName: "친환경 깐 생강 50g" })
+  .then((data) => {
+    if (data.data.length > 0) askDefault.classList.add("off");
+    data.data.forEach((item) => {
+      createAskList(
+        item.name,
+        item.userId,
+        item.createdAt.slice(0, 10),
+        item.isAnswer,
+        item.text,
+        item.answerText
+      );
+    });
+  });
+
+// 상품 문의 모달창
+const askModal = document.getElementById("ask-modal");
+const modalClose = document.getElementsByClassName("close-area")[0];
+const askBtn = document.getElementsByClassName("item-ask-btn")[0].children[0];
+modalClose.onclick = () => {
+  askModal.classList.toggle("off");
+};
+askBtn.onclick = () => {
+  askModal.classList.remove("off");
+};
+
+const modalSubmitBtn = document.getElementsByClassName("submit-area")[0];
+const modalTextArea = document.getElementById("modal-ask-area");
+const modalName = document.getElementById("modal-name");
+
+modalSubmitBtn.onclick = () => {
+  const name = modalName.value;
+  const value = modalTextArea.value;
+  if (name == "" || value == "") return;
+  axios
+    .post("/api/notice/modalask", {
+      userId: "2",
+      productName: currItemName,
+      name: name,
+      text: value,
+      answerText: undefined,
+      isAnswer: 0,
+    })
+    .then((data) => {
+      console.log(data);
+      askModal.classList.toggle("off");
+      window.location.reload();
+    });
+};
+//
