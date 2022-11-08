@@ -15,7 +15,6 @@ router
     res.send();
   })
   .post((req, res) => {
-
     const tempSend = [];
     db.ProductTable.findAll().then((data) => {
       data.forEach((item) => {
