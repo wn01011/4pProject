@@ -51,6 +51,17 @@ router
     });
   });
 
+router.route("/productReview").post((req, res) => {
+  const tempSend = [];
+  db.ReviewTable.findAll({
+    where: {
+      productName: req.body.productName,
+    },
+  }).then((data) => {
+    res.send(data);
+  });
+});
+
 // router.get("/category", async (req, res) => {
 //   const tempItem = await db.ProductTable.findAll()({
 //     where: {

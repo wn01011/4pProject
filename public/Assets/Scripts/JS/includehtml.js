@@ -26,3 +26,24 @@ window.onscroll = function () {
     document.getElementById("header_scroll").classList.remove("on");
   }
 };
+
+let currAudio;
+
+window.onload = () => {
+  const id = setInterval(() => {
+    currAudio = document.getElementsByTagName("audio")[0];
+    if (currAudio) {
+      OnLoadCallBack();
+      console.log(currAudio);
+      clearInterval(id);
+    }
+  }, 100);
+};
+
+function OnLoadCallBack() {
+  window.onclick = () => {
+    currAudio.play();
+    console.log("hihi");
+    window.onclick = () => {};
+  };
+}
