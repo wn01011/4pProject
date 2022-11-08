@@ -5,6 +5,7 @@ const db = require("../models/index.js");
 const dotenv = require("dotenv");
 const router = Router();
 
+let tempDeduplication = [];
 dotenv.config();
 // 유저 정보 일단 담아둘 곳
 const users = [];
@@ -18,6 +19,7 @@ router
   .post((req, res) => {
     res.send("post로 요청을 보냈군요?");
   });
+
 // 로그인 들어왔을 때 예시
 router
   .route("/login")
@@ -25,8 +27,8 @@ router
     res.send();
   })
   .post(async (req, res) => {
-    console.log("받았어", req.body);
     try {
+      console.log(await db.findOne({ where: { userId: req.body.id } }));
       const tempUser = await db.findOne({ where: { userId: req.body.id } });
       // db
       if (!tempUser) {
@@ -49,31 +51,49 @@ router
       }
       res.status(500);
       res.send({ message: "wrong password" });
-    } catch {
+    } catch (error) {
       res.status(500);
       res.send(error);
     }
   });
 
-router
-  .route("/regist")
-  .get((req, res) => {
-    res.send();
-  })
-  .post((req, res) => {
-    console.log(req.body);
-    db.UserTable.create({
-      userId: req.body.id,
-      pw: crypto.SHA256(req.body.pw).toString(),
-      name: req.body.name,
-      isManager: 0,
-      address: req.body.address,
-      gender: req.body.gender,
-      birthday: `${req.body.birthday.year}-${req.body.birthday.month}-${req.body.birthday.day}`,
-    }).then((data) => {
-      res.send(data);
-    });
+router.route("/deduplication").post(async (req, res) => {
+  console.log("라우터에서 중복 체크 받음 : " + req.body.id);
+  try {
+    const tempId = await db.UserTable.findAll();
+    let tempIdArr = Array.from(tempId);
+    for (let i = 0; i < tempIdArr.length; i++) {
+      if (tempId[i].dataValues.userId == req.body.id) {
+        res.send({ status: 401, data: "exist Id" });
+      }
+      if (
+        i == tempIdArr.length - 1 &&
+        tempId[i].dataValues.userId != req.body.id
+      ) {
+        res.send({ status: 200, data: "available" });
+      }
+    }
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+const idCondition = /^(?=.*[0-9]+)[a-zA-Z][a-zA-Z0-9]{8,16}$/g;
+const pwCondition = /(?=.*[0-9])(?=.*[a-z])(?=.*\W)(?=\S+$).{8,20}/;
+router.route("/regist").post((req, res) => {
+  console.log(req.body);
+  db.UserTable.create({
+    userId: req.body.id,
+    pw: crypto.SHA256(req.body.pw).toString(),
+    name: req.body.name,
+    isManager: 0,
+    address: req.body.address,
+    gender: req.body.gender,
+    birthday: `${req.body.birthday.year}-${req.body.birthday.month}-${req.body.birthday.day}`,
+  }).then((data) => {
+    res.send(data);
   });
+});
 
 // 로그인에 대한 토큰일 필요해 보여서 토큰 여기에 생성
 // 토큰에 대한 키.. 일단 만들어둠

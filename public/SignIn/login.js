@@ -10,7 +10,7 @@ document.getElementById("sign_in_btn").onclick = async function (e) {
   try {
     const data = await axios.post("/api/user/login", {
       id: document.getElementById("login_input_id").value,
-      pw: e.target["login_input_pw"].value,
+      pw: document.getElementById("login_input_pw").value,
     });
     console.log(data.data);
     if (data.data.status != 200) {

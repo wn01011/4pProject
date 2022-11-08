@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   </head>
   <body>
     <div id="header_include"></div>
@@ -33,8 +34,12 @@
                 placeholder="아이디를 입력하십시오."
               />
             </div>
-
             <button id="signup_board_id_deduplication">중복확인</button>
+          </div>
+          <div id="signup_board_id_reg">
+            <div class="white_space1"></div>
+            <span id="signup_board_id_reg_text"></span>
+            <div class="white_space2"></div>
           </div>
           <div id="signup_board_pw">
             <div id="signup_board_pw_text">
@@ -50,6 +55,11 @@
             </div>
             <div id="signup_board_pw_whitespace"></div>
           </div>
+          <div id="signup_board_pw_reg">
+            <div class="white_space1"></div>
+            <span id="signup_board_pw_reg_text"></span>
+            <div class="white_space2"></div>
+          </div>
           <div id="signup_board_confirmpw">
             <div id="signup_board_confirmpw_text">
               <span id="signup_board_confirmpw_text_pw">비밀번호확인</span
@@ -63,6 +73,11 @@
               />
             </div>
             <div id="signup_board_confirmpw_whitespace"></div>
+          </div>
+          <div id="signup_board_confirmpw_reg">
+            <div class="white_space1"></div>
+            <span id="signup_board_confirmpw_reg_text"></span>
+            <div class="white_space2"></div>
           </div>
           <div id="signup_board_name">
             <div id="signup_board_name_text">
@@ -83,7 +98,6 @@
               <span id="signup_board_address_text_address">주소</span
               ><span class="asterisk">*</span>
             </div>
-            <!-- <div id="signup_board_address_btn"> -->
             <button id="signup_board_address_btn">
               <div id="signup_board_address_btn_icon">
                 <?xml version="1.0"?>
@@ -101,8 +115,12 @@
               </div>
               주소 검색
             </button>
-            <!-- </div> -->
             <div id="signup_board_name_whitespace"></div>
+          </div>
+          <div id="signup_board_address_result">
+            <div class="white_space1"></div>
+            <span id="signup_board_address_result_text"></span>
+            <div class="white_space2"></div>
           </div>
           <div id="signup_board_gender">
             <div id="signup_board_gender_text">
@@ -173,6 +191,12 @@
       </div>
     </div>
     <div id="footer_include"></div>
+    <div id="deduplication_modal">
+      <div id="deduplication_modal_body">
+        <div id="deduplication_modal_body_text">aaaaaaa</div>
+        <button id="deduplication_modal_body_exit">확인</button>
+      </div>
+    </div>
     <script src="/Assets/Scripts/JS/includehtml.js"></script>
     <script src="/SignUp/signup.js"></script>
   </body>

@@ -1,0 +1,13 @@
+#signupclear_content {
+  display: flex;
+  justify-content: center;
+}
+#signupclear_content_center {
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+}
+#signupclear_left > h1 {
+  display: inline;
+  color: #c2eaec;
+}
