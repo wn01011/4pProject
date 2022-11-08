@@ -31,6 +31,26 @@ router
     });
   });
 
+router
+  .route("/category")
+  .get((req, res) => {
+    res.send();
+  })
+  .post((req, res) => {
+    console.log(req.body);
+    db.ProductTable.findAll().then((data) => {
+      res.send(data);
+    });
+  });
+
+// router.get("/category", async (req, res) => {
+//   const tempItem = await db.ProductTable.findAll()({
+//     where: {
+//       category: item.dataValues.category[0],
+//     },
+//   });
+// });
+
 // product.json 파일 넣는 곳
 // fs.readFile("./product.json", "utf-8", function (err, data) {
 //   if (err) {
