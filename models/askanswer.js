@@ -14,6 +14,10 @@ module.exports = class AskanswerTable extends Sequelize.Model {
           type: Sequelize.STRING(255), // VARCHAR
           allowNull: true,
         },
+        text: {
+          type: Sequelize.STRING(255), // VARCHAR
+          allowNull: true,
+        },
         isAnswer: {
           type: Sequelize.TINYINT(1), // mysql에선 boolean이 애초에 tinyint(1)로 변환된다.
           allowNull: false,

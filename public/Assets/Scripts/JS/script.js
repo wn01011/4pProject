@@ -1,27 +1,84 @@
-// 메인 페이지에 대한 script입니다.
-
 // 서버에 대한 요청 예시
 axios
-  // post 형식으로 /api/user 주소로 요청을 보내는데 {data: "myData"}라는 데이터와 같이 보냅니다.
-  .post("/api/user", { data: "myData" })
-  // 이후 요청에대한 응답이 서버로 부터 오면 then 이후의 코드가 실행됩니다.
+  .post("/api/product", { data: "야채" })
   .then((data) => {
     console.log(data);
   })
-  // 일련의 과정중 에러가 생긴다면 여기로 들어오게 됩니다.
   .catch((err) => {
     console.error(err);
   });
+
 axios
   .post("/api/product", { data: "건어물" })
   .then((data) => {
     console.log(data);
-    document.value = data.data[0].allergy;
   })
   .catch((err) => {
     console.error(err);
   });
 
+axios
+  .post("/api/product", { data: "수산" })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+axios
+  .post("/api/product", { data: "정육" })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+axios
+  .post("/api/product", { data: "국" })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+axios
+  .post("/api/product", { data: "샐러드" })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+axios
+  .post("/api/product", { data: "면" })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+axios
+  .post("/api/product", { data: "생수" })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+axios
+  .post("/api/product", { data: "쿠키" })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 //   만약 로그인에 대한 요청을 보내신다면
 // 1. 로그인을 위해 필요한 데이터를 담아서 서버로 보냅니다.
 // ex) id, pw => {id: "testId", pw : "testPw"}
@@ -30,3 +87,11 @@ axios
 // 응답 예시 data.data = {data : "로그인 가능"}
 
 // 로그아웃 기능
+// document.getElementById("user_info_dropdown_logout").onclick =
+//   async function () {
+//     try {
+//       const data = await axios.get("/api/user/logout");
+//     } catch (error) {
+//       console.error(error.response.data.message);
+//     }
+//   };

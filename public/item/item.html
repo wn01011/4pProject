@@ -1,0 +1,178 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>detail</title>
+    <link rel="stylesheet" href="./items.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="header_include"></div>
+    <div class="detail">
+      <div class="detail-inner">
+        <div style="display: flex; width: 1050px">
+          <div id="item-image" class="item-image"></div>
+          <div class="item-info">
+            <div class="item-info-ul1">
+              <div id="item-delivery"></div>
+              <div id="item-name"></div>
+              <div id="item-des"></div>
+              <div id="item-price"></div>
+              <!-- <div>
+                <p>로그인 후, 적립 혜택이 제공됩니다.</p>
+              </div> -->
+            </div>
+            <div class="item-info-ul">
+              <div class="c">
+                <div class="a">
+                  <p>판매자</p>
+                </div>
+                <div class="b" id="item-sales"></div>
+              </div>
+              <div class="c">
+                <div class="a">
+                  <p>포장타입</p>
+                </div>
+                <div class="b" id="item-package"></div>
+              </div>
+              <div class="c">
+                <div class="a">
+                  <p>판매단위</p>
+                </div>
+                <div class="b" id="item-unit"></div>
+              </div>
+              <div class="c">
+                <div class="a">
+                  <p>중량/용량</p>
+                </div>
+                <div class="b" id="item-weight"></div>
+              </div>
+              <div class="c">
+                <div class="a">
+                  <p>원산지</p>
+                </div>
+                <div class="b" id="item-origin"></div>
+              </div>
+              <!-- <div class="c">
+                <div class="a">
+                  <p>유통기한(또는 소비기한)정보</p>
+                </div>
+                <div class="b">
+                  <p>농산물로 별도의 유통기한 없음</p>
+                </div>
+              </div>
+              <div class="c">
+                <div class="a">
+                  <p>안내사항</p>
+                </div>
+                <div class="b">
+                  <p>
+                    -신선식품의 특성상 중량에 3% 내외의 차이가 발생할 수
+                    있습니다.
+                  </p>
+                </div>
+              </div> -->
+              <div class="item-select">
+                <p>상품선택</p>
+                <div class="item-select-inner">
+                  <div class="item-select-ea" id="item-select">
+                    <div class="item-ea-price">
+                      <div>
+                        <div id="item-ea">
+                          <button id="item-Minus">-</button>
+                          <p id="item-count">0</p>
+                          <button id="item-Plus">+</button>
+                        </div>
+                        <div id="item-select-price"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-price">
+              <div class="item-price-inner">
+                <div id="item-total-price">
+                  <li id="total-price-text"></li>
+                  <li id="total-price"></li>
+                  <li id="total-price-won"></li>
+                </div>
+                <div class="cart-dama">
+                  <button id="cart-damgi">장바구니 담기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item-ask">
+          <div class="item-ask-head">
+            <li>문의</li>
+          </div>
+        </div>
+        <div class="item-ask-under">
+          <div class="item-ask-text">
+            <h3>상품 문의</h3>
+            <p>
+              상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른
+              글은 사정동의 없이 담당 게시판으로 이동될 수 있습니다.
+            </p>
+            <p>
+              배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내
+              <a
+                href="/serviceCenter/askanswer"
+                style="text-decoration: underline"
+                >1:1 문의</a
+              >에 남겨주세요.
+            </p>
+          </div>
+          <div class="item-ask-btn">
+            <button>문의하기</button>
+          </div>
+        </div>
+        <div id="item-ask-tableTitle">
+          <span>제목</span>
+          <span>작성자</span>
+          <span>작성일</span>
+          <span>답변상태</span>
+        </div>
+        <!-- 문의 테이블  -->
+        <div id="ask-table">
+          <div id="ask-default">문의 사항이 없습니다.</div>
+        </div>
+      </div>
+    </div>
+    <!-- 문의 모달창 -->
+    <div id="ask-modal" class="modal-overlay off">
+      <div class="modal-window">
+        <div class="title">
+          <h2>상품 문의</h2>
+        </div>
+        <div class="close-area">X</div>
+        <div class="content">
+          <input
+            type="text"
+            id="modal-name"
+            placeholder="문의 제목을 입력해주세요"
+          />
+          <textarea
+            name=""
+            id="modal-ask-area"
+            cols="30"
+            rows="10"
+            placeholder="문의 내용을 입력해주세요"
+          ></textarea>
+        </div>
+        <div id="submit">
+          <button class="submit-area">제출하기</button>
+        </div>
+      </div>
+    </div>
+    <!-- ******************************************* -->
+    <div id="footer_include"></div>
+    <script src="/Assets/Scripts/JS/includehtml.js"></script>
+    <script src="./item.js"></script>
+  </body>
+</html>
