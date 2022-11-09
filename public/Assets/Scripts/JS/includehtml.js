@@ -48,7 +48,6 @@ window.onload = () => {
     currAudio = document.getElementsByTagName("audio")[0];
     if (currAudio) {
       OnLoadCallBack();
-      console.log(currAudio);
       clearInterval(id);
     }
   }, 100);
@@ -57,7 +56,6 @@ window.onload = () => {
 function OnLoadCallBack() {
   window.onclick = () => {
     currAudio.play();
-    console.log("hihi");
     window.onclick = () => {};
   };
 }
@@ -74,14 +72,23 @@ let loop = setInterval(() => {
   userinfotext = document.getElementById("user_info_text");
   logout = document.getElementById("user_info_dropdown_logout");
   if (cookieResult) {
-    if (signup && signin && userinfo) {
+    if (signup && signin && userinfo && userinfotext && logout) {
       signup.classList.add("off");
       signin.classList.add("off");
       userinfo.classList.add("on");
+      logout.onclick = () => {
+        logoutFunction();
+      };
+      console.log(document.cookie);
+      if (
+        decodeURI(document.cookie.split(";")[0].split("=")[1]) == "관리자다"
+      ) {
+        location.href = "/adminpage";
+      }
       userinfotext.innerText =
         document.cookie.split("=")[0] + " 님 어서오십시오.";
       console.log("로드 완료");
-      logoutFunction();
+      // logoutFunction();
       clearInterval(loop);
     }
   }
@@ -95,15 +102,23 @@ let loop = setInterval(() => {
   //   };
 }, 50);
 
+function deleteCookie(name) {
+  signup.classList.remove("off");
+  signin.classList.remove("off");
+  userinfo.classList.remove("on");
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
+}
+
+function getUserId() {
+  return document.cookie?.split(";")[0].split("=")[0];
+}
+
 function logoutFunction() {
   console.log("로그아웃");
   // logout.onclick = logoutFunction2();
   // logout.addEventListener("click", logoutFunction2());
-  logout.onclick = temp();
+  deleteCookie(getUserId());
   // logout.addEventListener("click", temp());
-}
-function temp() {
-  console.log("temp");
 }
 async function logoutFunction2() {
   console.log("쿠키제거하러 갔다.");

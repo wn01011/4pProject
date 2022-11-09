@@ -53,6 +53,7 @@ router
 
 router.route("/productReview").post((req, res) => {
   const tempSend = [];
+  console.log(req.body.productName);
   db.ReviewTable.findAll({
     where: {
       productName: req.body.productName,
