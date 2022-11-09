@@ -147,6 +147,23 @@ router.route("/category").post((req, res) => {
 //       }
 //     });
 //     res.send(tempVegi);
+router.route("/productReview").post((req, res) => {
+  const tempSend = [];
+  console.log(req.body.productName);
+  db.ReviewTable.findAll({
+    where: {
+      productName: req.body.productName,
+    },
+  }).then((data) => {
+    res.send(data);
+  });
+});
+
+// router.get("/category", async (req, res) => {
+//   const tempItem = await db.ProductTable.findAll()({
+//     where: {
+//       category: item.dataValues.category[0],
+//     },
 //   });
 // });
 

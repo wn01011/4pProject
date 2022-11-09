@@ -44,6 +44,12 @@ body {
   margin-top: 80px;
 }
 
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+
 .nav-link {
   outline: none;
   text-decoration: none;
@@ -123,6 +129,17 @@ h4 {
 }
 
 .tg .tg-selti {
+  background-color: #f7e8e8;
+  border: 1px solid #bbb;
+  color: #493f3f;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: top;
+  padding: 10px 12px;
+}
+
+.tg .tg-qnamanage {
   background-color: #f7e8e8;
   border: 1px solid #bbb;
   color: #493f3f;
@@ -486,6 +503,10 @@ ul {
   width: 700px;
   height: 400px;
   margin-bottom: 50px;
+}
+
+.qna {
+  display: block;
 }
 
 #qna-manage1 {

@@ -1,5 +1,5 @@
 let currItemName = "";
-let currUserId = "1";
+let currUserId = getUserId();
 // ===== 상품 =====
 let currImg = "";
 let currDelivery = "";
@@ -12,6 +12,47 @@ let currUnit = "";
 let currWeight = "";
 let currOrigin = "";
 
+<<<<<<< HEAD
+=======
+axios
+  .post("/api/product/", { data: "채소" })
+  .then((data) => {
+    getList(
+      data.data[0].img,
+      data.data[0].delivery,
+      data.data[0].name,
+      data.data[0].description,
+      data.data[0].price,
+      data.data[0].manufacturer,
+      data.data[0].package,
+      data.data[0].unit,
+      data.data[0].weight,
+      data.data[0].origin
+    );
+    currItemName = data.data[0].name;
+    currItemCategory = data.data[0].category[0];
+    // 상품 문의쪽 정보 불러오는 곳
+    axios
+      .post("/api/notice/productask", { productName: currItemName })
+      .then((data) => {
+        if (data.data.length > 0) askDefault.classList.add("off");
+        data.data.forEach((item) => {
+          createAskList(
+            item.name,
+            item.userId,
+            item.createdAt.slice(0, 10),
+            item.isAnswer,
+            item.text,
+            item.answerText
+          );
+        });
+      });
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+>>>>>>> dev
 const itemList = document.getElementById("item-image");
 const itemDelivery = document.getElementById("item-delivery");
 const itemName = document.getElementById("item-name");
@@ -286,6 +327,7 @@ modalClose.onclick = () => {
   askModal.classList.toggle("off");
 };
 askBtn.onclick = () => {
+  if (!getUserId()) return alert("로그인 해주세요");
   askModal.classList.remove("off");
 };
 
@@ -293,13 +335,19 @@ const modalSubmitBtn = document.getElementsByClassName("submit-area")[0];
 const modalTextArea = document.getElementById("modal-ask-area");
 const modalName = document.getElementById("modal-name");
 
+function getUserId() {
+  for (let i = 0; i < document.cookie.split(";").length; ++i) {
+    return document.cookie.split(";")[i].split("=")[0];
+  }
+}
+
 modalSubmitBtn.onclick = () => {
   const name = modalName.value;
   const value = modalTextArea.value;
-  if (name == "" || value == "") return;
+  if (name == "" || value == "" || !getUserId()) return;
   axios
     .post("/api/notice/modalask", {
-      userId: "2",
+      userId: getUserId(),
       productName: currItemName,
       name: name,
       text: value,
@@ -307,8 +355,53 @@ modalSubmitBtn.onclick = () => {
       isAnswer: 0,
     })
     .then((data) => {
-      console.log(data);
       askModal.classList.toggle("off");
       window.location.reload();
     });
 };
+
+// 상품 리뷰
+
+const reviewBox = document.getElementById("review-box");
+const totalCount = document.getElementById("total-count");
+
+const reviewId = setInterval(() => {
+  if (itemName != "") {
+    makeReview(getUserId(), currItemName, "가격 착하고 품질조아요2");
+    clearInterval(reviewId);
+  }
+}, 100);
+
+function makeReview(userId, productName, text) {
+  axios
+    .post("/api/product/productReview", {
+      userId: userId,
+      productName: productName,
+      text: text,
+    })
+    .then((data) => {
+      totalCount.innerText = "총 " + data.data.length + "개";
+      data.data.forEach((item) => {
+        // 2번째 글자 *으로 치환하는 구문
+        let tempUserId = item.userId;
+        tempUserId = [...tempUserId];
+        tempUserId.splice(1, 1, "*");
+        tempUserId = tempUserId.join("");
+        // ****************************
+        const tempList = document.createElement("li");
+        tempList.innerHTML = `<li class="user-list">
+        <div class="user-id">${tempUserId}</div>
+        <div class="review-text-box">
+          <div class="review-product-name">
+            ${item.productName}
+          </div>
+          <div class="review-product-text">${item.text}</div>
+          <div class="review-product-date">${item.createdAt.slice(0, 10)}</div>
+        </div>
+      </li>`;
+        reviewBox.appendChild(tempList);
+      });
+    });
+}
+
+// 리뷰끝

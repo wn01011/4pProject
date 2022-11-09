@@ -3,17 +3,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Market Clear - 관리자 페이지</title>
+    <title>관리자 페이지</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/a10ef0afa0.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div id="header">
-      <img class="admin-logo" src="marketclear_logo_mint.png" />
-      <div class="admin-logout"><a href="">로그아웃</a></div>
+      <a href="http://localhost:8080"
+        ><img class="admin-logo" src="marketclear_logo_mint.png"
+      /></a>
+      <div class="admin-logout">
+        <a onclick="logoutFunction()">로그아웃</a>
+      </div>
     </div>
 
     <div id="row">
@@ -23,7 +33,6 @@
           class="h-100 flex-column align-items-stretch pe-4 border-end"
         >
           <nav class="nav nav-pills flex-column">
-            <div><a class="nav-link" href="#item-0">Dashboard</a></div>
             <div><a class="nav-link" href="#item-1">상품</a></div>
             <div>
               <nav class="nav nav-pills flex-column">
@@ -75,7 +84,7 @@
           class="scrollspy-example-2"
           tabindex="0"
         >
-          <div id="item-0">
+          <!-- <div id="item-0">
             <h2>대시보드</h2>
             <div id="dashboard1">
               <h4>최근 들어온 주문 내역</h4>
@@ -86,7 +95,7 @@
                     <th class="tg-selti">상품명</th>
                     <th class="tg-selti">브랜드명</th>
                     <th class="tg-selti">카테고리</th>
-                    <th class="tg-selti">회원명</th>
+                    <th class="tg-selti">이름</th>
                     <th class="tg-selti">결제금액</th>
                     <th class="tg-selti">수량</th>
                   </tr>
@@ -146,7 +155,7 @@
               <table class="tg">
                 <thead>
                   <tr>
-                    <th class="tg-selti">회원명</th>
+                    <th class="tg-selti">이름</th>
                     <th class="tg-selti">상품명</th>
                     <th class="tg-selti" colspan="2">카테고리</th>
                     <th class="tg-selti" colspan="2">제목</th>
@@ -194,7 +203,7 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          </div> -->
 
           <div id="item-1">
             <h2>상품</h2>
@@ -396,7 +405,7 @@
                     <th class="tg-selti">상품명</th>
                     <th class="tg-selti">브랜드명</th>
                     <th class="tg-selti">카테고리</th>
-                    <th class="tg-selti">회원명</th>
+                    <th class="tg-selti">이름</th>
                     <th class="tg-selti">결제금액</th>
                     <th class="tg-selti">수량</th>
                   </tr>
@@ -471,7 +480,7 @@
                 <thead>
                   <tr>
                     <th class="tg-selti" colspan="2">주문번호</th>
-                    <th class="tg-selti">회원명</th>
+                    <th class="tg-selti">이름</th>
                     <th class="tg-selti">상품명</th>
                     <th class="tg-selti">브랜드명</th>
                     <th class="tg-selti">배송 상태</th>
@@ -543,18 +552,21 @@
         </div>
         <div id="item-3-1">
           <h3>회원 관리</h3>
+          <!-- ID, 비밀번호, 이름, 주소 -->
           <div id="ppl-manage1">
             <table class="tg">
               <thead>
                 <tr>
-                  <th class="tg-selti">회원명</th>
-                  <th class="tg-selti" colspan="2">연락처</th>
+                  <th class="tg-selti">ID</th>
+                  <th class="tg-selti">비밀번호</th>
+                  <th class="tg-selti" colspan="2">이름</th>
                   <th class="tg-selti" colspan="2">주소</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="tg-db-lineodd">고우석</td>
+                  <td class="tg-db-lineodd">boylove@never.com</td>
+                  <td class="tg-db-lineodd">홍석천</td>
                   <td class="tg-db-lineodd" colspan="2">010-7777-7777</td>
                   <td class="tg-db-lineodd" colspan="2">
                     서울시 강동구 천호로 123
@@ -562,20 +574,24 @@
                 </tr>
                 <tr>
                   <td class="tg-db-lineeven">히</td>
+                  <td class="tg-db-lineeven">히</td>
                   <td class="tg-db-lineeven" colspan="2"></td>
                   <td class="tg-db-lineeven" colspan="2"></td>
                 </tr>
                 <tr>
+                  <td class="tg-db-lineodd">히</td>
                   <td class="tg-db-lineodd">히</td>
                   <td class="tg-db-lineodd" colspan="2"></td>
                   <td class="tg-db-lineodd" colspan="2"></td>
                 </tr>
                 <tr>
                   <td class="tg-db-lineeven">히</td>
+                  <td class="tg-db-lineeven">히</td>
                   <td class="tg-db-lineeven" colspan="2"></td>
                   <td class="tg-db-lineeven" colspan="2"></td>
                 </tr>
                 <tr>
+                  <td class="tg-db-lineodd">히</td>
                   <td class="tg-db-lineodd">히</td>
                   <td class="tg-db-lineodd" colspan="2"></td>
                   <td class="tg-db-lineodd" colspan="2"></td>
@@ -603,55 +619,53 @@
             <table class="tg">
               <thead>
                 <tr>
-                  <th class="tg-selti">회원명</th>
-                  <th class="tg-selti" colspan="2">제목</th>
-                  <th class="tg-selti" colspan="2">내용</th>
+                  <th class="tg-qnamanage" colspan="2">제목</th>
+                  <th class="tg-qnamanage" colspan="2">상품명</th>
+                  <th class="tg-qnamanage">작성자</th>
+                  <th class="tg-qnamanage">작성일</th>
+                  <th class="tg-qnamanage">답변상태</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="tg-db-lineodd">고우석</td>
-                  <td class="tg-db-lineodd" colspan="2">
-                    가래떡가래떡가래떡가래떡
-                  </td>
-                  <td class="tg-db-lineodd" colspan="2">
-                    맛있네요맛있네요맛있네요맛있네요맛있네요맛있네요맛있네요맛있네요
-                  </td>
-                </tr>
-                <tr>
-                  <td class="tg-db-lineeven">히</td>
-                  <td class="tg-db-lineeven" colspan="2"></td>
-                  <td class="tg-db-lineeven" colspan="2"></td>
-                </tr>
-                <tr>
-                  <td class="tg-db-lineodd">히</td>
                   <td class="tg-db-lineodd" colspan="2"></td>
                   <td class="tg-db-lineodd" colspan="2"></td>
+                  <td class="tg-db-lineodd"></td>
+                  <td class="tg-db-lineodd"></td>
+                  <td class="tg-db-lineodd"></td>
                 </tr>
                 <tr>
-                  <td class="tg-db-lineeven">히</td>
                   <td class="tg-db-lineeven" colspan="2"></td>
                   <td class="tg-db-lineeven" colspan="2"></td>
+                  <td class="tg-db-lineeven"></td>
+                  <td class="tg-db-lineeven"></td>
+                  <td class="tg-db-lineeven"></td>
                 </tr>
                 <tr>
-                  <td class="tg-db-lineodd">히</td>
                   <td class="tg-db-lineodd" colspan="2"></td>
                   <td class="tg-db-lineodd" colspan="2"></td>
+                  <td class="tg-db-lineodd"></td>
+                  <td class="tg-db-lineodd"></td>
+                  <td class="tg-db-lineodd"></td>
+                </tr>
+                <tr>
+                  <td class="tg-db-lineeven" colspan="2"></td>
+                  <td class="tg-db-lineeven" colspan="2"></td>
+                  <td class="tg-db-lineeven"></td>
+                  <td class="tg-db-lineeven"></td>
+                  <td class="tg-db-lineeven"></td>
+                </tr>
+                <tr>
+                  <td class="tg-db-lineodd" colspan="2"></td>
+                  <td class="tg-db-lineodd" colspan="2"></td>
+                  <td class="tg-db-lineodd"></td>
+                  <td class="tg-db-lineodd"></td>
+                  <td class="tg-db-lineodd"></td>
                 </tr>
               </tbody>
             </table>
             <div>
-              <ul class="pagination">
-                <li class="page-item">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">3</a>
-                </li>
-              </ul>
+              <ul id="page"></ul>
             </div>
           </div>
         </div>
@@ -661,50 +675,52 @@
             <table class="tg">
               <thead>
                 <tr>
-                  <th class="tg-selti">회원명</th>
-                  <th class="tg-selti">카테고리</th>
-                  <th class="tg-selti" colspan="2">상품명</th>
                   <th class="tg-selti" colspan="2">제목</th>
-                  <th class="tg-selti" colspan="2">내용</th>
+                  <th class="tg-selti" colspan="2">상품명</th>
+                  <th class="tg-selti">카테고리</th>
+                  <th class="tg-selti">작성자</th>
+                  <th class="tg-selti">작성일</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="tg-db-lineodd">김정규</td>
-                  <td class="tg-db-lineodd">떡빵</td>
-                  <td class="tg-db-lineodd" colspan="2">가래떡</td>
-                  <td class="tg-db-lineodd" colspan="2">맛있네요</td>
                   <td class="tg-db-lineodd" colspan="2">
-                    기대 이상이에요 제 점수는요
+                    가래떡가래떡가래떡가래떡
                   </td>
+                  <td class="tg-db-lineodd" colspan="2">
+                    가래떡 맛있겠다 꿀 발라 먹...
+                  </td>
+                  <th class="tg-db-lineodd">참깨</th>
+                  <th class="tg-db-lineodd">고우석</th>
+                  <th class="tg-db-lineodd">작성일</th>
                 </tr>
                 <tr>
-                  <td class="tg-db-lineeven">히</td>
-                  <td class="tg-db-lineeven">히</td>
+                  <td class="tg-db-lineeven" colspan="2">가래떡가래떡</td>
                   <td class="tg-db-lineeven" colspan="2"></td>
-                  <td class="tg-db-lineeven" colspan="2"></td>
-                  <td class="tg-db-lineeven" colspan="2"></td>
+                  <th class="tg-db-lineeven">참깨</th>
+                  <th class="tg-db-lineeven">장나라</th>
+                  <th class="tg-db-lineeven">작성일</th>
                 </tr>
                 <tr>
-                  <td class="tg-db-lineodd">히</td>
-                  <td class="tg-db-lineodd">히</td>
+                  <td class="tg-db-lineodd" colspan="2">가래떡가래떡</td>
                   <td class="tg-db-lineodd" colspan="2"></td>
-                  <td class="tg-db-lineodd" colspan="2"></td>
-                  <td class="tg-db-lineodd" colspan="2"></td>
+                  <th class="tg-db-lineodd">참깨</th>
+                  <th class="tg-db-lineodd">장나라</th>
+                  <th class="tg-db-lineodd">작성일</th>
                 </tr>
                 <tr>
-                  <td class="tg-db-lineeven">히</td>
-                  <td class="tg-db-lineeven">히</td>
+                  <td class="tg-db-lineeven" colspan="2">가래떡가래떡</td>
                   <td class="tg-db-lineeven" colspan="2"></td>
-                  <td class="tg-db-lineeven" colspan="2"></td>
-                  <td class="tg-db-lineeven" colspan="2"></td>
+                  <th class="tg-db-lineeven">참깨</th>
+                  <th class="tg-db-lineeven">장나라</th>
+                  <th class="tg-db-lineeven">작성일</th>
                 </tr>
                 <tr>
-                  <td class="tg-db-lineodd">히</td>
-                  <td class="tg-db-lineodd">히</td>
+                  <td class="tg-db-lineodd" colspan="2">가래떡가래떡</td>
                   <td class="tg-db-lineodd" colspan="2"></td>
-                  <td class="tg-db-lineodd" colspan="2"></td>
-                  <td class="tg-db-lineodd" colspan="2"></td>
+                  <th class="tg-db-lineodd">참깨</th>
+                  <th class="tg-db-lineodd">장나라</th>
+                  <th class="tg-db-lineodd">작성일</th>
                 </tr>
               </tbody>
             </table>
