@@ -20,7 +20,8 @@ async function getList() {
       boardNumber.innerText = item.id;
       boardTitle.innerText = item.noticeName;
       boardWriter.innerText = item.writer;
-      boardDate.innerText = item.createat;
+      boardDate.innerText = item.createdAt;
+
       boardItem.append(boardNumber);
       boardItem.append(boardTitle);
       boardItem.append(boardWriter);
