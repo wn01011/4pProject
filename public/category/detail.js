@@ -4,7 +4,19 @@ let currName = "";
 let currDescription = "";
 let currPrice = "";
 
+// 상품
 const goods = document.getElementById("goods");
+
+// 카테고리
+const categoryAll = document.getElementById("item-all");
+const categoryBro = document.getElementById("item-bro");
+const categoryBean = document.getElementById("item-bean");
+const categoryEnv = document.getElementById("item-env");
+const categoryOni = document.getElementById("item-onion");
+const categoryPota = document.getElementById("item-potato");
+const categoryCuc = document.getElementById("item-cucumber");
+const categorySpi = document.getElementById("item-spinach");
+const categoryFro = document.getElementById("item-frozen");
 
 const getList = function (img, delivery, name, description, price) {
   try {
@@ -16,6 +28,10 @@ const getList = function (img, delivery, name, description, price) {
     const tempGoodsPrice = document.createElement("p");
     const tempGoodsInfo = document.createElement("p");
     const tempGoodsCart = document.createElement("img");
+
+    categoryAll.onclick = (e) => {
+      e.preventDefault();
+    };
 
     tempGoodsImg.src = `/api/product/download${img}`;
     tempGoodsDel.innerText = `${delivery}`;
@@ -46,7 +62,7 @@ const getList = function (img, delivery, name, description, price) {
 
     goods.style = `
     display: flex;
-    width: 800px;
+    width: 837px;
     `;
 
     tempGoodsImg.style = `
@@ -83,9 +99,9 @@ const getList = function (img, delivery, name, description, price) {
     tempGoodsDiv.append(tempGoodsCart);
     tempGoodsA.after(tempGoodsCart);
 
-    // 상세페이지로 이동
+    // 제품 상세페이지로 이동
     function detailItem() {
-      location.href = "/item?name=" + name;
+      location.href = "/item?너의선택=" + img;
     }
     // 이미지 클릭시
     tempGoodsA.onclick = (e) => {
@@ -98,7 +114,9 @@ const getList = function (img, delivery, name, description, price) {
   }
 };
 
-const filterBrand = document.getElementById("filter-brand");
+// 필터 사이드바 (브랜드명)
+const brandFilter = document.getElementById("filter-brand");
+const priceBrand = document.getElementById("brand-price");
 let brandSet = new Set();
 
 const getFilter = function (manufacturer) {
@@ -107,15 +125,18 @@ const getFilter = function (manufacturer) {
     const filterImg = document.createElement("img");
     const filterA = document.createElement("a");
     const filterAa = document.createElement("a");
+
     filterImg.src = `/category/imges/detailImg/check-circle.svg`;
     filterAa.innerText = `${manufacturer}`;
     filterAa.style = `
     margin-left: 20px;
     line-height: 2
     `;
+    filterImg.style = `
+    opacity: 0.3;
+    `;
 
-    // brandSet.
-    filterBrand.append(filterLi);
+    brandFilter.append(filterLi);
     filterA.append(filterImg);
     filterLi.append(filterA);
     filterLi.append(filterAa);
@@ -123,6 +144,16 @@ const getFilter = function (manufacturer) {
     console.log(error);
   }
 };
+
+const getCategories = function (category) {
+  try {
+    // cateLi1.innerText = `${category[1]}`;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// 카테고리 데이터 요청
 axios
   .post("/api/product/category", { data: "채소" })
   .then((data) => {
@@ -131,16 +162,22 @@ axios
       // 카테고리별 아이템 추출
       const category = Object.values(item.category[0]);
       console.log(category[1]);
+      // console.log(category);
+      // getCategories(category);
       // 전체보기
-      getList(item.img, item.delivery, item.name, item.description, item.price);
+      getList(
+        item.img,
+        item.delivery,
+        item.name,
+        item.description,
+        item.price,
+        category
+      );
       // 브랜드 추출
       if (!brandSet.has(item.manufacturer) && item.manufacturer != "") {
         brandSet.add(item.manufacturer);
         getFilter(item.manufacturer);
       }
-      // 가격 추출
-      // filterAa
-      // console.log(brand);
     });
   })
   .catch((err) => {
@@ -148,16 +185,24 @@ axios
   });
 
 // axios
-//   .post("/api/product/filter", { data: "채소" })
-//   .then((data) => {
+// .post("/api/product/category", { data: "과일" })
+// .then((data) => {
+//   console.log(data.data);
+//   data.data.forEach((item) => {
+//     // 카테고리별 아이템 추출
 //     const category = Object.values(item.category[0]);
 //     console.log(category[1]);
-//     // console.log(item.category[0]);
-//     data.data.forEach((item) => {
-//       getList(item.img, item.delivery, item.name, item.description, item.price);
-//       getFilter();
-//     });
-//   })
-//   .catch((err) => {
-//     console.error(err);
+//     // 전체보기
+//     getList(item.img, item.delivery, item.name, item.description, item.price);
+//     // 브랜드 추출
+//     if (!brandSet.has(item.manufacturer) && item.manufacturer != "") {
+//       brandSet.add(item.manufacturer);
+//       getFilter(item.manufacturer);
+//     }
+//     // 가격 추출
+
 //   });
+// })
+// .catch((err) => {
+//   console.error(err);
+// });

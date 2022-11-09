@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="./detail.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
+    <link
+      rel="shortcut icon"
+      href="/Assets/IMG/clear.ico"
+      type="image/x-icon"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
@@ -21,21 +26,21 @@
           <div id="item">
             <div class="item-inner">
               <ul>
-                <li>전체보기</li>
-                <li>브로콜리&#183;파프리카&#183;양배추</li>
-                <li>콩나물&#183;버섯</li>
+                <li id="item-all">전체보기</li>
+                <li id="item-bro">브로콜리&#183;파프리카&#183;양배추</li>
+                <li id="item-bean">콩나물&#183;버섯</li>
               </ul>
               <ul>
-                <li>친환경</li>
-                <li>양파&#183;대파&#183;마늘&#183;배추</li>
+                <li id="item-env">친환경</li>
+                <li id="item-onion">양파&#183;대파&#183;마늘&#183;배추</li>
               </ul>
               <ul>
-                <li>고구마&#183;감자&#183;당근</li>
-                <li>오이&#183;호박&#183;고추</li>
+                <li id="item-potato">고구마&#183;감자&#183;당근</li>
+                <li id="item-cucumber">오이&#183;호박&#183;고추</li>
               </ul>
               <ul>
-                <li>시금치&#183;쌈채소&#183;나물</li>
-                <li>냉동&#183;이색&#183;간편채소</li>
+                <li id="item-spinach">시금치&#183;쌈채소&#183;나물</li>
+                <li id="item-frozen">냉동&#183;이색&#183;간편채소</li>
               </ul>
             </div>
           </div>
@@ -54,20 +59,26 @@
           <ul id="check">
             <li>가격</li>
           </ul>
-          <ul id="check">
+          <ul id="brand-price">
             <li>
               <img src="/category/imges/detailImg/check-circle.svg" alt="" /><a
                 href=""
                 >2,590원 미만</a
               >
+            </li>
+            <li>
               <img src="/category/imges/detailImg/check-circle.svg" alt="" /><a
                 href=""
                 >2,590원 ~ 3,800원</a
               >
+            </li>
+            <li>
               <img src="/category/imges/detailImg/check-circle.svg" alt="" /><a
                 href=""
                 >3,800원 ~ 5,490원</a
               >
+            </li>
+            <li>
               <img src="/category/imges/detailImg/check-circle.svg" alt="" /><a
                 href=""
                 >5,490원 이상</a
