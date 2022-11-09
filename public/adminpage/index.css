@@ -494,6 +494,10 @@ ul {
   margin-bottom: 50px;
 }
 
+.qna {
+  display: block;
+}
+
 #qna-manage1 {
   display: flex;
   flex-direction: column;

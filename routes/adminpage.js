@@ -2,7 +2,7 @@ const { Router } = require("express");
 const db = require("../models/index.js");
 const fs = require("fs");
 const path = require("path");
-const { sequelize } = require("../models/index.js");
+const { sequelize, ProductaskTable } = require("../models/index.js");
 const router = Router();
 const seq = require("sequelize");
 
@@ -80,10 +80,15 @@ router // 문의 관리
   .post((req, res) => {
     const adminSendAsk = [];
     db.ProductaskTable.findAll().then((data) => {
+      data.forEach((item) => {
+        console.log(item);
+        adminSendAsk.push(item.dataValues);
+      });
       console.log(data);
-      res.send(data);
+      res.send(adminSendAsk);
     });
   });
+
 // router // 리뷰 관리
 //   .route("/")
 //   .get((req, res) => {
