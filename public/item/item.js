@@ -1,5 +1,5 @@
 let currItemName = "";
-let currUserId = "1";
+let currUserId = getUserId();
 // ===== 상품 =====
 let currImg = "";
 let currDelivery = "";
@@ -12,6 +12,8 @@ let currUnit = "";
 let currWeight = "";
 let currOrigin = "";
 
+<<<<<<< HEAD
+=======
 axios
   .post("/api/product/", { data: "채소" })
   .then((data) => {
@@ -27,8 +29,7 @@ axios
       data.data[0].weight,
       data.data[0].origin
     );
-    currItemName = data.data[1].name;
-
+    currItemName = data.data[0].name;
     currItemCategory = data.data[0].category[0];
     // 상품 문의쪽 정보 불러오는 곳
     axios
@@ -51,6 +52,7 @@ axios
     console.error(err);
   });
 
+>>>>>>> dev
 const itemList = document.getElementById("item-image");
 const itemDelivery = document.getElementById("item-delivery");
 const itemName = document.getElementById("item-name");
@@ -72,7 +74,7 @@ const total = document.getElementById("total-price");
 const totalText = document.getElementById("total-price-text");
 const totalWonText = document.getElementById("total-price-won");
 
-async function getList(
+async function itemDetailList(
   img,
   delivery,
   name,
@@ -85,6 +87,7 @@ async function getList(
   origin
 ) {
   try {
+    // for (let i = 0; i > data.length; ++i) {}
     const itemDiv = document.createElement("div");
     const itemImg = document.createElement("img");
     const itemInfoP = document.createElement("p");
@@ -190,6 +193,45 @@ async function getList(
   }
 }
 
+axios
+  .post("/api/product/category", { data: "채소" })
+  .then((data) => {
+    itemDetailList(
+      data.data[0].img,
+      data.data[0].delivery,
+      data.data[0].name,
+      data.data[0].description,
+      data.data[0].price,
+      data.data[0].manufacturer,
+      data.data[0].package,
+      data.data[0].unit,
+      data.data[0].weight,
+      data.data[0].origin
+    );
+    currItemName = data.data[1].name;
+
+    currItemCategory = data.data[0].category[0];
+    // 상품 문의쪽 정보 불러오는 곳
+    axios
+      .post("/api/notice/productask", { productName: currItemName })
+      .then((data) => {
+        if (data.data.length > 0) askDefault.classList.add("off");
+        data.data.forEach((item) => {
+          createAskList(
+            item.name,
+            item.userId,
+            item.createdAt.slice(0, 10),
+            item.isAnswer,
+            item.text,
+            item.answerText
+          );
+        });
+      });
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
 const askTable = document.getElementById("ask-table");
 const askDefault = document.getElementById("ask-default");
 
@@ -285,6 +327,7 @@ modalClose.onclick = () => {
   askModal.classList.toggle("off");
 };
 askBtn.onclick = () => {
+  if (!getUserId()) return alert("로그인 해주세요");
   askModal.classList.remove("off");
 };
 
@@ -292,13 +335,19 @@ const modalSubmitBtn = document.getElementsByClassName("submit-area")[0];
 const modalTextArea = document.getElementById("modal-ask-area");
 const modalName = document.getElementById("modal-name");
 
+function getUserId() {
+  for (let i = 0; i < document.cookie.split(";").length; ++i) {
+    return document.cookie.split(";")[i].split("=")[0];
+  }
+}
+
 modalSubmitBtn.onclick = () => {
   const name = modalName.value;
   const value = modalTextArea.value;
-  if (name == "" || value == "") return;
+  if (name == "" || value == "" || !getUserId()) return;
   axios
     .post("/api/notice/modalask", {
-      userId: "2",
+      userId: getUserId(),
       productName: currItemName,
       name: name,
       text: value,
@@ -306,7 +355,6 @@ modalSubmitBtn.onclick = () => {
       isAnswer: 0,
     })
     .then((data) => {
-      console.log(data);
       askModal.classList.toggle("off");
       window.location.reload();
     });
@@ -316,11 +364,14 @@ modalSubmitBtn.onclick = () => {
 
 const reviewBox = document.getElementById("review-box");
 const totalCount = document.getElementById("total-count");
-makeReview(
-  "김킴형",
-  "[풀무원] 나폴리식 파스타 미트라구 (2인분)",
-  "가격 착하고 품질조아요2"
-);
+
+const reviewId = setInterval(() => {
+  if (itemName != "") {
+    makeReview(getUserId(), currItemName, "가격 착하고 품질조아요2");
+    clearInterval(reviewId);
+  }
+}, 100);
+
 function makeReview(userId, productName, text) {
   axios
     .post("/api/product/productReview", {
