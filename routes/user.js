@@ -5,6 +5,7 @@ const db = require("../models/index.js");
 const dotenv = require("dotenv");
 const router = Router();
 
+let tempDeduplication = [];
 dotenv.config();
 // 유저 정보 일단 담아둘 곳
 const users = [];
@@ -18,62 +19,78 @@ router
   .post((req, res) => {
     res.send("post로 요청을 보냈군요?");
   });
-// 로그인 들어왔을 때 예시
-router
-  .route("/login")
-  .get((req, res) => {
-    res.send();
-  })
-  .post(async (req, res) => {
-    console.log("받았어", req.body);
-    try {
-      const tempUser = await db.findOne({ where: { userId: req.body.id } });
-      // db
-      if (!tempUser) {
-        res.status(500);
-        res.send({ message: "no ID" });
-        return;
-      }
-      if (tempUser.userPw == crypto.SHA256(req.body.pw).toString()) {
-        console.log();
-        const expireTime = "20";
-        res.cookie("clearLogin", createJwt(tempUser.id, process.env.ADMIN_PW), {
-          expires: expireTime + "s",
-        });
-        res.send({
-          status: 200,
-          id: tempUser.id,
-          name: tempUser.name,
-        });
-        return;
-      }
-      res.status(500);
-      res.send({ message: "wrong password" });
-    } catch {
-      res.status(500);
-      res.send(error);
-    }
-  });
 
-router
-  .route("/regist")
-  .get((req, res) => {
-    res.send();
-  })
-  .post((req, res) => {
-    console.log(req.body);
-    db.UserTable.create({
-      userId: req.body.id,
-      pw: crypto.SHA256(req.body.pw).toString(),
-      name: req.body.name,
-      isManager: 0,
-      address: req.body.address,
-      gender: req.body.gender,
-      birthday: `${req.body.birthday.year}-${req.body.birthday.month}-${req.body.birthday.day}`,
-    }).then((data) => {
-      res.send(data);
+// 로그인 들어왔을 때 예시
+router.route("/login").post(async (req, res) => {
+  try {
+    const tempUser = await db.UserTable.findOne({
+      where: { userId: req.body.id },
     });
+    // db
+    console.log(tempUser);
+    if (!tempUser) {
+      console.log("디비에 아이디 X");
+      res.send({ status: 402, message: "no ID" });
+    }
+    console.log("디비에 아이디가 있넹");
+    if (tempUser.pw == crypto.SHA256(req.body.pw).toString()) {
+      console.log(tempUser.pw);
+      console.log(crypto.SHA256(req.body.pw).toString());
+      res.cookie(
+        tempUser.userId,
+        createJwt(tempUser.userId, process.env.ADMIN_PW)
+      );
+      console.log("쿠키만듦");
+      res.send({
+        status: 200,
+        id: tempUser.id,
+        name: tempUser.name,
+      });
+      return;
+    } else {
+      res.send({ status: 402, message: "wrong password", name: tempUser.name });
+    }
+  } catch (error) {
+    res.status(500);
+    res.send(error);
+  }
+});
+
+router.route("/deduplication").post(async (req, res) => {
+  console.log("라우터에서 중복 체크 받음 : " + req.body.id);
+  try {
+    const tempId = await db.UserTable.findAll();
+    let tempIdArr = Array.from(tempId);
+    for (let i = 0; i < tempIdArr.length; i++) {
+      if (tempId[i].dataValues.userId == req.body.id) {
+        res.send({ status: 401, data: "exist Id" });
+      }
+      if (
+        i == tempIdArr.length - 1 &&
+        tempId[i].dataValues.userId != req.body.id
+      ) {
+        res.send({ status: 200, data: "available" });
+      }
+    }
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.route("/regist").post((req, res) => {
+  console.log(req.body);
+  db.UserTable.create({
+    userId: req.body.id,
+    pw: crypto.SHA256(req.body.pw).toString(),
+    name: req.body.name,
+    isManager: 0,
+    address: req.body.address,
+    gender: req.body.gender,
+    birthday: `${req.body.birthday.year}-${req.body.birthday.month}-${req.body.birthday.day}`,
+  }).then((data) => {
+    res.send(data);
   });
+});
 
 // 로그인에 대한 토큰일 필요해 보여서 토큰 여기에 생성
 // 토큰에 대한 키.. 일단 만들어둠
@@ -84,6 +101,7 @@ let jwtKey = "abcd";
 
 function createJwt(name, key) {
   // JWT 토큰 만료시간 지정
+  console.log("createJwt 성공적으로 호출");
   const expireTime = "20";
   // 토큰 생성
   // sign(토큰 이름, 키, 헤더(옵션))

@@ -48,10 +48,11 @@ button {
   flex-direction: column;
   justify-content: center;
 }
+
 #signup_board_id_input {
   border: 1px solid gainsboro;
-  border-radius: 5px;
   padding: 10px;
+  border-radius: 5px;
   flex: 1;
 }
 #signup_board_id_input_input {
@@ -59,6 +60,7 @@ button {
   font-size: 18px;
   width: 100%;
 }
+
 #signup_board_id_deduplication {
   width: 120px;
   border: 2px solid #c2eaec;
@@ -66,6 +68,25 @@ button {
   margin-left: 10px;
   background-color: transparent;
   border-radius: 3px;
+}
+#signup_board_id_reg {
+  display: none;
+}
+#signup_board_id_reg_text {
+  color: #2c3333;
+  font-size: 12px;
+}
+#signup_board_id_reg.on {
+  display: flex;
+}
+#signup_board_id_reg_text.okay {
+  color: aquamarine;
+}
+.white_space1 {
+  width: 150px;
+}
+.white_space2 {
+  width: 120px;
 }
 #signup_board_pw {
   display: flex;
@@ -97,6 +118,21 @@ button {
   padding: 10px;
   margin-left: 10px;
 }
+
+#signup_board_pw_reg {
+  display: none;
+}
+#signup_board_pw_reg_text {
+  color: #2c3333;
+  font-size: 12px;
+}
+#signup_board_pw_reg.on {
+  display: flex;
+}
+#signup_board_pw_reg_text.okay {
+  color: aquamarine;
+}
+
 #signup_board_confirmpw {
   display: flex;
   justify-content: space-between;
@@ -127,6 +163,21 @@ button {
   padding: 10px;
   margin-left: 10px;
 }
+
+#signup_board_confirmpw_reg {
+  display: none;
+}
+#signup_board_confirmpw_reg_text {
+  color: #2c3333;
+  font-size: 12px;
+}
+#signup_board_confirmpw_reg.on {
+  display: flex;
+}
+#signup_board_confirmpw_reg_text.okay {
+  color: aquamarine;
+}
+
 #signup_board_name {
   display: flex;
   justify-content: space-between;
@@ -178,7 +229,6 @@ button {
   display: flex;
   justify-content: center;
   flex: 1;
-  /* border: none; */
   background: transparent;
   font-size: 18px;
   display: flex;
@@ -193,6 +243,21 @@ button {
   padding: 10px;
   margin-left: 10px;
 }
+
+#signup_board_address_result {
+  display: none;
+}
+#signup_board_address_result_text {
+  color: #2c3333;
+  font-size: 12px;
+  border: 1px solid gainsboro;
+  flex: 1;
+  padding: 10px;
+}
+#signup_board_address_result.on {
+  display: flex;
+}
+
 #signup_board_gender {
   display: flex;
   justify-content: space-between;
@@ -289,4 +354,55 @@ input[type="radio"]:focus-visible {
   padding: 10 80 10 80;
   border: none;
   font-size: 20px;
+}
+#deduplication_modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#deduplication_modal.show {
+  display: block;
+}
+body:hover #deduplication_modal.show {
+  overflow: hidden;
+}
+#deduplication_modal_body {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 450px;
+  height: 200px;
+
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+#deduplication_modal_body_text {
+  padding: 40px;
+  height: 75%;
+  border: 1px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#deduplication_modal_body_exit {
+  display: block;
+  height: 25%;
+  border: 1px;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 2px solid gainsboro;
+  font-size: 20px;
+  color: #c2eaec;
 }
