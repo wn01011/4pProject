@@ -6,15 +6,14 @@ const { rejects } = require("assert");
 const router = Router();
 
 // "/api/notice"
-router
-  .route("/")
-  .get((req, res) => {
-    res.send();
-  })
-  .post((req, res) => {
-    res.send("post로 요청을 보냈군요?");
+router.route("/").post(async (req, res) => {
+  console.log("라우터 접근");
+  const tempNoticeList = await db.NoticeTable.findAll({
+    order: [["id", "ASC"]],
   });
-
+  console.log(tempNoticeList);
+  res.send({ list: tempNoticeList });
+});
 router
   .route("/askRequest")
   .get((req, res) => {
