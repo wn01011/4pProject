@@ -311,3 +311,46 @@ modalSubmitBtn.onclick = () => {
       window.location.reload();
     });
 };
+
+// 상품 리뷰
+
+const reviewBox = document.getElementById("review-box");
+const totalCount = document.getElementById("total-count");
+makeReview(
+  "김킴형",
+  "[풀무원] 나폴리식 파스타 미트라구 (2인분)",
+  "가격 착하고 품질조아요2"
+);
+function makeReview(userId, productName, text) {
+  axios
+    .post("/api/product/productReview", {
+      userId: userId,
+      productName: productName,
+      text: text,
+    })
+    .then((data) => {
+      totalCount.innerText = "총 " + data.data.length + "개";
+      data.data.forEach((item) => {
+        // 2번째 글자 *으로 치환하는 구문
+        let tempUserId = item.userId;
+        tempUserId = [...tempUserId];
+        tempUserId.splice(1, 1, "*");
+        tempUserId = tempUserId.join("");
+        // ****************************
+        const tempList = document.createElement("li");
+        tempList.innerHTML = `<li class="user-list">
+        <div class="user-id">${tempUserId}</div>
+        <div class="review-text-box">
+          <div class="review-product-name">
+            ${item.productName}
+          </div>
+          <div class="review-product-text">${item.text}</div>
+          <div class="review-product-date">${item.createdAt.slice(0, 10)}</div>
+        </div>
+      </li>`;
+        reviewBox.appendChild(tempList);
+      });
+    });
+}
+
+// 리뷰끝

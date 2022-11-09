@@ -246,6 +246,7 @@ document.getElementById("signup_btn_btn").onclick = async () => {
     inputName.focus();
     return;
   }
+
   // if (!inputAddress)) {
   //   alert("주소를 입력하십시오.");
   //   document.getElementById("signup_board_address_input_input").focus();

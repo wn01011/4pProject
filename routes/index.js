@@ -3,6 +3,7 @@ const router = require("express").Router();
 const user = require("./user.js");
 const product = require("./product.js");
 const notice = require("./notice.js");
+const audio = require("./audio.js");
 const adminpage = require("./adminpage.js");
 
 router.use("/", (req, res, next) => {
@@ -13,6 +14,7 @@ router.use("/", (req, res, next) => {
 router.use("/user", user);
 router.use("/product", product);
 router.use("/notice", notice);
+router.use("/audio", audio);
 router.use("/adminpage", adminpage);
 
 module.exports = router;

@@ -375,3 +375,43 @@ li {
   margin-bottom: 20px;
   padding: 10px;
 }
+#review-main {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#total-count {
+  padding: 20px 0px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+#review-box {
+  width: 100%;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+.user-id {
+  width: 20%;
+  padding: 30px 15px;
+  font-weight: 800;
+}
+.review-text-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 80%;
+  padding: 30px 15px;
+}
+.user-list {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px lightgrey solid;
+}
+.review-product-name {
+  color: rgba(128, 128, 128, 0.719);
+  font-size: 0.9rem;
+}
+.review-product-date {
+  color: rgba(128, 128, 128, 0.719);
+  font-size: 0.9rem;
+}
