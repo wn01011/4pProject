@@ -41,12 +41,16 @@ window.onscroll = function () {
     document.getElementById("header_scroll").classList.remove("on");
   }
 };
+
 let currAudio;
+let search;
 
 window.onload = () => {
   const id = setInterval(() => {
     currAudio = document.getElementsByTagName("audio")[0];
-    if (currAudio) {
+    search = document.getElementById("search_input");
+
+    if (currAudio && search) {
       OnLoadCallBack();
       clearInterval(id);
     }
@@ -57,6 +61,10 @@ function OnLoadCallBack() {
   window.onclick = () => {
     currAudio.play();
     window.onclick = () => {};
+  };
+
+  search.onchange = () => {
+    location.href = "/search?sword=" + search.value;
   };
 }
 let signup;
