@@ -5,6 +5,7 @@ const product = require("./product.js");
 const notice = require("./notice.js");
 const audio = require("./audio.js");
 const adminpage = require("./adminpage.js");
+const cart = require("./cart.js");
 
 router.use("/", (req, res, next) => {
   console.log("routes/index.js : " + req.url);
@@ -16,5 +17,6 @@ router.use("/product", product);
 router.use("/notice", notice);
 router.use("/audio", audio);
 router.use("/adminpage", adminpage);
+router.use("/cart", cart);
 
 module.exports = router;
