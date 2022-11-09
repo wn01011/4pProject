@@ -12,44 +12,6 @@ let currUnit = "";
 let currWeight = "";
 let currOrigin = "";
 
-axios
-  .post("/api/product/", { data: "채소" })
-  .then((data) => {
-    getList(
-      data.data[0].img,
-      data.data[0].delivery,
-      data.data[0].name,
-      data.data[0].description,
-      data.data[0].price,
-      data.data[0].manufacturer,
-      data.data[0].package,
-      data.data[0].unit,
-      data.data[0].weight,
-      data.data[0].origin
-    );
-    currItemName = data.data[0].name;
-    currItemCategory = data.data[0].category[0];
-    // 상품 문의쪽 정보 불러오는 곳
-    axios
-      .post("/api/notice/productask", { productName: currItemName })
-      .then((data) => {
-        if (data.data.length > 0) askDefault.classList.add("off");
-        data.data.forEach((item) => {
-          createAskList(
-            item.name,
-            item.userId,
-            item.createdAt.slice(0, 10),
-            item.isAnswer,
-            item.text,
-            item.answerText
-          );
-        });
-      });
-  })
-  .catch((err) => {
-    console.error(err);
-  });
-
 const itemList = document.getElementById("item-image");
 const itemDelivery = document.getElementById("item-delivery");
 const itemName = document.getElementById("item-name");
