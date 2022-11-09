@@ -139,6 +139,17 @@ h4 {
   padding: 10px 12px;
 }
 
+.tg .tg-qnamanage {
+  background-color: #f7e8e8;
+  border: 1px solid #bbb;
+  color: #493f3f;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: top;
+  padding: 10px 12px;
+}
+
 .tg .tg-db-lineodd {
   background-color: #ffffff;
   text-align: center;

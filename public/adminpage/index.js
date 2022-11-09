@@ -35,60 +35,29 @@ bCatInput.addEventListener("click", function () {
 });
 
 // 아래는 DB 컴컴
-// Q&A 문의 관리
 
+// Q&A 문의 관리
 axios
   .post("/api/adminpage/qna", { productName: "" })
   .then((data) => {
     console.log(data);
+    let count = 0;
+    const qnaManage1 = document
+      .getElementById("qna-manage1")
+      .getElementsByTagName("table")[0];
+    console.log(data.data[0].userId);
+    for (let i = 0; i < data.data.length; i++) {
+      let curRow = qnaManage1
+        .getElementsByTagName("tbody")[0]
+        .getElementsByTagName("tr")[count++];
+      let curTds = curRow.getElementsByTagName("td");
+      curTds[0].innerText = data.data[i].name;
+      curTds[1].innerText = data.data[i].productName;
+      curTds[2].innerText = data.data[i].userId;
+      curTds[3].innerText = data.data[i].createdAt.slice(0, 10);
+      curTds[4].innerText = data.data[i].isAnswer;
+    }
   })
   .catch((error) => {
     throw error;
   });
-
-//  이 아래로는.. 내일.. 수정하자...  create, formdata도 사용
-async function qnaList(name, productName, userId, createdAtt, isAnswer) {
-  try {
-    const tempGoodsDiv = document.createElement("div");
-    const tempGoodsDel = document.createElement("p");
-    const tempGoodsText = document.createElement("p");
-    const tempGoodsPrice = document.createElement("p");
-    const tempGoodsInfo = document.createElement("p");
-    const tempGoodsCart = document.createElement("img");
-
-    console.log(`/api/adminpage/qna`);
-
-    tempGoodsDel.innerText = `${delivery}`;
-    tempGoodsText.innerText = `${name}`;
-    tempGoodsPrice.innerText = `${price}원`;
-    tempGoodsInfo.innerText = `${description}`;
-
-    tempGoodsCart.style = `
-      width: 30px;
-      position: relative;
-      top: -41px;
-      left: 200px;
-      `;
-
-    goods.style = `
-      display: block;
-      `;
-
-    goodsText.style = `
-      line-height: 1.5;
-      `;
-
-    tempGoodsInfo.style = `
-      padding-bottom: 10px;
-      `;
-
-    goods.append(tempGoodsDiv);
-    goodsText.append(tempGoodsPrice);
-    goodsText.append(tempGoodsText);
-    goodsDel.append(tempGoodsDel);
-    goodsInfo.append(tempGoodsInfo);
-    goodsImg.after(tempGoodsCart);
-  } catch (error) {
-    console.log(error);
-  }
-}
