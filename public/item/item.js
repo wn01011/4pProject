@@ -12,8 +12,6 @@ let currUnit = "";
 let currWeight = "";
 let currOrigin = "";
 
-<<<<<<< HEAD
-=======
 axios
   .post("/api/product/", { data: "채소" })
   .then((data) => {
@@ -52,7 +50,6 @@ axios
     console.error(err);
   });
 
->>>>>>> dev
 const itemList = document.getElementById("item-image");
 const itemDelivery = document.getElementById("item-delivery");
 const itemName = document.getElementById("item-name");
