@@ -12,6 +12,8 @@ let currUnit = "";
 let currWeight = "";
 let currOrigin = "";
 
+<<<<<<< HEAD
+=======
 axios
   .post("/api/product/", { data: "채소" })
   .then((data) => {
@@ -50,6 +52,7 @@ axios
     console.error(err);
   });
 
+>>>>>>> dev
 const itemList = document.getElementById("item-image");
 const itemDelivery = document.getElementById("item-delivery");
 const itemName = document.getElementById("item-name");
@@ -71,7 +74,7 @@ const total = document.getElementById("total-price");
 const totalText = document.getElementById("total-price-text");
 const totalWonText = document.getElementById("total-price-won");
 
-async function getList(
+async function itemDetailList(
   img,
   delivery,
   name,
@@ -84,6 +87,7 @@ async function getList(
   origin
 ) {
   try {
+    // for (let i = 0; i > data.length; ++i) {}
     const itemDiv = document.createElement("div");
     const itemImg = document.createElement("img");
     const itemInfoP = document.createElement("p");
@@ -188,6 +192,45 @@ async function getList(
     console.log(error);
   }
 }
+
+axios
+  .post("/api/product/category", { data: "채소" })
+  .then((data) => {
+    itemDetailList(
+      data.data[0].img,
+      data.data[0].delivery,
+      data.data[0].name,
+      data.data[0].description,
+      data.data[0].price,
+      data.data[0].manufacturer,
+      data.data[0].package,
+      data.data[0].unit,
+      data.data[0].weight,
+      data.data[0].origin
+    );
+    currItemName = data.data[1].name;
+
+    currItemCategory = data.data[0].category[0];
+    // 상품 문의쪽 정보 불러오는 곳
+    axios
+      .post("/api/notice/productask", { productName: currItemName })
+      .then((data) => {
+        if (data.data.length > 0) askDefault.classList.add("off");
+        data.data.forEach((item) => {
+          createAskList(
+            item.name,
+            item.userId,
+            item.createdAt.slice(0, 10),
+            item.isAnswer,
+            item.text,
+            item.answerText
+          );
+        });
+      });
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 const askTable = document.getElementById("ask-table");
 const askDefault = document.getElementById("ask-default");

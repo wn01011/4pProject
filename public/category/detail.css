@@ -30,15 +30,20 @@ a {
 #item-head {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 #item {
   width: 1050px;
-  height: 100px;
+}
+
+.item-inner {
+  width: 1050px;
   border: 1px solid black;
   padding: 20px;
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
 }
 
 #item ul {
@@ -66,12 +71,17 @@ a {
   width: 220px;
   border: 1px solid gray;
   padding: 10px;
-  position: relative;
+  position: absolute;
 }
 
 #filter p {
   padding: 10 0 20 0px;
   border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+#list {
+  position: relative;
+  left: 240px;
 }
 
 #brand {
@@ -225,4 +235,18 @@ a {
 
 .item img {
   width: 250px;
+}
+
+.item p {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.item > span img {
+  width: 30px;
+  position: relative;
+  top: -116px;
+  left: 90px;
 }
