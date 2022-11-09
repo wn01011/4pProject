@@ -1,0 +1,102 @@
+button {
+  cursor: pointer;
+}
+#cart_contents {
+  display: flex;
+  justify-content: center;
+  padding: 50 0 50 0px;
+}
+#cart_contents_center {
+  width: 1050px;
+}
+#cart_title {
+  padding: 30 0 30 0px;
+}
+#cart_title > h2 {
+  text-align: center;
+}
+#cart_main {
+  display: flex;
+}
+#cart_basket {
+  width: 75%;
+  padding-right: 20px;
+}
+#cart_basket_top {
+  border-bottom: 1px solid black;
+  padding: 0 0 10 10px;
+}
+#cart_basket_top_all {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+}
+#cart_basket_top_delete {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+}
+.wall {
+  border-right: 1px solid gainsboro;
+  padding-left: 20px;
+  margin-right: 20px;
+}
+#cart_basket_bottom_none {
+  /* display: none; */
+  padding: 120 0 120 0px;
+  color: gainsboro;
+  text-align: center;
+}
+#cart_basket_bottom_none.on {
+  display: block;
+}
+#cart_order {
+  width: 25%;
+}
+#checklist {
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+}
+#checklist_shipping_address {
+  padding: 10px;
+}
+#checklist_shipping_address_address {
+  padding: 10px;
+}
+#checklist_shipping_address_btn {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #a5c9ca;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 3px;
+}
+#checklist_shipping_address_result {
+  display: none;
+}
+#checklist_shipping_address_result.on {
+  display: block;
+}
+#checklist_amount {
+  background-color: #fafafa;
+  border-top: 1px solid gainsboro;
+  padding: 10px;
+}
+.checklist_amount_moneylist:last-child {
+  border-top: 1px solid gainsboro;
+}
+.checklist_amount_moneylist {
+  display: flex;
+  justify-content: space-between;
+  padding: 10 0 10 0px;
+}
+#cart_order_orderbutton {
+  margin-top: 10px;
+  border: none;
+  background-color: #a5c9ca;
+  border-radius: 3px;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  display: block;
+}
