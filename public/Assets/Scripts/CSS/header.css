@@ -70,6 +70,7 @@ li {
   display: block;
   position: relative;
 }
+
 #user_info_dropdown {
   display: none;
   width: 130px;
@@ -86,6 +87,7 @@ li {
 }
 #user_info_dropdown > div {
   padding-bottom: 10px;
+  cursor: pointer;
 }
 .service_center {
   padding-left: 20px;

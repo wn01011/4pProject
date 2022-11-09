@@ -33,3 +33,31 @@ bCatInput.addEventListener("click", function () {
 bCatInput.addEventListener("click", function () {
   bCatSave.classList.add("bigdirsave");
 });
+
+// 아래는 DB 컴컴
+
+// Q&A 문의 관리
+axios
+  .post("/api/adminpage/qna", { productName: "" })
+  .then((data) => {
+    console.log(data);
+    let count = 0;
+    const qnaManage1 = document
+      .getElementById("qna-manage1")
+      .getElementsByTagName("table")[0];
+    console.log(data.data[0].userId);
+    for (let i = 0; i < data.data.length; i++) {
+      let curRow = qnaManage1
+        .getElementsByTagName("tbody")[0]
+        .getElementsByTagName("tr")[count++];
+      let curTds = curRow.getElementsByTagName("td");
+      curTds[0].innerText = data.data[i].name;
+      curTds[1].innerText = data.data[i].productName;
+      curTds[2].innerText = data.data[i].userId;
+      curTds[3].innerText = data.data[i].createdAt.slice(0, 10);
+      curTds[4].innerText = data.data[i].isAnswer;
+    }
+  })
+  .catch((error) => {
+    throw error;
+  });

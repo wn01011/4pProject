@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>고객센터</title>
   </head>
   <body>
@@ -60,7 +61,7 @@
             <span id="serviceCenter_main_stylized_number">번호</span>
             <span id="serviceCenter_main_stylized_title">제목</span>
             <span id="serviceCenter_main_stylized_date">작성일</span>
-            <span id="serviceCenter_main_stylized_status">답변상태</span>
+            <span id="serviceCenter_main_stylized_writer">작성자</span>
           </div>
           <div id="noticeList">
             <!-- 
@@ -68,16 +69,10 @@
               <span class="noticeList_number"></span>
               <span class="noticeList_title"></span>
               <span class="noticeList_date"></span>
-              <span class="noticeList_status"></span>
+              <span class="noticeList_writer"></span>
             </div>
            -->
             <!-- 아래는 임시로 만든 것입니다.  -->
-            <div class="noticeList_item">
-              <span class="noticeList_number">1</span>
-              <span class="noticeList_title">1</span>
-              <span class="noticeList_date">1</span>
-              <span class="noticeList_status">1</span>
-            </div>
           </div>
           <div class="noticeList_paging">
             <div></div>
@@ -89,5 +84,6 @@
     </div>
     <div id="footer_include"></div>
     <script src="/Assets/Scripts/JS/includehtml.js"></script>
+    <script src="/ServiceCenter/index.js"></script>
   </body>
 </html>
