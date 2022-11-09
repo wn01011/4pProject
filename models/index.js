@@ -49,5 +49,4 @@ Object.keys(db).forEach((modelName) => {
     db[modelName].associate(db);
   }
 });
-
 module.exports = db;
