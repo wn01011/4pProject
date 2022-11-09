@@ -97,8 +97,7 @@
   display: flex;
   text-align: center;
   padding: 15px 0px;
-  border-top: 2px black solid;
-  border-bottom: 1px black solid;
+  border-bottom: 1px black gainsboro;
   font-size: 0.7rem;
   display: flex;
   justify-content: space-between;

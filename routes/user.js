@@ -34,12 +34,15 @@ router.route("/login").post(async (req, res) => {
     }
     console.log("디비에 아이디가 있넹");
     if (tempUser.pw == crypto.SHA256(req.body.pw).toString()) {
+      let currToken = createJwt(tempUser.userId, process.env.ADMIN_PW);
+      let currTokenVerified = jwt.verify(currToken, process.env.ADMIN_PW);
       console.log(tempUser.pw);
       console.log(crypto.SHA256(req.body.pw).toString());
-      res.cookie(
-        tempUser.userId,
-        createJwt(tempUser.userId, process.env.ADMIN_PW)
-      );
+      res.cookie(tempUser.userId, currToken, {
+        expires: new Date(
+          Date.now() + 1000 * (currTokenVerified.exp - currTokenVerified.iat)
+        ),
+      });
       console.log("쿠키만듦");
       res.send({
         status: 200,
@@ -54,6 +57,16 @@ router.route("/login").post(async (req, res) => {
     res.status(500);
     res.send(error);
   }
+});
+
+router.post("/logout", (req, res) => {
+  console.log("쿠키제거중");
+  console.log("req.body : ", req.body);
+  console.log("제거할 쿠키 이름 : ", req.body.userId);
+  res.clearCookie(req.body.userId);
+  console.log("쿠키 제거 완료.");
+  console.log(document.cookie);
+  res.end();
 });
 
 router.route("/deduplication").post(async (req, res) => {
