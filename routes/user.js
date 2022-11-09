@@ -38,7 +38,10 @@ router.route("/login").post(async (req, res) => {
       console.log(crypto.SHA256(req.body.pw).toString());
       res.cookie(
         tempUser.userId,
-        createJwt(tempUser.userId, process.env.ADMIN_PW)
+        createJwt(tempUser.userId, process.env.ADMIN_PW),
+        {
+          expires: new Date(Date.now() + 1000 * 1000),
+        }
       );
       console.log("쿠키만듦");
       res.send({

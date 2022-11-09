@@ -47,10 +47,14 @@ router
     //     isAnswer: 0,
     //     createdDate: getToday(),
     //   });
-    const tempData = await db.AskanswerTable.findAll({
-      where: { userId: req.body.userId.toString() },
-    });
-    res.send(tempData);
+    if (req.body.userId) {
+      const tempData = await db.AskanswerTable.findAll({
+        where: { userId: req.body.userId.toString() },
+      });
+      res.send(tempData);
+    } else {
+      res.send();
+    }
   });
 
 router.route("/productask").post((req, res) => {

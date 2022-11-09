@@ -48,7 +48,6 @@ window.onload = () => {
     currAudio = document.getElementsByTagName("audio")[0];
     if (currAudio) {
       OnLoadCallBack();
-      console.log(currAudio);
       clearInterval(id);
     }
   }, 100);
@@ -57,7 +56,6 @@ window.onload = () => {
 function OnLoadCallBack() {
   window.onclick = () => {
     currAudio.play();
-    console.log("hihi");
     window.onclick = () => {};
   };
 }

@@ -20,18 +20,26 @@ function popup() {
 
 init();
 
+function getUserId() {
+  for (let i = 0; i < document.cookie.split(";").length; ++i) {
+    return document.cookie.split(";")[i].split("=")[0];
+  }
+}
+
 function init() {
-  axios.post("/api/notice/askanswer", { userId: 1 }).then((data) => {
-    if (data.data.length > 0) tablePlaceHolder.classList.add("off");
-    data.data.forEach((item) => {
-      makeTableList(
-        item.name,
-        item.userId,
-        item.createdAt,
-        item.isAnswer,
-        item.text
-      );
-    });
+  axios.post("/api/notice/askanswer", { userId: getUserId() }).then((data) => {
+    if (data.data?.length > 0) {
+      tablePlaceHolder.classList.add("off");
+      data.data.forEach((item) => {
+        makeTableList(
+          item.name,
+          item.userId,
+          item.createdAt,
+          item.isAnswer,
+          item.text
+        );
+      });
+    }
   });
 }
 

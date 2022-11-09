@@ -1,5 +1,5 @@
 let currItemName = "";
-let currUserId = "1";
+let currUserId = getUserId();
 // ===== 상품 =====
 let currImg = "";
 let currDelivery = "";
@@ -27,8 +27,7 @@ axios
       data.data[0].weight,
       data.data[0].origin
     );
-    currItemName = data.data[1].name;
-
+    currItemName = data.data[0].name;
     currItemCategory = data.data[0].category[0];
     // 상품 문의쪽 정보 불러오는 곳
     axios
@@ -285,6 +284,7 @@ modalClose.onclick = () => {
   askModal.classList.toggle("off");
 };
 askBtn.onclick = () => {
+  if (!getUserId()) return alert("로그인 해주세요");
   askModal.classList.remove("off");
 };
 
@@ -292,13 +292,19 @@ const modalSubmitBtn = document.getElementsByClassName("submit-area")[0];
 const modalTextArea = document.getElementById("modal-ask-area");
 const modalName = document.getElementById("modal-name");
 
+function getUserId() {
+  for (let i = 0; i < document.cookie.split(";").length; ++i) {
+    return document.cookie.split(";")[i].split("=")[0];
+  }
+}
+
 modalSubmitBtn.onclick = () => {
   const name = modalName.value;
   const value = modalTextArea.value;
-  if (name == "" || value == "") return;
+  if (name == "" || value == "" || !getUserId()) return;
   axios
     .post("/api/notice/modalask", {
-      userId: "2",
+      userId: getUserId(),
       productName: currItemName,
       name: name,
       text: value,
@@ -306,7 +312,6 @@ modalSubmitBtn.onclick = () => {
       isAnswer: 0,
     })
     .then((data) => {
-      console.log(data);
       askModal.classList.toggle("off");
       window.location.reload();
     });
@@ -316,11 +321,14 @@ modalSubmitBtn.onclick = () => {
 
 const reviewBox = document.getElementById("review-box");
 const totalCount = document.getElementById("total-count");
-makeReview(
-  "김킴형",
-  "[풀무원] 나폴리식 파스타 미트라구 (2인분)",
-  "가격 착하고 품질조아요2"
-);
+
+const reviewId = setInterval(() => {
+  if (itemName != "") {
+    makeReview(getUserId(), currItemName, "가격 착하고 품질조아요2");
+    clearInterval(reviewId);
+  }
+}, 100);
+
 function makeReview(userId, productName, text) {
   axios
     .post("/api/product/productReview", {
