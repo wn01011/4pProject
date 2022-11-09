@@ -27,10 +27,20 @@ router.route("/login").post(async (req, res) => {
       where: { userId: req.body.id },
     });
     // db
-    console.log(tempUser);
     if (!tempUser) {
       console.log("디비에 아이디 X");
-      res.send({ status: 402, message: "no ID" });
+      if (
+        req.body.id == process.env.ADMIN_ID &&
+        req.body.pw == process.env.ADMIN_PW
+      ) {
+        res.cookie(req.body.id, "관리자다", {
+          expires: new Date(Date.now() + 1000 * 1000),
+        });
+        res.send({ status: 200, id: req.body.id, name: "관리자" });
+        return;
+      } else {
+        res.send({ status: 402, message: "no ID" });
+      }
     }
     console.log("디비에 아이디가 있넹");
     if (tempUser.pw == crypto.SHA256(req.body.pw).toString()) {
@@ -120,7 +130,7 @@ function createJwt(name, key) {
   // sign(토큰 이름, 키, 헤더(옵션))
   const tempJwt = jwt.sign({ name: `${name}` }, key, {
     algorithm: "HS256",
-    expiresIn: `${expireTime}s`,
+    expiresIn: `${expireTime}m`,
     issuer: "kjk",
   });
   return tempJwt;

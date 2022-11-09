@@ -376,6 +376,8 @@ audio + p {
   white-space: nowrap;
   left: -100px;
   height: 30px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 audio::-webkit-media-controls {
   width: inherit;
