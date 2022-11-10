@@ -125,6 +125,7 @@ a {
 .products {
   display: flex;
   margin-top: 30px;
+  min-height: 700px;
 }
 
 .list-header ul:last-child {
@@ -215,4 +216,21 @@ a {
 .item > span img {
   width: 30px;
   position: relative;
+}
+
+#check img {
+  opacity: 0.3;
+  border-radius: 50%;
+}
+#check button {
+  border: none;
+  background-color: transparent;
+  padding-left: 30px;
+}
+#productNone {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 250px;
 }

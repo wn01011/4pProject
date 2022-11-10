@@ -3,15 +3,21 @@ const sword = decodeURI(location.href.split("?")[1].split("=")[1]);
 title.innerHTML = `<div style="font-size: 1.7rem">'<span style="color: purple;">${sword}</span>'에 대한 검색결과</div>`;
 let brandSet = new Set();
 let selectedBrand = [];
+let selectedPrice = -1;
 const goods = document.getElementById("goods");
+const filter = document.getElementById("filter");
+const list = document.getElementById("list");
 const totalCount = document.getElementById("totalCount");
-
+const productNone = document.getElementById("productNone");
 function searchFunc() {
   goods.innerHTML = "";
   axios
-    .post("/api/product/search", { sword: sword, brand: selectedBrand })
+    .post("/api/product/search", {
+      sword: sword,
+      brand: selectedBrand,
+      price: selectedPrice,
+    })
     .then((data) => {
-      console.log(data.data);
       totalCount.innerText = "총 " + data.data.length + "건";
       data.data.forEach((item) => {
         getList(
@@ -26,6 +32,16 @@ function searchFunc() {
           getFilter(item.manufacturer);
         }
       });
+      if (data.data.length == 0) {
+        productNone.style.display = "flex";
+        list.style.display = "none";
+        if (selectedBrand.length == 0 && selectedPrice == -1)
+          filter.style.display = "none";
+      } else {
+        productNone.style.display = "none";
+        list.style.display = "block";
+        filter.style.display = "block";
+      }
     });
 }
 searchFunc();
@@ -123,7 +139,6 @@ const getList = function (img, delivery, name, description, price) {
     // 이미지 클릭시
     tempGoodsA.onclick = (e) => {
       e.preventDefault();
-      console.log(tempGoodsA);
       detailItem();
     };
   } catch (error) {
@@ -134,7 +149,31 @@ const getList = function (img, delivery, name, description, price) {
 // 필터 사이드바 (브랜드명)
 const brandFilter = document.getElementById("filter-brand");
 const priceBrand = document.getElementById("brand-price");
-
+const checkList = document.getElementsByClassName("check-list");
+checkList[0].onclick = () => {
+  if (selectedPrice == 0) selectedPrice = -1;
+  else selectedPrice = 0;
+  pricesFilter();
+  searchFunc();
+};
+checkList[1].onclick = () => {
+  if (selectedPrice == 1) selectedPrice = -1;
+  else selectedPrice = 1;
+  pricesFilter();
+  searchFunc();
+};
+checkList[2].onclick = () => {
+  if (selectedPrice == 2) selectedPrice = -1;
+  else selectedPrice = 2;
+  pricesFilter();
+  searchFunc();
+};
+checkList[3].onclick = () => {
+  if (selectedPrice == 3) selectedPrice = -1;
+  else selectedPrice = 3;
+  pricesFilter();
+  searchFunc();
+};
 // let filterSet = new Set();
 
 const getFilter = function (manufacturer) {
@@ -189,5 +228,44 @@ const getFilter = function (manufacturer) {
     filterLi.append(filterAa);
   } catch (error) {
     console.log(error);
+  }
+};
+
+const pricesFilter = function () {
+  switch (selectedPrice) {
+    case -1:
+      [...checkList].forEach((item) => {
+        const currImg = item.getElementsByTagName("img")[0];
+        currImg.style.backgroundColor = "transparent";
+      });
+      break;
+    case 0:
+      [...checkList].forEach((item, idx) => {
+        const currImg = item.getElementsByTagName("img")[0];
+        currImg.style.backgroundColor = "transparent";
+        if (idx == 0) currImg.style.backgroundColor = "rgba(75, 0, 130, 0.7)";
+      });
+      break;
+    case 1:
+      [...checkList].forEach((item, idx) => {
+        const currImg = item.getElementsByTagName("img")[0];
+        currImg.style.backgroundColor = "transparent";
+        if (idx == 1) currImg.style.backgroundColor = "rgba(75, 0, 130, 0.7)";
+      });
+      break;
+    case 2:
+      [...checkList].forEach((item, idx) => {
+        const currImg = item.getElementsByTagName("img")[0];
+        currImg.style.backgroundColor = "transparent";
+        if (idx == 2) currImg.style.backgroundColor = "rgba(75, 0, 130, 0.7)";
+      });
+      break;
+    case 3:
+      [...checkList].forEach((item, idx) => {
+        const currImg = item.getElementsByTagName("img")[0];
+        currImg.style.backgroundColor = "transparent";
+        if (idx == 3) currImg.style.backgroundColor = "rgba(75, 0, 130, 0.7)";
+      });
+      break;
   }
 };

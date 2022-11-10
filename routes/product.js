@@ -143,6 +143,7 @@ setImages();
 router.route("/search").post((req, res) => {
   const sword = req.body.sword;
   const sendAry = [];
+  const priceFilterAry = [];
   db.ProductTable.findAll().then((data) => {
     data.forEach((item) => {
       if (
@@ -153,12 +154,42 @@ router.route("/search").post((req, res) => {
         if (req.body.brand.length > 0) {
           if (req.body.brand.includes(item.manufacturer)) sendAry.push(item);
         } else {
-          sendAry.push(item.dataValues);
+          sendAry.push(item);
         }
       }
     });
-    console.log(sendAry);
-    res.send(sendAry);
+    console.log(req.body.price);
+    switch (req.body.price) {
+      case 0:
+        sendAry.forEach((item) => {
+          if (item.price <= 2590) priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      case 1:
+        sendAry.forEach((item) => {
+          if (item.price <= 3800 && item.price > 2590)
+            priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      case 2:
+        sendAry.forEach((item) => {
+          if (item.price <= 5490 && item.price > 3800)
+            priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      case 3:
+        sendAry.forEach((item) => {
+          if (item.price > 5490) priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      default:
+        res.send(sendAry);
+        break;
+    }
   });
 });
 
