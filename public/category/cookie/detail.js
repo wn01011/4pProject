@@ -94,7 +94,7 @@ const getList = function (img, delivery, name, description, price) {
 
     // 제품 상세페이지로 이동
     function detailItem() {
-      location.href = "/item?너의선택=" + img;
+      location.href = "/item?product=" + img;
     }
     // 이미지 클릭시
     tempGoodsA.onclick = (e) => {
@@ -119,7 +119,7 @@ const getFilter = function (manufacturer) {
     const filterA = document.createElement("a");
     const filterAa = document.createElement("a");
 
-    filterImg.src = `/Category/imges/detailImg/check-circle.svg`;
+    filterImg.src = `/category/imges/detailImg/check-circle.svg`;
     filterAa.innerText = `${manufacturer}`;
     filterAa.style = `
     margin-left: 20px;

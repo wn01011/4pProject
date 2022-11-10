@@ -3,6 +3,7 @@ const sword = decodeURI(location.href.split("?")[1].split("=")[1]);
 title.innerHTML = `<div style="font-size: 1.7rem">'<span style="color: purple;">${sword}</span>'에 대한 검색결과</div>`;
 let brandSet = new Set();
 let selectedBrand = [];
+
 let selectedPrice = -1;
 const goods = document.getElementById("goods");
 const filter = document.getElementById("filter");
@@ -183,7 +184,7 @@ const getFilter = function (manufacturer) {
     const filterA = document.createElement("button");
     const filterAa = document.createElement("button");
 
-    filterImg.src = `/Category/imges/detailImg/check-circle.svg`;
+    filterImg.src = `/category/imges/detailImg/check-circle.svg`;
     filterA.style = `
     border : none;
     background-color : transparent;
