@@ -1,24 +1,37 @@
+async function getCartList() {
+  try {
+    const data = await axios.post("/api/cart/cartlist", {
+      userid: document.cookie.split("=")[0],
+    });
+    console.log(data.data.tempList);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getCartList();
+
 const address = document.getElementById("checklist_shipping_address_address");
-// async function getAddress() {
-//   const data = await axios.post("/api/");
-// }
-getAddress();
+let myAddress;
+
 async function getAddress() {
   try {
-    const data = await axios.post("/api/cart/address");
+    const data = await axios.post("/api/cart/address", {
+      userid: document.cookie.split("=")[0],
+    });
     address.innerText = data.data.address;
   } catch (error) {
     console.error(error);
   }
 }
-let myAddress;
-const addressResult = document.getElementById("signup_board_address_result");
+
 document.getElementById("checklist_shipping_address_btn").onclick = () => {
   new daum.Postcode({
     oncomplete: function (data) {
       myAddress = data.address;
-      addressResult.classList.add("on");
-      addressResult.innerText = data.address;
+      address.innerText = data.address;
     },
   }).open();
 };
+
+getAddress();

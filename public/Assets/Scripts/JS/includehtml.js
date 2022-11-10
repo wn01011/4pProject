@@ -74,19 +74,7 @@ let loop = setInterval(() => {
   userinfotext = document.getElementById("user_info_text");
   logout = document.getElementById("user_info_dropdown_logout");
   if (cookieResult) {
-    console.log(signup);
-    console.log(signin);
-    console.log(userinfo);
-    console.log(userinfotext);
-    console.log(logout);
     if (signup && signin && userinfo && userinfotext && logout) {
-      console.log("쿠키가 있기는 한가?");
-      console.log("signup : ", signup);
-      console.log("signin : ", signin);
-      console.log("userinfo : ", userinfo);
-      console.log("userinfotext : ", userinfotext);
-      console.log("logout : ", logout);
-      console.log(document.cookie);
       signup.classList.add("off");
       signin.classList.add("off");
       userinfo.classList.add("on");
