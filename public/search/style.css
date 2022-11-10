@@ -88,8 +88,13 @@ a {
   line-height: 2;
 }
 
-#check li img {
-  padding-right: 10px;
+#brand-price li {
+  display: flex;
+  line-height: 2;
+}
+
+#brand-price li img {
+  padding-right: 20px;
   opacity: 0.3;
 }
 
@@ -213,7 +218,7 @@ a {
 } */
 
 #item-list {
-  width: 800px;
+  width: 835px;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -222,7 +227,7 @@ a {
 #item-inner2 {
   display: flex;
   justify-content: space-between;
-  width: 770px;
+  width: 837px;
   flex-wrap: wrap;
 }
 
@@ -230,7 +235,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 810px;
+  width: 250px;
 }
 
 .item img {

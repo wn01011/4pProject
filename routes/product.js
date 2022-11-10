@@ -242,14 +242,19 @@ setImages();
 //   .catch((err) => console.error(err));
 router.route("/search").post((req, res) => {
   const sword = req.body.sword;
+  const sendAry = [];
   db.ProductTable.findAll().then((data) => {
     data.forEach((item) => {
-      if (item.dataValues.name.match(req.body.sword)) {
-        console.log(item.dataValues.name);
+      if (
+        item.dataValues.name.match(sword) ||
+        JSON.stringify(item.dataValues.category).toString().includes(sword) ||
+        item.manufacturer.match(sword)
+      ) {
+        sendAry.push(item);
       }
     });
+    res.send(sendAry);
   });
-  res.send(sword);
 });
 
 module.exports = router;
