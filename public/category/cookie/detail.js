@@ -9,14 +9,7 @@ const goods = document.getElementById("goods");
 
 // 카테고리
 const categoryAll = document.getElementById("item-all");
-const categoryBro = document.getElementById("item-bro");
-const categoryBean = document.getElementById("item-bean");
 const categoryEnv = document.getElementById("item-env");
-const categoryOni = document.getElementById("item-onion");
-const categoryPota = document.getElementById("item-potato");
-const categoryCuc = document.getElementById("item-cucumber");
-const categorySpi = document.getElementById("item-spinach");
-const categoryFro = document.getElementById("item-frozen");
 
 const getList = function (img, delivery, name, description, price) {
   try {
@@ -126,7 +119,7 @@ const getFilter = function (manufacturer) {
     const filterA = document.createElement("a");
     const filterAa = document.createElement("a");
 
-    filterImg.src = `/category/imges/detailImg/check-circle.svg`;
+    filterImg.src = `/Category/imges/detailImg/check-circle.svg`;
     filterAa.innerText = `${manufacturer}`;
     filterAa.style = `
     margin-left: 20px;
@@ -145,26 +138,32 @@ const getFilter = function (manufacturer) {
   }
 };
 
-const getCategories = function (category) {
+const fruitCategories = function (category) {
   try {
-    // cateLi1.innerText = `${category[1]}`;
+    const tempAllA = document.createElement("a");
+    const tempEnvA = document.createElement("a");
+
+    tempAllA.innerText = "전체보기";
+    tempEnvA.innerText = `쿠키!!!`;
+
+    categoryAll.append(tempAllA);
+    categoryEnv.append(tempEnvA);
   } catch (error) {
     console.log(error);
   }
 };
 
 // 카테고리 데이터 요청
+
 axios
-  .post("/api/product/category", { data: "채소" })
+  .post("/api/product/category", { data: "쿠키" })
   .then((data) => {
+    fruitCategories();
     console.log(data.data);
     data.data.forEach((item) => {
       // 카테고리별 아이템 추출
       const category = Object.values(item.category[0]);
       console.log(category[1]);
-      // console.log(category);
-      // getCategories(category);
-      // 전체보기
       getList(
         item.img,
         item.delivery,
@@ -183,26 +182,3 @@ axios
   .catch((err) => {
     console.error(err);
   });
-
-// axios
-// .post("/api/product/category", { data: "과일" })
-// .then((data) => {
-//   console.log(data.data);
-//   data.data.forEach((item) => {
-//     // 카테고리별 아이템 추출
-//     const category = Object.values(item.category[0]);
-//     console.log(category[1]);
-//     // 전체보기
-//     getList(item.img, item.delivery, item.name, item.description, item.price);
-//     // 브랜드 추출
-//     if (!brandSet.has(item.manufacturer) && item.manufacturer != "") {
-//       brandSet.add(item.manufacturer);
-//       getFilter(item.manufacturer);
-//     }
-//     // 가격 추출
-
-//   });
-// })
-// .catch((err) => {
-//   console.error(err);
-// });

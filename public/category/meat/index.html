@@ -1,0 +1,121 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4pProj</title>
+    <link rel="stylesheet" href="/Category/vegi/detail.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
+    <link
+      rel="shortcut icon"
+      href="/Assets/IMG/clear.ico"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="header_include"></div>
+    <div class="detail">
+      <div class="detail">
+        <div id="banner">
+          <img src="/Category/imges/banner/meat_banner.jpg" alt="" />
+        </div>
+        <div id="vegetable">
+          <div id="item-head"><h1>정육·계란</h1></div>
+          <div id="item">
+            <div class="item-inner">
+              <ul>
+                <li id="item-all"></li>
+                <li id="item-bro"></li>
+              </ul>
+              <ul>
+                <li id="item-env"></li>
+                <li id="item-onion"></li>
+              </ul>
+              <ul>
+                <li id="item-potato"></li>
+                <li id="item-cucumber"></li>
+              </ul>
+              <ul>
+                <li id="item-spinach"></li>
+                <li id="item-frozen"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="products">
+        <div id="filter">
+          <ul>
+            <p>필터</p>
+          </ul>
+          <ul id="brand">
+            <li>브랜드</li>
+          </ul>
+          <ul id="filter-brand"></ul>
+          <div class="more"></div>
+          <ul id="check">
+            <li>가격</li>
+          </ul>
+          <ul id="brand-price">
+            <li>
+              <img src="/Category/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >8,900원 미만</a
+              >
+            </li>
+            <li>
+              <img src="/Category/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >8,900원 ~ 13,500원</a
+              >
+            </li>
+            <li>
+              <img src="/Category/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >13,500원 ~ 19,900원</a
+              >
+            </li>
+            <li>
+              <img src="/Category/imges/detailImg/check-circle.svg" alt="" /><a
+                href=""
+                >19,900원 이상</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="list">
+          <div class="list-header">
+            <ul>
+              <li>총 48건</li>
+            </ul>
+            <ul>
+              <li>
+                <a href="#">
+                  추천순
+                  <img
+                    src="/Category/imges/detailImg/question-circle.svg"
+                    alt=""
+                /></a>
+              </li>
+              <li><a href="#"> 신상품순 </a></li>
+              <li><a href="#"> 판매량순 </a></li>
+              <li><a href="#"> 혜택순 </a></li>
+              <li><a href="#"> 낮은 가격순 </a></li>
+              <li><a href="#"> 높은 가격순 </a></li>
+            </ul>
+          </div>
+          <div id="item-list">
+            <div id="item-inner2">
+              <div class="item" id="goods"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer_include"></div>
+    <script src="/Assets/Scripts/JS/includehtml.js"></script>
+    <script src="./detail.js"></script>
+  </body>
+</html>

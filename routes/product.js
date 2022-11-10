@@ -31,7 +31,7 @@ router
     });
   });
 
-// ======== 채소 연결해죠 ========
+// ======== 상품 뿌려죠 ========
 router.route("/category").post((req, res) => {
   const tempVegi = [];
   db.ProductTable.findAll().then((data) => {
@@ -46,107 +46,7 @@ router.route("/category").post((req, res) => {
   });
 });
 
-// // ======== 과일 연결해죠 ========
-// router.route("/fruit").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-// // ======== 수산 연결해죠 ========
-// router.route("/fish").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-
-// // ======== 정육 연결해죠 ========
-// router.route("/gogi").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-
-// // ======== 국 연결해죠 ========
-// router.route("/gug").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-
-// // ======== 샐러드 연결해죠 ========
-// router.route("/salad").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-
-// // ======== 면 연결해죠 ========
-// router.route("/noodle").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-
-// // ======== 생수 연결해죠 ========
-// router.route("/drink").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
+// ======= 상품 후기 ========
 router.route("/productReview").post((req, res) => {
   const tempSend = [];
   console.log(req.body.productName);
@@ -169,19 +69,19 @@ router.route("/productReview").post((req, res) => {
 
 // product.json 파일 넣는 곳
 // fs.readFile("./product.json", "utf-8", function (err, data) {
-// if (err) {
-// console.error(err.message);
-// } else {
-// if (data) {
-// JSON.parse(data).forEach((item) => {
-// try {
-// db.ProductTable.create(item);
-// } catch (err) {
-// console.error(err);
-// }
-// });
-// }
-// }
+//   if (err) {
+//     console.error(err.message);
+//   } else {
+//     if (data) {
+//       JSON.parse(data).forEach((item) => {
+//         try {
+//           db.ProductTable.create(item);
+//         } catch (err) {
+//           console.error(err);
+//         }
+//       });
+//     }
+//   }
 // });
 
 async function setImages() {

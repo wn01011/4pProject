@@ -129,3 +129,8 @@ async function logoutFunction2() {
   console.log("쿠키 제거하고 왔다.");
   location.href = "/index.html";
 }
+
+// const vegiLink = document.getElementById("cate-vegi")
+// const fruitLink = document.getElementById("cate-fruit")
+
+// vegiLink
