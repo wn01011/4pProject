@@ -5,6 +5,7 @@ const path = require("path");
 const { sequelize } = require("../models/index.js");
 const router = Router();
 const seq = require("sequelize");
+const { send } = require("process");
 const op = seq.Op;
 
 console.log("프로덕트 라우트 안이다!!!!!!");
@@ -139,5 +140,16 @@ setImages();
 //     console.log(data.dataValues);
 //   })
 //   .catch((err) => console.error(err));
+router.route("/search").post((req, res) => {
+  const sword = req.body.sword;
+  db.ProductTable.findAll().then((data) => {
+    data.forEach((item) => {
+      if (item.dataValues.name.match(req.body.sword)) {
+        console.log(item.dataValues.name);
+      }
+    });
+  });
+  res.send(sword);
+});
 
 module.exports = router;

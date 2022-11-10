@@ -41,12 +41,16 @@ window.onscroll = function () {
     document.getElementById("header_scroll").classList.remove("on");
   }
 };
+
 let currAudio;
+let search;
 
 window.onload = () => {
   const id = setInterval(() => {
     currAudio = document.getElementsByTagName("audio")[0];
-    if (currAudio) {
+    search = document.getElementById("search_input");
+
+    if (currAudio && search) {
       OnLoadCallBack();
       clearInterval(id);
     }
@@ -58,7 +62,12 @@ function OnLoadCallBack() {
     currAudio.play();
     window.onclick = () => {};
   };
+
+  search.onchange = () => {
+    location.href = "/search?sword=" + search.value;
+  };
 }
+
 let signup;
 let signin;
 let userinfo;
@@ -66,6 +75,7 @@ let userinfotext;
 let logout;
 let loop = setInterval(() => {
   let cookieResult = document.cookie;
+
   signup = document.getElementById("sign_up");
   signin = document.getElementById("sign_in");
   userinfo = document.getElementById("user_info");

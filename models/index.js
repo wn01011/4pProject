@@ -14,6 +14,8 @@ const ProductaskTable = require("./productask.js");
 const NoticeTable = require("./notice.js");
 const ReviewTable = require("./review.js");
 const CartTable = require("./cart.js");
+const OrderTable = require("./order.js");
+
 const db = {
   UserTable,
   SampleTable,
@@ -23,6 +25,7 @@ const db = {
   NoticeTable,
   ReviewTable,
   CartTable,
+  OrderTable,
 };
 
 let sequelize = new Sequelize(
@@ -43,6 +46,7 @@ ProductaskTable.init(sequelize);
 NoticeTable.init(sequelize);
 ReviewTable.init(sequelize);
 CartTable.init(sequelize);
+OrderTable.init(sequelize);
 
 Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {
