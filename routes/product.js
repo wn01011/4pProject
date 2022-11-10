@@ -9,7 +9,7 @@ const { send } = require("process");
 const op = seq.Op;
 
 console.log("프로덕트 라우트 안이다!!!!!!");
-// "/api/product"
+
 // ======== DB랑 연결해죠 ========
 router
   .route("/")
@@ -32,7 +32,7 @@ router
     });
   });
 
-// ======== 채소 연결해죠 ========
+// ======== 상품 뿌려죠 ========
 router.route("/category").post((req, res) => {
   const tempVegi = [];
   db.ProductTable.findAll().then((data) => {
@@ -159,9 +159,22 @@ router.route("/getImage").post(async (req, res) => {
 //       }
 //     });
 //     res.send(tempVegi);
+// ----------- 상세페이지 보여죠 ------------
+router.route("/item").post((req, res) => {
+  const itemLink = req.body.itemLink;
+  console.log(itemLink);
+  db.ProductTable.findOne({ where: { img: itemLink } }).then((data) => {
+    // console.log(data.dataValues);
+    const itemData = data.dataValues;
+    console.log(itemData);
+    res.send(itemData);
+  });
+});
+
+// ======= 상품 후기 ========
 router.route("/productReview").post((req, res) => {
   const tempSend = [];
-  console.log(req.body.productName);
+  // console.log(req.body.productName);
   db.ReviewTable.findAll({
     where: {
       productName: req.body.productName,
@@ -170,14 +183,6 @@ router.route("/productReview").post((req, res) => {
     res.send(data);
   });
 });
-
-// router.get("/category", async (req, res) => {
-//   const tempItem = await db.ProductTable.findAll()({
-//     where: {
-//       category: item.dataValues.category[0],
-//     },
-//   });
-// });
 
 // product.json 파일 넣는 곳
 // fs.readFile("./product.json", "utf-8", function (err, data) {
@@ -251,13 +256,59 @@ setImages();
 //     console.log(data.dataValues);
 //   })
 //   .catch((err) => console.error(err));
+
+// =========검색기능이닷==========
 router.route("/search").post((req, res) => {
   const sword = req.body.sword;
-  // db.ProductTable.findAll().then((data) => {
-  //   console.log(data.dataValues);
-  //   send(data.dataValues);
-  // });
-  send(sword);
+  const sendAry = [];
+  const priceFilterAry = [];
+  db.ProductTable.findAll().then((data) => {
+    data.forEach((item) => {
+      if (
+        item.dataValues.name.match(sword) ||
+        JSON.stringify(item.dataValues.category).toString().includes(sword) ||
+        item.manufacturer.match(sword)
+      ) {
+        if (req.body.brand.length > 0) {
+          if (req.body.brand.includes(item.manufacturer)) sendAry.push(item);
+        } else {
+          sendAry.push(item);
+        }
+      }
+    });
+    console.log(req.body.price);
+    switch (req.body.price) {
+      case 0:
+        sendAry.forEach((item) => {
+          if (item.price <= 2590) priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      case 1:
+        sendAry.forEach((item) => {
+          if (item.price <= 3800 && item.price > 2590)
+            priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      case 2:
+        sendAry.forEach((item) => {
+          if (item.price <= 5490 && item.price > 3800)
+            priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      case 3:
+        sendAry.forEach((item) => {
+          if (item.price > 5490) priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      default:
+        res.send(sendAry);
+        break;
+    }
+  });
 });
 
 module.exports = router;

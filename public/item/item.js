@@ -151,25 +151,32 @@ async function itemDetailList(
     console.log(error);
   }
 }
+const itemLink = decodeURI(location.href.split("?")[1].split("=")[1]);
 
 axios
-  .post("/api/product/category", { data: "채소" })
-  .then((data) => {
+  .post("/api/product/item", {
+    data: "채소",
+    itemLink: location.href.split("?")[1].split("=")[1],
+  })
+  .then((itemData) => {
+    // data.data.forEach((item) => {
     itemDetailList(
-      data.data[0].img,
-      data.data[0].delivery,
-      data.data[0].name,
-      data.data[0].description,
-      data.data[0].price,
-      data.data[0].manufacturer,
-      data.data[0].package,
-      data.data[0].unit,
-      data.data[0].weight,
-      data.data[0].origin
+      itemData.data.img,
+      itemData.data.delivery,
+      itemData.data.name,
+      itemData.data.description,
+      itemData.data.price,
+      itemData.data.manufacturer,
+      itemData.data.package,
+      itemData.data.unit,
+      itemData.data.weight,
+      itemData.data.origin
     );
-    currItemName = data.data[1].name;
 
-    currItemCategory = data.data[0].category[0];
+    currItemName = itemData.data.name;
+    // console.log(itemData);
+    currItemcategory = itemData.data.category[0];
+
     // 상품 문의쪽 정보 불러오는 곳
     axios
       .post("/api/notice/productask", { productName: currItemName })
