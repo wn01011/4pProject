@@ -16,7 +16,7 @@
   },
   {
     "img": "2",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "친환경 깐 생강 50g",
     "price": 2990,
     "description": "요리의 풍미를 더하는 간편 향신채(1봉/50g)",
@@ -31,7 +31,7 @@
   },
   {
     "img": "3",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "무농약 머쉬밥 80g",
     "price": 12000,
     "description": "무농약 표고, 새송이, 흰목이버섯을 조각내어 건조한 머쉬밥",
@@ -46,7 +46,7 @@
   },
   {
     "img": "4",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "무농약 연근 2종",
     "price": 6490,
     "description": "용도에 맞게 골라쓰는 무농약 연근(통연근 400g, 연근채 300g)",
@@ -63,7 +63,7 @@
   },
   {
     "img": "5",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "유기농 딜 10g",
     "price": 2400,
     "description": "깃털 같은 잎의 섬세한 유혹(10g/1팩)",
@@ -93,7 +93,7 @@
   },
   {
     "img": "7",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "친환경 양파 1kg",
     "price": 3990,
     "description": "단단하고 아삭한 필수 채소",
@@ -138,7 +138,7 @@
   },
   {
     "img": "10",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "해남 호박고구마 1.5kg",
     "price": 10900,
     "description": "해풍이 기른 달콤 촉촉 고구마",
@@ -153,7 +153,7 @@
   },
   {
     "img": "11",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "친환경 알감자 500g",
     "price": 3500,
     "description": "손쉽게 요리하는 작은 감자",
@@ -183,7 +183,7 @@
   },
   {
     "img": "13",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "유채나물 150g",
     "price": 2790,
     "description": "미각을 깨우는 신선한 맛 (1봉/150g)",
@@ -198,7 +198,7 @@
   },
   {
     "img": "14",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "달래 60g",
     "price": 2690,
     "description": "봄을 알리는 똑 쏘는 향긋한 봄나물",
@@ -213,7 +213,7 @@
   },
   {
     "img": "15",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "친환경 고사리 300g",
     "price": 11900,
     "description": "편하게 요리하는 고소한 나물",
@@ -228,7 +228,7 @@
   },
   {
     "img": "16",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "컷팅 부추 100g",
     "price": 1450,
     "description": "먹기 쉽게 컷팅된 소용량 부추(1봉/100g)",
@@ -243,7 +243,7 @@
   },
   {
     "img": "17",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "청도 미나리 300g",
     "price": 5490,
     "description": "생으로 즐기면 더 좋은 향긋한 미나리",
@@ -258,7 +258,7 @@
   },
   {
     "img": "18",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "친환경 베이비 비타민 50g",
     "price": 1900,
     "description": "비타민 A를 함유한",
@@ -275,7 +275,7 @@
   },
   {
     "img": "19",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "유기농 이탈리안 파슬리 15g",
     "price": 3190,
     "description": "넓은 잎이 품은 은은한 향",
@@ -326,7 +326,7 @@
   },
   {
     "img": "22",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "한통 양배추",
     "price": 3990,
     "description": "아삭한 잎에 깃든 달콤함",
@@ -360,7 +360,7 @@
   },
   {
     "img": "24",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "조각 양배추 500g",
     "price": 2390,
     "description": "신선하게 즐기는 아삭 달큰한 채소",
@@ -377,7 +377,7 @@
   },
   {
     "img": "25",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "김장용 알타리 무 1.5kg",
     "price": 7490,
     "description": "총각김치를 위한 필수재료",
@@ -394,7 +394,7 @@
   },
   {
     "img": "26",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "김장용 다발 무 5kg",
     "price": 12900,
     "description": "아삭함이 오래가는 싱싱한 무",
@@ -411,7 +411,7 @@
   },
   {
     "img": "27",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "김장용 미나리 500g",
     "price": 6990,
     "description": "기분 좋게 입맛 돋우는",
@@ -428,7 +428,7 @@
   },
   {
     "img": "28",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "김장용 청갓 300g",
     "price": 6990,
     "description": "입맛을 깨우는 알싸한 풍미",
@@ -445,7 +445,7 @@
   },
   {
     "img": "29",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "통마늘 1kg",
     "price": 12900,
     "description": "단단하고 아삭한 햇마늘",
@@ -479,7 +479,7 @@
   },
   {
     "img": "31",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "땅콩호박",
     "price": 4990,
     "description": "땅콩을 쏙 빼다 닮은 호박",
@@ -494,7 +494,7 @@
   },
   {
     "img": "32",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "냉동 그릴드 바밤 단호박 320g",
     "price": 4990,
     "description": "불에 구워 달콤함이 살아있는",
@@ -509,7 +509,7 @@
   },
   {
     "img": "33",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "미인 보라 (가지)고추 150g",
     "price": 2490,
     "description": "아삭아삭 달큰함을 가득 품은",
@@ -524,7 +524,7 @@
   },
   {
     "img": "34",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "오이지3입",
     "price": 6990,
     "description": "국산 천일염만으로 절여진",
@@ -569,7 +569,7 @@
   },
   {
     "img": "37",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "그린빈스 (줄기콩)",
     "price": 4600,
     "description": "고소하고 많이 먹어도 질리지 않는 건강한 주머니 그린빈스 (1팩 100g)",
@@ -629,7 +629,7 @@
   },
   {
     "img": "41",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "곁들임 채소 2종",
     "price": 2990,
     "description": "입맛을 산뜻하게 돋워줄 채소",
@@ -659,7 +659,7 @@
   },
   {
     "img": "43",
-    "manufacturer": "컬리",
+    "manufacturer": "",
     "name": "건 포르치니 버섯 40g",
     "price": 9900,
     "description": "근사한 양식을 완성하는 이색 건버섯",
