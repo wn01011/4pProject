@@ -195,9 +195,20 @@ const vegiCategories = function (category) {
 
 // 카테고리 데이터 요청
 // 채소
+let selectedBrand = [];
+let selectedPrice = -1;
+const filter = document.getElementById("filter");
+const list = document.getElementById("list");
+const totalCount = document.getElementById("totalCount");
+const productNone = document.getElementById("productNone");
 axios
-  .post("/api/product/category", { data: "채소" })
+  .post("/api/product/category", {
+    data: "채소",
+    brand: selectedBrand,
+    price: selectedPrice,
+  })
   .then((data) => {
+    totalCount.innerText = "총 " + data.data.length + "건";
     vegiCategories();
     console.log(data.data);
     data.data.forEach((item) => {
@@ -219,6 +230,16 @@ axios
         getFilter(item.manufacturer);
       }
     });
+    if (data.data.length == 0) {
+      productNone.style.display = "flex";
+      list.style.display = "none";
+      if (selectedBrand.length == 0 && selectedPrice == -1)
+        filter.style.display = "none";
+    } else {
+      productNone.style.display = "none";
+      list.style.display = "block";
+      filter.style.display = "block";
+    }
   })
   .catch((err) => {
     console.error(err);

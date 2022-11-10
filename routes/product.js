@@ -35,6 +35,8 @@ router
 // ======== 상품 뿌려죠 ========
 router.route("/category").post((req, res) => {
   const tempVegi = [];
+  const brandFilterAry = [];
+  const priceFilterAry = [];
   db.ProductTable.findAll().then((data) => {
     data.forEach((item) => {
       if (
@@ -43,7 +45,42 @@ router.route("/category").post((req, res) => {
         tempVegi.push(item.dataValues);
       }
     });
-    res.send(tempVegi);
+    if (req.body.brand.length > 0) {
+      if (req.body.brand.includes(item.manufacturer)) brandFilterAry.push(item);
+    } else {
+      brandFilterAry.push(item);
+    }
+    switch (req.body.price) {
+      case 0:
+        brandFilterAry.forEach((item) => {
+          if (item.price <= 2590) priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      case 1:
+        brandFilterAry.forEach((item) => {
+          if (item.price <= 3800 && item.price > 2590)
+            priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      case 2:
+        brandFilterAry.forEach((item) => {
+          if (item.price <= 5490 && item.price > 3800)
+            priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      case 3:
+        brandFilterAry.forEach((item) => {
+          if (item.price > 5490) priceFilterAry.push(item);
+        });
+        res.send(priceFilterAry);
+        break;
+      default:
+        res.send(brandFilterAry);
+        break;
+    }
   });
 });
 router.route("/getImage").post(async (req, res) => {
