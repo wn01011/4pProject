@@ -41,36 +41,88 @@ button {
   padding-left: 20px;
   margin-right: 20px;
 }
-#cart_basket_bottom {
-  display: flex;
-  justify-content: space-between;
+
+.cart_basket_bottom:first-child {
+  display: none;
 }
-#cart_basket_bottom_item {
+.cart_basket_bottom_item {
   display: flex;
   justify-content: space-between;
   padding: 10 0 10 0px;
 }
-
-#cart_basket_bottom_item:first-child {
+.cart_basket_bottom_item_checkBox {
   width: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#cart_basket_bottom_item:nth-child(2) {
-  width: 15%;
-}
-#cart_basket_bottom_item:nth-child(3) {
-  width: 50%;
-}
-#cart_basket_bottom_item:nth-child(4) {
+.cart_basket_bottom_item_imgBox {
   width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#cart_basket_bottom_item:nth-child(5) {
+.cart_basket_bottom_item_img {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart_basket_bottom_item_title {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart_basket_bottom_item_amountBox {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart_basket_bottom_item_amountBox2 {
+  display: inline-flex;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+}
+.cart_basket_bottom_item_amountMinus {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+}
+.cart_basket_bottom_item_amount {
+  width: 40px;
+  height: 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart_basket_bottom_item_amountPlus {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+}
+.cart_basket_bottom_item_price {
   width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
-#cart_basket_bottom_item:last-child {
+.cart_basket_bottom_item_delete {
   width: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 #cart_basket_bottom_none {
-  /* display: none; */
+  display: none;
   padding: 120 0 120 0px;
   color: gainsboro;
   text-align: center;
