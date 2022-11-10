@@ -46,7 +46,18 @@ router.route("/category").post((req, res) => {
     res.send(tempVegi);
   });
 });
-
+router.route("/getImage").post(async (req, res) => {
+  let imgList = [];
+  for (let i = 0; i < req.body.data.length; i++) {
+    const productBox = await db.ProductTable.findOne({
+      where: {
+        name: req.body.data[i],
+      },
+    });
+    imgList.push(productBox.img);
+  }
+  res.send({ list: imgList });
+});
 // // ======== 과일 연결해죠 ========
 // router.route("/fruit").post((req, res) => {
 //   const tempVegi = [];
