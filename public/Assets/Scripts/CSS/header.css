@@ -46,7 +46,16 @@ li {
   justify-content: end;
   font-size: 14px;
 }
-
+#header_customers_center > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vertical_center_alignment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 #sign_up {
   border-right: 1px solid gainsboro;
   padding-left: 20px;
@@ -67,14 +76,16 @@ li {
   display: none;
 }
 #user_info.on {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
 }
-
 #user_info_dropdown {
   display: none;
   width: 130px;
   right: 0px;
+  top: 20px;
   padding: 7px;
   background: white;
   position: absolute;
@@ -96,6 +107,7 @@ li {
 .service_center_dropdown {
   display: none;
   width: 130px;
+  top: 20px;
   right: 0px;
   padding: 7px;
   background: white;
@@ -164,7 +176,6 @@ li {
 #header_item {
   display: flex;
   justify-content: center;
-  padding-bottom: 10px;
 }
 
 #header_item_center {
@@ -175,9 +186,15 @@ li {
 #category {
   display: flex;
   position: relative;
+  padding-bottom: 10px;
 }
 #category_menuicon {
   padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#category_text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,7 +203,6 @@ li {
   display: none;
   width: 250px;
   left: 0px;
-  padding: 7px;
   background: white;
   position: absolute;
   border: 2px solid gainsboro;
@@ -228,6 +244,10 @@ li {
 #header_list > div {
   padding-left: 30px;
   padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
 #shipping_info_text {

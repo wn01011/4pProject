@@ -41,6 +41,34 @@ button {
   padding-left: 20px;
   margin-right: 20px;
 }
+#cart_basket_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+#cart_basket_bottom_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10 0 10 0px;
+}
+
+#cart_basket_bottom_item:first-child {
+  width: 5%;
+}
+#cart_basket_bottom_item:nth-child(2) {
+  width: 15%;
+}
+#cart_basket_bottom_item:nth-child(3) {
+  width: 50%;
+}
+#cart_basket_bottom_item:nth-child(4) {
+  width: 10%;
+}
+#cart_basket_bottom_item:nth-child(5) {
+  width: 15%;
+}
+#cart_basket_bottom_item:last-child {
+  width: 5%;
+}
 #cart_basket_bottom_none {
   /* display: none; */
   padding: 120 0 120 0px;
@@ -71,12 +99,7 @@ button {
   padding: 10px;
   border-radius: 3px;
 }
-#checklist_shipping_address_result {
-  display: none;
-}
-#checklist_shipping_address_result.on {
-  display: block;
-}
+
 #checklist_amount {
   background-color: #fafafa;
   border-top: 1px solid gainsboro;

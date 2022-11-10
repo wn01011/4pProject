@@ -67,6 +67,7 @@ function OnLoadCallBack() {
     location.href = "/search?sword=" + search.value;
   };
 }
+
 let signup;
 let signin;
 let userinfo;
@@ -74,6 +75,7 @@ let userinfotext;
 let logout;
 let loop = setInterval(() => {
   let cookieResult = document.cookie;
+
   signup = document.getElementById("sign_up");
   signin = document.getElementById("sign_in");
   userinfo = document.getElementById("user_info");

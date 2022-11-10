@@ -183,7 +183,7 @@ document.getElementById("signup_board_id_deduplication").onclick =
         modalText.innerText = "사용 가능한 아이디입니다.";
         modal.classList.add("show");
       } else if (data.data.status == 401) {
-        modalText.innerText = "이미 있는 아이디입니다.";
+        modalText.innerText = "이미 있는 아이디입a니다.";
         modal.classList.add("show");
       }
     } catch (error) {
