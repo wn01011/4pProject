@@ -5,6 +5,7 @@ const path = require("path");
 const { sequelize } = require("../models/index.js");
 const router = Router();
 const seq = require("sequelize");
+const { send } = require("process");
 const op = seq.Op;
 
 console.log("프로덕트 라우트 안이다!!!!!!");
@@ -169,19 +170,19 @@ router.route("/productReview").post((req, res) => {
 
 // product.json 파일 넣는 곳
 // fs.readFile("./product.json", "utf-8", function (err, data) {
-// if (err) {
-// console.error(err.message);
-// } else {
-// if (data) {
-// JSON.parse(data).forEach((item) => {
-// try {
-// db.ProductTable.create(item);
-// } catch (err) {
-// console.error(err);
-// }
-// });
-// }
-// }
+//   if (err) {
+//     console.error(err.message);
+//   } else {
+//     if (data) {
+//       JSON.parse(data).forEach((item) => {
+//         try {
+//           db.ProductTable.create(item);
+//         } catch (err) {
+//           console.error(err);
+//         }
+//       });
+//     }
+//   }
 // });
 
 async function setImages() {
@@ -239,5 +240,13 @@ setImages();
 //     console.log(data.dataValues);
 //   })
 //   .catch((err) => console.error(err));
+router.route("/search").post((req, res) => {
+  const sword = req.body.sword;
+  // db.ProductTable.findAll().then((data) => {
+  //   console.log(data.dataValues);
+  //   send(data.dataValues);
+  // });
+  send(sword);
+});
 
 module.exports = router;
