@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  margin: 0 325px 0 325px;
+  margin: 0 10% 0 10%;
 }
 
 #header {
@@ -13,12 +13,12 @@ body {
 }
 
 .admin-logo {
-  width: 10rem;
+  width: 15%;
   padding-left: 6%;
 }
 
 .admin-logout {
-  width: 70px;
+  width: 5%;
   padding: 0.3rem;
   color: black;
   background: transparent;
@@ -27,8 +27,8 @@ body {
   font-weight: bold;
   text-decoration: none;
   position: absolute;
-  right: 25em;
-  top: 2em;
+  right: 10%;
+  top: 3%;
 }
 
 #row {
@@ -41,7 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   color: black;
-  margin-top: 80px;
+  margin-top: 7%;
 }
 
 a {
@@ -55,6 +55,7 @@ a {
   text-decoration: none;
   color: black;
   display: flex;
+  padding: 3% 0 3% 0;
 }
 
 .nav-link:hover {
@@ -62,31 +63,33 @@ a {
 }
 
 #admin-sidebar {
-  width: 250px;
-  padding: 50px 0 50px 0;
+  width: 13em;
+  padding: 30% 0 30% 0;
+  margin: 0 10% 0 5%;
   background-color: #c2eaec;
 }
 
 #admin-sidebar > nav {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 60%;
   font-weight: bolder;
 }
 
 .nav > div > a {
-  padding-left: 50px;
+  padding-left: 20%;
 }
 
 #admin-sidebar > nav > nav {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 60%;
   font-weight: bolder;
 }
 
 .col-8 {
-  padding: 30px 20px 50px 150px;
+  padding-top: 3%;
+  margin: 0 6% 0 9%;
 }
 
 h2,
@@ -107,19 +110,6 @@ h4 {
   align-items: center;
   text-align: center;
   gap: 1.5rem;
-}
-
-#dashboard1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px dashed gainsboro;
-  border-radius: 1em;
-  color: black;
-  width: 700px;
-  height: 350px;
 }
 
 .tg {
@@ -187,20 +177,6 @@ ul {
   border-radius: 0.3rem;
 }
 
-#dashboard2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px dashed gainsboro;
-  border-radius: 1em;
-  color: black;
-  width: 700px;
-  height: 350px;
-  margin-bottom: 50px;
-}
-
 #item-1-1 {
   display: flex;
   flex-direction: column;
@@ -219,14 +195,15 @@ ul {
   border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
-  width: 700px;
-  height: 400px;
+  width: 100%;
+  height: 14500px;
   margin-bottom: 50px;
 }
 
 #regi-before {
   display: flex;
   flex-direction: row;
+  margin-top: 5%;
 }
 
 #sell-regi {
@@ -278,35 +255,6 @@ ul {
   justify-content: space-between;
 }
 
-#regi-category-small {
-  position: relative;
-  font-size: 16px;
-  font-weight: bold;
-}
-#regi-category-small > li {
-  padding: 10px;
-}
-#regi-dropdown-category-s {
-  display: none;
-  width: 130px;
-  right: 150px;
-  top: -2px;
-  padding: 7px;
-  background: white;
-  position: absolute;
-  border: 2px solid gainsboro;
-  font-size: 14px;
-  font-weight: bold;
-  z-index: 1;
-}
-#regi-category-small:hover #regi-dropdown-category-s {
-  display: block;
-}
-.regi-s-dropdown-item a {
-  display: flex;
-  justify-content: space-between;
-}
-
 #pojang {
   display: flex;
   justify-content: center;
@@ -338,8 +286,8 @@ ul {
   border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
-  width: 700px;
-  height: 400px;
+  width: 55vw;
+  height: 40vh;
   margin-bottom: 50px;
 }
 
@@ -523,6 +471,10 @@ ul {
   width: 700px;
   height: 400px;
   margin-bottom: 50px;
+}
+
+.now {
+  display: block;
 }
 
 #review-manage1 {
