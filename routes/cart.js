@@ -28,5 +28,7 @@ router.route("/address").post(async (req, res) => {
   console.log("tempAddress : ", tempAddress.address);
   res.send({ address: tempAddress.address });
 });
-
+// router.route("/order").post(async (req, res) => {
+//   const tempOrder = await db.CartTable.create();
+// });
 module.exports = router;
