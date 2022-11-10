@@ -141,7 +141,6 @@ axios
     throw error;
   });
 
-
 function deleteCookie(name) {
   document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
   // console.log((document.cookie = cookie), cookie, document.cookie);
@@ -162,4 +161,3 @@ function logoutFunction() {
 
   // logout.addEventListener("click", temp());
 }
-

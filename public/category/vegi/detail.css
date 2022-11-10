@@ -125,6 +125,7 @@ a {
 .products {
   display: flex;
   margin-top: 30px;
+  min-height: 700px;
 }
 
 .list-header ul:last-child {
@@ -154,7 +155,7 @@ a {
 }
 
 .list-header ul:last-child li:first-child {
-  width: 60px;
+  width: 70px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -172,9 +173,9 @@ a {
 }
 
 .list-header ul:last-child li:first-child img {
-  width: 15px;
+  width: 16px;
   display: flex;
-  padding-left: 7px;
+  padding-left: 8px;
   opacity: 0.5;
 }
 
