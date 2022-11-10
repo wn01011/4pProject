@@ -155,6 +155,7 @@ async function itemDetailList(
 axios
   .post("/api/product/category", { data: "채소" })
   .then((data) => {
+    // data.data.forEach((item) => {
     itemDetailList(
       data.data[0].img,
       data.data[0].delivery,
