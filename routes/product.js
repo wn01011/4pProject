@@ -40,9 +40,6 @@ router.route("/category").post((req, res) => {
   if (!req.body.brand) {
     db.ProductTable.findAll().then((data) => {
       data.forEach((item) => {
-        console.log(
-          Object.values(item.dataValues.category[0]).includes(req.body.data)
-        );
         if (
           Object.values(item.dataValues.category[0]).includes(
             `${req.body.data}`
@@ -69,10 +66,6 @@ router.route("/category").post((req, res) => {
           }
         }
       });
-      console.log("brand", req.body);
-      // res.send(tempVegi);
-
-      // res.send(brandFilterAry);
       switch (req.body.price) {
         case 0:
           brandFilterAry.forEach((item) => {
@@ -223,10 +216,8 @@ router.route("/getImage").post(async (req, res) => {
 // ----------- 상세페이지 보여죠 ------------
 router.route("/item").post((req, res) => {
   const itemLink = req.body.itemLink;
-  console.log(itemLink);
   db.ProductTable.findOne({ where: { img: itemLink } }).then((data) => {
     const itemData = data.dataValues;
-    console.log(itemData);
     res.send(itemData);
   });
 });
@@ -335,7 +326,6 @@ router.route("/search").post((req, res) => {
         }
       }
     });
-    console.log(req.body.price);
     switch (req.body.price) {
       case 0:
         sendAry.forEach((item) => {
@@ -368,6 +358,23 @@ router.route("/search").post((req, res) => {
         break;
     }
   });
+});
+
+router.route("/cartDamgi").post((req, res) => {
+  db.UserTable.findOne({
+    where: {
+      userId: req.body.userId,
+    },
+  }).then((data) => {
+    db.CartTable.create({
+      userId: req.body.userId,
+      name: req.body.name,
+      amount: req.body.amount,
+      price: req.body.price,
+      address: data.address,
+    });
+  });
+  res.send();
 });
 
 module.exports = router;
