@@ -5,23 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
-    <link rel="stylesheet" href="/Cart/index.css" />
+    <link rel="stylesheet" href="/myinfo/myinfo.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   </head>
   <body>
     <div id="header_include"></div>
-    <div id="myIinfo_contents">
+    <div id="myinfo_contents">
       <div id="myinfo_contents_center">
-        <div id="myinfo_contents_sidebar">
-          <div></div>
+        <div id="myinfo_sidebar">
+          <div id="myinfo_sidebar_title"><h2>내 정보</h2></div>
+          <ul id="myinfo_sidebar_list">
+            <li id="myinfo_sidebar_list_item_1">
+              <a href="/myinfo"
+                ><span> 주문내역</span
+                ><svg
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    class="path1"
+                    d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li id="myinfo_sidebar_list_item_2">
+              <a href="/myinfo/askanswer"
+                ><span>상품후기 & 문의</span
+                ><svg
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    class="path1"
+                    d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li id="myinfo_sidebar_list_item_3">
+              <a href="/myinfo/askanswer"
+                ><span>개인정보 수정</span
+                ><svg
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    class="path1"
+                    d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div id="myinfo_contents_main"></div>
+        <div id="myinfo_main">
+          <div id="myinfo_main_orderhistory">
+            <div id="myinfo_main_orderhistory_title">
+              <h2>주문내역</h2>
+              <span>마켓 클리어에서 주문한 상품들</span>
+            </div>
+            <ul id="myinfo_main_orderhistory_list">
+              <li id="myinfo_main_orderhistory_list_none"></li>
+            </ul>
+          </div>
+          <div id="myinfo_main_review">
+            <div id="myinfo_main_review_title">
+              <h2>상품 후기</h2>
+              <span>마켓 클리어에서 주문한 상품들</span>
+            </div>
+            <ul id="myinfo_main_review_list">
+              <li id="myinfo_main_review_list_none"></li>
+            </ul>
+          </div>
+          <div id="myinfo_main_infoupdate">
+            <div id="myinfo_main_infoupdate_title">
+              <h2>상품 후기</h2>
+              <span>마켓 클리어에서 주문한 상품들</span>
+            </div>
+            <ul id="myinfo_main_infoupdate_list">
+              <li id="myinfo_main_infoupdate_list_none"></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div id="footer_include"></div>
     <script src="/Assets/Scripts/JS/includehtml.js"></script>
-    <script src="/Cart/index.js"></script>
+    <script src="/Order/index.js"></script>
   </body>
 </html>
