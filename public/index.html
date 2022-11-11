@@ -213,6 +213,16 @@
     <div id="banner">
       <img src="/imges/banner2.jpg" alt="" />
     </div>
+    <script>
+      const mySet = new Set();
+      while (true) {
+        if (mySet.size == 10) {
+          break;
+        }
+        mySet.add(Math.floor(Math.random(0, 1) * 15));
+      }
+      console.log(mySet);
+    </script>
     <!-- footer -->
     <div id="footer_include"></div>
     <script src="./Assets/Scripts/JS/script.js"></script>

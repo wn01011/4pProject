@@ -83,10 +83,10 @@ let userinfo;
 let userinfotext;
 let myinfo;
 let logout;
-
+let cartBtn;
 let loop = setInterval(() => {
   let cookieResult = document.cookie;
-
+  cartBtn = document.getElementById("shopping_basket_button");
   signup = document.getElementById("sign_up");
   signin = document.getElementById("sign_in");
   userinfo = document.getElementById("user_info");
