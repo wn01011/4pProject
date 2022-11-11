@@ -133,6 +133,12 @@ li {
   margin-top: 40px;
 }
 
+.item-ask-head {
+  display: flex;
+  justify-content: space-between;
+  width: 525px;
+}
+
 .item-ask-head li {
   display: flex;
   justify-content: flex-start;
