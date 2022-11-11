@@ -214,14 +214,18 @@
       <img src="/imges/banner2.jpg" alt="" />
     </div>
     <script>
-      const mySet = new Set();
-      while (true) {
-        if (mySet.size == 10) {
-          break;
-        }
-        mySet.add(Math.floor(Math.random(0, 1) * 15));
-      }
-      console.log(mySet);
+      axios
+        .post("/api/user/getMyDelivery", { userId: "wn010111" })
+        .then((data) => {
+          data.data.forEach((item) => {
+            const diffMiniute =
+              (new Date(Date.now()).getTime() -
+                new Date(item.createdAt).getTime()) /
+              60000;
+            if (diffMiniute > 30) console.log("배송 끝");
+            else console.log("배송 중");
+          });
+        });
     </script>
     <!-- footer -->
     <div id="footer_include"></div>
