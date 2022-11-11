@@ -53,6 +53,9 @@
 #myinfo_main_orderhistory {
   display: none;
 }
+#myinfo_main_orderhistory.on {
+  display: block;
+}
 #myinfo_main_orderhistory_title {
   display: flex;
   margin-bottom: 20px;
@@ -67,9 +70,13 @@
 #myinfo_main_review {
   display: none;
 }
+#myinfo_main_review.on {
+  display: block;
+}
 #myinfo_main_review_title {
   display: flex;
   margin-bottom: 20px;
+  border: 2px solid black;
 }
 #myinfo_main_review_title span {
   color: #999;
@@ -80,6 +87,9 @@
 }
 #myinfo_main_infoupdate {
   display: none;
+}
+#myinfo_main_infoupdate.on {
+  display: block;
 }
 #myinfo_main_infoupdate_title {
   display: flex;

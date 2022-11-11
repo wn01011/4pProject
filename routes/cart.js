@@ -48,6 +48,9 @@ router.route("/order").post(async (req, res) => {
       address: req.body.orderlist[index].address,
     });
   });
+  await db.CartTable.destroy({
+    where: { userId: req.body.orderlist[0].userid },
+  });
 
   res.send();
 });

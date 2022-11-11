@@ -208,6 +208,11 @@ document.getElementById("checklist_shipping_address_btn").onclick = () => {
 
 getAddress();
 
+const modal = document.getElementById("cart_modal");
+const modalBody = document.getElementById("cart_modal_body");
+const modalText = document.getElementById("cart_modal_body_text");
+const modalExit = document.getElementById("cart_modal_exit");
+
 document.getElementById("cart_order_orderbutton").onclick = async () => {
   let orderlist = [];
   cartData?.data?.list?.forEach((item, index) => {
@@ -224,4 +229,10 @@ document.getElementById("cart_order_orderbutton").onclick = async () => {
   const data = await axios.post("/api/cart/order", {
     orderlist: orderlist,
   });
+  modal.classList.add("show");
+};
+
+document.getElementById("cart_modal").onclick = () => {
+  window.location.reload();
+  modal.classList.remove("show");
 };
