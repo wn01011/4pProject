@@ -29,7 +29,7 @@ const getList = function (img, delivery, name, description, price) {
     tempGoodsImg.src = `/api/product/download${img}`;
     tempGoodsDel.innerText = `${delivery}`;
     tempGoodsText.innerText = `${name}`;
-    tempGoodsPrice.innerText = `${price}원`;
+    tempGoodsPrice.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempGoodsInfo.innerText = `${description}`;
     tempGoodsCart.src = `/imges/cart3.svg`;
 
