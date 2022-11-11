@@ -139,3 +139,36 @@ let loop = setInterval(() => {
   //     }
   //   };
 }, 50);
+
+function deleteCookie(name) {
+  signup.classList.remove("off");
+  signin.classList.remove("off");
+  userinfo.classList.remove("on");
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
+}
+
+function getUserId() {
+  return document.cookie?.split(";")[0].split("=")[0];
+}
+
+function logoutFunction() {
+  console.log("로그아웃");
+  // logout.onclick = logoutFunction2();
+  // logout.addEventListener("click", logoutFunction2());
+  deleteCookie(getUserId());
+  // logout.addEventListener("click", temp());
+}
+async function logoutFunction2() {
+  console.log("쿠키제거하러 갔다.");
+
+  await axios.post("/api/user/logout", {
+    userId: document.cookie.split("=")[0],
+  });
+  console.log("쿠키 제거하고 왔다.");
+  location.href = "/index.html";
+}
+
+// const vegiLink = document.getElementById("cate-vegi")
+// const fruitLink = document.getElementById("cate-fruit")
+
+// vegiLink
