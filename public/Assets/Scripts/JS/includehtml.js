@@ -44,13 +44,14 @@ window.onscroll = function () {
 
 let currAudio;
 let search;
+let cartBtn;
 
 window.onload = () => {
   const id = setInterval(() => {
     currAudio = document.getElementsByTagName("audio")[0];
     search = document.getElementById("search_input");
-
-    if (currAudio && search) {
+    cartBtn = document.getElementById("cartBtn");
+    if (currAudio && search && cartBtn) {
       OnLoadCallBack();
       clearInterval(id);
     }
@@ -65,6 +66,14 @@ function OnLoadCallBack() {
 
   search.onchange = () => {
     location.href = "/search?sword=" + search.value;
+  };
+
+  cartBtn.onclick = () => {
+    if (document.cookie) {
+      location.href = "/Cart";
+    } else {
+      location.href = "/SignIn";
+    }
   };
 }
 

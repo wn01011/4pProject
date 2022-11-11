@@ -35,16 +35,77 @@ router
 // ======== 상품 뿌려죠 ========
 router.route("/category").post((req, res) => {
   const tempVegi = [];
-  db.ProductTable.findAll().then((data) => {
-    data.forEach((item) => {
-      if (
-        Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-      ) {
-        tempVegi.push(item.dataValues);
+  const brandFilterAry = [];
+  const priceFilterAry = [];
+  if (!req.body.brand) {
+    db.ProductTable.findAll().then((data) => {
+      data.forEach((item) => {
+        console.log(
+          Object.values(item.dataValues.category[0]).includes(req.body.data)
+        );
+        if (
+          Object.values(item.dataValues.category[0]).includes(
+            `${req.body.data}`
+          )
+        ) {
+          tempVegi.push(item.dataValues);
+        }
+      });
+      res.send(tempVegi);
+    });
+  } else {
+    db.ProductTable.findAll().then((data) => {
+      data.forEach((item) => {
+        if (
+          Object.values(item.dataValues.category[0]).includes(
+            `${req.body.data}`
+          )
+        ) {
+          if (req.body.brand.length > 0) {
+            if (req.body.brand.includes(item.manufacturer))
+              brandFilterAry.push(item);
+          } else {
+            brandFilterAry.push(item);
+          }
+        }
+      });
+      console.log("brand", req.body);
+      // res.send(tempVegi);
+
+      // res.send(brandFilterAry);
+      switch (req.body.price) {
+        case 0:
+          brandFilterAry.forEach((item) => {
+            if (item.price <= 2590) priceFilterAry.push(item);
+          });
+          res.send(priceFilterAry);
+          break;
+        case 1:
+          brandFilterAry.forEach((item) => {
+            if (item.price <= 3800 && item.price > 2590)
+              priceFilterAry.push(item);
+          });
+          res.send(priceFilterAry);
+          break;
+        case 2:
+          brandFilterAry.forEach((item) => {
+            if (item.price <= 5490 && item.price > 3800)
+              priceFilterAry.push(item);
+          });
+          res.send(priceFilterAry);
+          break;
+        case 3:
+          brandFilterAry.forEach((item) => {
+            if (item.price > 5490) priceFilterAry.push(item);
+          });
+          res.send(priceFilterAry);
+          break;
+        default:
+          res.send(brandFilterAry);
+          break;
       }
     });
-    res.send(tempVegi);
-  });
+  }
 });
 router.route("/getImage").post(async (req, res) => {
   let imgList = [];
@@ -164,7 +225,6 @@ router.route("/item").post((req, res) => {
   const itemLink = req.body.itemLink;
   console.log(itemLink);
   db.ProductTable.findOne({ where: { img: itemLink } }).then((data) => {
-    // console.log(data.dataValues);
     const itemData = data.dataValues;
     console.log(itemData);
     res.send(itemData);
@@ -174,7 +234,6 @@ router.route("/item").post((req, res) => {
 // ======= 상품 후기 ========
 router.route("/productReview").post((req, res) => {
   const tempSend = [];
-  // console.log(req.body.productName);
   db.ReviewTable.findAll({
     where: {
       productName: req.body.productName,
