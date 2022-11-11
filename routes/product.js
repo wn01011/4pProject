@@ -361,19 +361,36 @@ router.route("/search").post((req, res) => {
 });
 
 router.route("/cartDamgi").post((req, res) => {
-  db.UserTable.findOne({
-    where: {
-      userId: req.body.userId,
-    },
-  }).then((data) => {
-    db.CartTable.create({
-      userId: req.body.userId,
-      name: req.body.name,
-      amount: req.body.amount,
-      price: req.body.price,
-      address: data.address,
+  if (req.query.productName) {
+    db.UserTable.findOne({
+      where: {
+        userId: req.query.userId,
+      },
+    }).then((data) => {
+      db.CartTable.create({
+        userId: req.query.userId,
+        name: req.query.productName,
+        amount: 1,
+        price: req.query.price,
+        address: data.address,
+      });
     });
-  });
+  } else {
+    db.UserTable.findOne({
+      where: {
+        userId: req.body.userId,
+      },
+    }).then((data) => {
+      db.CartTable.create({
+        userId: req.body.userId,
+        name: req.body.name,
+        amount: req.body.amount,
+        price: req.body.price,
+        address: data.address,
+      });
+    });
+  }
+
   res.send();
 });
 

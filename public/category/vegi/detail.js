@@ -120,6 +120,21 @@ const getList = function (
       console.log(tempGoodsA);
       detailItem();
     };
+    tempGoodsCart.onclick = (e) => {
+      console.log(name);
+      axios
+        .post(
+          "/api/product/cartDamgi?productName=" +
+            name +
+            "&userId=" +
+            getUserId() +
+            "&price=" +
+            price
+        )
+        .then((data) => {
+          location.href = "/Cart";
+        });
+    };
   } catch (error) {
     console.log(error);
   }
@@ -348,3 +363,9 @@ const pricesFilter = function () {
       break;
   }
 };
+
+function getUserId() {
+  for (let i = 0; i < document.cookie.split(";").length; ++i) {
+    return document.cookie.split(";")[i].split("=")[0];
+  }
+}
