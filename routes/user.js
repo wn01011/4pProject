@@ -75,8 +75,7 @@ router.post("/logout", (req, res) => {
   console.log("제거할 쿠키 이름 : ", req.body.userId);
   res.clearCookie(req.body.userId);
   console.log("쿠키 제거 완료.");
-  console.log(document.cookie);
-  res.end();
+  res.send();
 });
 
 router.route("/deduplication").post(async (req, res) => {

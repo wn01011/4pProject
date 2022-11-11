@@ -81,24 +81,27 @@ let signup;
 let signin;
 let userinfo;
 let userinfotext;
+let myinfo;
 let logout;
+let cartBtn;
 let loop = setInterval(() => {
   let cookieResult = document.cookie;
-
+  cartBtn = document.getElementById("shopping_basket_button");
   signup = document.getElementById("sign_up");
   signin = document.getElementById("sign_in");
   userinfo = document.getElementById("user_info");
   userinfotext = document.getElementById("user_info_text");
+  myinfo = document.getElementById("user_info_dropdown_myinfo");
   logout = document.getElementById("user_info_dropdown_logout");
   if (cookieResult) {
-    if (signup && signin && userinfo && userinfotext && logout) {
+    if (signup && signin && userinfo && userinfotext && logout && cartBtn) {
+      console.log("조건 맞췄당!");
       signup.classList.add("off");
       signin.classList.add("off");
       userinfo.classList.add("on");
       logout.onclick = () => {
         logoutFunction();
       };
-      console.log(document.cookie);
       if (
         decodeURI(document.cookie.split(";")[0].split("=")[1]) == "관리자다"
       ) {
@@ -107,7 +110,32 @@ let loop = setInterval(() => {
       userinfotext.innerText =
         document.cookie.split("=")[0] + " 님 어서오십시오.";
       console.log("로드 완료");
-      // logoutFunction();
+      myinfo.onclick = function () {
+        location.href = "/myinfo";
+      };
+      logout.onclick = async function () {
+        try {
+          console.log(document.cookie.split("=")[0]);
+          await axios.post("/api/user/logout", {
+            userId: document.cookie.split("=")[0],
+          });
+          console.log("액시오스 보냈음");
+          signup.classList.remove("off");
+          signin.classList.remove("off");
+          userinfo.classList.remove("on");
+          document.cookie =
+            document.cookie?.split(";")[0].split("=")[0] +
+            "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
+          location.href = "/index.html";
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      cartBtn.onclick = function () {
+        if (document.cookie) {
+          location.href = "/Cart";
+        } else console.log("로그인이 안되어있네");
+      };
       clearInterval(loop);
     }
   }
