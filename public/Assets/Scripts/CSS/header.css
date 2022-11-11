@@ -610,3 +610,9 @@ audio::-webkit-media-controls-fullscreen-volume-min-button {
 audio::-webkit-media-controls-fullscreen-volume-max-button {
   display: none;
 }
+#cartBtn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
