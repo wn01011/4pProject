@@ -33,19 +33,26 @@ router
   });
 
 // ======== 상품 뿌려죠 ========
-router.route("/category").post((req, res) => {
-  const tempVegi = [];
-  db.ProductTable.findAll().then((data) => {
-    data.forEach((item) => {
-      if (
-        Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-      ) {
-        tempVegi.push(item.dataValues);
-      }
+router
+  .route("/category")
+  .get((req, res) => {
+    res.send();
+  })
+  .post((req, res) => {
+    const tempVegi = [];
+    db.ProductTable.findAll().then((data) => {
+      data.forEach((item) => {
+        if (
+          Object.values(item.dataValues.category[0]).includes(
+            `${req.body.data}`
+          )
+        ) {
+          tempVegi.push(item.dataValues);
+        }
+      });
+      res.send(tempVegi);
     });
-    res.send(tempVegi);
   });
-});
 // ----------- 상세페이지 보여죠 ------------
 router.route("/item").post((req, res) => {
   const itemLink = req.body.itemLink;

@@ -135,7 +135,7 @@ const getList = function (img, delivery, name, description, price) {
 
     // 상세페이지로 이동
     function detailItem() {
-      location.href = "/item?name=" + name;
+      location.href = "/item?product=" + img;
     }
     // 이미지 클릭시
     tempGoodsA.onclick = (e) => {
