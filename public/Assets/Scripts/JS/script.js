@@ -102,12 +102,10 @@ function getItemList(img, name, price, manufacturer) {
     // 이미지 클릭시
     tempItemNameP.onclick = (e) => {
       e.preventDefault();
-      console.log(tempItemNameP);
       detailItem();
     };
     tempItemImg.onclick = (e) => {
       e.preventDefault();
-      console.log(tempItemNameP);
       detailItem();
     };
 
@@ -124,7 +122,7 @@ function getItemList(img, name, price, manufacturer) {
         if (currentIdx1 < 5) {
           moveSlide1(currentIdx1 + 1);
           leftBtn[0].style.display = "flex";
-          console.log(currentIdx1);
+
           return;
         }
       };
@@ -132,7 +130,6 @@ function getItemList(img, name, price, manufacturer) {
 
     [...leftBtn].forEach((item) => {
       item.onclick = function () {
-        // console.log(currentIdx1);
         if (currentIdx1 <= 0) {
           leftBtn[0].style.display = "none";
           return;
@@ -149,9 +146,7 @@ function getItemList(img, name, price, manufacturer) {
       currentIdx1 = num;
       subSlides.style.left = -num * (subslideWidth + subslideMargin) + "px";
     }
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 }
 
 // 생수픽
@@ -281,9 +276,7 @@ const getPickItemList = function (img, name, price, manufacturer) {
       currentIdx1 = num;
       subSlides1.style.left = -num * (subslideWidth1 + subslideMargin1) + "px";
     }
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 // 샐러드픽
@@ -422,9 +415,7 @@ const getPickItem2List = function (img, name, price, manufacturer) {
       currentIdx2 = num;
       subSlides2.style.left = -num * (subslideWidth2 + subslideMargin2) + "px";
     }
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 // 과일픽
@@ -563,9 +554,7 @@ const getPickItem3List = function (img, name, price, manufacturer) {
       currentIdx3 = num;
       subSlides3.style.left = -num * (subslideWidth3 + subslideMargin3) + "px";
     }
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 // 면픽
@@ -704,19 +693,16 @@ const getPickItem4List = function (img, name, price, manufacturer) {
       currentIdx4 = num;
       subSlides4.style.left = -num * (subslideWidth4 + subslideMargin4) + "px";
     }
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 axios
   .post("/api/product/category", { data: "채소" })
   .then((data) => {
-    console.log(data.data);
     data.data.forEach((item) => {
       // 카테고리별 아이템 추출
       const category = Object.values(item.category[0]);
-      console.log(category[1]);
+
       getItemList(item.img, item.name, item.price, item.manufacturer);
     });
   })
@@ -727,7 +713,6 @@ axios
 axios
   .post("/api/product/category", { data: "생수" })
   .then((data) => {
-    console.log(data.data);
     data.data.forEach((item) => {
       getPickItemList(item.img, item.name, item.price, item.manufacturer);
     });
@@ -739,7 +724,6 @@ axios
 axios
   .post("/api/product/category", { data: "샐러드" })
   .then((data) => {
-    console.log(data.data);
     data.data.forEach((item) => {
       getPickItem2List(item.img, item.name, item.price, item.manufacturer);
     });
@@ -750,7 +734,6 @@ axios
 axios
   .post("/api/product/category", { data: "과일" })
   .then((data) => {
-    console.log(data.data);
     data.data.forEach((item) => {
       getPickItem3List(item.img, item.name, item.price, item.manufacturer);
     });
@@ -762,7 +745,6 @@ axios
 axios
   .post("/api/product/category", { data: "면" })
   .then((data) => {
-    console.log(data.data);
     data.data.forEach((item) => {
       getPickItem4List(item.img, item.name, item.price, item.manufacturer);
     });
