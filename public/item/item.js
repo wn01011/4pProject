@@ -371,3 +371,23 @@ function makeReview(userId, productName, text) {
 }
 
 // 리뷰끝
+
+// 장바구니 담기
+cartDamgi.onclick = () => {
+  if (currUserId == "") return (location.href = "/SignIn");
+  console.log(
+    currItemName,
+    currUserId,
+    +itemEa.innerText,
+    +itemPrice.innerText.replace(/[^0-9]/g, ""),
+    +itemTotal.innerText.replace(/[^0-9]/g, "")
+  );
+  axios.post("/api/product/cartDamgi", {
+    name: currItemName,
+    userId: currUserId,
+    amount: +itemEa.innerText,
+    price: +itemPrice.innerText.replace(/[^0-9]/g, ""),
+  });
+  window.alert("장바구니에 담겼습니다.");
+  window.location.reload();
+};
