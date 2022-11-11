@@ -45,13 +45,17 @@ window.onscroll = function () {
 let currAudio;
 let search;
 let cartBtn;
+let generalBtn;
+let vegiBtn;
 
 window.onload = () => {
   const id = setInterval(() => {
     currAudio = document.getElementsByTagName("audio")[0];
     search = document.getElementById("search_input");
     cartBtn = document.getElementById("cartBtn");
-    if (currAudio && search && cartBtn) {
+    generalBtn = document.getElementById("generalBtn");
+    vegiBtn = document.getElementById("vegiBtn");
+    if (currAudio && search && cartBtn && generalBtn && vegiBtn) {
       OnLoadCallBack();
       clearInterval(id);
     }
@@ -74,6 +78,16 @@ function OnLoadCallBack() {
     } else {
       location.href = "/SignIn";
     }
+  };
+
+  generalBtn.onclick = () => {
+    const currText = generalBtn.children[1].innerText;
+    location.href = "/category/general?pick=" + currText;
+  };
+
+  vegiBtn.onclick = () => {
+    const currText = vegiBtn.children[1].innerText;
+    location.href = "/category/general?pick=" + currText;
   };
 }
 

@@ -169,4 +169,18 @@ function createJwt(name, key) {
 //   })
 //   .catch((err) => console.error(err));
 
+router.route("/getMyDelivery").post((req, res) => {
+  if (req.body.userId) {
+    db.OrderTable.findAll({
+      where: {
+        userId: req.body.userId,
+      },
+    }).then((data) => {
+      res.send(data);
+    });
+  } else {
+    res.send(data);
+  }
+});
+
 module.exports = router;
