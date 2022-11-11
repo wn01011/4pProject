@@ -38,7 +38,7 @@ function amountCalculate() {
     amountPrice.innerText = priceSum;
   });
   amountCost.innerText = 3000;
-  amountDue.innerText = parseInt(priceSum) - parseInt(amountCost.innerText);
+  amountDue.innerText = parseInt(priceSum) + parseInt(amountCost.innerText);
 }
 // amountCalculate();
 
@@ -154,6 +154,10 @@ function callback() {
 }
 
 async function getCartList() {
+  if (!document.cookie) {
+    location.href = "/index.html";
+    return;
+  }
   try {
     cartData = await axios.post("/api/cart/cartlist", {
       userid: document.cookie.split("=")[0],
@@ -204,10 +208,20 @@ document.getElementById("checklist_shipping_address_btn").onclick = () => {
 
 getAddress();
 
-// document.getElementById("cart_order_orderbutton").onclick = async () => {
-//   const data = await axios.post("/api/cart/order",{
-//     order : {
+document.getElementById("cart_order_orderbutton").onclick = async () => {
+  let orderlist = [];
+  cartData?.data?.list?.forEach((item, index) => {
+    orderlist.push({
+      userid: document.cookie.split("=")[0],
+      price: parseInt(cartData.data.list[index].price),
 
-//     }
-//   });
-// };
+      product: cartData.data.list[index].name,
+      count: parseInt(document.getElementById(`textAmount${index}`)?.innerText),
+      address: address.innerText,
+    });
+  });
+  console.log("orderlist : ", orderlist);
+  const data = await axios.post("/api/cart/order", {
+    orderlist: orderlist,
+  });
+};
