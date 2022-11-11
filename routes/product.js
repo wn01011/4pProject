@@ -290,10 +290,7 @@ router.route("/cartDamgi").post((req, res) => {
       });
     });
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> b0734d1 (ksj merge to dev)
   res.send();
 });
 
