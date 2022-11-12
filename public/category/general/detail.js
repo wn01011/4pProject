@@ -76,6 +76,7 @@ const getList = function (
     tempGoodsDiv.append(tempGoodsPrice);
     tempGoodsDiv.append(tempGoodsInfo);
     tempGoodsDiv.append(tempGoodsCart);
+    // tempGoodsImgDiv.after(tempGoodsCart);
 
     // 제품 상세페이지로 이동
     function detailItem() {
@@ -103,21 +104,6 @@ const getList = function (
     //       location.href = "/Cart";
     //     });
     // };
-    tempGoodsCart.onclick = (e) => {
-      console.log(name);
-      axios
-        .post(
-          "/api/product/cartDamgi?productName=" +
-            name +
-            "&userId=" +
-            getUserId() +
-            "&price=" +
-            price
-        )
-        .then((data) => {
-          location.href = "/Cart";
-        });
-    };
   } catch (error) {
     console.log(error);
   }
@@ -264,28 +250,28 @@ checkList[0].onclick = () => {
   else selectedPrice = 0;
   pricesFilter();
   searchFunc();
-  // vegiCategories();
+  vegiCategories();
 };
 checkList[1].onclick = () => {
   if (selectedPrice == 1) selectedPrice = -1;
   else selectedPrice = 1;
   pricesFilter();
   searchFunc();
-  // vegiCategories();
+  vegiCategories();
 };
 checkList[2].onclick = () => {
   if (selectedPrice == 2) selectedPrice = -1;
   else selectedPrice = 2;
   pricesFilter();
   searchFunc();
-  // vegiCategories();
+  vegiCategories();
 };
 checkList[3].onclick = () => {
   if (selectedPrice == 3) selectedPrice = -1;
   else selectedPrice = 3;
   pricesFilter();
   searchFunc();
-  // vegiCategories();
+  vegiCategories();
 };
 // let filterSet = new Set();
 
@@ -334,7 +320,7 @@ const getFilter = function (manufacturer) {
       }
       searchFunc();
       // vegiCategories();
-      // vegiCategories();
+      vegiCategories();
     };
 
     brandFilter.append(filterLi);
@@ -347,7 +333,6 @@ const getFilter = function (manufacturer) {
 };
 
 // 카테고리 데이터 요청
-// 채소
 let selectedBrand = [];
 let selectedPrice = -1;
 const filter = document.getElementById("filter");
@@ -368,6 +353,8 @@ function searchFunc() {
       vegiCategories(currCategory);
       data.data.forEach((item) => {
         // 카테고리별 아이템 추출
+        // console.log(vegiCategories);
+
         const category = Object.values(item.category[0]);
         getList(
           item.img,
@@ -400,6 +387,7 @@ function searchFunc() {
     });
 }
 searchFunc();
+// vegiCategories();
 
 const pricesFilter = function () {
   switch (selectedPrice) {
@@ -481,13 +469,6 @@ switch (originName) {
     banner.src = "/category/imges/banner/drink_banner.jpg";
     break;
   case "간식·과자·떡":
-    const itemHead = (document.getElementById("item-head").children.innerText =
-      currCategory);
-
-    const banner = document
-      .getElementById("banner")
-      .getElementsByTagName("img")[0];
-
     banner.src = "/category/imges/banner/cookie_banner.jpg";
     break;
   default:
