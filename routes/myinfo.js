@@ -23,7 +23,7 @@ router.route("/orderhistory").post(async (req, res) => {
         name: orderSave[i],
       },
     });
-    imgList.push(imgBox.img);
+    if (imgBox?.img) imgList.push(imgBox?.img);
   }
   res.send({ imgList: imgList, orderList: tempOrderhistoryList });
 });
