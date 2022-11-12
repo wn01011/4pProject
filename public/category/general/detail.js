@@ -3,37 +3,16 @@ let currDelivery = "";
 let currName = "";
 let currDescription = "";
 let currPrice = "";
-<<<<<<< HEAD
 let originName = decodeURI(
   window.location.href.split("?")[1].split("=")[1].replaceAll("-", "·")
 );
 const currCategory = decodeURI(
   window.location.href.split("?")[1].split("=")[1].split("-")[0]
 );
-=======
-const currCategory = decodeURI(
-  window.location.href.split("?")[1].split("=")[1]
-);
-console.log(currCategory);
->>>>>>> d304a68 (make general category)
 
 // 상품
 const goods = document.getElementById("goods");
 
-<<<<<<< HEAD
-=======
-// 카테고리
-const categoryAll = document.getElementById("item-all");
-const categoryBro = document.getElementById("item-bro");
-const categoryBean = document.getElementById("item-bean");
-const categoryEnv = document.getElementById("item-env");
-const categoryOni = document.getElementById("item-onion");
-const categoryPota = document.getElementById("item-potato");
-const categoryCuc = document.getElementById("item-cucumber");
-const categorySpi = document.getElementById("item-spinach");
-const categoryFro = document.getElementById("item-frozen");
-
->>>>>>> d304a68 (make general category)
 const getList = function (
   img,
   delivery,
@@ -44,64 +23,28 @@ const getList = function (
 ) {
   try {
     const tempGoodsDiv = document.createElement("div");
-<<<<<<< HEAD
     const tempGoodsImgDiv = document.createElement("div");
-=======
-    const tempGoodsA = document.createElement("a");
->>>>>>> d304a68 (make general category)
     const tempGoodsImg = document.createElement("img");
     const tempGoodsDel = document.createElement("p");
     const tempGoodsText = document.createElement("p");
     const tempGoodsPrice = document.createElement("p");
     const tempGoodsInfo = document.createElement("p");
-<<<<<<< HEAD
     const tempGoodsCart = document.createElement("button");
-=======
-    const tempGoodsCart = document.createElement("img");
->>>>>>> d304a68 (make general category)
 
     tempGoodsImg.src = `/api/product/download${img}`;
     tempGoodsDel.innerText = `${delivery}`;
     tempGoodsText.innerText = `[${manufacturer}]` + `${name}`;
-<<<<<<< HEAD
     tempGoodsPrice.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempGoodsInfo.innerText = `${description}`;
-=======
-    tempGoodsPrice.innerText = `${price}원`;
-    tempGoodsInfo.innerText = `${description}`;
-    tempGoodsCart.src = `/imges/cart3.svg`;
->>>>>>> d304a68 (make general category)
 
     if (!manufacturer) {
       tempGoodsText.innerText = `${name}`;
     }
 
-<<<<<<< HEAD
     tempGoodsCart.classList.add(`goodsCartBtn`);
     tempGoodsText.classList.add(`goodsTxt`);
     tempGoodsPrice.classList.add(`priceTxt`);
     tempGoodsInfo.classList.add(`goodsInfoTxt`);
-=======
-    tempGoodsCart.style = `
-    width: 30px;
-    position: relative;
-    top:130px;
-    left: -40px;
-    `;
-
-    tempGoodsText.style = `
-    display:block;
-    line-height: 1.5;
-    margin-top: 8px;
-    `;
-
-    tempGoodsPrice.style = `
-    margin-top: 8px;
-    `;
-    tempGoodsInfo.style = `
-    padding-bottom: 10px;
-    `;
->>>>>>> d304a68 (make general category)
 
     goods.style = `
     display: flex;
@@ -123,43 +66,22 @@ const getList = function (
     color: rgb(205, 204, 204);
     `;
 
-<<<<<<< HEAD
     tempGoodsDel.classList.add(`deliveryTxt`);
 
     goods.appendChild(tempGoodsDiv);
     tempGoodsDiv.append(tempGoodsImgDiv);
     tempGoodsImgDiv.append(tempGoodsImg);
-=======
-    tempGoodsPrice.style = `
-    font-weight: bold;
-    `;
-
-    tempGoodsDel.style = `
-    font-size: 14px;
-    `;
-
-    goods.appendChild(tempGoodsDiv);
-    tempGoodsDiv.append(tempGoodsA);
-    // tempGoodsImg.append(tempGoodsA);
-    tempGoodsA.append(tempGoodsImg);
->>>>>>> d304a68 (make general category)
     tempGoodsDiv.append(tempGoodsDel);
     tempGoodsDiv.append(tempGoodsText);
     tempGoodsDiv.append(tempGoodsPrice);
     tempGoodsDiv.append(tempGoodsInfo);
     tempGoodsDiv.append(tempGoodsCart);
-<<<<<<< HEAD
-    // tempGoodsImgDiv.after(tempGoodsCart);
-=======
-    tempGoodsA.after(tempGoodsCart);
->>>>>>> d304a68 (make general category)
 
     // 제품 상세페이지로 이동
     function detailItem() {
       location.href = "/item?product=" + img;
     }
     // 이미지 클릭시
-<<<<<<< HEAD
     tempGoodsImgDiv.onclick = (e) => {
       e.preventDefault();
       detailItem();
@@ -181,13 +103,6 @@ const getList = function (
     //       location.href = "/Cart";
     //     });
     // };
-=======
-    tempGoodsA.onclick = (e) => {
-      e.preventDefault();
-      console.log(tempGoodsA);
-      detailItem();
-    };
->>>>>>> d304a68 (make general category)
     tempGoodsCart.onclick = (e) => {
       console.log(name);
       axios
@@ -208,95 +123,6 @@ const getList = function (
   }
 };
 
-<<<<<<< HEAD
-=======
-// 필터 사이드바 (브랜드명)
-const brandFilter = document.getElementById("filter-brand");
-const priceBrand = document.getElementById("brand-price");
-let brandSet = new Set();
-const checkList = document.getElementsByClassName("check-list");
-checkList[0].onclick = () => {
-  if (selectedPrice == 0) selectedPrice = -1;
-  else selectedPrice = 0;
-  pricesFilter();
-  searchFunc();
-};
-checkList[1].onclick = () => {
-  if (selectedPrice == 1) selectedPrice = -1;
-  else selectedPrice = 1;
-  pricesFilter();
-  searchFunc();
-};
-checkList[2].onclick = () => {
-  if (selectedPrice == 2) selectedPrice = -1;
-  else selectedPrice = 2;
-  pricesFilter();
-  searchFunc();
-};
-checkList[3].onclick = () => {
-  if (selectedPrice == 3) selectedPrice = -1;
-  else selectedPrice = 3;
-  pricesFilter();
-  searchFunc();
-};
-// let filterSet = new Set();
-
-const getFilter = function (manufacturer) {
-  try {
-    const filterLi = document.createElement("li");
-    const filterImg = document.createElement("img");
-    const filterA = document.createElement("button");
-    const filterAa = document.createElement("button");
-
-    filterImg.src = `/category/imges/detailImg/check-circle.svg`;
-    filterA.style = `
-border : none;
-background-color : transparent;
-border-radius: 50%;
-padding : 0;
-`;
-
-    filterAa.innerText = `${manufacturer}`;
-    filterAa.style = `
-margin-left: 20px;
-line-height: 2;
-border : none;
-background-color : transparent; 
-`;
-    filterImg.style = `
-opacity: 0.7;
-`;
-    filterLi.onclick = () => {
-      if (selectedBrand.includes(filterAa.innerText)) {
-        const tempAry = [];
-        selectedBrand.filter((elem) => {
-          if ((elem, filterAa.innerText, elem !== filterAa.innerText)) {
-            tempAry.push(elem);
-          }
-          elem !== filterAa.innerText;
-        });
-        selectedBrand = tempAry;
-      } else {
-        selectedBrand.push(filterAa.innerText);
-      }
-      if (selectedBrand.includes(filterAa.innerText)) {
-        filterA.style.backgroundColor = "rgba(75, 0, 130, 0.7)";
-      } else {
-        filterA.style.backgroundColor = "transparent";
-      }
-      searchFunc();
-    };
-
-    brandFilter.append(filterLi);
-    filterA.append(filterImg);
-    filterLi.append(filterA);
-    filterLi.append(filterAa);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
->>>>>>> d304a68 (make general category)
 const categoryList = [
   [
     "전체보기",
@@ -375,11 +201,7 @@ const categoryList = [
   ["전체보기", `쿠키!!!`],
 ];
 
-<<<<<<< HEAD
 function vegiCategories(category) {
-=======
-const vegiCategories = function (category) {
->>>>>>> d304a68 (make general category)
   let currCategoryList = categoryList[8];
   switch (category) {
     case "채소":
@@ -413,10 +235,6 @@ const vegiCategories = function (category) {
       currCategoryList = categoryList[0];
       break;
   }
-<<<<<<< HEAD
-=======
-  console.log(currCategoryList);
->>>>>>> d304a68 (make general category)
   try {
     const itemInner = document.getElementsByClassName("item-inner")[0];
     itemInner.style.columnGap = "50px";
@@ -435,7 +253,6 @@ const vegiCategories = function (category) {
   } catch (error) {
     console.log(error);
   }
-<<<<<<< HEAD
 }
 // 필터 사이드바 (브랜드명)
 const brandFilter = document.getElementById("filter-brand");
@@ -530,21 +347,13 @@ const getFilter = function (manufacturer) {
 };
 
 // 카테고리 데이터 요청
-=======
-};
-
-// 카테고리 데이터 요청
 // 채소
->>>>>>> d304a68 (make general category)
 let selectedBrand = [];
 let selectedPrice = -1;
 const filter = document.getElementById("filter");
 const list = document.getElementById("list");
 const totalCount = document.getElementById("totalCount");
-<<<<<<< HEAD
 const arrayPrice = document.getElementById("arrayPrice");
-=======
->>>>>>> d304a68 (make general category)
 const productNone = document.getElementById("productNone");
 function searchFunc() {
   goods.innerHTML = "";
@@ -591,10 +400,6 @@ function searchFunc() {
     });
 }
 searchFunc();
-<<<<<<< HEAD
-// vegiCategories();
-=======
->>>>>>> d304a68 (make general category)
 
 const pricesFilter = function () {
   switch (selectedPrice) {
@@ -641,7 +446,6 @@ function getUserId() {
   }
 }
 
-<<<<<<< HEAD
 // 페이지 카테고리 제목
 const itemHead = document
   .getElementById("item-head")
@@ -677,40 +481,13 @@ switch (originName) {
     banner.src = "/category/imges/banner/drink_banner.jpg";
     break;
   case "간식·과자·떡":
-=======
-const itemHead = (document.getElementById("item-head").children.innerText =
-  currCategory);
+    const itemHead = (document.getElementById("item-head").children.innerText =
+      currCategory);
 
-const banner = document.getElementById("banner").getElementsByTagName("img")[0];
+    const banner = document
+      .getElementById("banner")
+      .getElementsByTagName("img")[0];
 
-// 배너 정하기
-switch (currCategory) {
-  case "채소":
-    banner.src = "/category/imges/banner/vegi_banner.jpg";
-    break;
-  case "과일":
-    banner.src = "/category/imges/banner/fruit_banner.jpg";
-    break;
-  case "수산":
-    banner.src = "/category/imges/banner/sea_banner.jpg";
-    break;
-  case "정육":
-    banner.src = "/category/imges/banner/meat_banner.jpg";
-    break;
-  case "국":
-    banner.src = "/category/imges/banner/soup_banner.jpg";
-    break;
-  case "샐러드":
-    banner.src = "/category/imges/banner/salad_banner.jpg";
-    break;
-  case "면":
-    banner.src = "/category/imges/banner/oil_banner.jpg";
-    break;
-  case "생수":
-    banner.src = "/category/imges/banner/drink_banner.jpg";
-    break;
-  case "간식":
->>>>>>> d304a68 (make general category)
     banner.src = "/category/imges/banner/cookie_banner.jpg";
     break;
   default:
