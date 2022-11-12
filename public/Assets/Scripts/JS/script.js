@@ -33,7 +33,7 @@ function getItemList(img, name, price, manufacturer) {
 
     tempItemImg.src = `${productImg}`;
     tempItemNameP.innerText = `[${manufacturer}]` + `${name}`;
-    tempItemPriceP.innerText = `${price}원`;
+    tempItemPriceP.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempItemCartImg.src = `/imges/cart3.svg`;
 
     tempItemDiv.style = `
@@ -80,7 +80,7 @@ function getItemList(img, name, price, manufacturer) {
 
     tempItemPriceP.style = `
     cursor:pointer;
-    font-weight: bolder;
+    font-weight: bold;
     `;
 
     if (!manufacturer) {
@@ -166,7 +166,7 @@ const getPickItemList = function (img, name, price, manufacturer) {
 
     tempPickItemImg.src = `${productImg}`;
     tempPickItemNameP.innerText = `[${manufacturer}]` + `${name}`;
-    tempPickItemPriceP.innerText = `${price}원`;
+    tempPickItemPriceP.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempPickItemCartImg.src = `/imges/cart3.svg`;
 
     tempPickItemDiv.style = `
@@ -296,7 +296,7 @@ const getPickItem2List = function (img, name, price, manufacturer) {
 
     tempPickItem2Img.src = `${productImg}`;
     tempPickItem2NameP.innerText = `[${manufacturer}]` + `${name}`;
-    tempPickItem2PriceP.innerText = `${price}원`;
+    tempPickItem2PriceP.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempPickItem2CartImg.src = `/imges/cart3.svg`;
 
     tempPickItem2Div.style = `
@@ -435,7 +435,7 @@ const getPickItem3List = function (img, name, price, manufacturer) {
 
     tempPickItem3Img.src = `${productImg}`;
     tempPickItem3NameP.innerText = `[${manufacturer}]` + `${name}`;
-    tempPickItem3PriceP.innerText = `${price}원`;
+    tempPickItem3PriceP.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempPickItem3CartImg.src = `/imges/cart3.svg`;
 
     tempPickItem3Div.style = `
@@ -574,7 +574,7 @@ const getPickItem4List = function (img, name, price, manufacturer) {
 
     tempPickItem4Img.src = `${productImg}`;
     tempPickItem4NameP.innerText = `[${manufacturer}]` + `${name}`;
-    tempPickItem4PriceP.innerText = `${price}원`;
+    tempPickItem4PriceP.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempPickItem4CartImg.src = `/imges/cart3.svg`;
 
     tempPickItem4Div.style = `

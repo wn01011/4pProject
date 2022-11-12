@@ -70,7 +70,7 @@ async function itemDetailList(
     itemInfoP.innerText = `${delivery}`;
     itemInfoh2.innerText = `${name}`;
     itemInfo2P.innerText = `${description}`;
-    itemPrice_h2.innerText = `${price}원`;
+    itemPrice_h2.innerText = `${price.toLocaleString("ko-KR")}원`;
     itemSaleP.innerText = `${manufacturer}`;
     itemPackP.innerText = `${package}`;
     itemUnitP.innerText = `${unit}`;
@@ -78,7 +78,7 @@ async function itemDetailList(
     itemOriginP.innerText = `${origin}`;
     itemSelectSpan.innerText = `${name}`;
     totalText.innerText = `총 상품금액:`;
-    itemSelectPrice.innerText = `${price}원`;
+    itemSelectPrice.innerText = `${price.toLocaleString("ko-KR")}원`;
     total.innerText = `${price * 1}`;
     totalWonText.innerText = "원";
     itemTotal.style = `

@@ -43,7 +43,7 @@ const getList = function (
     tempGoodsImg.src = `/api/product/download${img}`;
     tempGoodsDel.innerText = `${delivery}`;
     tempGoodsText.innerText = `[${manufacturer}]` + `${name}`;
-    tempGoodsPrice.innerText = `${price}원`;
+    tempGoodsPrice.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempGoodsInfo.innerText = `${description}`;
     tempGoodsCart.src = `/imges/cart3.svg`;
 
@@ -74,6 +74,11 @@ const getList = function (
     goods.style = `
     display: flex;
     width: 837px;
+    `;
+
+    tempGoodsA.style = `
+    width: 249px;
+    height: 320px;
     `;
 
     tempGoodsImg.style = `

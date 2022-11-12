@@ -34,7 +34,7 @@ const getList = function (img, delivery, name, description, price) {
     tempGoodsImg.src = `/api/product/download${img}`;
     tempGoodsDel.innerText = `${delivery}`;
     tempGoodsText.innerText = `${name}`;
-    tempGoodsPrice.innerText = `${price}원`;
+    tempGoodsPrice.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempGoodsInfo.innerText = `${description}`;
     tempGoodsCart.src = `/imges/cart3.svg`;
 
@@ -152,7 +152,6 @@ const fruitCategories = function (category) {
     const tempPotaA = document.createElement("a");
     const tempCucA = document.createElement("a");
     const tempSpiA = document.createElement("a");
-    const tempFroA = document.createElement("a");
 
     tempAllA.innerText = "전체보기";
     tempBroA.innerText = `김치·젓갈·장류`;
