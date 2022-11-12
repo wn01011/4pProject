@@ -271,7 +271,7 @@ async function getInquireList() {
     console.error(error);
   }
 }
-getInquireList();
+// getInquireList();
 const inputId = document.getElementById(
   "myinfo_main_infoupdate_list_id_input_input"
 );
