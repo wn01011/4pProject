@@ -250,28 +250,28 @@ checkList[0].onclick = () => {
   else selectedPrice = 0;
   pricesFilter();
   searchFunc();
-  vegiCategories();
+  // vegiCategories();
 };
 checkList[1].onclick = () => {
   if (selectedPrice == 1) selectedPrice = -1;
   else selectedPrice = 1;
   pricesFilter();
   searchFunc();
-  vegiCategories();
+  // vegiCategories();
 };
 checkList[2].onclick = () => {
   if (selectedPrice == 2) selectedPrice = -1;
   else selectedPrice = 2;
   pricesFilter();
   searchFunc();
-  vegiCategories();
+  // vegiCategories();
 };
 checkList[3].onclick = () => {
   if (selectedPrice == 3) selectedPrice = -1;
   else selectedPrice = 3;
   pricesFilter();
   searchFunc();
-  vegiCategories();
+  // vegiCategories();
 };
 // let filterSet = new Set();
 
@@ -320,7 +320,7 @@ const getFilter = function (manufacturer) {
       }
       searchFunc();
       // vegiCategories();
-      vegiCategories();
+      // vegiCategories();
     };
 
     brandFilter.append(filterLi);
@@ -353,8 +353,6 @@ function searchFunc() {
       vegiCategories(currCategory);
       data.data.forEach((item) => {
         // 카테고리별 아이템 추출
-        // console.log(vegiCategories);
-
         const category = Object.values(item.category[0]);
         getList(
           item.img,
