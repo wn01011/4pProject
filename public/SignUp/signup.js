@@ -165,13 +165,11 @@ const modalExit = document.getElementById("deduplication_modal_exit");
 document.getElementById("signup_board_id_deduplication").onclick =
   async function () {
     if (!inputId.value) {
-      document.getElementById("thebody").classList.add("body_onmodal");
       modalText.innerText = "아이디를 입력하십시오";
       modal.classList.add("show");
       return;
     }
     if (!regIdTestOkay) {
-      document.getElementById("thebody").classList.add("body_onmodal");
       modalText.innerText = "아이디를 형식에 맞게 작성하십시오.";
       modal.classList.add("show");
       return;
@@ -182,12 +180,10 @@ document.getElementById("signup_board_id_deduplication").onclick =
       });
       console.log("data.data.status : ", data.data.status);
       if (data.data.status == 200) {
-        document.getElementById("thebody").classList.add("body_onmodal");
         modalText.innerText = "사용 가능한 아이디입니다.";
         modal.classList.add("show");
       } else if (data.data.status == 401) {
-        document.getElementById("thebody").classList.add("body_onmodal");
-        modalText.innerText = "이미 있는 아이디입니다.";
+        modalText.innerText = "이미 있는 아이디입a니다.";
         modal.classList.add("show");
       }
     } catch (error) {
@@ -195,12 +191,10 @@ document.getElementById("signup_board_id_deduplication").onclick =
     }
   };
 document.getElementById("deduplication_modal_body_exit").onclick = () => {
-  document.getElementById("thebody").classList.remove("body_onmodal");
   modal.deduplication_modal_bodyinnerText == "";
   modal.classList.remove("show");
 };
 document.getElementById("deduplication_modal").onclick = () => {
-  document.getElementById("thebody").classList.remove("body_onmodal");
   modal.deduplication_modal_bodyinnerText == "";
   modal.classList.remove("show");
 };

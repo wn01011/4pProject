@@ -104,6 +104,21 @@ const getList = function (
     //       location.href = "/Cart";
     //     });
     // };
+    tempGoodsCart.onclick = (e) => {
+      console.log(name);
+      axios
+        .post(
+          "/api/product/cartDamgi?productName=" +
+            name +
+            "&userId=" +
+            getUserId() +
+            "&price=" +
+            price
+        )
+        .then((data) => {
+          location.href = "/Cart";
+        });
+    };
   } catch (error) {
     console.log(error);
   }
