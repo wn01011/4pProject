@@ -3,24 +3,15 @@ let currDelivery = "";
 let currName = "";
 let currDescription = "";
 let currPrice = "";
-const currCategory = decodeURI(
-  window.location.href.split("?")[1].split("=")[1]
+let originName = decodeURI(
+  window.location.href.split("?")[1].split("=")[1].replaceAll("-", "·")
 );
-console.log(currCategory);
+const currCategory = decodeURI(
+  window.location.href.split("?")[1].split("=")[1].split("-")[0]
+);
 
 // 상품
 const goods = document.getElementById("goods");
-
-// 카테고리
-const categoryAll = document.getElementById("item-all");
-const categoryBro = document.getElementById("item-bro");
-const categoryBean = document.getElementById("item-bean");
-const categoryEnv = document.getElementById("item-env");
-const categoryOni = document.getElementById("item-onion");
-const categoryPota = document.getElementById("item-potato");
-const categoryCuc = document.getElementById("item-cucumber");
-const categorySpi = document.getElementById("item-spinach");
-const categoryFro = document.getElementById("item-frozen");
 
 const getList = function (
   img,
@@ -32,44 +23,28 @@ const getList = function (
 ) {
   try {
     const tempGoodsDiv = document.createElement("div");
-    const tempGoodsA = document.createElement("a");
+    const tempGoodsImgDiv = document.createElement("div");
     const tempGoodsImg = document.createElement("img");
     const tempGoodsDel = document.createElement("p");
     const tempGoodsText = document.createElement("p");
     const tempGoodsPrice = document.createElement("p");
     const tempGoodsInfo = document.createElement("p");
-    const tempGoodsCart = document.createElement("img");
+    const tempGoodsCart = document.createElement("button");
 
     tempGoodsImg.src = `/api/product/download${img}`;
     tempGoodsDel.innerText = `${delivery}`;
     tempGoodsText.innerText = `[${manufacturer}]` + `${name}`;
-    tempGoodsPrice.innerText = `${price}원`;
+    tempGoodsPrice.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempGoodsInfo.innerText = `${description}`;
-    tempGoodsCart.src = `/imges/cart3.svg`;
 
     if (!manufacturer) {
       tempGoodsText.innerText = `${name}`;
     }
 
-    tempGoodsCart.style = `
-    width: 30px;
-    position: relative;
-    top:130px;
-    left: -40px;
-    `;
-
-    tempGoodsText.style = `
-    display:block;
-    line-height: 1.5;
-    margin-top: 8px;
-    `;
-
-    tempGoodsPrice.style = `
-    margin-top: 8px;
-    `;
-    tempGoodsInfo.style = `
-    padding-bottom: 10px;
-    `;
+    tempGoodsCart.classList.add(`goodsCartBtn`);
+    tempGoodsText.classList.add(`goodsTxt`);
+    tempGoodsPrice.classList.add(`priceTxt`);
+    tempGoodsInfo.classList.add(`goodsInfoTxt`);
 
     goods.style = `
     display: flex;
@@ -91,136 +66,44 @@ const getList = function (
     color: rgb(205, 204, 204);
     `;
 
-    tempGoodsPrice.style = `
-    font-weight: bold;
-    `;
-
-    tempGoodsDel.style = `
-    font-size: 14px;
-    `;
+    tempGoodsDel.classList.add(`deliveryTxt`);
 
     goods.appendChild(tempGoodsDiv);
-    tempGoodsDiv.append(tempGoodsA);
-    // tempGoodsImg.append(tempGoodsA);
-    tempGoodsA.append(tempGoodsImg);
+    tempGoodsDiv.append(tempGoodsImgDiv);
+    tempGoodsImgDiv.append(tempGoodsImg);
     tempGoodsDiv.append(tempGoodsDel);
     tempGoodsDiv.append(tempGoodsText);
     tempGoodsDiv.append(tempGoodsPrice);
     tempGoodsDiv.append(tempGoodsInfo);
     tempGoodsDiv.append(tempGoodsCart);
-    tempGoodsA.after(tempGoodsCart);
+    // tempGoodsImgDiv.after(tempGoodsCart);
 
     // 제품 상세페이지로 이동
     function detailItem() {
       location.href = "/item?product=" + img;
     }
     // 이미지 클릭시
-    tempGoodsA.onclick = (e) => {
+    tempGoodsImgDiv.onclick = (e) => {
       e.preventDefault();
-      console.log(tempGoodsA);
       detailItem();
     };
-    tempGoodsCart.onclick = (e) => {
-      console.log(name);
-      axios
-        .post(
-          "/api/product/cartDamgi?productName=" +
-            name +
-            "&userId=" +
-            getUserId() +
-            "&price=" +
-            price
-        )
-        .then((data) => {
-          location.href = "/Cart";
-        });
-    };
-  } catch (error) {
-    console.log(error);
-  }
-};
 
-// 필터 사이드바 (브랜드명)
-const brandFilter = document.getElementById("filter-brand");
-const priceBrand = document.getElementById("brand-price");
-let brandSet = new Set();
-const checkList = document.getElementsByClassName("check-list");
-checkList[0].onclick = () => {
-  if (selectedPrice == 0) selectedPrice = -1;
-  else selectedPrice = 0;
-  pricesFilter();
-  searchFunc();
-};
-checkList[1].onclick = () => {
-  if (selectedPrice == 1) selectedPrice = -1;
-  else selectedPrice = 1;
-  pricesFilter();
-  searchFunc();
-};
-checkList[2].onclick = () => {
-  if (selectedPrice == 2) selectedPrice = -1;
-  else selectedPrice = 2;
-  pricesFilter();
-  searchFunc();
-};
-checkList[3].onclick = () => {
-  if (selectedPrice == 3) selectedPrice = -1;
-  else selectedPrice = 3;
-  pricesFilter();
-  searchFunc();
-};
-// let filterSet = new Set();
-
-const getFilter = function (manufacturer) {
-  try {
-    const filterLi = document.createElement("li");
-    const filterImg = document.createElement("img");
-    const filterA = document.createElement("button");
-    const filterAa = document.createElement("button");
-
-    filterImg.src = `/category/imges/detailImg/check-circle.svg`;
-    filterA.style = `
-border : none;
-background-color : transparent;
-border-radius: 50%;
-padding : 0;
-`;
-
-    filterAa.innerText = `${manufacturer}`;
-    filterAa.style = `
-margin-left: 20px;
-line-height: 2;
-border : none;
-background-color : transparent; 
-`;
-    filterImg.style = `
-opacity: 0.7;
-`;
-    filterLi.onclick = () => {
-      if (selectedBrand.includes(filterAa.innerText)) {
-        const tempAry = [];
-        selectedBrand.filter((elem) => {
-          if ((elem, filterAa.innerText, elem !== filterAa.innerText)) {
-            tempAry.push(elem);
-          }
-          elem !== filterAa.innerText;
-        });
-        selectedBrand = tempAry;
-      } else {
-        selectedBrand.push(filterAa.innerText);
-      }
-      if (selectedBrand.includes(filterAa.innerText)) {
-        filterA.style.backgroundColor = "rgba(75, 0, 130, 0.7)";
-      } else {
-        filterA.style.backgroundColor = "transparent";
-      }
-      searchFunc();
-    };
-
-    brandFilter.append(filterLi);
-    filterA.append(filterImg);
-    filterLi.append(filterA);
-    filterLi.append(filterAa);
+    // tempGoodsCart.onclick = (e) => {
+    //   e.preventDefault();
+    //   console.log(name);
+    //   axios
+    //     .post(
+    //       "/api/product/cartDamgi?productName=" +
+    //         name +
+    //         "&userId=" +
+    //         getUserId() +
+    //         "&price=" +
+    //         price
+    //     )
+    //     .then((data) => {
+    //       location.href = "/Cart";
+    //     });
+    // };
   } catch (error) {
     console.log(error);
   }
@@ -304,7 +187,7 @@ const categoryList = [
   ["전체보기", `쿠키!!!`],
 ];
 
-const vegiCategories = function (category) {
+function vegiCategories(category) {
   let currCategoryList = categoryList[8];
   switch (category) {
     case "채소":
@@ -338,7 +221,6 @@ const vegiCategories = function (category) {
       currCategoryList = categoryList[0];
       break;
   }
-  console.log(currCategoryList);
   try {
     const itemInner = document.getElementsByClassName("item-inner")[0];
     itemInner.style.columnGap = "50px";
@@ -357,15 +239,106 @@ const vegiCategories = function (category) {
   } catch (error) {
     console.log(error);
   }
+}
+// 필터 사이드바 (브랜드명)
+const brandFilter = document.getElementById("filter-brand");
+const priceBrand = document.getElementById("brand-price");
+let brandSet = new Set();
+const checkList = document.getElementsByClassName("check-list");
+checkList[0].onclick = () => {
+  if (selectedPrice == 0) selectedPrice = -1;
+  else selectedPrice = 0;
+  pricesFilter();
+  searchFunc();
+  vegiCategories();
+};
+checkList[1].onclick = () => {
+  if (selectedPrice == 1) selectedPrice = -1;
+  else selectedPrice = 1;
+  pricesFilter();
+  searchFunc();
+  vegiCategories();
+};
+checkList[2].onclick = () => {
+  if (selectedPrice == 2) selectedPrice = -1;
+  else selectedPrice = 2;
+  pricesFilter();
+  searchFunc();
+  vegiCategories();
+};
+checkList[3].onclick = () => {
+  if (selectedPrice == 3) selectedPrice = -1;
+  else selectedPrice = 3;
+  pricesFilter();
+  searchFunc();
+  vegiCategories();
+};
+// let filterSet = new Set();
+
+// 필터리스트
+const getFilter = function (manufacturer) {
+  try {
+    // categoryList.innerHTML = "";
+    const filterLi = document.createElement("li");
+    const filterImg = document.createElement("img");
+    const filterA = document.createElement("button");
+    const filterAa = document.createElement("button");
+    filterImg.src = `/category/imges/detailImg/check-circle.svg`;
+    filterA.style = `
+    border : none;
+    background-color : transparent;
+    border-radius: 50%;
+    padding : 0;
+    `;
+    filterAa.innerText = `${manufacturer}`;
+    filterAa.style = `
+    margin-left: 20px;
+    line-height: 2;
+    border : none;
+    background-color : transparent; 
+    `;
+    filterImg.style = `
+    opacity: 0.7;
+    `;
+    filterLi.onclick = () => {
+      if (selectedBrand.includes(filterAa.innerText)) {
+        const tempAry = [];
+        selectedBrand.filter((elem) => {
+          if ((elem, filterAa.innerText, elem !== filterAa.innerText)) {
+            tempAry.push(elem);
+          }
+          elem !== filterAa.innerText;
+        });
+        selectedBrand = tempAry;
+      } else {
+        selectedBrand.push(filterAa.innerText);
+      }
+      if (selectedBrand.includes(filterAa.innerText)) {
+        filterA.style.backgroundColor = "rgba(75, 0, 130, 0.7)";
+      } else {
+        filterA.style.backgroundColor = "transparent";
+      }
+      searchFunc();
+      // vegiCategories();
+      vegiCategories();
+    };
+
+    brandFilter.append(filterLi);
+    filterA.append(filterImg);
+    filterLi.append(filterA);
+    filterLi.append(filterAa);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // 카테고리 데이터 요청
-// 채소
 let selectedBrand = [];
 let selectedPrice = -1;
 const filter = document.getElementById("filter");
 const list = document.getElementById("list");
 const totalCount = document.getElementById("totalCount");
+const arrayPrice = document.getElementById("arrayPrice");
 const productNone = document.getElementById("productNone");
 function searchFunc() {
   goods.innerHTML = "";
@@ -380,6 +353,8 @@ function searchFunc() {
       vegiCategories(currCategory);
       data.data.forEach((item) => {
         // 카테고리별 아이템 추출
+        // console.log(vegiCategories);
+
         const category = Object.values(item.category[0]);
         getList(
           item.img,
@@ -412,6 +387,7 @@ function searchFunc() {
     });
 }
 searchFunc();
+// vegiCategories();
 
 const pricesFilter = function () {
   switch (selectedPrice) {
@@ -458,38 +434,41 @@ function getUserId() {
   }
 }
 
-const itemHead = (document.getElementById("item-head").children.innerText =
-  currCategory);
+// 페이지 카테고리 제목
+const itemHead = document
+  .getElementById("item-head")
+  .getElementsByTagName("h1")[0];
 
-const banner = document.getElementById("banner").getElementsByTagName("img")[0];
+itemHead.innerText = originName;
 
 // 배너 정하기
-switch (currCategory) {
+const banner = document.getElementById("banner").getElementsByTagName("img")[0];
+switch (originName) {
   case "채소":
     banner.src = "/category/imges/banner/vegi_banner.jpg";
     break;
-  case "과일":
-    banner.src = "/category/imges/banner/fruit_banner.jpg";
+  case "과일·견과·쌀":
+    banner.src = "/category/imges/banner/fruit_banner.jpeg";
     break;
-  case "수산":
-    banner.src = "/category/imges/banner/sea_banner.jpg";
+  case "수산·해산물·건어물":
+    banner.src = "/category/imges/banner/sea_banner.jpeg";
     break;
-  case "정육":
+  case "정육·계란":
     banner.src = "/category/imges/banner/meat_banner.jpg";
     break;
-  case "국":
+  case "국·반찬·메인요리":
     banner.src = "/category/imges/banner/soup_banner.jpg";
     break;
-  case "샐러드":
-    banner.src = "/category/imges/banner/salad_banner.jpg";
+  case "샐러드·간편식":
+    banner.src = "/category/imges/banner/salad_banner.jpeg";
     break;
-  case "면":
-    banner.src = "/category/imges/banner/oil_banner.jpg";
+  case "면·양념·오일":
+    banner.src = "/category/imges/banner/oil_banner.jpeg";
     break;
-  case "생수":
+  case "생수·음료·우유·커피":
     banner.src = "/category/imges/banner/drink_banner.jpg";
     break;
-  case "간식":
+  case "간식·과자·떡":
     banner.src = "/category/imges/banner/cookie_banner.jpg";
     break;
   default:
