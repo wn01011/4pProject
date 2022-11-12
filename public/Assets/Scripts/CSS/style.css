@@ -157,6 +157,10 @@ h1 {
   width: 100vw;
 }
 
+/* #cart-btn {
+  
+} */
+
 #item-how,
 #item1,
 #item2,
@@ -414,4 +418,49 @@ h1 {
   border: 1px solid rgba(155, 154, 154, 0.5);
   background-color: white;
   margin-bottom: 70px;
+}
+
+/* subslide css */
+.imgDiv {
+  width: 250px;
+  height: 320px;
+  margin: 0 30 20 0;
+  overflow: hidden;
+}
+.img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 320px;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.img:hover {
+  transform: scale(1.1);
+}
+.cartBtn {
+  position: absolute;
+  background-image: url("/imges/cart3.svg");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(109, 174, 182, 0.5);
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  top: 250px;
+  left: 180px;
+}
+.itemNameTxt {
+  width: 240px;
+  cursor: pointer;
+}
+.itemPriceTxt {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 2;
 }

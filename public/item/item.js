@@ -101,7 +101,7 @@ async function itemDetailList(
     display:flex;
     justify-content: flex-end;
     font-size : 40px;
-    width: 140px;
+    width: 180px;
     font-weight : bold;
     margin-right: 10px
     `;
@@ -134,9 +134,16 @@ async function itemDetailList(
 
     itemPlus.onclick = () => {
       count++;
-      itemEa.innerText = count;
-      total.innerText = `${price * count}`;
-      itemTotal.append(itemTotalPrice);
+      if (count <= 100) {
+        itemEa.innerText = count;
+        total.innerText = `${price * count}`;
+        itemTotal.append(itemTotalPrice);
+      } else if (count > 100) {
+        alert(
+          "대량으로 살꺼면 할인해줄테니까 고객센터 문의해라~ 답변은 생략한다"
+        );
+        return;
+      }
     };
 
     itemMinus.onclick = () => {
