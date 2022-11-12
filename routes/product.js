@@ -257,8 +257,10 @@ async function setImages() {
     len = datas.length;
     for (let i = 1; i <= len; ++i) {
       router.get(`/download${i}`, (req, res) => {
-        fs.readFile("./Images/" + i + ".jpg", (err, data) => {
-          res.writeHead(200, { "Content-Type": "text/html" });
+        fs.readFile("./Images/" + i + `.jpg`, (err, data) => {
+          res.writeHead(200, {
+            "Content-Type": `image/jpg;`,
+          });
           res.end(data);
         });
       });
@@ -319,7 +321,7 @@ router.route("/search").post((req, res) => {
         JSON.stringify(item.dataValues.category).toString().includes(sword) ||
         item.manufacturer.match(sword)
       ) {
-        if (req.body.brand.length > 0) {
+        if (req.body.brand?.length > 0) {
           if (req.body.brand.includes(item.manufacturer)) sendAry.push(item);
         } else {
           sendAry.push(item);
@@ -391,6 +393,40 @@ router.route("/cartDamgi").post((req, res) => {
     });
   }
   res.send();
+});
+
+router.route("/delProduct").post((req, res) => {
+  db.ProductTable.destroy({ where: { name: req.body.productName } }).then(
+    () => {
+      res.send(req.body.productName + "이(가) 지워졌어요");
+    }
+  );
+});
+
+router.route("/categoryType").post((req, res) => {
+  db.CartegoryTable.findAll().then((data) => {
+    res.send(data);
+  });
+});
+
+router.route("/newData").post((req, res) => {
+  console.log(" : " + req.body[1]);
+  db.ProductTable.create(req.body[0]).then(() => {
+    fs.readdir("./Images", (err, datas) => {
+      len = datas.length;
+
+      router.get(`/download${len}`, (req, res) => {
+        fs.readFile("./Images/" + len + req.body[1], (err, data) => {
+          res.writeHead(200, {
+            "Content-Type": `image/jpg
+            )};charset=UTF-8`,
+          });
+          res.end(data);
+        });
+      });
+    });
+    res.send();
+  });
 });
 
 module.exports = router;
