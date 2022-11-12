@@ -1,0 +1,301 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
+    <link rel="stylesheet" href="/myinfo/myinfo.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  </head>
+  <body id="thebody">
+    <div id="header_include"></div>
+    <div id="myinfo_contents">
+      <div id="myinfo_contents_center">
+        <div id="myinfo_sidebar">
+          <div id="myinfo_sidebar_title"><h2>내 정보</h2></div>
+          <ul id="myinfo_sidebar_list">
+            <li id="myinfo_sidebar_list_item_1">
+              <span> 주문내역</span
+              ><svg
+                width="20"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+              >
+                <path
+                  class="path1"
+                  d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                />
+              </svg>
+            </li>
+            <li id="myinfo_sidebar_list_item_2">
+              <span>상품후기 & 문의</span
+              ><svg
+                width="20"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+              >
+                <path
+                  class="path1"
+                  d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                />
+              </svg>
+            </li>
+            <li id="myinfo_sidebar_list_item_3">
+              <span>개인정보 수정</span
+              ><svg
+                width="20"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+              >
+                <path
+                  class="path1"
+                  d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                />
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div id="myinfo_main">
+          <div id="myinfo_main_orderhistory">
+            <div id="myinfo_main_orderhistory_title">
+              <h2>주문내역</h2>
+              <span>마켓 클리어에서 주문한 상품들</span>
+            </div>
+            <ul id="myinfo_main_orderhistory_list">
+              <li id="myinfo_main_orderhistory_list_none">
+                주문한 상품이 없습니다.
+              </li>
+            </ul>
+          </div>
+          <div id="myinfo_main_review">
+            <div id="myinfo_main_reviewInquire_title">
+              <h2 id="myinfo_main_review_title" class="on">상품 후기</h2>
+              <h2 id="myinfo_main_inquire_title">문의</h2>
+              <span id="myinfo_main_review_tip" class="on"
+                >마켓 클리어에서 주문한 상품에 대한 후기</span
+              >
+              <span id="myinfo_main_inquire_tip"
+                >마켓 클리어에 문의한 내역</span
+              >
+            </div>
+            <ul id="myinfo_main_review_list" class="on">
+              <li id="myinfo_main_review_list_none">상품 후기가 없습니다.</li>
+            </ul>
+            <ul id="myinfo_main_inquire_list">
+              <li id="myinfo_main_inquire_list_none">문의 내역이 없습니다.</li>
+            </ul>
+          </div>
+          <div id="myinfo_main_infoupdate">
+            <div id="myinfo_main_infoupdate_title">
+              <h2>개인정보 수정</h2>
+              <span>개인정보를 수정할 수 있습니다.</span>
+            </div>
+            <div id="myinfo_main_infoupdate_list">
+              <div id="myinfo_main_infoupdate_list_id">
+                <div id="myinfo_main_infoupdate_list_id_text">
+                  <span id="myinfo_main_infoupdate_list_id_text_id"
+                    >아이디</span
+                  >
+                </div>
+                <div id="myinfo_main_infoupdate_list_id_input">
+                  <span id="myinfo_main_infoupdate_list_id_input_input">1</span>
+                </div>
+                <div id="myinfo_main_infoupdate_list_id_whitespace"></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_id_reg">
+                <div class="white_space1"></div>
+                <span id="myinfo_main_infoupdate_list_id_reg_text"></span>
+                <div class="white_space2"></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_pw">
+                <div id="myinfo_main_infoupdate_list_pw_text">
+                  <span id="myinfo_main_infoupdate_list_pw_text_pw"
+                    >비밀번호</span
+                  >
+                </div>
+                <div id="myinfo_main_infoupdate_list_pw_input">
+                  <input
+                    id="myinfo_main_infoupdate_list_pw_input_input"
+                    type="password"
+                    placeholder="패스워드를 입력하십시오."
+                  />
+                </div>
+                <div id="myinfo_main_infoupdate_list_pw_whitespace"></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_pw_reg">
+                <div class="white_space1"></div>
+                <span id="myinfo_main_infoupdate_list_pw_reg_text"></span>
+                <div class="white_space2"></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_confirmpw">
+                <div id="myinfo_main_infoupdate_list_confirmpw_text">
+                  <span id="myinfo_main_infoupdate_list_confirmpw_text_pw"
+                    >비밀번호확인</span
+                  >
+                </div>
+                <div id="myinfo_main_infoupdate_list_confirmpw_input">
+                  <input
+                    id="myinfo_main_infoupdate_list_confirmpw_input_input"
+                    type="password"
+                    placeholder="비밀번호를 한 번 더 입력하십시오."
+                  />
+                </div>
+                <div
+                  id="myinfo_main_infoupdate_list_confirmpw_whitespace"
+                ></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_confirmpw_reg">
+                <div class="white_space1"></div>
+                <span
+                  id="myinfo_main_infoupdate_list_confirmpw_reg_text"
+                ></span>
+                <div class="white_space2"></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_name">
+                <div id="myinfo_main_infoupdate_list_name_text">
+                  <span id="myinfo_main_infoupdate_list_name_text_name"
+                    >이름</span
+                  >
+                </div>
+                <div id="myinfo_main_infoupdate_list_name_input">
+                  <input
+                    id="myinfo_main_infoupdate_list_name_input_input"
+                    type="text"
+                    placeholder="이름를 입력하십시오."
+                    autocomplete="off"
+                  />
+                </div>
+                <div id="myinfo_main_infoupdate_list_name_whitespace"></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_address">
+                <div id="myinfo_main_infoupdate_list_address_text">
+                  <span id="myinfo_main_infoupdate_list_address_text_address"
+                    >주소</span
+                  >
+                </div>
+                <button id="myinfo_main_infoupdate_list_address_btn">
+                  <div id="myinfo_main_infoupdate_list_address_btn_icon">
+                    <?xml version="1.0"?>
+                    <svg
+                      fill="#000000"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      height="24px"
+                    >
+                      <path
+                        d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"
+                      />
+                    </svg>
+                  </div>
+                  주소 검색
+                </button>
+                <div id="myinfo_main_infoupdate_list_name_whitespace"></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_address_result">
+                <div class="white_space1"></div>
+                <span
+                  id="myinfo_main_infoupdate_list_address_result_text"
+                ></span>
+                <div class="white_space2"></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_gender">
+                <div id="myinfo_main_infoupdate_list_gender_text">
+                  <span id="myinfo_main_infoupdate_list_gender_text_gender"
+                    >성별</span
+                  >
+                </div>
+                <div id="myinfo_main_infoupdate_list_gender_radiobox">
+                  <div id="myinfo_main_infoupdate_list_gender_radiobox_man">
+                    <label>
+                      <input
+                        type="radio"
+                        id="gender_man"
+                        name="gender_radio"
+                        value="man"
+                      /><span>남자</span></label
+                    >
+                  </div>
+                  <div id="myinfo_main_infoupdate_list_gender_radiobox_woman">
+                    <label>
+                      <input
+                        type="radio"
+                        id="gender_woman"
+                        name="gender_radio"
+                        value="woman"
+                      /><span>여자</span></label
+                    >
+                  </div>
+                  <div id="myinfo_main_infoupdate_list_gender_radiobox_none">
+                    <label>
+                      <input
+                        type="radio"
+                        id="gender_none"
+                        name="gender_radio"
+                        value="none"
+                        checked
+                      /><span>선택 안함</span>
+                    </label>
+                  </div>
+                </div>
+                <div id="myinfo_main_infoupdate_list_gender_whitespace"></div>
+              </div>
+              <div id="myinfo_main_infoupdate_list_birthday">
+                <div id="myinfo_main_infoupdate_list_birthday_text">
+                  생년월일
+                </div>
+                <div id="myinfo_main_infoupdate_list_birthday_inputbox">
+                  <input
+                    id="myinfo_main_infoupdate_list_birthday_inputbox_year"
+                    type="text"
+                    placeholder="YYYY"
+                    autocomplete="off"
+                  />
+                  <span
+                    class="myinfo_main_infoupdate_list_birthday_inputbox_slash"
+                    >/</span
+                  >
+                  <input
+                    id="myinfo_main_infoupdate_list_birthday_inputbox_month"
+                    type="text"
+                    placeholder="MM"
+                    autocomplete="off"
+                  />
+                  <span
+                    class="myinfo_main_infoupdate_list_birthday_inputbox_slash"
+                    >/</span
+                  >
+                  <input
+                    id="myinfo_main_infoupdate_list_birthday_inputbox_day"
+                    type="text"
+                    placeholder="DD"
+                    autocomplete="off"
+                  />
+                </div>
+                <div id="myinfo_main_infoupdate_list_birthday_whitespace"></div>
+              </div>
+            </div>
+            <div id="update_btn">
+              <button id="update_btn_btn">가입하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer_include"></div>
+    <div id="modal">
+      <div id="modal_body">
+        <div id="modal_body_text">aaaaaaa</div>
+        <button id="modal_body_exit">확인</button>
+      </div>
+    </div>
+    <script src="/Assets/Scripts/JS/includehtml.js"></script>
+    <script src="/myinfo/myinfo.js"></script>
+  </body>
+</html>
