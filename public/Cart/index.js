@@ -28,13 +28,7 @@ function amountCalculate() {
       document.getElementById(`textAmount${index}`)?.innerText
     );
     let priceItem = parseInt(cartData.data.list[index].price);
-    console.log("priceSum : ", priceSum);
     priceSum += amountItem * priceItem;
-    console.log("typeof amountItem : ", typeof amountItem);
-    console.log("amountItem : ", amountItem);
-    console.log("priceItem : ", priceItem);
-    console.log("typeof priceItem : ", typeof priceItem);
-    console.log("priceSum : ", priceSum);
     amountPrice.innerText = priceSum;
   });
   amountCost.innerText = 3000;
@@ -68,7 +62,8 @@ function callback() {
     listAmountMinus.innerText = "-";
     listAmount.innerText = cartData.data.list[index].amount;
     listAmountPlus.innerText = "+";
-    listPrice.innerText = cartData.data.list[index].price;
+    listPrice.innerText =
+      cartData.data.list[index].price * cartData.data.list[index].amount;
     listDelete.innerText = "×";
 
     listItem.classList.add("cart_basket_bottom_item");
@@ -86,6 +81,7 @@ function callback() {
     listAmount.classList.add("cart_basket_bottom_item_amount");
     listAmount.setAttribute("id", `textAmount${index}`);
     listPrice.classList.add("cart_basket_bottom_item_price");
+    listPrice.setAttribute("id", `textPrice${index}`);
     listDelete.classList.add("cart_basket_bottom_item_delete");
     listDelete.setAttribute("id", `btnDelete${index}`);
 
@@ -108,10 +104,12 @@ function callback() {
     const btnPlus = document.getElementById(`btnPlus${index}`);
     const textAmount = document.getElementById(`textAmount${index}`);
     const btnDelete = document.getElementById(`btnDelete${index}`);
-
+    const textPrice = document.getElementById(`textPrice${index}`);
     btnMinus.onclick = function () {
       if (textAmount.innerText > 1) {
         textAmount.innerText = textAmount.innerText - 1;
+        textPrice.innerText =
+          textAmount.innerText * cartData.data.list[index].price;
         amountCalculate();
       } else {
       }
@@ -119,6 +117,8 @@ function callback() {
     btnPlus.onclick = function () {
       if (textAmount.innerText < 99) {
         textAmount.innerText = parseInt(textAmount.innerText) + 1;
+        textPrice.innerText =
+          textAmount.innerText * cartData.data.list[index].price;
         amountCalculate();
       }
     };
@@ -229,6 +229,7 @@ document.getElementById("cart_order_orderbutton").onclick = async () => {
   const data = await axios.post("/api/cart/order", {
     orderlist: orderlist,
   });
+  document.getElementById("thebody").classList.add("body_onmodal");
   modal.classList.add("show");
 };
 

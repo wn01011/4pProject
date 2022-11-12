@@ -10,6 +10,12 @@ input:focus {
 button {
   cursor: pointer;
 }
+.body_onmodal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 #signup_contents {
   display: flex;
   justify-content: center;
