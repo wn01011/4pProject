@@ -28,35 +28,49 @@ router.route("/orderhistory").post(async (req, res) => {
   res.send({ imgList: imgList, orderList: tempOrderhistoryList });
 });
 
-router.route("/update").post(async (req, res) => {
-  console.log("/update 라우터 접근");
-  console.log("req.body", req.body);
-  const updateData = await db.UserTable.update({
-    userId: req.body.id,
-    pw: crypto.SHA256(req.body.pw).toString(),
-    name: req.body.name,
-    isManager: 0,
-    address: req.body.address,
-    gender: req.body.gender,
-    birthday: `${req.body.birthday.year}-${req.body.birthday.month}-${req.body.birthday.day}`,
+router.route("/getReview").post(async (req, res) => {
+  console.log("/getReview 라우터 접근");
+  console.log("getReview req.body.userid", req.body.userid);
+  const tempReview = await db.ReviewTable.findAll({
+    where: {
+      userId: req.body.userid,
+    },
   });
-  res.send({ updateData: updateData });
+  console.log("tempReview : ", tempReview);
+  res.send({ reviewList: tempReview });
 });
 
-router.route("/duplication").post(async (req, res) => {
-  console.log("라우터에서 중복 체크 받음 : " + req.body.id);
-  try {
-    const tempId = await db.UserTable.findAll();
-    let tempIdArr = Array.from(tempId);
-    for (let i = 0; i < tempIdArr.length; i++) {
-      if (tempId[i].dataValues.userId == req.body.id) {
-        res.send({ status: 200, data: "exist Id" });
-      }
+router.route("/getInquire").post(async (req, res) => {
+  console.log("/getInquire 라우터 접근");
+  console.log("getInquire req.body.userid : ", req.body.userid);
+  const tempInquire = await db.ProductaskTable.findAll({
+    where: {
+      userId: req.body.userid,
+    },
+  });
+  console.log("getInquire : ", tempInquire);
+  res.send({ inquireList: tempInquire });
+});
+
+router.route("/update").post((req, res) => {
+  console.log("/update 라우터 접근");
+  console.log("req.body", req.body);
+  const updateData = db.UserTable.update(
+    {
+      pw: crypto.SHA256(req.body.pw).toString(),
+      name: req.body.name,
+      isManager: 0,
+      address: req.body.address,
+      gender: req.body.gender,
+      birthday: `${req.body.birthday.year}-${req.body.birthday.month}-${req.body.birthday.day}`,
+    },
+    {
+      where: {
+        userId: req.body.id,
+      },
     }
-    res.send({ status: 400 });
-  } catch (error) {
-    console.error(error);
-  }
+  );
+  res.send({ updateData: updateData, status: 200 });
 });
 
 router.route("/").post(async (req, res) => {

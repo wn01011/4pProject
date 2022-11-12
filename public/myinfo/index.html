@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   </head>
-  <body>
+  <body id="thebody">
     <div id="header_include"></div>
     <div id="myinfo_contents">
       <div id="myinfo_contents_center">
@@ -68,16 +68,27 @@
               <span>마켓 클리어에서 주문한 상품들</span>
             </div>
             <ul id="myinfo_main_orderhistory_list">
-              <li id="myinfo_main_orderhistory_list_none"></li>
+              <li id="myinfo_main_orderhistory_list_none">
+                주문한 상품이 없습니다.
+              </li>
             </ul>
           </div>
           <div id="myinfo_main_review">
-            <div id="myinfo_main_review_title">
-              <h2>상품 후기</h2>
-              <span>마켓 클리어에서 주문한 상품들</span>
+            <div id="myinfo_main_reviewInquire_title">
+              <h2 id="myinfo_main_review_title" class="on">상품 후기</h2>
+              <h2 id="myinfo_main_inquire_title">문의</h2>
+              <span id="myinfo_main_review_tip" class="on"
+                >마켓 클리어에서 주문한 상품에 대한 후기</span
+              >
+              <span id="myinfo_main_inquire_tip"
+                >마켓 클리어에 문의한 내역</span
+              >
             </div>
-            <ul id="myinfo_main_review_list">
-              <li id="myinfo_main_review_list_none"></li>
+            <ul id="myinfo_main_review_list" class="on">
+              <li id="myinfo_main_review_list_none">상품 후기가 없습니다.</li>
+            </ul>
+            <ul id="myinfo_main_inquire_list">
+              <li id="myinfo_main_inquire_list_none">문의 내역이 없습니다.</li>
             </ul>
           </div>
           <div id="myinfo_main_infoupdate">
@@ -93,16 +104,9 @@
                   >
                 </div>
                 <div id="myinfo_main_infoupdate_list_id_input">
-                  <input
-                    id="myinfo_main_infoupdate_list_id_input_input"
-                    type="text"
-                    placeholder="아이디를 입력하십시오."
-                    autocomplete="off"
-                  />
+                  <span id="myinfo_main_infoupdate_list_id_input_input">1</span>
                 </div>
-                <button id="myinfo_main_infoupdate_list_id_deduplication">
-                  중복확인
-                </button>
+                <div id="myinfo_main_infoupdate_list_id_whitespace"></div>
               </div>
               <div id="myinfo_main_infoupdate_list_id_reg">
                 <div class="white_space1"></div>
@@ -285,10 +289,10 @@
       </div>
     </div>
     <div id="footer_include"></div>
-    <div id="deduplication_modal">
-      <div id="deduplication_modal_body">
-        <div id="deduplication_modal_body_text">aaaaaaa</div>
-        <button id="deduplication_modal_body_exit">확인</button>
+    <div id="modal">
+      <div id="modal_body">
+        <div id="modal_body_text">aaaaaaa</div>
+        <button id="modal_body_exit">확인</button>
       </div>
     </div>
     <script src="/Assets/Scripts/JS/includehtml.js"></script>

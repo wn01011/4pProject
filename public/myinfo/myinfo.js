@@ -1,6 +1,9 @@
 const orderhistory = document.getElementById("myinfo_main_orderhistory");
 const review = document.getElementById("myinfo_main_review");
 const infoupdate = document.getElementById("myinfo_main_infoupdate");
+const orderhistoryNone = document.getElementById(
+  "myinfo_main_orderhistory_list_none"
+);
 
 const orderhistoryList = document.getElementById(
   "myinfo_main_orderhistory_list"
@@ -10,21 +13,31 @@ async function orderhistoryGetList() {
   orderhistory.classList.add("on");
   try {
     console.log("쿠키 : ", document.cookie.split("=")[0]);
+    if (!document.cookie) {
+      location.href = "/SignIn";
+    }
     const data = await axios.post("/api/myinfo/orderhistory", {
       userid: document.cookie.split("=")[0],
     });
 
     console.log("data?.data?.imgList : ", data?.data?.imgList);
     console.log("data?.data?.orderList : ", data?.data?.orderList);
+    if (data?.data?.imgList?.length == 0) {
+      orderhistoryNone.classList.add("on");
+    }
     data?.data?.imgList?.forEach((item, index) => {
       const orderhistoryItem = document.createElement("li");
       const orderhistoryImgBox = document.createElement("div");
       const orderhistoryImg = document.createElement("img");
       const orderhistoryTextBox = document.createElement("div");
+
       const orderhistoryProductName = document.createElement("span");
       const orderhistoryPriceCountBox = document.createElement("div");
       const orderhistoryPrice = document.createElement("span");
       const orderhistoryCount = document.createElement("span");
+      const orderhistoryAddressCreatedAtBox = document.createElement("div");
+      const orderhistoryAddress = document.createElement("span");
+      const orderhistoryCreatedAt = document.createElement("span");
 
       orderhistoryImg.setAttribute(
         "src",
@@ -34,6 +47,9 @@ async function orderhistoryGetList() {
       orderhistoryPrice.innerText = data.data.orderList[index].price + " 원";
       orderhistoryCount.innerText =
         data.data.orderList[index].count + " 개 구매";
+      orderhistoryAddress.innerText = data.data.orderList[index].address;
+      orderhistoryCreatedAt.innerText =
+        data.data.orderList[index].createdAt.split("T")[0];
 
       orderhistoryItem.classList.add("myinfo_main_orderhistory_list_item");
       orderhistoryItem.setAttribute(
@@ -87,28 +103,183 @@ async function orderhistoryGetList() {
         "id",
         `myinfo_main_orderhistory_list_item_count${index}`
       );
+      orderhistoryAddressCreatedAtBox.classList.add(
+        "myinfo_main_orderhistory_list_item_addressCreatedAtBox"
+      );
+      orderhistoryAddressCreatedAtBox.setAttribute(
+        "id",
+        ` myinfo_main_orderhistory_list_item_addressCreatedAtBox${index}`
+      );
+      orderhistoryAddress.classList.add(
+        "myinfo_main_orderhistory_list_item_address"
+      );
+      orderhistoryAddress.setAttribute(
+        "id",
+        `myinfo_main_orderhistory_list_item_address${index}`
+      );
+      orderhistoryCreatedAt.classList.add(
+        "myinfo_main_orderhistory_list_item_createdAt"
+      );
+      orderhistoryCreatedAt.setAttribute(
+        "id",
+        `myinfo_main_orderhistory_list_item_createdAt${index}`
+      );
 
       orderhistoryImgBox.append(orderhistoryImg);
       orderhistoryTextBox.append(orderhistoryProductName);
       orderhistoryTextBox.append(orderhistoryPriceCountBox);
       orderhistoryPriceCountBox.append(orderhistoryPrice);
       orderhistoryPriceCountBox.append(orderhistoryCount);
-
+      orderhistoryAddressCreatedAtBox.append(orderhistoryAddress);
+      orderhistoryAddressCreatedAtBox.append(orderhistoryCreatedAt);
       orderhistoryItem.append(orderhistoryImgBox);
       orderhistoryItem.append(orderhistoryTextBox);
-
+      orderhistoryItem.append(orderhistoryAddressCreatedAtBox);
       orderhistoryList.append(orderhistoryItem);
     });
   } catch (error) {
     console.error(error);
   }
 }
+const reviewTitle = document.getElementById("myinfo_main_review_title");
+const reviewTip = document.getElementById("myinfo_main_review_tip");
+const inquireTitle = document.getElementById("myinfo_main_inquire_title");
+const inquireTip = document.getElementById("myinfo_main_inquire_tip");
+const reviewList = document.getElementById("myinfo_main_review_list");
+const inquireList = document.getElementById("myinfo_main_inquire_list");
+const reviewNone = document.getElementById("myinfo_main_review_list_none");
+const inquireNone = document.getElementById("myinfo_main_inquire_list_none");
 
-// async function reviewGetList() {}
+reviewTitle.onclick = function () {
+  inquireTitle.classList.remove("on");
+  reviewTitle.classList.add("on");
+  inquireTip.classList.remove("on");
+  reviewTip.classList.add("on");
+  inquireList.classList.remove("on");
+  reviewList.classList.add("on");
+};
+inquireTitle.onclick = function () {
+  reviewTitle.classList.remove("on");
+  inquireTitle.classList.add("on");
+  reviewTip.classList.remove("on");
+  inquireTip.classList.add("on");
+  reviewList.classList.remove("on");
+  inquireList.classList.add("on");
+};
 
+async function getReviewList() {
+  console.log("getReviewList 실행");
+  try {
+    const data = await axios.post("/api/myinfo/getReview", {
+      userid: document.cookie.split("=")[0],
+    });
+    console.log("review data.data.reviewList", data.data.reviewList);
+    if (data?.data?.reviewList?.length == 0) {
+      reviewNone.classList.add("on");
+    }
+    data?.data?.reviewList?.forEach((item, index) => {
+      const reviewItem = document.createElement("li");
+      const reviewTitle = document.createElement("div");
+      const reviewProductName = document.createElement("span");
+      const reviewCreatedAt = document.createElement("span");
+      const reviewTextBox = document.createElement("div");
+      const reviewText = document.createElement("span");
+
+      reviewProductName.innerText = data.data.reviewList[index].productName;
+      reviewCreatedAt.innerText =
+        data.data.reviewList[index].createdAt.split("T")[0];
+      reviewText.innerText = data.data.reviewList[index].text;
+
+      reviewItem.classList.add("myinfo_main_review_list_item");
+      reviewItem.setAttribute("id", `myinfo_main_review_list_item${index}`);
+      reviewTitle.classList.add("myinfo_main_review_list_item_title");
+      reviewTitle.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_title${index}`
+      );
+      reviewProductName.classList.add(
+        "myinfo_main_review_list_item_productName"
+      );
+      reviewProductName.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_productName${index}`
+      );
+      reviewCreatedAt.classList.add("myinfo_main_review_list_item_createdAt");
+      reviewCreatedAt.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_createdAt${index}`
+      );
+      reviewTextBox.classList.add("myinfo_main_review_list_item_textBox");
+      reviewTextBox.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_textBox${index}`
+      );
+      reviewText.classList.add("myinfo_main_review_list_item_text");
+      reviewText.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_text${index}`
+      );
+
+      reviewTitle.append(reviewProductName);
+      reviewTitle.append(reviewCreatedAt);
+      reviewTextBox.append(reviewText);
+      reviewItem.append(reviewTitle);
+      reviewItem.append(reviewTextBox);
+      reviewList.append(reviewItem);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+getReviewList();
+async function getInquireList() {
+  console.log("getInquireList 실행");
+  try {
+    const data = await axios.post("/api/myinfo/getInquire", {
+      userid: document.cookie.split("=")[0],
+    });
+    console.log("inquire data.data.inquireList : ", data.data.inquireList);
+    if (data?.data?.inquireList?.length == 0) {
+      inquireNone.classList.add("on");
+    }
+    data?.data?.inquireList?.forEach((item, index) => {
+      const inquireItem = document.createElement("li");
+      const inquireTitleBox = document.createElement("div");
+      const inquireTitle = document.createElement("div");
+      const inquireProductNameCreatedAtBox = document.createElement("div");
+      const inquireProductName = document.createElement("span");
+      const inquireCreatedAt = document.createElement("span");
+      const inquireTextBox = document.createElement("div");
+      const inquireText = document.createElement("div");
+
+      inquireTitle.innerText = data.data.inquire[index].name;
+      inquireProductName.innerText = data.data.inquire[index].productName;
+      inquireCreatedAt.innerText =
+        data.data.inquireList[index].createdAt.split("T")[0];
+      inquireText.innerText = data.data.inquireList[index].text;
+
+      inquireTitleBox.append(inquireTitle);
+      inquireProductNameCreatedAtBox.append(inquireProductName);
+      inquireProductNameCreatedAtBox.append(inquireCreatedAt);
+      inquireTextBox.append(inquireText);
+      inquireItem.append(inquireTitleBox);
+      inquireItem.append(inquireProductNameCreatedAtBox);
+      inquireItem.append(inquireTextBox);
+      inquireList.append(inquireItem);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+getInquireList();
 const inputId = document.getElementById(
   "myinfo_main_infoupdate_list_id_input_input"
 );
+
+function getId() {
+  inputId.innerText = document.cookie.split("=")[0];
+}
+getId();
 const inputPw = document.getElementById(
   "myinfo_main_infoupdate_list_pw_input_input"
 );
@@ -142,56 +313,6 @@ const idRegText = document.getElementById(
 const regTest = /[a-zA-Z0-9]/;
 const startEng = /^[a-zA-Z]/;
 const onlyEngNum = /[^a-zA-Z0-9]+/;
-inputId.oninput = function (e) {
-  if (e.target.value.length > 0) {
-    if (regTest.test(e.target.value)) {
-      if (startEng.test(e.target.value)) {
-        if (e.target.value.length > 7) {
-          if (e.target.value.length < 17) {
-            // 8글자이상, 16글자 이하
-            if (!onlyEngNum.test(e.target.value)) {
-              idReg.classList.add("on");
-              idRegText.classList.add("okay");
-              idRegText.innerText = "올바른 아이디 형식입니다.";
-              regIdTestOkay = true;
-            } else {
-              idRegText.classList.remove("okay");
-              idReg.classList.add("on");
-              idRegText.innerText =
-                "아이디는 영어와 숫자로만 구성할 수 있습니다.";
-              regIdTestOkay = false;
-            }
-          } else {
-            idRegText.classList.remove("okay");
-            idReg.classList.add("on");
-            idRegText.innerText = "아이디는 16글자 이하이어야 합니다.";
-            regIdTestOkay = false;
-          }
-        } else {
-          idRegText.classList.remove("okay");
-          idReg.classList.add("on");
-          idRegText.innerText = "아이디는 8글자 이상이어야 합니다.";
-          regIdTestOkay = false;
-        }
-      } else {
-        idRegText.classList.remove("okay");
-        idReg.classList.add("on");
-        idRegText.innerText = "아이디는 영어로 시작해야 합니다.";
-        regIdTestOkay = false;
-      }
-    } else {
-      idRegText.classList.remove("okay");
-      idReg.classList.add("on");
-      idRegText.innerText = "아이디는 영어와 숫자만 사용 가능합니다.";
-      regIdTestOkay = false;
-    }
-  } else {
-    idRegText.classList.remove("okay");
-    idReg.classList.remove("on");
-    idRegText.innerText = "";
-    regIdTestOkay = false;
-  }
-};
 
 let regPwTestOkay = false;
 const pwReg = document.getElementById("myinfo_main_infoupdate_list_pw_reg");
@@ -279,52 +400,16 @@ inputConfirmpw.onchange = function (e) {
   }
 };
 
-const modal = document.getElementById("deduplication_modal");
-const modalBody = document.getElementById("deduplication_modal_body");
-const modalText = document.getElementById("deduplication_modal_body_text");
-const modalExit = document.getElementById("deduplication_modal_exit");
+const modal = document.getElementById("modal");
+const modalBody = document.getElementById("modal_body");
+const modalText = document.getElementById("modal_body_text");
+const modalExit = document.getElementById("modal_exit");
 
-document.getElementById(
-  "myinfo_main_infoupdate_list_id_deduplication"
-).onclick = async function () {
-  if (!inputId.value) {
-    modalText.innerText = "아이디를 입력하십시오";
-    modal.classList.add("show");
-    return;
-  }
-  if (!regIdTestOkay) {
-    modalText.innerText = "아이디를 형식에 맞게 작성하십시오.";
-    modal.classList.add("show");
-    return;
-  }
-  try {
-    const data = await axios.post("/api/myinfo/duplication", {
-      id: inputId.value,
-    });
-    console.log("data.data.status : ", data.data.status);
-    if (data.data.status == 200) {
-      modalText.innerText = "사용 가능한 아이디입니다.";
-      modal.classList.add("show");
-    } else if (data.data.status == 401) {
-      modalText.innerText = "이미 있는 아이디입니다.";
-      modal.classList.add("show");
-    }
-  } catch (error) {
-    console.error(error);
-  }
-};
-document.getElementById("deduplication_modal_body_exit").onclick = () => {
-  modal.deduplication_modal_bodyinnerText == "";
+document.getElementById("modal_body_exit").onclick = () => {
+  modal.modal_bodyinnerText == "";
   modal.classList.remove("show");
+  location.href = "/";
 };
-document.getElementById("deduplication_modal").onclick = () => {
-  modal.deduplication_modal_bodyinnerText == "";
-  modal.classList.remove("show");
-};
-
-// 연착 증명서 : 서울 교통 공사, 지하철역
-// 교통어플 캡처 : 도착 예정시간이 지연인지 아닌지
-// 지각한 날을 포함해서 7일치 교통내역
 
 const onlyNum = /[^0-9]+/;
 let now = new Date();
@@ -348,12 +433,6 @@ inputDay.onchange = function (e) {
 };
 
 document.getElementById("update_btn_btn").onclick = async () => {
-  if (!inputId.value) {
-    alert("아이디를 입력하십시오.");
-    console.log(inputId.value);
-    inputId.focus();
-    return;
-  }
   if (!inputPw.value) {
     alert("비밀번호를 입력하십시오.");
     inputPw.focus();
@@ -370,11 +449,10 @@ document.getElementById("update_btn_btn").onclick = async () => {
     return;
   }
 
-  // if (!inputAddress)) {
-  //   alert("주소를 입력하십시오.");
-  //   document.getElementById("myinfo_main_infoupdate_list_address_input_input").focus();
-  //   return;
-  // }
+  if (addressResult.innerText == "") {
+    alert("주소를 입력하십시오.");
+    return;
+  }
   console.log(inputPw.value, inputConfirmpw.value);
   if (inputPw.value != inputConfirmpw.value) {
     alert("비밀번호를 확인하십시오.");
@@ -384,7 +462,7 @@ document.getElementById("update_btn_btn").onclick = async () => {
   try {
     console.log(myAddress);
     const data = await axios.post("/api/myinfo/update", {
-      id: inputId.value,
+      id: document.cookie.split("=")[0],
       pw: inputPw.value,
       name: inputName.value,
       address: myAddress,
@@ -395,9 +473,13 @@ document.getElementById("update_btn_btn").onclick = async () => {
         day: inputDay.value,
       },
     });
-    console.log(data);
-    modalText.innerText = "수정이 완료되었습니다.";
-    modal.classList.add("show");
+    console.log("data : ", data);
+    console.log("data.data.status : ", data.data.status);
+    if (data.data.status == 200) {
+      document.getElementById("thebody").classList.add("body_onmodal");
+      modalText.innerText = "수정이 완료되었습니다.";
+      modal.classList.add("show");
+    }
   } catch (error) {
     console.error(error);
   }
