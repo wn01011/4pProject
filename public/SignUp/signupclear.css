@@ -1,0 +1,32 @@
+#signupclear_content {
+  display: flex;
+  justify-content: center;
+}
+#signupclear_content_center {
+  width: 600px;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex-direction: column;
+  justify-content: center;
+}
+#signupclear_left {
+  display: flex;
+  justify-content: center;
+}
+#welcome_h1 {
+  display: inline;
+  color: #c2eaec;
+}
+#welcome_span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signupclear_right {
+  display: flex;
+  justify-content: center;
+}
+#signupclear_right > img {
+  width: 80%;
+}

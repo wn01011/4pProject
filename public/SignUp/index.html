@@ -1,0 +1,208 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/SignUp/signup.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  </head>
+  <body id="thebody">
+    <div id="header_include"></div>
+    <div id="signup_contents">
+      <div id="signup_contents_center">
+        <div id="signup_contents_h1">
+          <h1>회원가입</h1>
+        </div>
+        <div id="signup_essential">
+          <span class="asterisk">*</span
+          ><span id="signup_essential_text">필수입력사항</span>
+        </div>
+        <div id="signup_board">
+          <div id="signup_board_id">
+            <div id="signup_board_id_text">
+              <span id="signup_board_id_text_id">아이디</span
+              ><span class="asterisk">*</span>
+            </div>
+            <div id="signup_board_id_input">
+              <input
+                id="signup_board_id_input_input"
+                type="text"
+                placeholder="아이디를 입력하십시오."
+                autocomplete="off"
+              />
+            </div>
+            <button id="signup_board_id_deduplication">중복확인</button>
+          </div>
+          <div id="signup_board_id_reg">
+            <div class="white_space1"></div>
+            <span id="signup_board_id_reg_text"></span>
+            <div class="white_space2"></div>
+          </div>
+          <div id="signup_board_pw">
+            <div id="signup_board_pw_text">
+              <span id="signup_board_pw_text_pw">비밀번호</span
+              ><span class="asterisk">*</span>
+            </div>
+            <div id="signup_board_pw_input">
+              <input
+                id="signup_board_pw_input_input"
+                type="password"
+                placeholder="패스워드를 입력하십시오."
+              />
+            </div>
+            <div id="signup_board_pw_whitespace"></div>
+          </div>
+          <div id="signup_board_pw_reg">
+            <div class="white_space1"></div>
+            <span id="signup_board_pw_reg_text"></span>
+            <div class="white_space2"></div>
+          </div>
+          <div id="signup_board_confirmpw">
+            <div id="signup_board_confirmpw_text">
+              <span id="signup_board_confirmpw_text_pw">비밀번호확인</span
+              ><span class="asterisk">*</span>
+            </div>
+            <div id="signup_board_confirmpw_input">
+              <input
+                id="signup_board_confirmpw_input_input"
+                type="password"
+                placeholder="비밀번호를 한 번 더 입력하십시오."
+              />
+            </div>
+            <div id="signup_board_confirmpw_whitespace"></div>
+          </div>
+          <div id="signup_board_confirmpw_reg">
+            <div class="white_space1"></div>
+            <span id="signup_board_confirmpw_reg_text"></span>
+            <div class="white_space2"></div>
+          </div>
+          <div id="signup_board_name">
+            <div id="signup_board_name_text">
+              <span id="signup_board_name_text_name">이름</span
+              ><span class="asterisk">*</span>
+            </div>
+            <div id="signup_board_name_input">
+              <input
+                id="signup_board_name_input_input"
+                type="text"
+                placeholder="이름를 입력하십시오."
+                autocomplete="off"
+              />
+            </div>
+            <div id="signup_board_name_whitespace"></div>
+          </div>
+          <div id="signup_board_address">
+            <div id="signup_board_address_text">
+              <span id="signup_board_address_text_address">주소</span
+              ><span class="asterisk">*</span>
+            </div>
+            <button id="signup_board_address_btn">
+              <div id="signup_board_address_btn_icon">
+                <?xml version="1.0"?>
+                <svg
+                  fill="#000000"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  height="24px"
+                >
+                  <path
+                    d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"
+                  />
+                </svg>
+              </div>
+              주소 검색
+            </button>
+            <div id="signup_board_name_whitespace"></div>
+          </div>
+          <div id="signup_board_address_result">
+            <div class="white_space1"></div>
+            <span id="signup_board_address_result_text"></span>
+            <div class="white_space2"></div>
+          </div>
+          <div id="signup_board_gender">
+            <div id="signup_board_gender_text">
+              <span id="signup_board_gender_text_gender">성별</span>
+            </div>
+            <div id="signup_board_gender_radiobox">
+              <div id="signup_board_gender_radiobox_man">
+                <label>
+                  <input
+                    type="radio"
+                    id="gender_man"
+                    name="gender_radio"
+                    value="man"
+                  /><span>남자</span></label
+                >
+              </div>
+              <div id="signup_board_gender_radiobox_woman">
+                <label>
+                  <input
+                    type="radio"
+                    id="gender_woman"
+                    name="gender_radio"
+                    value="woman"
+                  /><span>여자</span></label
+                >
+              </div>
+              <div id="signup_board_gender_radiobox_none">
+                <label>
+                  <input
+                    type="radio"
+                    id="gender_none"
+                    name="gender_radio"
+                    value="none"
+                    checked
+                  /><span>선택 안함</span>
+                </label>
+              </div>
+            </div>
+            <div id="signup_board_gender_whitespace"></div>
+          </div>
+          <div id="signup_board_birthday">
+            <div id="signup_board_birthday_text">생년월일</div>
+            <div id="signup_board_birthday_inputbox">
+              <input
+                id="signup_board_birthday_inputbox_year"
+                type="text"
+                placeholder="YYYY"
+                autocomplete="off"
+              />
+              <span class="signup_board_birthday_inputbox_slash">/</span>
+              <input
+                id="signup_board_birthday_inputbox_month"
+                type="text"
+                placeholder="MM"
+                autocomplete="off"
+              />
+              <span class="signup_board_birthday_inputbox_slash">/</span>
+              <input
+                id="signup_board_birthday_inputbox_day"
+                type="text"
+                placeholder="DD"
+                autocomplete="off"
+              />
+            </div>
+            <div id="signup_board_birthday_whitespace"></div>
+          </div>
+        </div>
+        <div id="signup_btn">
+          <button id="signup_btn_btn">가입하기</button>
+        </div>
+      </div>
+    </div>
+    <div id="footer_include"></div>
+    <div id="deduplication_modal">
+      <div id="deduplication_modal_body">
+        <div id="deduplication_modal_body_text">aaaaaaa</div>
+        <button id="deduplication_modal_body_exit">확인</button>
+      </div>
+    </div>
+    <script src="/Assets/Scripts/JS/includehtml.js"></script>
+    <script src="/SignUp/signup.js"></script>
+  </body>
+</html>
