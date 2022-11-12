@@ -29,8 +29,64 @@ async function orderhistoryGetList() {
 
 async function reviewGetList() {}
 
-async function userInfoUpdate() {
-  const data = await axois.post("/api/myinfo/update", {});
+      reviewTitle.append(reviewProductName);
+      reviewTitle.append(reviewCreatedAt);
+      reviewTextBox.append(reviewText);
+      reviewItem.append(reviewTitle);
+      reviewItem.append(reviewTextBox);
+      reviewList.append(reviewItem);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+getReviewList();
+async function getInquireList() {
+  console.log("getInquireList 실행");
+  try {
+    const data = await axios.post("/api/myinfo/getInquire", {
+      userid: document.cookie.split("=")[0],
+    });
+    console.log("inquire data.data.inquireList : ", data.data.inquireList);
+    if (data?.data?.inquireList?.length == 0) {
+      inquireNone.classList.add("on");
+    }
+    data?.data?.inquireList?.forEach((item, index) => {
+      const inquireItem = document.createElement("li");
+      const inquireTitleBox = document.createElement("div");
+      const inquireTitle = document.createElement("div");
+      const inquireProductNameCreatedAtBox = document.createElement("div");
+      const inquireProductName = document.createElement("span");
+      const inquireCreatedAt = document.createElement("span");
+      const inquireTextBox = document.createElement("div");
+      const inquireText = document.createElement("div");
+
+      inquireTitle.innerText = data.data.inquire[index].name;
+      inquireProductName.innerText = data.data.inquire[index].productName;
+      inquireCreatedAt.innerText =
+        data.data.inquireList[index].createdAt.split("T")[0];
+      inquireText.innerText = data.data.inquireList[index].text;
+
+      inquireTitleBox.append(inquireTitle);
+      inquireProductNameCreatedAtBox.append(inquireProductName);
+      inquireProductNameCreatedAtBox.append(inquireCreatedAt);
+      inquireTextBox.append(inquireText);
+      inquireItem.append(inquireTitleBox);
+      inquireItem.append(inquireProductNameCreatedAtBox);
+      inquireItem.append(inquireTextBox);
+      inquireList.append(inquireItem);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+// getInquireList();
+const inputId = document.getElementById(
+  "myinfo_main_infoupdate_list_id_input_input"
+);
+
+function getId() {
+  inputId.innerText = document.cookie.split("=")[0];
 }
 
 orderhistoryGetList();
