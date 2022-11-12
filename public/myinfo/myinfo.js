@@ -1,6 +1,9 @@
 const orderhistory = document.getElementById("myinfo_main_orderhistory");
 const review = document.getElementById("myinfo_main_review");
 const infoupdate = document.getElementById("myinfo_main_infoupdate");
+const orderhistoryNone = document.getElementById(
+  "myinfo_main_orderhistory_list_none"
+);
 
 const orderhistoryList = document.getElementById(
   "myinfo_main_orderhistory_list"
@@ -19,15 +22,22 @@ async function orderhistoryGetList() {
 
     console.log("data?.data?.imgList : ", data?.data?.imgList);
     console.log("data?.data?.orderList : ", data?.data?.orderList);
+    if (data?.data?.imgList?.length == 0) {
+      orderhistoryNone.classList.add("on");
+    }
     data?.data?.imgList?.forEach((item, index) => {
       const orderhistoryItem = document.createElement("li");
       const orderhistoryImgBox = document.createElement("div");
       const orderhistoryImg = document.createElement("img");
       const orderhistoryTextBox = document.createElement("div");
+
       const orderhistoryProductName = document.createElement("span");
       const orderhistoryPriceCountBox = document.createElement("div");
       const orderhistoryPrice = document.createElement("span");
       const orderhistoryCount = document.createElement("span");
+      const orderhistoryAddressCreatedAtBox = document.createElement("div");
+      const orderhistoryAddress = document.createElement("span");
+      const orderhistoryCreatedAt = document.createElement("span");
 
       orderhistoryImg.setAttribute(
         "src",
@@ -37,6 +47,9 @@ async function orderhistoryGetList() {
       orderhistoryPrice.innerText = data.data.orderList[index].price + " 원";
       orderhistoryCount.innerText =
         data.data.orderList[index].count + " 개 구매";
+      orderhistoryAddress.innerText = data.data.orderList[index].address;
+      orderhistoryCreatedAt.innerText =
+        data.data.orderList[index].createdAt.split("T")[0];
 
       orderhistoryItem.classList.add("myinfo_main_orderhistory_list_item");
       orderhistoryItem.setAttribute(
@@ -90,25 +103,175 @@ async function orderhistoryGetList() {
         "id",
         `myinfo_main_orderhistory_list_item_count${index}`
       );
+      orderhistoryAddressCreatedAtBox.classList.add(
+        "myinfo_main_orderhistory_list_item_addressCreatedAtBox"
+      );
+      orderhistoryAddressCreatedAtBox.setAttribute(
+        "id",
+        ` myinfo_main_orderhistory_list_item_addressCreatedAtBox${index}`
+      );
+      orderhistoryAddress.classList.add(
+        "myinfo_main_orderhistory_list_item_address"
+      );
+      orderhistoryAddress.setAttribute(
+        "id",
+        `myinfo_main_orderhistory_list_item_address${index}`
+      );
+      orderhistoryCreatedAt.classList.add(
+        "myinfo_main_orderhistory_list_item_createdAt"
+      );
+      orderhistoryCreatedAt.setAttribute(
+        "id",
+        `myinfo_main_orderhistory_list_item_createdAt${index}`
+      );
 
       orderhistoryImgBox.append(orderhistoryImg);
       orderhistoryTextBox.append(orderhistoryProductName);
       orderhistoryTextBox.append(orderhistoryPriceCountBox);
       orderhistoryPriceCountBox.append(orderhistoryPrice);
       orderhistoryPriceCountBox.append(orderhistoryCount);
-
+      orderhistoryAddressCreatedAtBox.append(orderhistoryAddress);
+      orderhistoryAddressCreatedAtBox.append(orderhistoryCreatedAt);
       orderhistoryItem.append(orderhistoryImgBox);
       orderhistoryItem.append(orderhistoryTextBox);
-
+      orderhistoryItem.append(orderhistoryAddressCreatedAtBox);
       orderhistoryList.append(orderhistoryItem);
     });
   } catch (error) {
     console.error(error);
   }
 }
+const reviewTitle = document.getElementById("myinfo_main_review_title");
+const reviewTip = document.getElementById("myinfo_main_review_tip");
+const inquireTitle = document.getElementById("myinfo_main_inquire_title");
+const inquireTip = document.getElementById("myinfo_main_inquire_tip");
+const reviewList = document.getElementById("myinfo_main_review_list");
+const inquireList = document.getElementById("myinfo_main_inquire_list");
+const reviewNone = document.getElementById("myinfo_main_review_list_none");
+const inquireNone = document.getElementById("myinfo_main_inquire_list_none");
 
-// async function reviewGetList() {}
+reviewTitle.onclick = function () {
+  inquireTitle.classList.remove("on");
+  reviewTitle.classList.add("on");
+  inquireTip.classList.remove("on");
+  reviewTip.classList.add("on");
+  inquireList.classList.remove("on");
+  reviewList.classList.add("on");
+};
+inquireTitle.onclick = function () {
+  reviewTitle.classList.remove("on");
+  inquireTitle.classList.add("on");
+  reviewTip.classList.remove("on");
+  inquireTip.classList.add("on");
+  reviewList.classList.remove("on");
+  inquireList.classList.add("on");
+};
 
+async function getReviewList() {
+  console.log("getReviewList 실행");
+  try {
+    const data = await axios.post("/api/myinfo/getReview", {
+      userid: document.cookie.split("=")[0],
+    });
+    console.log("review data.data.reviewList", data.data.reviewList);
+    if (data?.data?.reviewList?.length == 0) {
+      reviewNone.classList.add("on");
+    }
+    data?.data?.reviewList?.forEach((item, index) => {
+      const reviewItem = document.createElement("li");
+      const reviewTitle = document.createElement("div");
+      const reviewProductName = document.createElement("span");
+      const reviewCreatedAt = document.createElement("span");
+      const reviewTextBox = document.createElement("div");
+      const reviewText = document.createElement("span");
+
+      reviewProductName.innerText = data.data.reviewList[index].productName;
+      reviewCreatedAt.innerText =
+        data.data.reviewList[index].createdAt.split("T")[0];
+      reviewText.innerText = data.data.reviewList[index].text;
+
+      reviewItem.classList.add("myinfo_main_review_list_item");
+      reviewItem.setAttribute("id", `myinfo_main_review_list_item${index}`);
+      reviewTitle.classList.add("myinfo_main_review_list_item_title");
+      reviewTitle.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_title${index}`
+      );
+      reviewProductName.classList.add(
+        "myinfo_main_review_list_item_productName"
+      );
+      reviewProductName.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_productName${index}`
+      );
+      reviewCreatedAt.classList.add("myinfo_main_review_list_item_createdAt");
+      reviewCreatedAt.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_createdAt${index}`
+      );
+      reviewTextBox.classList.add("myinfo_main_review_list_item_textBox");
+      reviewTextBox.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_textBox${index}`
+      );
+      reviewText.classList.add("myinfo_main_review_list_item_text");
+      reviewText.setAttribute(
+        "id",
+        `myinfo_main_review_list_item_text${index}`
+      );
+
+      reviewTitle.append(reviewProductName);
+      reviewTitle.append(reviewCreatedAt);
+      reviewTextBox.append(reviewText);
+      reviewItem.append(reviewTitle);
+      reviewItem.append(reviewTextBox);
+      reviewList.append(reviewItem);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+getReviewList();
+async function getInquireList() {
+  console.log("getInquireList 실행");
+  try {
+    const data = await axios.post("/api/myinfo/getInquire", {
+      userid: document.cookie.split("=")[0],
+    });
+    console.log("inquire data.data.inquireList : ", data.data.inquireList);
+    if (data?.data?.inquireList?.length == 0) {
+      inquireNone.classList.add("on");
+    }
+    data?.data?.inquireList?.forEach((item, index) => {
+      const inquireItem = document.createElement("li");
+      const inquireTitleBox = document.createElement("div");
+      const inquireTitle = document.createElement("div");
+      const inquireProductNameCreatedAtBox = document.createElement("div");
+      const inquireProductName = document.createElement("span");
+      const inquireCreatedAt = document.createElement("span");
+      const inquireTextBox = document.createElement("div");
+      const inquireText = document.createElement("div");
+
+      inquireTitle.innerText = data.data.inquire[index].name;
+      inquireProductName.innerText = data.data.inquire[index].productName;
+      inquireCreatedAt.innerText =
+        data.data.inquireList[index].createdAt.split("T")[0];
+      inquireText.innerText = data.data.inquireList[index].text;
+
+      inquireTitleBox.append(inquireTitle);
+      inquireProductNameCreatedAtBox.append(inquireProductName);
+      inquireProductNameCreatedAtBox.append(inquireCreatedAt);
+      inquireTextBox.append(inquireText);
+      inquireItem.append(inquireTitleBox);
+      inquireItem.append(inquireProductNameCreatedAtBox);
+      inquireItem.append(inquireTextBox);
+      inquireList.append(inquireItem);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+getInquireList();
 const inputId = document.getElementById(
   "myinfo_main_infoupdate_list_id_input_input"
 );

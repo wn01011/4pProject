@@ -229,6 +229,7 @@ document.getElementById("cart_order_orderbutton").onclick = async () => {
   const data = await axios.post("/api/cart/order", {
     orderlist: orderlist,
   });
+  document.getElementById("thebody").classList.add("body_onmodal");
   modal.classList.add("show");
 };
 

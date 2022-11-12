@@ -28,6 +28,30 @@ router.route("/orderhistory").post(async (req, res) => {
   res.send({ imgList: imgList, orderList: tempOrderhistoryList });
 });
 
+router.route("/getReview").post(async (req, res) => {
+  console.log("/getReview 라우터 접근");
+  console.log("getReview req.body.userid", req.body.userid);
+  const tempReview = await db.ReviewTable.findAll({
+    where: {
+      userId: req.body.userid,
+    },
+  });
+  console.log("tempReview : ", tempReview);
+  res.send({ reviewList: tempReview });
+});
+
+router.route("/getInquire").post(async (req, res) => {
+  console.log("/getInquire 라우터 접근");
+  console.log("getInquire req.body.userid : ", req.body.userid);
+  const tempInquire = await db.ProductaskTable.findAll({
+    where: {
+      userId: req.body.userid,
+    },
+  });
+  console.log("getInquire : ", tempInquire);
+  res.send({ inquireList: tempInquire });
+});
+
 router.route("/update").post((req, res) => {
   console.log("/update 라우터 접근");
   console.log("req.body", req.body);

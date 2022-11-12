@@ -4,6 +4,9 @@ input:focus {
 button {
   cursor: pointer;
 }
+ul {
+  padding-inline-start: 0px;
+}
 #myinfo_contents {
   display: flex;
   justify-content: center;
@@ -76,6 +79,15 @@ button {
 #myinfo_main_orderhistory_list {
   padding-inline-start: 0px;
 }
+#myinfo_main_orderhistory_list_none {
+  display: none;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#myinfo_main_orderhistory_list_none.on {
+  display: block;
+}
 .myinfo_main_orderhistory_list_item {
   display: flex;
   padding: 20 0 20 0px;
@@ -114,6 +126,25 @@ button {
   margin-left: 15px;
   font-size: 13px;
 }
+.myinfo_main_orderhistory_list_item_addressCreatedAtBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+.myinfo_main_orderhistory_list_item_address {
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+.myinfo_main_orderhistory_list_item_createdAt {
+  padding-top: 5px;
+  font-size: 14px;
+}
+#myInfo_main_reviewInquire_title {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+}
 #myinfo_main_review {
   display: none;
 }
@@ -121,16 +152,97 @@ button {
   display: block;
 }
 #myinfo_main_review_title {
-  display: flex;
-  margin-bottom: 20px;
-  border-bottom: 2px solid black;
-}
-#myinfo_main_review_title span {
-  color: #999;
+  color: gainsboro;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#myinfo_main_review_title.on {
+  color: black;
+  font-size: 25px;
+}
+
+#myinfo_main_review_tip {
+  color: #999;
   padding-left: 10px;
+  display: none;
+}
+#myinfo_main_review_tip.on {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#myinfo_main_review_list {
+  display: none;
+}
+#myinfo_main_review_list.on {
+  display: block;
+}
+
+#myinfo_main_review_list_none {
+  display: none;
+}
+#myinfo_main_review_list_none.on {
+  display: block;
+}
+
+.myinfo_main_review_list_item {
+  padding: 20 0 20 0px;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+.myinfo_main_review_list_item_title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.myinfo_main_review_list_item_productName {
+  font-size: 18px;
+}
+.myinfo_main_review_list_item_textBox {
+  border: 1px solid gainsboro;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #f6fbfa;
+}
+#myinfo_main_inquire_title {
+  color: gainsboro;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#myinfo_main_inquire_title {
+  color: gainsboro;
+  font-size: 18px;
+}
+#myinfo_main_inquire_title.on {
+  color: black;
+  font-size: 25px;
+}
+
+#myinfo_main_inquire_tip {
+  color: #999;
+  padding-left: 10px;
+  display: none;
+}
+#myinfo_main_inquire_tip.on {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#myinfo_main_inquire_list {
+  display: none;
+}
+#myinfo_main_inquire_list.on {
+  display: block;
+}
+#myinfo_main_inquire_list_none {
+  display: none;
+}
+#myinfo_main_inquire_list_none.on {
+  display: block;
 }
 #myinfo_main_infoupdate {
   display: none;
