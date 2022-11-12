@@ -85,10 +85,7 @@ function getItemList(img, name, price, manufacturer) {
         if (currentIdx1 < 5) {
           moveSlide1(currentIdx1 + 1);
           leftBtn[0].style.display = "flex";
-<<<<<<< HEAD
-=======
 
->>>>>>> d304a68 (make general category)
           return;
         }
       };
@@ -514,13 +511,9 @@ const getPickItem4List = function (img, name, price, manufacturer) {
       currentIdx4 = num;
       subSlides4.style.left = -num * (subslideWidth4 + subslideMargin4) + "px";
     }
-<<<<<<< HEAD
   } catch (err) {
     console.log(err);
   }
-=======
-  } catch (error) {}
->>>>>>> d304a68 (make general category)
 };
 
 axios
@@ -528,12 +521,9 @@ axios
   .then((data) => {
     data.data.forEach((item) => {
       // 카테고리별 아이템 추출
-<<<<<<< HEAD
       // const category = Object.values(item.category[0]);
-=======
       const category = Object.values(item.category[0]);
 
->>>>>>> d304a68 (make general category)
       getItemList(item.img, item.name, item.price, item.manufacturer);
     });
   })

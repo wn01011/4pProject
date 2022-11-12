@@ -45,7 +45,6 @@ window.onscroll = function () {
 let currAudio;
 let search;
 let cartBtn;
-<<<<<<< HEAD
 // 카테고리 Btn
 let vegiBtn;
 let fruitBtn;
@@ -56,17 +55,13 @@ let saladBtn;
 let noodleBtn;
 let drinkBtn;
 let cookieBtn;
-=======
 let generalBtn;
-let vegiBtn;
->>>>>>> d304a68 (make general category)
 
 window.onload = () => {
   const id = setInterval(() => {
     currAudio = document.getElementsByTagName("audio")[0];
     search = document.getElementById("search_input");
     cartBtn = document.getElementById("cartBtn");
-<<<<<<< HEAD
     vegiBtn = document.getElementById("vegiBtn");
     fruitBtn = document.getElementById("fruitBtn");
     fishBtn = document.getElementById("fishBtn");
@@ -92,13 +87,12 @@ window.onload = () => {
       drinkBtn &&
       cookieBtn
     ) {
-=======
-    generalBtn = document.getElementById("generalBtn");
-    vegiBtn = document.getElementById("vegiBtn");
-    if (currAudio && search && cartBtn && generalBtn && vegiBtn) {
->>>>>>> d304a68 (make general category)
-      OnLoadCallBack();
-      clearInterval(id);
+      generalBtn = document.getElementById("generalBtn");
+      vegiBtn = document.getElementById("vegiBtn");
+      if (currAudio && search && cartBtn && generalBtn && vegiBtn) {
+        OnLoadCallBack();
+        clearInterval(id);
+      }
     }
   }, 100);
 };
@@ -121,7 +115,6 @@ function OnLoadCallBack() {
     }
   };
 
-<<<<<<< HEAD
   vegiBtn.onclick = () => {
     const currText = vegiBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
@@ -156,16 +149,15 @@ function OnLoadCallBack() {
   };
   cookieBtn.onclick = () => {
     const currText = cookieBtn.children[1].innerText.replaceAll("·", "-");
-=======
-  generalBtn.onclick = () => {
-    const currText = generalBtn.children[1].innerText;
-    location.href = "/category/general?pick=" + currText;
-  };
+    generalBtn.onclick = () => {
+      const currText = generalBtn.children[1].innerText;
+      location.href = "/category/general?pick=" + currText;
+    };
 
-  vegiBtn.onclick = () => {
-    const currText = vegiBtn.children[1].innerText;
->>>>>>> d304a68 (make general category)
-    location.href = "/category/general?pick=" + currText;
+    vegiBtn.onclick = () => {
+      const currText = vegiBtn.children[1].innerText;
+      location.href = "/category/general?pick=" + currText;
+    };
   };
 }
 
