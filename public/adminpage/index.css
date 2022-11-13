@@ -138,6 +138,7 @@ h4 {
   text-align: center;
   vertical-align: top;
   padding: 10px 12px;
+  white-space: nowrap;
 }
 
 .tg .tg-qnamanage {
@@ -306,20 +307,21 @@ ul {
   border-radius: 1em;
   color: black;
   width: 55vw;
-  height: 40vh;
   margin-bottom: 50px;
 }
 
 #category-manage2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 20px;
   text-align: center;
   border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
   width: 600px;
-  height: 100px;
+  padding: 50px 0px;
 }
 
 #category-big {
@@ -351,10 +353,6 @@ ul {
 .dropdown-item a {
   display: flex;
   justify-content: space-between;
-}
-
-#bigcatip {
-  display: none;
 }
 
 #b-cat-save {
@@ -406,7 +404,6 @@ ul {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
   margin-bottom: 50px;
 }
 

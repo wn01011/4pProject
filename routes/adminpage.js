@@ -27,32 +27,31 @@ router // 상품 목록
 // router // 카테고리 관리
 
 // router // 주문 내역
-// .route("/order")
-// .get(async (req, res) => {
-//   res.send();
-// })
-// .post(async (req, res) => {
-//   const adminSendOrder = [];
-//   const data = await db.OrderTable.findAll();
-//   data.forEach((item) => {
-//     adminSendOrder.push(item.dataValues);
-//   });
-//   res.send(adminSendOrder);
-// });
+router
+  .route("/order")
+  .get(async (req, res) => {
+    res.send();
+  })
+  .post(async (req, res) => {
+    const adminSendOrder = [];
+    const data = await db.OrderTable.findAll();
+    data.forEach((item) => {
+      adminSendOrder.push(item.dataValues);
+    });
+    res.send(adminSendOrder);
+  });
 
 // router // 배송 관리
-// .route("/delivery")
-// .get(async (req, res) => {
-//   res.send();
-// })
-// .post(async (req, res) => {
-//   const adminSendDelivery = [];
-//   const data = await db.DeliveryTable.findAll();
-//   data.forEach((item) => {
-//     adminSendDelivery.push(item.dataValues);
-//   });
-//   res.send(adminSendDelivery);
-// });
+router
+  .route("/delivery")
+  .get(async (req, res) => {
+    res.send();
+  })
+  .post(async (req, res) => {
+    const data = await db.OrderTable.findAll().then((data) => {
+      res.send(data);
+    });
+  });
 
 router // 회원 목록
   .route("/user")

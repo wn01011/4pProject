@@ -5,8 +5,6 @@ const path = require("path");
 const { sequelize } = require("../models/index.js");
 const router = Router();
 const seq = require("sequelize");
-const { send } = require("process");
-const op = seq.Op;
 
 console.log("프로덕트 라우트 안이다!!!!!!");
 
@@ -309,6 +307,18 @@ router.route("/categoryType").post((req, res) => {
   });
 });
 
+router.route("/addCategory").post((req, res) => {
+  db.CartegoryTable.create({ name: req.body.name }).then(() => {
+    res.send();
+  });
+});
+
+router.route("/destroyCategory").post((req, res) => {
+  db.CartegoryTable.destroy({ where: { name: req.body.name } }).then(() => {
+    res.send();
+  });
+});
+
 router.route("/newData").post((req, res) => {
   console.log(" : " + req.body[1]);
   db.ProductTable.create(req.body[0]).then(() => {
@@ -316,16 +326,26 @@ router.route("/newData").post((req, res) => {
       len = datas.length;
 
       router.get(`/download${len}`, (req, res) => {
-        fs.readFile("./Images/" + len + req.body[1], (err, data) => {
+        fs.readFile("./Images/" + len + encodeURI(req.body[1]), (err, data) => {
           res.writeHead(200, {
-            "Content-Type": `image/jpg
-            )};charset=UTF-8`,
+            "Content-Type": `image/jpg`,
+            charset: `utf-8`,
           });
           res.end(data);
         });
       });
     });
     res.send();
+  });
+});
+
+router.route("/findone").post((req, res) => {
+  db.ProductTable.findOne({
+    where: {
+      name: req.body.name,
+    },
+  }).then((data) => {
+    res.send(data);
   });
 });
 

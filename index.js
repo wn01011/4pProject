@@ -88,7 +88,7 @@ app.post(
 app.use("/api", api);
 
 app.listen(app.get("port"), () => {
-  const dir = "./uploadedFiles";
+  const dir = "./Images";
   if (!fs.existsSync(dir)) fs.mkdirSync(dir);
   console.log(app.get("port") + "서버 열렸다");
 });
