@@ -3,7 +3,6 @@ const db = require("../models/index.js");
 const router = Router();
 
 router.route("/cartlist").post(async (req, res) => {
-  console.log("userId:req.body.userid : ", req.body.userid);
   const tempList = await db.CartTable.findAll({
     where: {
       userId: req.body.userid,
@@ -23,8 +22,6 @@ router.route("/address").post(async (req, res) => {
       user_id: req.body.userid,
     },
   });
-  console.log("tempAddress : ", tempAddress);
-  console.log("tempAddress : ", tempAddress.address);
   res.send({ address: tempAddress.address });
 });
 router.route("/order").post(async (req, res) => {

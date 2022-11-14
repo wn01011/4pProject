@@ -22,13 +22,6 @@ document.body.onload = () => {
     sellRegi.classList.remove("add");
   });
 
-  const bCatInput = document.getElementById("b-cat-input");
-  const bigCatIp = document.getElementById("bigcatip");
-  const bCatSave = document.getElementById("b-cat-save");
-
-  bCatInput.addEventListener("click", function () {
-    bigCatIp.classList.add("bigdirinput");
-  });
   function deleteCookie(name) {
     document.cookie =
       name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
@@ -41,10 +34,6 @@ document.body.onload = () => {
     console.log(userId);
     return userId;
   }
-
-  bCatInput.addEventListener("click", function () {
-    bCatSave.classList.add("bigdirsave");
-  });
 
   // 아래는 DB 컴컴
 
@@ -202,98 +191,68 @@ document.body.onload = () => {
   // 카테고리 관리
 
   // 주문 내역
-  // axios
-  //   .post("/api/adminpage/order", { name: "" })
-  //   .then((data) => {
-  //     for (let i = 0; i < data.data.length; i++) {
-  //       const odrManage = document.getElementById("order-manage2");
+  axios
+    .post("/api/adminpage/order", { name: "" })
+    .then((data) => {
+      for (let i = 0; i < data.data.length; i++) {
+        axios
+          .post("/api/product/findone", { name: data.data[i].product })
+          .then((curData) => {
+            const odrManage = document.getElementById("order-manage2");
+            const odrListTR = document.createElement("tr");
 
-  //       const odrListTR = document.createElement("tr");
+            let odrListTD0 = document.createElement("td");
+            let odrListTD1 = document.createElement("td");
+            let odrListTD2 = document.createElement("td");
+            let odrListTD3 = document.createElement("td");
+            let odrListTD4 = document.createElement("td");
+            let odrListTD5 = document.createElement("td");
+            let odrListTD6 = document.createElement("td");
+            let odrListTD7 = document.createElement("td");
 
-  //       let odrListTD0 = document.createElement("td");
-  //       let odrListTD1 = document.createElement("td");
-  //       let odrListTD2 = document.createElement("td");
-  //       let odrListTD3 = document.createElement("td");
-  //       let odrListTD4 = document.createElement("td");
-  //       let odrListTD5 = document.createElement("td");
-  //       let odrListTD6 = document.createElement("td");
+            odrListTD0.classList.add("tg-db-lineodd");
+            odrListTD1.classList.add("tg-db-lineeven");
+            odrListTD2.classList.add("tg-db-lineodd");
+            odrListTD3.classList.add("tg-db-lineodd");
+            odrListTD4.classList.add("tg-db-lineeven");
+            odrListTD5.classList.add("tg-db-lineeven");
+            odrListTD6.classList.add("tg-db-lineeven");
+            odrListTD7.classList.add("tg-db-lineodd");
 
-  //       odrListTD0.classList.add("tg-db-lineodd");
-  //       odrListTD1.classList.add("tg-db-lineeven");
-  //       odrListTD2.classList.add("tg-db-lineodd");
-  //       odrListTD3.classList.add("tg-db-lineodd");
-  //       odrListTD4.classList.add("tg-db-lineeven");
-  //       odrListTD5.classList.add("tg-db-lineeven");
-  //       odrListTD6.classList.add("tg-db-lineeven");
+            odrListTD0.innerText = data.data[i].id;
+            odrListTD1.innerText = curData.data.name;
+            odrListTD2.innerText = curData.data.manufacturer;
+            odrListTD3.innerText = Object.values(curData.data.category[0]);
+            odrListTD4.innerText = data.data[i].userId;
+            odrListTD5.innerText =
+              +data.data[i].price * +data.data[i].count + "원";
+            odrListTD6.innerText = data.data[i].count;
 
-  //       odrListTD0.innerText = data.data[i].userId;
-  //       odrListTD1.innerText = data.data[i].productName;
-  //       odrListTD2.innerText = data.data[i].manufacturer;
-  //       odrListTD3.innerText = data.data[i].category;
-  //       odrListTD4.innerText = data.data[i].name;
-  //       odrListTD5.innerText = data.data[i].totalPrice + "원";
-  //       odrListTD6.innerText = data.data[i].totalUnit;
-
-  //       odrManage.append(odrListTR);
-  //       odrListTR.append(odrListTD0);
-  //       odrListTR.append(odrListTD1);
-  //       odrListTR.append(odrListTD2);
-  //       odrListTR.append(odrListTD3);
-  //       odrListTR.append(odrListTD4);
-  //       odrListTR.append(odrListTD5);
-  //       odrListTR.append(odrListTD6);
-  //     }
-  //   })
-  //   .catch((error) => {
-  //     throw error;
-  //   });
-
-  // 배송 관리
-  // axios
-  //   .post("/api/adminpage/delivery", { name: "" })
-  //   .then((data) => {
-  //     for (let i = 0; i < data.data.length; i++) {
-  //       const delManage = document.getElementById("del-manage2");
-
-  //       const delListTR = document.createElement("tr");
-
-  //       let delListTD0 = document.createElement("td");
-  //       let delListTD1 = document.createElement("td");
-  //       let delListTD2 = document.createElement("td");
-  //       let delListTD3 = document.createElement("td");
-  //       let delListTD4 = document.createElement("td");
-  //       let delListTD5 = document.createElement("td");
-  //       let delListTD6 = document.createElement("td");
-
-  //       delListTD0.classList.add("tg-db-lineodd");
-  //       delListTD1.classList.add("tg-db-lineeven");
-  //       delListTD2.classList.add("tg-db-lineodd");
-  //       delListTD3.classList.add("tg-db-lineodd");
-  //       delListTD4.classList.add("tg-db-lineeven");
-  //       delListTD5.classList.add("tg-db-lineeven");
-  //       delListTD6.classList.add("tg-db-lineeven");
-
-  //       delListTD0.innerText = data.data[i].userId;
-  //       delListTD1.innerText = data.data[i].productName;
-  //       delListTD2.innerText = data.data[i].manufacturer;
-  //       delListTD3.innerText = data.data[i].category;
-  //       delListTD4.innerText = data.data[i].name;
-  //       delListTD5.innerText = data.data[i].totalPrice + "원";
-  //       delListTD6.innerText = data.data[i].totalUnit;
-
-  //       delManage.append(delListTR);
-  //       delListTR.append(delListTD0);
-  //       delListTR.append(delListTD1);
-  //       delListTR.append(delListTD2);
-  //       delListTR.append(delListTD3);
-  //       delListTR.append(delListTD4);
-  //       delListTR.append(delListTD5);
-  //       delListTR.append(delListTD6);
-  //     }
-  //   })
-  //   .catch((error) => {
-  //     throw error;
-  //   });
+            // 주문 시간으로 부터 계산해서 배송 중인지 여부 결정
+            const diffTime =
+              (new Date(Date.now()).getTime() -
+                new Date(data.data[i].createdAt).getTime()) /
+              60000;
+            if (diffTime > 30) {
+              odrListTD7.innerText = "배송 끝";
+            } else {
+              odrListTD7.innerText = "배송 중";
+            }
+            odrManage.append(odrListTR);
+            odrListTR.append(odrListTD0);
+            odrListTR.append(odrListTD1);
+            odrListTR.append(odrListTD2);
+            odrListTR.append(odrListTD3);
+            odrListTR.append(odrListTD4);
+            odrListTR.append(odrListTD5);
+            odrListTR.append(odrListTD6);
+            odrListTR.append(odrListTD7);
+          });
+      }
+    })
+    .catch((error) => {
+      throw error;
+    });
 
   // 회원 관리
   axios
@@ -339,6 +298,42 @@ document.body.onload = () => {
     });
 
   // Q&A 문의 관리
+  const productQnaAnswerBtn = document.getElementsByClassName("submit-area")[0];
+  const modalAskArea = document.getElementById("modal-ask-area");
+  const askModal = document.getElementById("ask-modal");
+  const closeArea = document.getElementsByClassName("close-area")[0];
+  let curAsk;
+  let curDiv;
+  let curBtn;
+  let curId;
+  let curTr;
+  closeArea.onclick = () => {
+    askModal.classList.add("off");
+  };
+  productQnaAnswerBtn.onclick = () => {
+    askModal.classList.add("off");
+    curAsk.answerText = modalAskArea.value;
+    curDiv.innerText = "완료";
+    curBtn.onclick = () => {};
+    axios
+      .post("/api/adminpage/qnaAnswer", { text: modalAskArea.value, id: curId })
+      .then((data) => {
+        const tempTr = document.createElement("div");
+        tempTr.innerText = modalAskArea.value;
+        curTr.onclick = () => {
+          if (tempTr.display == "block") tempTr.display = "none";
+          else tempTr.display = "block";
+        };
+        curTr.after(tempTr);
+
+        curAsk = undefined;
+        curDiv = undefined;
+        curBtn = undefined;
+        curId = undefined;
+        curTr = undefined;
+      });
+  };
+
   axios
     .post("/api/adminpage/qna", { productName: "" })
     .then((data) => {
@@ -352,18 +347,23 @@ document.body.onload = () => {
         let qnaListTD2 = document.createElement("td");
         let qnaListTD3 = document.createElement("td");
         let qnaListTD4 = document.createElement("td");
+        let qnaListTD5 = document.createElement("td");
 
         qnaListTD0.classList.add("tg-db-lineeven");
         qnaListTD1.classList.add("tg-db-lineeven");
         qnaListTD2.classList.add("tg-db-lineeven");
         qnaListTD3.classList.add("tg-db-lineodd");
         qnaListTD4.classList.add("tg-db-lineodd");
+        qnaListTD5.classList.add("tg-db-lineeven");
 
         qnaListTD0.innerText = data.data[i].name;
         qnaListTD1.innerText = data.data[i].productName;
         qnaListTD2.innerText = data.data[i].userId;
         qnaListTD3.innerText = data.data[i].createdAt.slice(0, 10);
-        qnaListTD4.innerText = data.data[i].isAnswer;
+
+        const tempAnswerBtn = document.createElement("button");
+
+        qnaListTD5.appendChild(tempAnswerBtn);
 
         qnaManage.append(qnaListTR);
         qnaListTR.append(qnaListTD0);
@@ -371,6 +371,35 @@ document.body.onload = () => {
         qnaListTR.append(qnaListTD2);
         qnaListTR.append(qnaListTD3);
         qnaListTR.append(qnaListTD4);
+        qnaListTR.append(qnaListTD5);
+
+        if (data.data[i].isAnswer == "0") {
+          qnaListTD4.innerText = "대기중";
+          tempAnswerBtn.innerText = "답변하기";
+          tempAnswerBtn.onclick = () => {
+            curAsk = data.data[i];
+            curDiv = qnaListTD4;
+            curBtn = tempAnswerBtn;
+            curId = data.data[i].id;
+            curTr = qnaListTR;
+            askModal.classList.toggle("off");
+          };
+        } else {
+          qnaListTD4.innerText = "완료";
+          tempAnswerBtn.innerText = "답변완료";
+          const tempTr = document.createElement("div");
+          tempTr.innerText = "답변내용 : " + data.data[i].answerText;
+          tempTr.classList.add("off");
+          tempTr.style = `
+            width : 100%;
+            padding : 10px 0px;
+            text-align: center;
+          `;
+          qnaListTR.after(tempTr);
+          qnaListTR.onclick = () => {
+            tempTr.classList.toggle("off");
+          };
+        }
       }
     })
     .catch((error) => {
@@ -434,6 +463,9 @@ document.body.onload = () => {
   }
 
   const logoutBtn = document.getElementsByClassName("admin-logout")[0];
+  logoutBtn.style = `
+    white-space: nowrap;
+  `;
   const productSearch = document.getElementById("productSearch");
 
   logoutBtn.onclick = function logoutFunction() {
@@ -453,6 +485,7 @@ document.body.onload = () => {
   };
 
   // 상품 등록에서 카테고리 등록
+
   const categoryBtn = document.getElementsByClassName("big btn")[0];
   const dropdownCategoryList = document.getElementById(
     "regi-dropdown-category"
@@ -475,104 +508,172 @@ document.body.onload = () => {
       });
     });
   };
-};
 
-// 상품 등록 폼
-// 0 : 브랜드명, 1 : 상품명, 2 : 배송, 3 : 판매자, 4 : 포장상태, 5 : 판매단위, 6 : 중량/용량, 7 : 원산지, 8 : 판매가, 9 : 등록버튼
-const productAdd = document.getElementById("productAdd");
-const productAddSubmitBtn = document.getElementById("regi-submit");
-let img;
-productAdd.onsubmit = (e) => {
-  let brandName = e.srcElement[0].value;
-  let productName = e.srcElement[1].value;
-  let delivery = e.srcElement[2].value;
-  let seller = e.srcElement[3].value;
-  let package = e.srcElement[4].value;
-  let unit = e.srcElement[5].value;
-  let weight = e.srcElement[6].value;
-  let origin = e.srcElement[7].value;
-  let price = e.srcElement[8].value;
-  let categoryName = selectedCategory.innerText.split(": ")[1];
-  if (categoryName == "(없음)") categoryName = undefined;
-  if (
-    !brandName ||
-    !productName ||
-    !delivery ||
-    !seller ||
-    !package ||
-    !unit ||
-    !weight ||
-    !origin ||
-    !price ||
-    !categoryName ||
-    !img
-  )
-    return false;
-  onSubmitFunction(
-    {
-      brandName: brandName,
-      productName: productName,
-      delivery: delivery,
-      seller: seller,
-      package: package,
-      unit: unit,
-      weight: weight,
-      origin: origin,
-      price: price,
-      categoryName: categoryName,
-      img: img,
-    },
-    curExt
-  );
-  return false;
-};
-
-// img multer uploadBtn
-const imgMulterUploadBtn = document.getElementById("originBtn");
-const originInput = document.getElementById("originInput");
-let curExt;
-imgMulterUploadBtn.onclick = () => {
-  const form = new FormData();
-  // form tag 의 name과 연결됨
-  curExt = "." + originInput.files[0].name.split(".")[1];
-  form.append("attachment", originInput.files[0]);
-  axios
-    .post("/uploadFileWithOriginalFilename", form, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    })
-    .then((data) => {
-      console.log((img = data.data.length));
-    });
-};
-
-const originImg = document.getElementById("originImg");
-
-function onSubmitFunction(data, ext) {
-  axios
-    .post("/api/product/newData", [
+  // 상품 등록 폼
+  // 0 : 브랜드명, 1 : 상품명, 2 : 배송, 3 : 판매자, 4 : 포장상태, 5 : 판매단위, 6 : 중량/용량, 7 : 원산지, 8 : 판매가, 9 : 등록버튼
+  const productAdd = document.getElementById("productAdd");
+  const productAddSubmitBtn = document.getElementById("regi-submit");
+  let img;
+  productAdd.onsubmit = (e) => {
+    let brandName = e.srcElement[0].value;
+    let productName = e.srcElement[1].value;
+    let delivery = e.srcElement[2].value;
+    let seller = e.srcElement[3].value;
+    let package = e.srcElement[4].value;
+    let unit = e.srcElement[5].value;
+    let weight = e.srcElement[6].value;
+    let origin = e.srcElement[7].value;
+    let price = e.srcElement[8].value;
+    let categoryName = selectedCategory.innerText.split(": ")[1];
+    if (categoryName == "(없음)") categoryName = undefined;
+    if (
+      !brandName ||
+      !productName ||
+      !delivery ||
+      !seller ||
+      !package ||
+      !unit ||
+      !weight ||
+      !origin ||
+      !price ||
+      !categoryName ||
+      !img
+    )
+      return false;
+    onSubmitFunction(
       {
-        img: data.img,
-        manufacturer: data.brandName,
-        name: data.productName,
-        price: data.price,
-        description: "메롱",
-        delivery: data.delivery,
-        seller: data.seller,
-        package: data.package,
-        unit: data.unit,
-        weight: data.weight,
-        origin: data.origin,
-        category: [{ 0: data.categoryName }],
+        brandName: brandName,
+        productName: productName,
+        delivery: delivery,
+        seller: seller,
+        package: package,
+        unit: unit,
+        weight: weight,
+        origin: origin,
+        price: price,
+        categoryName: categoryName,
+        img: img,
       },
-      curExt,
-    ])
-    .then((data) => {
-      console.log(img);
-      originImg.src = "/api/product/download" + img;
-      img = undefined;
-      curExt = undefined;
-      console.log("생성완료", data.data);
+      curExt
+    );
+    return false;
+  };
+
+  // img multer uploadBtn
+  const imgMulterUploadBtn = document.getElementById("originBtn");
+  const originInput = document.getElementById("originInput");
+  originInput.onchange = function (e) {
+    // 미리보기
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById("preview").src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      } else {
+        document.getElementById("preview").src = "";
+      }
+    }
+    readURL(originInput);
+  };
+  let curExt;
+  imgMulterUploadBtn.onclick = () => {
+    const form = new FormData();
+    // form tag 의 name과 연결됨
+    curExt = "." + originInput.files[0].name.split(".")[1];
+    form.append("attachment", originInput.files[0]);
+    axios
+      .post("/uploadFileWithOriginalFilename", form, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((data) => {
+        console.log((img = data.data.length));
+      });
+  };
+
+  const originImg = document.getElementById("originImg");
+
+  function onSubmitFunction(data, ext) {
+    axios
+      .post("/api/product/newData", [
+        {
+          img: data.img,
+          manufacturer: data.brandName,
+          name: data.productName,
+          price: data.price,
+          description: "메롱",
+          delivery: data.delivery,
+          seller: data.seller,
+          package: data.package,
+          unit: data.unit,
+          weight: data.weight,
+          origin: data.origin,
+          category: [{ 0: data.categoryName }],
+        },
+        curExt,
+      ])
+      .then((data) => {
+        console.log(img);
+        originImg.src = "/api/product/download" + img;
+        img = undefined;
+        curExt = undefined;
+        console.log("생성완료", data.data);
+      });
+  }
+  // 카테고리 분류
+  const korReg = /^[가-힣]{2,8}$/; //한글 2~8글자 정규식
+  const categoryInput = document.getElementById("bigcatip");
+  const categoryAddBtn = document.getElementsByClassName("bigBtn")[0];
+  const categoryBox = document.getElementById("categoryBox");
+  categoryAddBtn.onclick = () => {
+    // 카테고리 추가.
+    // 일단 기존 카테고리 불러옴
+    axios.post("/api/product/categoryType").then((data) => {
+      if (
+        korReg.test(categoryInput.value) &&
+        !data.data.find((e) => e.name == categoryInput.value)
+      ) {
+        categoryBox.innerHTML = "";
+        // 입력이 제대로 되었다면 카테고리 생성을 해주고 다시 리스트를 만들어준다.
+        axios
+          .post("/api/product/addCategory", { name: categoryInput.value })
+          .then(() => {
+            makeCategoryList();
+          });
+      }
     });
+  };
+};
+function makeCategoryList() {
+  axios.post("/api/product/categoryType").then((data) => {
+    categoryBox.innerHTML = "";
+    data.data.forEach((item) => {
+      const tempDiv = document.createElement("div");
+      const tempBtn = document.createElement("button");
+      tempDiv.innerText = `/  ${item.name}  /`;
+      tempBtn.innerText = `삭제`;
+      tempDiv.style = `
+        width : 40%;
+      `;
+      tempBtn.style = `
+        margin-left: 20px;
+        border: none;
+      `;
+      tempBtn.onclick = () => {
+        // db에 해당 카테고리 삭제 요청
+        axios
+          .post("/api/product/destroyCategory", { name: item.name })
+          .then(() => {
+            makeCategoryList();
+          });
+        // 삭제하고 나면 다시 생성
+      };
+      tempDiv.appendChild(tempBtn);
+      categoryBox.appendChild(tempDiv);
+    });
+  });
 }
+makeCategoryList();

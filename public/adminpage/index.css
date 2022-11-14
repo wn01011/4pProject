@@ -138,6 +138,7 @@ h4 {
   text-align: center;
   vertical-align: top;
   padding: 10px 12px;
+  white-space: nowrap;
 }
 
 .tg .tg-qnamanage {
@@ -284,9 +285,6 @@ ul {
   justify-content: space-between;
 }
 
-#pojang {
-}
-
 #item-1-2 {
   display: flex;
   flex-direction: column;
@@ -306,20 +304,21 @@ ul {
   border-radius: 1em;
   color: black;
   width: 55vw;
-  height: 40vh;
   margin-bottom: 50px;
 }
 
 #category-manage2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 20px;
   text-align: center;
   border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
   width: 600px;
-  height: 100px;
+  padding: 50px 0px;
 }
 
 #category-big {
@@ -351,10 +350,6 @@ ul {
 .dropdown-item a {
   display: flex;
   justify-content: space-between;
-}
-
-#bigcatip {
-  display: none;
 }
 
 #b-cat-save {
@@ -406,7 +401,6 @@ ul {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
   margin-bottom: 50px;
 }
 
@@ -488,7 +482,6 @@ ul {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
   margin-bottom: 50px;
 }
 
@@ -539,4 +532,77 @@ ul {
 
 #uparrow:hover {
   background: white;
+}
+
+#ask-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset rgb(0, 0, 0, 0.3) 0px 0px 100px 500px;
+}
+.modal-window {
+  width: 500px;
+  background-color: #a5c9ca;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #2c3333;
+}
+.close-area {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #395b64;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: bold;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.modal-window .title {
+  padding-left: 40px;
+}
+.modal-window .content {
+  padding-left: 40px;
+  padding-top: 20px;
+  color: #2c3333;
+}
+#ask-modal.off {
+  display: none;
+}
+#modal-ask-area {
+  resize: none;
+  width: 80%;
+  margin: auto;
+}
+#modal-ask-area:focus {
+  outline: none;
+}
+#submit {
+  display: flex;
+  justify-content: end;
+}
+.submit-area {
+  position: relative;
+  width: 120px;
+  margin: 20px;
+  padding: 10px 20px;
+}
+#modal-name {
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.off {
+  display: none;
 }

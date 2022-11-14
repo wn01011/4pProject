@@ -54,9 +54,6 @@
                 <a class="nav-link ms-3 my-1" href="#item-2-1"
                   >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주문 관리</a
                 >
-                <a class="nav-link ms-3 my-1" href="#item-2-2"
-                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;배송현황 관리</a
-                >
               </div>
             </nav>
             <div><a class="nav-link" href="#item-3">CS</a></div>
@@ -73,7 +70,6 @@
                 >
               </div>
             </nav>
-            <div><a class="nav-link" href="#item-4">통계</a></div>
           </nav>
         </div>
       </div>
@@ -136,9 +132,10 @@
                   method="post"
                 >
                   <input type="file" name="attachment" id="originInput" />
+                  <img src="" alt="" id="preview" />
                 </form>
                 <p></p>
-                <button id="originBtn">originBtn</button>
+                <button id="originBtn">파일제출</button>
                 <img id="originImg" src="" alt="" />
                 <hr />
                 <form id="productAdd">
@@ -184,7 +181,7 @@
 
                   <br /><br />
                   <label for="price">판매가</label><br />
-                  <input id="priceip" type="text" placeholder="판매가 입력" />
+                  <input id="priceip" type="number" placeholder="판매가 입력" />
 
                   <br /><br />
                   <button type="submit" id="regi-submit">등록</button>
@@ -197,30 +194,21 @@
               <div id="category-manage1">
                 <i class="fa-solid fa-bars"> 카테고리 분류</i>
                 <div id="category-manage2">
-                  <div id="category-big">
-                    <button type="button" class="big btn">카테고리 추가</button>
-                    <ul id="dropdown-category">
-                      <li><a class="dropdown-item" href="#">베이커리</a></li>
-                      <li><a class="dropdown-item" href="#">치즈</a></li>
-                      <li><a class="dropdown-item" href="#">음료</a></li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#bigcatip"
-                          id="b-cat-input"
-                          >직접 입력</a
-                        >
-                      </li>
-                    </ul>
-                    <input
-                      id="bigcatip"
-                      type="text"
-                      placeholder="카테고리 입력"
-                    />
-                    <br />
-                    <button type="submit" id="b-cat-save">저장</button>
-                  </div>
+                  <input
+                    id="bigcatip"
+                    type="text"
+                    placeholder="카테고리 입력"
+                  />
+                  <div
+                    id="categoryBox"
+                    style="
+                      display: flex;
+                      width: 100%;
+                      flex-wrap: wrap;
+                      justify-content: space-between;
+                    "
+                  ></div>
+                  <button type="button" class="bigBtn">카테고리 추가</button>
                 </div>
               </div>
             </div>
@@ -242,28 +230,10 @@
                     <th class="tg-selti">회원명</th>
                     <th class="tg-selti">결제금액</th>
                     <th class="tg-selti">수량</th>
+                    <th class="tg-selti">배송현황</th>
                   </tr>
                 </thead>
                 <tbody id="order-manage2"></tbody>
-              </table>
-            </div>
-          </div>
-          <div id="item-2-2">
-            <h3>배송현황 관리</h3>
-            <div id="del-manage1">
-              <table class="tg">
-                <thead>
-                  <tr>
-                    <th class="tg-selti">주문번호</th>
-                    <th class="tg-selti">상품명</th>
-                    <th class="tg-selti">브랜드</th>
-                    <th class="tg-selti">카테고리</th>
-                    <th class="tg-selti">회원명</th>
-                    <th class="tg-selti">결제금액</th>
-                    <th class="tg-selti">수량</th>
-                  </tr>
-                </thead>
-                <tbody id="del-manage2"></tbody>
               </table>
             </div>
           </div>
@@ -301,6 +271,7 @@
                   <th class="tg-selti">작성자</th>
                   <th class="tg-selti">작성일</th>
                   <th class="tg-selti">답변상태</th>
+                  <th class="tg-selti">답변버튼</th>
                 </tr>
               </thead>
               <tbody id="qna-manage2"></tbody>
@@ -323,15 +294,25 @@
             </table>
           </div>
         </div>
-
-        <div id="item-4">
-          <h2>통계</h2>
-          <p>같은 건 없다.</p>
-          <p>
-            <img
-              src="https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be846cf9e0ad057035a_oaVMYWTVDbSobpm1nXr8S9ERSmhLz8iYF3u2t12bmluiRBaHH4YZ6FGWajs1T9yDSAT-BpnVOjkxFE5blXakKWmtztAM1K-_5PSnHKMNxRei3VjvJHp7Hvt8mSikLqCdlopkHZHf.png"
-            />
-          </p>
+      </div>
+    </div>
+    <div id="ask-modal" class="modal-overlay off">
+      <div class="modal-window">
+        <div class="title">
+          <h2>문의 답변</h2>
+        </div>
+        <div class="close-area">X</div>
+        <div class="content">
+          <textarea
+            name=""
+            id="modal-ask-area"
+            cols="30"
+            rows="10"
+            placeholder="문의 내용을 입력해주세요"
+          ></textarea>
+        </div>
+        <div id="submit">
+          <button class="submit-area">제출하기</button>
         </div>
       </div>
     </div>
