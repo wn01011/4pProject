@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>관리자 페이지</title>
     <link rel="stylesheet" href="index.css" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Gothic+A1:100,400"
       rel="stylesheet"
     />
     <script
@@ -16,7 +25,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-  <body>
+  <body id="thebody">
     <div id="header">
       <a href="http://localhost:8080"
         ><img class="admin-logo" src="./Images/marketclear_logo_mint.png"
@@ -91,14 +100,16 @@
 
             <div id="item-1-1">
               <h3>상품 관리</h3>
-              <i class="fa-solid fa-person-skiing"></i>
               <div style="display: flex; justify-content: center">
                 <button>
                   <a class="regi-before-go" href="#sell-regi"
                     >상품 등록 및 수정</a
                   >
                 </button>
-                <input type="text" placeholder="검색창" id="productSearch" />
+                <div>
+                  <input type="text" placeholder="검색창" id="productSearch" />
+                  <button>검색</button>
+                </div>
               </div>
 
               <div id="sth-manage1">
@@ -124,8 +135,10 @@
 
               <div id="sell-regi">
                 <h3>상품 등록</h3>
-                <div id="regi-category-big">
-                  <button type="button" class="big btn">카테고리 선택</button>
+                <div id="regi-category">
+                  <button type="button" class="category-btn">
+                    카테고리 선택
+                  </button>
                   <div id="selectedCategory">선택된 카테고리 : (없음)</div>
                   <ul id="regi-dropdown-category"></ul>
                 </div>
@@ -138,7 +151,9 @@
                   <input type="file" name="attachment" id="originInput" />
                 </form>
                 <p></p>
-                <button id="originBtn">originBtn</button>
+                <div id="btn-space">
+                  <button id="originBtn">originBtn</button>
+                </div>
                 <img id="originImg" src="" alt="" />
                 <hr />
                 <form id="productAdd">
@@ -197,29 +212,32 @@
               <div id="category-manage1">
                 <i class="fa-solid fa-bars"> 카테고리 분류</i>
                 <div id="category-manage2">
-                  <div id="category-big">
-                    <button type="button" class="big btn">카테고리 추가</button>
+                  <div id="category">
+                    <button type="button" class="category-add">
+                      카테고리 추가
+                    </button>
                     <ul id="dropdown-category">
-                      <li><a class="dropdown-item" href="#">베이커리</a></li>
-                      <li><a class="dropdown-item" href="#">치즈</a></li>
-                      <li><a class="dropdown-item" href="#">음료</a></li>
+                      <li><a class="dropdown-item">베이커리</a></li>
+                      <li><a class="dropdown-item">치즈</a></li>
+                      <li><a class="dropdown-item">음료</a></li>
                       <li><hr class="dropdown-divider" /></li>
                       <li>
-                        <a
+                        <button
                           class="dropdown-item"
-                          href="#bigcatip"
-                          id="b-cat-input"
-                          >직접 입력</a
+                          id="categoryinput-btn"
+                          href="#categoryinput"
                         >
+                          직접 입력
+                        </button>
                       </li>
                     </ul>
                     <input
-                      id="bigcatip"
+                      id="categoryinput"
                       type="text"
                       placeholder="카테고리 입력"
                     />
                     <br />
-                    <button type="submit" id="b-cat-save">저장</button>
+                    <button type="submit" id="cat-save">저장</button>
                   </div>
                 </div>
               </div>
@@ -235,32 +253,33 @@
               <table class="tg">
                 <thead>
                   <tr>
-                    <th class="tg-selti">주문번호</th>
-                    <th class="tg-selti">상품명</th>
-                    <th class="tg-selti">브랜드</th>
-                    <th class="tg-selti">카테고리</th>
-                    <th class="tg-selti">회원명</th>
+                    <th class="tg-selti">ID</th>
                     <th class="tg-selti">결제금액</th>
+                    <th class="tg-selti">상품명</th>
                     <th class="tg-selti">수량</th>
+                    <th class="tg-selti">배송지</th>
+                    <th class="tg-selti">주문일자</th>
+                    <th class="tg-selti">준비현황</th>
                   </tr>
                 </thead>
                 <tbody id="order-manage2"></tbody>
               </table>
             </div>
           </div>
+
           <div id="item-2-2">
             <h3>배송현황 관리</h3>
             <div id="del-manage1">
               <table class="tg">
                 <thead>
                   <tr>
-                    <th class="tg-selti">주문번호</th>
-                    <th class="tg-selti">상품명</th>
-                    <th class="tg-selti">브랜드</th>
-                    <th class="tg-selti">카테고리</th>
-                    <th class="tg-selti">회원명</th>
+                    <th class="tg-selti">ID</th>
                     <th class="tg-selti">결제금액</th>
+                    <th class="tg-selti">상품명</th>
                     <th class="tg-selti">수량</th>
+                    <th class="tg-selti">배송지</th>
+                    <th class="tg-selti">주문일자</th>
+                    <th class="tg-selti">배송상태</th>
                   </tr>
                 </thead>
                 <tbody id="del-manage2"></tbody>
@@ -300,7 +319,9 @@
                   <th class="tg-selti">상품명</th>
                   <th class="tg-selti">작성자</th>
                   <th class="tg-selti">작성일</th>
-                  <th class="tg-selti">답변상태</th>
+                  <th class="tg-selti">답변여부</th>
+                  <th class="tg-selti">답변할까?</th>
+                  <th class="tg-selti">답변내용</th>
                 </tr>
               </thead>
               <tbody id="qna-manage2"></tbody>
@@ -335,9 +356,28 @@
         </div>
       </div>
     </div>
+
     <div id="uparrow">
       <a href="#header"><i class="fa-regular fa-circle-up fa-3x"></i></a>
     </div>
+
+    <div id="reply_modal">
+      <div id="reply_modal_body">
+        <!-- <div id="reply_modal_body_text"> -->
+        <textarea
+          name="content"
+          cols="40"
+          rows="8"
+          id="reply_modal_body_text_input"
+        ></textarea>
+        <!-- </div> -->
+        <div id="reply_modal_body_ox">
+          <button id="reply_modal_body_confirm">등록</button>
+          <button id="reply_modal_body_cancel">취소</button>
+        </div>
+      </div>
+    </div>
+
     <script src="./index.js"></script>
   </body>
 </html>

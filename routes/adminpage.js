@@ -26,33 +26,33 @@ router // 상품 목록
 
 // router // 카테고리 관리
 
-// router // 주문 내역
-// .route("/order")
-// .get(async (req, res) => {
-//   res.send();
-// })
-// .post(async (req, res) => {
-//   const adminSendOrder = [];
-//   const data = await db.OrderTable.findAll();
-//   data.forEach((item) => {
-//     adminSendOrder.push(item.dataValues);
-//   });
-//   res.send(adminSendOrder);
-// });
+router // 주문 내역
+  .route("/order")
+  .get(async (req, res) => {
+    res.send();
+  })
+  .post(async (req, res) => {
+    const adminSendOrder = [];
+    const data = await db.OrderTable.findAll();
+    data.forEach((item) => {
+      adminSendOrder.push(item.dataValues);
+    });
+    res.send(adminSendOrder);
+  });
 
-// router // 배송 관리
-// .route("/delivery")
-// .get(async (req, res) => {
-//   res.send();
-// })
-// .post(async (req, res) => {
-//   const adminSendDelivery = [];
-//   const data = await db.DeliveryTable.findAll();
-//   data.forEach((item) => {
-//     adminSendDelivery.push(item.dataValues);
-//   });
-//   res.send(adminSendDelivery);
-// });
+router // 배송 관리
+  .route("/delivery")
+  .get(async (req, res) => {
+    res.send();
+  })
+  .post(async (req, res) => {
+    const adminSendOrder = [];
+    const data = await db.OrderTable.findAll();
+    data.forEach((item) => {
+      adminSendOrder.push(item.dataValues);
+    });
+    res.send(adminSendOrder);
+  });
 
 router // 회원 목록
   .route("/user")
@@ -80,6 +80,30 @@ router // 문의 관리
       adminSendAsk.push(item.dataValues);
     });
     res.send(adminSendAsk);
+  });
+
+router // 문의 답변 기능
+  .route("/replyQna")
+  .get((req, res) => {
+    res.send();
+  })
+  .post(async (req, res) => {
+    console.log("어디 오류인가ㅁㅁ");
+    console.log("req.body : ", req.body);
+    console.log("req.body.id : ", req.body.id);
+    db.ProductaskTable.update(
+      {
+        answerText: req.body.answerText,
+        isAnswer: 1,
+      },
+      {
+        where: { id: req.body.id },
+      }
+    ).then(() => {
+      console.log("어디냐");
+      res.send({ answerText: req.body.answerText });
+      console.log("어디 오류인가");
+    });
   });
 
 router // 리뷰 관리

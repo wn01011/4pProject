@@ -205,10 +205,6 @@ document.getElementById("deduplication_modal").onclick = () => {
   modal.classList.remove("show");
 };
 
-// 연착 증명서 : 서울 교통 공사, 지하철역
-// 교통어플 캡처 : 도착 예정시간이 지연인지 아닌지
-// 지각한 날을 포함해서 7일치 교통내역
-
 const onlyNum = /[^0-9]+/;
 let now = new Date();
 let nowYear = now.getFullYear();

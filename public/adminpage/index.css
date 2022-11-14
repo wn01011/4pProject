@@ -5,21 +5,29 @@ html {
 body {
   margin: 0 10% 0 10%;
 }
-
+/* 
 #header {
+  @import url("https://fonts.googleapis.com/css?family=Gothic+A1:100,400");
   background-color: #fff;
   height: 10rem;
   width: 70%;
+} */
+
+.body_onmodal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .admin-logo {
-  width: 15%;
-  padding-left: 6%;
+  width: 10%;
+  padding-left: 4%;
 }
 
 .puppies {
-  width: 18%;
-  padding-left: 45%;
+  width: 13%;
+  padding-left: 30%;
 }
 
 .admin-logout {
@@ -32,7 +40,7 @@ body {
   font-weight: bold;
   text-decoration: none;
   position: absolute;
-  right: 10%;
+  right: 12%;
   top: 3%;
 }
 
@@ -46,7 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   color: black;
-  margin: 7% 5% 0 0;
+  margin: 5% 5% 0 0;
 }
 
 a {
@@ -60,24 +68,25 @@ a {
   text-decoration: none;
   color: black;
   display: flex;
-  padding: 3% 0 3% 0;
+  padding: 6% 0 6% 0;
 }
 
 .nav-link:hover {
   background-image: linear-gradient(
     to right,
-    #ffca28 0%,
+    #e1bee7 0%,
     #f8bbd0 51%,
-    #ffca28 100%
+    #e1bee7 100%
   );
   background-position: right center;
 }
 
 #admin-sidebar {
   width: 13em;
+  height: 100vh;
   padding: 30% 0 30% 0;
-  margin: 0 10% 0 5%;
-  background-color: #c2eaec;
+  margin: 0 6% 0 5%;
+  background-color: c2eaec;
 }
 
 #admin-sidebar > nav {
@@ -88,7 +97,7 @@ a {
 }
 
 .nav > div > a {
-  padding-left: 20%;
+  padding-left: 15%;
 }
 
 #admin-sidebar > nav > nav {
@@ -225,8 +234,12 @@ ul {
   overflow-y: hidden;
 }
 
-.fa-person-skiing {
-  width: 10%;
+#originBtn {
+  display: block;
+}
+
+#btn-space.removeOriginBtn {
+  display: none;
 }
 
 #regi-before {
@@ -253,13 +266,13 @@ ul {
   margin-bottom: 100px;
 }
 
-#regi-category-big {
+#regi-category {
   position: relative;
   font-size: 16px;
   font-weight: bold;
   margin: 10px 0 10px 0;
 }
-#regi-category-big > li {
+#regi-category > li {
   padding: 10px;
 }
 #regi-dropdown-category {
@@ -282,9 +295,6 @@ ul {
 .regi-dropdown-item a {
   display: flex;
   justify-content: space-between;
-}
-
-#pojang {
 }
 
 #item-1-2 {
@@ -322,13 +332,14 @@ ul {
   height: 100px;
 }
 
-#category-big {
+#category {
   position: relative;
   font-size: 16px;
   font-weight: bold;
   margin: 10px 0 10px 0;
+  cursor: pointer;
 }
-#category-big > li {
+#category > li {
   padding: 10px;
 }
 #dropdown-category {
@@ -345,27 +356,31 @@ ul {
   z-index: 1;
 }
 
-#category-big:hover #dropdown-category {
+#category:hover #dropdown-category {
   display: block;
 }
-.dropdown-item a {
+.dropdown-item#category-btn {
   display: flex;
   justify-content: space-between;
 }
 
-#bigcatip {
+#categoryinput-btn {
   display: none;
 }
 
-#b-cat-save {
+#categoryinput {
   display: none;
 }
 
-.bigdirinput {
+#cat-save {
+  display: none;
+}
+
+#categoryinput-btn.add-category {
   display: block;
 }
 
-.bigdirsave {
+#cat-save.save-category {
   display: block;
 }
 
@@ -488,7 +503,7 @@ ul {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
+  height: 600px;
   margin-bottom: 50px;
 }
 
@@ -539,4 +554,76 @@ ul {
 
 #uparrow:hover {
   background: white;
+}
+
+#reply_modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#reply_modal.show {
+  display: block;
+}
+body:hover #reply_modal.show {
+  overflow: hidden;
+}
+#reply_modal_body {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 450px;
+  height: 180px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+#reply_modal_body_text {
+  padding: 60px;
+  border: 1px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#reply_modal_body_ox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  border: 1px;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+  color: #c2eaec;
+}
+
+#reply_modal_body_confirm {
+  display: block;
+  border: 1px;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+  color: #c2eaec;
+}
+
+#reply_modal_body_cancel {
+  display: block;
+  border: 1px;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+  color: #c2eaec;
 }
