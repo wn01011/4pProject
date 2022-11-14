@@ -208,10 +208,10 @@ document.getElementById("checklist_shipping_address_btn").onclick = () => {
 
 getAddress();
 
-const modal = document.getElementById("cart_modal");
-const modalBody = document.getElementById("cart_modal_body");
-const modalText = document.getElementById("cart_modal_body_text");
-const modalExit = document.getElementById("cart_modal_exit");
+const cartModal = document.getElementById("cart_modal");
+const cartModalBody = document.getElementById("cart_modal_body");
+const cartModalText = document.getElementById("cart_modal_body_text");
+const cartModalExit = document.getElementById("cart_modal_exit");
 
 document.getElementById("cart_order_orderbutton").onclick = async () => {
   let orderlist = [];
@@ -230,10 +230,10 @@ document.getElementById("cart_order_orderbutton").onclick = async () => {
     orderlist: orderlist,
   });
   document.getElementById("thebody").classList.add("body_onmodal");
-  modal.classList.add("show");
+  cartModal.classList.add("show");
 };
 
 document.getElementById("cart_modal").onclick = () => {
   window.location.reload();
-  modal.classList.remove("show");
+  cartModal.classList.remove("show");
 };
