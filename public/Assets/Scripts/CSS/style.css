@@ -437,7 +437,7 @@ h1 {
   transition: all 0.5s ease-in-out;
 }
 .img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .cartBtn {
   position: absolute;
@@ -453,6 +453,7 @@ h1 {
   border: none;
   top: 250px;
   left: 180px;
+  cursor: pointer;
 }
 .itemNameTxt {
   width: 240px;

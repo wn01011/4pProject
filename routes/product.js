@@ -156,10 +156,8 @@ async function setImages() {
     len = datas.length;
     for (let i = 1; i <= len; ++i) {
       router.get(`/download${i}`, (req, res) => {
-        fs.readFile("./Images/" + i + `.jpg`, (err, data) => {
-          res.writeHead(200, {
-            "Content-Type": `image/jpg;`,
-          });
+        fs.readFile("./Images/" + i + ".jpg", (err, data) => {
+          res.writeHead(200, { "Content-Type": "text/html" });
           res.end(data);
         });
       });
@@ -186,6 +184,7 @@ setImages();
 
 // db.ProductTable.create({
 //   img: "1",
+//   png: "2",
 //   manufacturer: "브로드카세",
 //   name: "부드러운 비엔나 쿠키 4종",
 //   price: 5500,
@@ -220,7 +219,7 @@ router.route("/search").post((req, res) => {
         JSON.stringify(item.dataValues.category).toString().includes(sword) ||
         item.manufacturer.match(sword)
       ) {
-        if (req.body.brand?.length > 0) {
+        if (req.body.brand.length > 0) {
           if (req.body.brand.includes(item.manufacturer)) sendAry.push(item);
         } else {
           sendAry.push(item);

@@ -616,3 +616,17 @@ audio::-webkit-media-controls-fullscreen-volume-max-button {
   border: none;
   cursor: pointer;
 }
+.category_Btn > button {
+  border: none;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+.category_Btn button > span:hover {
+  color: rgb(139, 185, 185);
+}
+.category_Btn button > span {
+  margin-left: 30px;
+}
