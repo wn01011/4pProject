@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4pProj</title>
-    <link rel="stylesheet" href="/category/vegi/detail.css" />
+    <link rel="stylesheet" href="./detail.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
     <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
     <link
@@ -19,19 +19,12 @@
     <div class="detail">
       <div class="detail">
         <div id="banner">
-          <img src="/category/imges/banner/cookie_banner.jpg" alt="" />
+          <img src="" alt="" />
         </div>
         <div id="vegetable">
-          <div id="item-head"><h1>간식·과자·떡</h1></div>
+          <div id="item-head"><h1></h1></div>
           <div id="item">
-            <div class="item-inner">
-              <ul>
-                <li id="item-all"></li>
-              </ul>
-              <ul>
-                <li id="item-env"></li>
-              </ul>
-            </div>
+            <div class="item-inner"></div>
           </div>
         </div>
       </div>
@@ -45,37 +38,45 @@
           </ul>
           <ul id="filter-brand"></ul>
           <div class="more"></div>
-          <ul id="check">
+          <ul>
             <li>가격</li>
           </ul>
-          <ul id="brand-price">
-            <li>
-              <img src="/category/imges/detailImg/check-circle.svg" alt="" /><a
-                href=""
-                >5,500원</a
-              >
+          <ul id="check">
+            <li class="check-list">
+              <img
+                src="/category/imges/detailImg/check-circle.svg"
+                alt=""
+              /><button href="">2,590원 미만</button>
+            </li>
+            <li class="check-list">
+              <img
+                src="/category/imges/detailImg/check-circle.svg"
+                alt=""
+              /><button href="">2,590원 ~ 3,800원</button>
+            </li>
+            <li class="check-list">
+              <img
+                src="/category/imges/detailImg/check-circle.svg"
+                alt=""
+              /><button href="">3,800원 ~ 5,490원</button>
+            </li>
+            <li class="check-list">
+              <img
+                src="/category/imges/detailImg/check-circle.svg"
+                alt=""
+              /><button href="">5,490원 이상</button>
             </li>
           </ul>
         </div>
         <div id="list">
           <div class="list-header">
             <ul>
-              <li>총 48건</li>
+              <li id="totalCount"></li>
             </ul>
             <ul>
-              <li>
-                <a href="#">
-                  추천순
-                  <img
-                    src="/category/imges/detailImg/question-circle.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li><a href="#"> 신상품순 </a></li>
-              <li><a href="#"> 판매량순 </a></li>
-              <li><a href="#"> 혜택순 </a></li>
-              <li><a href="#"> 낮은 가격순 </a></li>
-              <li><a href="#"> 높은 가격순 </a></li>
+              <li id="arrayPrice"></li>
+              <li>낮은 가격순</li>
+              <li>높은 가격순</li>
             </ul>
           </div>
           <div id="item-list">
@@ -83,6 +84,9 @@
               <div class="item" id="goods"></div>
             </div>
           </div>
+        </div>
+        <div id="productNone">
+          <img src="./Img/검색X.png" alt="" />
         </div>
       </div>
     </div>

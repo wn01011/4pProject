@@ -5,6 +5,7 @@ const path = require("path");
 const { sequelize, ProductaskTable } = require("../models/index.js");
 const router = Router();
 const seq = require("sequelize");
+const { send } = require("process");
 
 console.log("관리자페이지 라우트 안이다!!!!!!");
 // "/api/adminpage"
@@ -29,6 +30,31 @@ router // 상품 목록
 // router // 주문 내역
 
 // router // 배송 관리
+router
+  .route("/order")
+  .get(async (req, res) => {
+    res.send();
+  })
+  .post(async (req, res) => {
+    const adminSendOrder = [];
+    const data = await db.OrderTable.findAll();
+    data.forEach((item) => {
+      adminSendOrder.push(item.dataValues);
+    });
+    res.send(adminSendOrder);
+  });
+
+// router // 배송 관리
+router
+  .route("/delivery")
+  .get(async (req, res) => {
+    res.send();
+  })
+  .post(async (req, res) => {
+    const data = await db.OrderTable.findAll().then((data) => {
+      res.send(data);
+    });
+  });
 
 router // 회원 목록
   .route("/user")
@@ -71,5 +97,20 @@ router // 리뷰 관리
     });
     res.send(adminSendReview);
   });
+
+router.route("/qnaAnswer").post((req, res) => {
+  db.ProductaskTable.findOne({ where: { id: req.body.id } }).then((data) => {
+    db.ProductaskTable.update(
+      { answerText: req.body.text, isAnswer: 1 },
+      {
+        where: {
+          id: req.body.id,
+        },
+      }
+    ).then((data) => {
+      res.send(data);
+    });
+  });
+});
 
 module.exports = router;

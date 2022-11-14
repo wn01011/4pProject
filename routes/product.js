@@ -5,8 +5,6 @@ const path = require("path");
 const { sequelize } = require("../models/index.js");
 const router = Router();
 const seq = require("sequelize");
-const { send } = require("process");
-const op = seq.Op;
 
 console.log("프로덕트 라우트 안이다!!!!!!");
 
@@ -107,112 +105,13 @@ router.route("/getImage").post(async (req, res) => {
       where: {
         name: req.body.data[i],
       },
+    }).then((data) => {
+      imgList.push(data?.img);
     });
-    imgList.push(productBox.img);
   }
   res.send({ list: imgList });
 });
-// // ======== 과일 연결해죠 ========
-// router.route("/fruit").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-// // ======== 수산 연결해죠 ========
-// router.route("/fish").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
 
-// // ======== 정육 연결해죠 ========
-// router.route("/gogi").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-
-// // ======== 국 연결해죠 ========
-// router.route("/gug").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-
-// // ======== 샐러드 연결해죠 ========
-// router.route("/salad").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-
-// // ======== 면 연결해죠 ========
-// router.route("/noodle").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
-//   });
-// });
-
-// // ======== 생수 연결해죠 ========
-// router.route("/drink").post((req, res) => {
-//   const tempVegi = [];
-//   db.ProductTable.findAll().then((data) => {
-//     data.forEach((item) => {
-//       if (
-//         Object.values(item.dataValues.category[0]).includes(`${req.body.data}`)
-//       ) {
-//         tempVegi.push(item.dataValues);
-//       }
-//     });
-//     res.send(tempVegi);
 // ----------- 상세페이지 보여죠 ------------
 router.route("/item").post((req, res) => {
   const itemLink = req.body.itemLink;
@@ -285,6 +184,7 @@ setImages();
 
 // db.ProductTable.create({
 //   img: "1",
+//   png: "2",
 //   manufacturer: "브로드카세",
 //   name: "부드러운 비엔나 쿠키 4종",
 //   price: 5500,
@@ -361,20 +261,93 @@ router.route("/search").post((req, res) => {
 });
 
 router.route("/cartDamgi").post((req, res) => {
-  db.UserTable.findOne({
+  console.log(req.query.productName);
+  if (encodeURI(req.query.productName)) {
+    db.UserTable.findOne({
+      where: {
+        userId: req.query.userId,
+      },
+    }).then((data) => {
+      db.CartTable.create({
+        userId: req.query.userId,
+        name: encodeURI(req.query.productName),
+        amount: 1,
+        price: req.query.price,
+        address: data?.address,
+      });
+    });
+  } else {
+    db.UserTable.findOne({
+      where: {
+        userId: req.body.userId,
+      },
+    }).then((data) => {
+      db.CartTable.create({
+        userId: req.body.userId,
+        name: req.body.name,
+        amount: req.body.amount,
+        price: req.body.price,
+        address: data.address,
+      });
+    });
+  }
+  res.send();
+});
+
+router.route("/delProduct").post((req, res) => {
+  db.ProductTable.destroy({ where: { name: req.body.productName } }).then(
+    () => {
+      res.send(req.body.productName + "이(가) 지워졌어요");
+    }
+  );
+});
+
+router.route("/categoryType").post((req, res) => {
+  db.CategoryTable.findAll().then((data) => {
+    res.send(data);
+  });
+});
+
+router.route("/addCategory").post((req, res) => {
+  db.CategoryTable.create({ name: req.body.name }).then(() => {
+    res.send();
+  });
+});
+
+router.route("/destroyCategory").post((req, res) => {
+  db.CategoryTable.destroy({ where: { name: req.body.name } }).then(() => {
+    res.send();
+  });
+});
+
+router.route("/newData").post((req, res) => {
+  console.log(" : " + req.body[1]);
+  db.ProductTable.create(req.body[0]).then(() => {
+    // fs.readdir("./Images", (err, datas) => {
+    //   len = datas.length;
+
+    //   router.get(`/download${len}`, (req, res) => {
+    //     fs.readFile("./Images/" + len + encodeURI(req.body[1]), (err, data) => {
+    //       res.writeHead(200, {
+    //         "Content-Type": `image/jpg`,
+    //         charset: `utf-8`,
+    //       });
+    //       res.end(data);
+    //     });
+    //   });
+    // });
+    setImages();
+  });
+});
+
+router.route("/findone").post((req, res) => {
+  db.ProductTable.findOne({
     where: {
-      userId: req.body.userId,
+      name: req.body.name,
     },
   }).then((data) => {
-    db.CartTable.create({
-      userId: req.body.userId,
-      name: req.body.name,
-      amount: req.body.amount,
-      price: req.body.price,
-      address: data.address,
-    });
+    res.send(data);
   });
-  res.send();
 });
 
 module.exports = router;

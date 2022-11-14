@@ -714,4 +714,17 @@ body:hover #modal.show {
   border-top: 2px solid gainsboro;
   font-size: 20px;
   color: #c2eaec;
+.category_Btn > button {
+  border: none;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+.category_Btn button > span:hover {
+  color: rgb(139, 185, 185);
+}
+.category_Btn button > span {
+  margin-left: 30px;
 }

@@ -1,15 +1,20 @@
 const { Router } = require("express");
-const crypto = require("crypto-js");
 const db = require("../models/index.js");
 const router = Router();
 
 // "/api/myinfo"
+router.route("/").post(async (req, res) => {
+  console.log("라우터 접근");
+  const tempNoticeList = await db.NoticeTable.findAll({
+    order: [["id", "ASC"]],
+  });
+  console.log(tempNoticeList);
+  res.send({ list: tempNoticeList });
+});
 
 router.route("/orderhistory").post(async (req, res) => {
-  console.log("/orderhistory 라우터 접근");
+  console.log("orderhistory 라우터 접근");
   console.log("req.body.userid : ", req.body.userid);
-  let orderSave = [];
-  let imgList = [];
   const tempOrderhistoryList = await db.OrderTable.findAll({
     userId: req.body.userid,
   });
@@ -23,7 +28,7 @@ router.route("/orderhistory").post(async (req, res) => {
         name: orderSave[i],
       },
     });
-    imgList.push(imgBox.img);
+    if (imgBox?.img) imgList.push(imgBox?.img);
   }
   res.send({ imgList: imgList, orderList: tempOrderhistoryList });
 });
@@ -40,42 +45,12 @@ router.route("/getReview").post(async (req, res) => {
   res.send({ reviewList: tempReview });
 });
 
-router.route("/getInquire").post(async (req, res) => {
-  console.log("/getInquire 라우터 접근");
-  console.log("getInquire req.body.userid : ", req.body.userid);
-  const tempInquire = await db.ProductaskTable.findAll({
-    where: {
-      userId: req.body.userid,
-    },
+function getAskAnswerTable(userId) {
+  db.AskanswerTable.findAll({
+    where: { userId: userId.toString() },
+  }).then((data) => {
+    console.log(data);
+    return data;
   });
-  console.log("getInquire : ", tempInquire);
-  res.send({ inquireList: tempInquire });
-});
-
-router.route("/update").post((req, res) => {
-  console.log("/update 라우터 접근");
-  console.log("req.body", req.body);
-  const updateData = db.UserTable.update(
-    {
-      pw: crypto.SHA256(req.body.pw).toString(),
-      name: req.body.name,
-      isManager: 0,
-      address: req.body.address,
-      gender: req.body.gender,
-      birthday: `${req.body.birthday.year}-${req.body.birthday.month}-${req.body.birthday.day}`,
-    },
-    {
-      where: {
-        userId: req.body.id,
-      },
-    }
-  );
-  res.send({ updateData: updateData, status: 200 });
-});
-
-router.route("/").post(async (req, res) => {
-  console.log(" / 라우터 접근");
-  res.send({ list: tempNoticeList });
-});
-
+}
 module.exports = router;
