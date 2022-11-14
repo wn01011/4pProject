@@ -185,6 +185,7 @@ setImages();
 
 // db.ProductTable.create({
 //   img: "1",
+//   png: "2",
 //   manufacturer: "브로드카세",
 //   name: "부드러운 비엔나 쿠키 4종",
 //   price: 5500,

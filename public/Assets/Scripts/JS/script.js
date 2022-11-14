@@ -72,6 +72,31 @@ function getItemList(img, name, price, manufacturer) {
       e.preventDefault();
       detailItem();
     };
+    // function cartGo() {
+    //   location.href =
+    //     "/api/product/cartDamgi?productName=" +
+    //     name +
+    //     "&userId=" +
+    //     getUserId() +
+    //     "&price=" +
+    //     price;
+    // }
+    // 카트 기능으로 넘기기
+    tempItemCartBtn.onclick = (e) => {
+      e.preventDefault();
+      axios
+        .post(
+          "/api/product/cartDamgi?productName=" +
+            name +
+            "&userId=" +
+            getUserId() +
+            "&price=" +
+            price
+        )
+        .then((data) => {
+          location.href = "/Cart";
+        });
+    };
 
     let subSlides = document.getElementById("item-how"),
       currentIdx1 = 0,
@@ -165,6 +190,21 @@ const getPickItemList = function (img, name, price, manufacturer) {
     tempPickItemImg.onclick = (e) => {
       e.preventDefault();
       detailItem();
+    };
+    tempPickCartBtn.onclick = (e) => {
+      e.preventDefault();
+      axios
+        .post(
+          "/api/product/cartDamgi?productName=" +
+            name +
+            "&userId=" +
+            getUserId() +
+            "&price=" +
+            price
+        )
+        .then((data) => {
+          location.href = "/Cart";
+        });
     };
 
     let subSlides1 = document.getElementById("item1"),
@@ -264,10 +304,20 @@ const getPickItem2List = function (img, name, price, manufacturer) {
       e.preventDefault();
       detailItem();
     };
-    // 카트 기능으로 넘기기
     tempPick2CartBtn.onclick = (e) => {
       e.preventDefault();
-      cartItem();
+      axios
+        .post(
+          "/api/product/cartDamgi?productName=" +
+            name +
+            "&userId=" +
+            getUserId() +
+            "&price=" +
+            price
+        )
+        .then((data) => {
+          location.href = "/Cart";
+        });
     };
 
     let subSlides2 = document.getElementById("item2"),
@@ -367,10 +417,20 @@ const getPickItem3List = function (img, name, price, manufacturer) {
       e.preventDefault();
       detailItem();
     };
-
     tempPick3CartBtn.onclick = (e) => {
       e.preventDefault();
-      cartItem();
+      axios
+        .post(
+          "/api/product/cartDamgi?productName=" +
+            name +
+            "&userId=" +
+            getUserId() +
+            "&price=" +
+            price
+        )
+        .then((data) => {
+          location.href = "/Cart";
+        });
     };
 
     let subSlides3 = document.getElementById("item3"),
@@ -469,10 +529,20 @@ const getPickItem4List = function (img, name, price, manufacturer) {
       e.preventDefault();
       detailItem();
     };
-
     tempPick4CartBtn.onclick = (e) => {
       e.preventDefault();
-      cartItem();
+      axios
+        .post(
+          "/api/product/cartDamgi?productName=" +
+            name +
+            "&userId=" +
+            getUserId() +
+            "&price=" +
+            price
+        )
+        .then((data) => {
+          location.href = "/Cart";
+        });
     };
 
     let subSlides4 = document.getElementById("item4"),

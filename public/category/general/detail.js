@@ -24,6 +24,7 @@ const getList = function (
   try {
     const tempGoodsDiv = document.createElement("div");
     const tempGoodsImgDiv = document.createElement("div");
+    const tempGoodsTxtDiv = document.createElement("div");
     const tempGoodsImg = document.createElement("img");
     const tempGoodsDel = document.createElement("p");
     const tempGoodsText = document.createElement("p");
@@ -50,33 +51,35 @@ const getList = function (
     display: flex;
     width: 837px;
     `;
-
-    tempGoodsImg.style = `
-    width: 249px;
-    `;
-
     tempGoodsDiv.style = `
     display:flex;
     flex-wrap:wrap;
     width:279px
     `;
-
     tempGoodsInfo.style = `
     font-size: 12px;
     color: rgb(205, 204, 204);
     `;
+    tempGoodsTxtDiv.style = `
+    width : 250px;
+    `;
+    tempGoodsCart.style = `
+    cursor: pointer;
+    `;
 
     tempGoodsDel.classList.add(`deliveryTxt`);
+    tempGoodsImg.classList.add(`goodsImg`);
+    tempGoodsImgDiv.classList.add(`goodsItemDiv`);
 
     goods.appendChild(tempGoodsDiv);
     tempGoodsDiv.append(tempGoodsImgDiv);
     tempGoodsImgDiv.append(tempGoodsImg);
-    tempGoodsDiv.append(tempGoodsDel);
-    tempGoodsDiv.append(tempGoodsText);
-    tempGoodsDiv.append(tempGoodsPrice);
-    tempGoodsDiv.append(tempGoodsInfo);
+    tempGoodsDiv.append(tempGoodsTxtDiv);
+    tempGoodsTxtDiv.append(tempGoodsDel);
+    tempGoodsTxtDiv.append(tempGoodsText);
+    tempGoodsTxtDiv.append(tempGoodsPrice);
+    tempGoodsTxtDiv.append(tempGoodsInfo);
     tempGoodsDiv.append(tempGoodsCart);
-    // tempGoodsImgDiv.after(tempGoodsCart);
 
     // 제품 상세페이지로 이동
     function detailItem() {
@@ -88,22 +91,21 @@ const getList = function (
       detailItem();
     };
 
-    // tempGoodsCart.onclick = (e) => {
-    //   e.preventDefault();
-    //   console.log(name);
-    //   axios
-    //     .post(
-    //       "/api/product/cartDamgi?productName=" +
-    //         name +
-    //         "&userId=" +
-    //         getUserId() +
-    //         "&price=" +
-    //         price
-    //     )
-    //     .then((data) => {
-    //       location.href = "/Cart";
-    //     });
-    // };
+    tempGoodsCart.onclick = (e) => {
+      e.preventDefault();
+      axios
+        .post(
+          "/api/product/cartDamgi?productName=" +
+            name +
+            "&userId=" +
+            getUserId() +
+            "&price=" +
+            price
+        )
+        .then((data) => {
+          location.href = "/Cart";
+        });
+    };
   } catch (error) {
     console.log(error);
   }
@@ -223,16 +225,13 @@ function vegiCategories(category) {
   }
   try {
     const itemInner = document.getElementsByClassName("item-inner")[0];
-    itemInner.style.columnGap = "50px";
-    itemInner.style.rowGap = "30px";
-    itemInner.style.flexWrap = "wrap";
+    itemInner.innerHTML = "";
     currCategoryList.forEach((innerText) => {
       const tempDiv = document.createElement("div");
       tempDiv.innerText = innerText;
       tempDiv.style = `
         width : 200px;
         white-space:nowrap;
-        text-align: center;
       `;
       itemInner.appendChild(tempDiv);
     });
@@ -278,7 +277,6 @@ checkList[3].onclick = () => {
 // 필터리스트
 const getFilter = function (manufacturer) {
   try {
-    // categoryList.innerHTML = "";
     const filterLi = document.createElement("li");
     const filterImg = document.createElement("img");
     const filterA = document.createElement("button");

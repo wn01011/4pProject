@@ -40,9 +40,16 @@ a {
 .item-inner {
   width: 1050px;
   border: 1px solid black;
-  padding: 20px;
+  padding: 20px 49px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px 50px;
+  flex-wrap: wrap;
+}
+.item-inner > div {
+  display: flex;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -230,18 +237,24 @@ a {
   height: 320px;
   margin: 0 30 20 0;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 .goodsImg {
   display: flex;
   flex-wrap: wrap;
-  width: 250px;
+  width: 249px;
   height: 320px;
   align-items: flex-start;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 .goodsImg:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+.goods > div > p {
+  display: flex;
+  justify-content: flex-start;
 }
 .goodsCartBtn {
   position: absolute;
@@ -255,8 +268,7 @@ a {
   height: 50px;
   border-radius: 100%;
   border: none;
-  top: 290px;
-  left: 180px;
+  margin: 260px 190px;
 }
 .goodsTxt {
   display: block;
