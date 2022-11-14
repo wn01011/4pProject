@@ -1,3 +1,6 @@
+let currItemName = "";
+let currUserId = getUserId();
+
 let currImg = "";
 let currDelivery = "";
 let currName = "";
@@ -93,6 +96,7 @@ const getList = function (
 
     tempGoodsCart.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
@@ -249,28 +253,24 @@ checkList[0].onclick = () => {
   else selectedPrice = 0;
   pricesFilter();
   searchFunc();
-  vegiCategories();
 };
 checkList[1].onclick = () => {
   if (selectedPrice == 1) selectedPrice = -1;
   else selectedPrice = 1;
   pricesFilter();
   searchFunc();
-  vegiCategories();
 };
 checkList[2].onclick = () => {
   if (selectedPrice == 2) selectedPrice = -1;
   else selectedPrice = 2;
   pricesFilter();
   searchFunc();
-  vegiCategories();
 };
 checkList[3].onclick = () => {
   if (selectedPrice == 3) selectedPrice = -1;
   else selectedPrice = 3;
   pricesFilter();
   searchFunc();
-  vegiCategories();
 };
 // let filterSet = new Set();
 
