@@ -139,9 +139,7 @@ async function itemDetailList(
         total.innerText = `${price * count}`;
         itemTotal.append(itemTotalPrice);
       } else if (count > 100) {
-        alert(
-          "대량으로 살꺼면 할인해줄테니까 고객센터 문의해라~ 답변은 생략한다"
-        );
+        alert("진정하고 장바구니에 담아라");
         return;
       }
     };
