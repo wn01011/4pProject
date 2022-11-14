@@ -624,7 +624,7 @@ input[type="radio"]:focus-visible {
   border: none;
   font-size: 20px;
 }
-#modal {
+#myinfo_modal {
   position: absolute;
   top: 0;
   left: 0;
@@ -633,7 +633,7 @@ input[type="radio"]:focus-visible {
   display: none;
   background-color: rgba(0, 0, 0, 0.4);
 }
-#modal.show {
+#myinfo_modal.show {
   display: block;
 }
 .body_onmodal {
@@ -642,7 +642,7 @@ input[type="radio"]:focus-visible {
   height: 100%;
   overflow: hidden;
 }
-#modal_body {
+#myinfo_modal_body {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -657,7 +657,7 @@ input[type="radio"]:focus-visible {
   display: flex;
   flex-direction: column;
 }
-#modal_body_text {
+#myinfo_modal_body_text {
   padding: 40px;
   height: 75%;
   border: 1px;
@@ -667,7 +667,7 @@ input[type="radio"]:focus-visible {
   flex-direction: column;
   justify-content: center;
 }
-#modal_body_exit {
+#myinfo_modal_body_exit {
   display: block;
   height: 25%;
   border: 1px;

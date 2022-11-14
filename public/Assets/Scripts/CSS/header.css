@@ -20,7 +20,8 @@ li {
   list-style-type: none;
 }
 .marketClearLogo {
-  width: 110px;
+  width: 100px;
+  border-radius: 50%;
 }
 
 .icon_small {
@@ -158,7 +159,7 @@ li {
 }
 #header_icons {
   display: flex;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
 
 #header_icons > div {

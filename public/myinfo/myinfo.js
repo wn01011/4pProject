@@ -455,14 +455,14 @@ inputConfirmpw.onchange = function (e) {
   }
 };
 
-const modal = document.getElementById("modal");
-const modalBody = document.getElementById("modal_body");
-const modalText = document.getElementById("modal_body_text");
-const modalExit = document.getElementById("modal_exit");
+const myinfoModal = document.getElementById("myinfo_modal");
+const myinfoModalBody = document.getElementById("myinfo_modal_body");
+const myinfoModalText = document.getElementById("myinfo_modal_body_text");
+const myinfoModalExit = document.getElementById("myinfo_modal_exit");
 
-document.getElementById("modal_body_exit").onclick = () => {
-  modal.modal_bodyinnerText == "";
-  modal.classList.remove("show");
+document.getElementById("myinfo_modal_body_exit").onclick = () => {
+  myinfoModalBody.innerText == "";
+  myinfoModal.classList.remove("show");
   location.href = "/";
 };
 
@@ -532,8 +532,8 @@ document.getElementById("update_btn_btn").onclick = async () => {
     console.log("data.data.status : ", data.data.status);
     if (data.data.status == 200) {
       document.getElementById("thebody").classList.add("body_onmodal");
-      modalText.innerText = "수정이 완료되었습니다.";
-      modal.classList.add("show");
+      myinfoModalText.innerText = "수정이 완료되었습니다.";
+      myinfoModal.classList.add("show");
     }
   } catch (error) {
     console.error(error);
