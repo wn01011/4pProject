@@ -298,6 +298,42 @@ document.body.onload = () => {
     });
 
   // Q&A 문의 관리
+  const productQnaAnswerBtn = document.getElementsByClassName("submit-area")[0];
+  const modalAskArea = document.getElementById("modal-ask-area");
+  const askModal = document.getElementById("ask-modal");
+  const closeArea = document.getElementsByClassName("close-area")[0];
+  let curAsk;
+  let curDiv;
+  let curBtn;
+  let curId;
+  let curTr;
+  closeArea.onclick = () => {
+    askModal.classList.add("off");
+  };
+  productQnaAnswerBtn.onclick = () => {
+    askModal.classList.add("off");
+    curAsk.answerText = modalAskArea.value;
+    curDiv.innerText = "완료";
+    curBtn.onclick = () => {};
+    axios
+      .post("/api/adminpage/qnaAnswer", { text: modalAskArea.value, id: curId })
+      .then((data) => {
+        const tempTr = document.createElement("div");
+        tempTr.innerText = modalAskArea.value;
+        curTr.onclick = () => {
+          if (tempTr.display == "block") tempTr.display = "none";
+          else tempTr.display = "block";
+        };
+        curTr.after(tempTr);
+
+        curAsk = undefined;
+        curDiv = undefined;
+        curBtn = undefined;
+        curId = undefined;
+        curTr = undefined;
+      });
+  };
+
   axios
     .post("/api/adminpage/qna", { productName: "" })
     .then((data) => {
@@ -324,10 +360,9 @@ document.body.onload = () => {
         qnaListTD1.innerText = data.data[i].productName;
         qnaListTD2.innerText = data.data[i].userId;
         qnaListTD3.innerText = data.data[i].createdAt.slice(0, 10);
-        if (data.data[i].isAnswer == "0") qnaListTD4.innerText = "대기중";
-        else qnaListTD4.innerText = "완료";
+
         const tempAnswerBtn = document.createElement("button");
-        tempAnswerBtn.innerText = "답변하기";
+
         qnaListTD5.appendChild(tempAnswerBtn);
 
         qnaManage.append(qnaListTR);
@@ -337,6 +372,34 @@ document.body.onload = () => {
         qnaListTR.append(qnaListTD3);
         qnaListTR.append(qnaListTD4);
         qnaListTR.append(qnaListTD5);
+
+        if (data.data[i].isAnswer == "0") {
+          qnaListTD4.innerText = "대기중";
+          tempAnswerBtn.innerText = "답변하기";
+          tempAnswerBtn.onclick = () => {
+            curAsk = data.data[i];
+            curDiv = qnaListTD4;
+            curBtn = tempAnswerBtn;
+            curId = data.data[i].id;
+            curTr = qnaListTR;
+            askModal.classList.toggle("off");
+          };
+        } else {
+          qnaListTD4.innerText = "완료";
+          tempAnswerBtn.innerText = "답변완료";
+          const tempTr = document.createElement("div");
+          tempTr.innerText = "답변내용 : " + data.data[i].answerText;
+          tempTr.classList.add("off");
+          tempTr.style = `
+            width : 100%;
+            padding : 10px 0px;
+            text-align: center;
+          `;
+          qnaListTR.after(tempTr);
+          qnaListTR.onclick = () => {
+            tempTr.classList.toggle("off");
+          };
+        }
       }
     })
     .catch((error) => {
