@@ -70,7 +70,7 @@ async function itemDetailList(
     itemInfoP.innerText = `${delivery}`;
     itemInfoh2.innerText = `${name}`;
     itemInfo2P.innerText = `${description}`;
-    itemPrice_h2.innerText = `${price}원`;
+    itemPrice_h2.innerText = `${price.toLocaleString("ko-KR")}원`;
     itemSaleP.innerText = `${manufacturer}`;
     itemPackP.innerText = `${package}`;
     itemUnitP.innerText = `${unit}`;
@@ -78,7 +78,7 @@ async function itemDetailList(
     itemOriginP.innerText = `${origin}`;
     itemSelectSpan.innerText = `${name}`;
     totalText.innerText = `총 상품금액:`;
-    itemSelectPrice.innerText = `${price}원`;
+    itemSelectPrice.innerText = `${price.toLocaleString("ko-KR")}원`;
     total.innerText = `${price * 1}`;
     totalWonText.innerText = "원";
     itemTotal.style = `
@@ -101,7 +101,7 @@ async function itemDetailList(
     display:flex;
     justify-content: flex-end;
     font-size : 40px;
-    width: 140px;
+    width: 180px;
     font-weight : bold;
     margin-right: 10px
     `;
@@ -134,9 +134,16 @@ async function itemDetailList(
 
     itemPlus.onclick = () => {
       count++;
-      itemEa.innerText = count;
-      total.innerText = `${price * count}`;
-      itemTotal.append(itemTotalPrice);
+      if (count <= 100) {
+        itemEa.innerText = count;
+        total.innerText = `${price * count}`;
+        itemTotal.append(itemTotalPrice);
+      } else if (count > 100) {
+        alert(
+          "대량으로 살꺼면 할인해줄테니까 고객센터 문의해라~ 답변은 생략한다"
+        );
+        return;
+      }
     };
 
     itemMinus.onclick = () => {

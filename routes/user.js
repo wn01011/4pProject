@@ -100,7 +100,6 @@ router.route("/deduplication").post(async (req, res) => {
 });
 
 router.route("/regist").post((req, res) => {
-  console.log(req.body);
   db.UserTable.create({
     userId: req.body.id,
     pw: crypto.SHA256(req.body.pw).toString(),
@@ -191,5 +190,19 @@ function createJwt(name, key) {
 //     console.log(data.dataValues);
 //   })
 //   .catch((err) => console.error(err));
+
+router.route("/getMyDelivery").post((req, res) => {
+  if (req.body.userId) {
+    db.OrderTable.findAll({
+      where: {
+        userId: req.body.userId,
+      },
+    }).then((data) => {
+      res.send(data);
+    });
+  } else {
+    res.send(data);
+  }
+});
 
 module.exports = router;

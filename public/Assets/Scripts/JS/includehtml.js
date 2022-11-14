@@ -45,13 +45,47 @@ window.onscroll = function () {
 let currAudio;
 let search;
 let cartBtn;
+// 카테고리 Btn
+let vegiBtn;
+let fruitBtn;
+let fishBtn;
+let meatBtn;
+let soupBtn;
+let saladBtn;
+let noodleBtn;
+let drinkBtn;
+let cookieBtn;
 
 window.onload = () => {
   const id = setInterval(() => {
     currAudio = document.getElementsByTagName("audio")[0];
     search = document.getElementById("search_input");
     cartBtn = document.getElementById("cartBtn");
-    if (currAudio && search && cartBtn) {
+    vegiBtn = document.getElementById("vegiBtn");
+    fruitBtn = document.getElementById("fruitBtn");
+    fishBtn = document.getElementById("fishBtn");
+    meatBtn = document.getElementById("meatBtn");
+    soupBtn = document.getElementById("soupBtn");
+    saladBtn = document.getElementById("saladBtn");
+    noodleBtn = document.getElementById("noodleBtn");
+    drinkBtn = document.getElementById("drinkBtn");
+    cookieBtn = document.getElementById("cookieBtn");
+
+    if (
+      currAudio &&
+      search &&
+      cartBtn &&
+      vegiBtn &&
+      fruitBtn &&
+      fishBtn &&
+      meatBtn &&
+      soupBtn &&
+      saladBtn &&
+      saladBtn &&
+      noodleBtn &&
+      drinkBtn &&
+      cookieBtn
+    ) {
       OnLoadCallBack();
       clearInterval(id);
     }
@@ -74,6 +108,43 @@ function OnLoadCallBack() {
     } else {
       location.href = "/SignIn";
     }
+  };
+
+  vegiBtn.onclick = () => {
+    const currText = vegiBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  fruitBtn.onclick = () => {
+    const currText = fruitBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  fishBtn.onclick = () => {
+    const currText = fishBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  meatBtn.onclick = () => {
+    const currText = meatBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  soupBtn.onclick = () => {
+    const currText = soupBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  saladBtn.onclick = () => {
+    const currText = saladBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  noodleBtn.onclick = () => {
+    const currText = noodleBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  drinkBtn.onclick = () => {
+    const currText = drinkBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  cookieBtn.onclick = () => {
+    const currText = cookieBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
   };
 }
 
@@ -133,7 +204,7 @@ let loop = setInterval(() => {
       }
       userinfotext.innerText =
         document.cookie.split("=")[0] + " 님 어서오십시오.";
-      console.log("로드 완료");
+      // console.log("로드 완료");
       myinfo.onclick = function () {
         location.href = "/myinfo";
       };

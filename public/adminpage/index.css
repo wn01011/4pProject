@@ -17,6 +17,11 @@ body {
   padding-left: 6%;
 }
 
+.puppies {
+  width: 18%;
+  padding-left: 45%;
+}
+
 .admin-logout {
   width: 5%;
   padding: 0.3rem;
@@ -41,7 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   color: black;
-  margin-top: 7%;
+  margin: 7% 5% 0 0;
 }
 
 a {
@@ -59,7 +64,13 @@ a {
 }
 
 .nav-link:hover {
-  background: #d8eef6;
+  background-image: linear-gradient(
+    to right,
+    #ffca28 0%,
+    #f8bbd0 51%,
+    #ffca28 100%
+  );
+  background-position: right center;
 }
 
 #admin-sidebar {
@@ -89,7 +100,7 @@ a {
 
 .col-8 {
   padding-top: 3%;
-  margin: 0 6% 0 9%;
+  margin: 0 20% 0 5%;
 }
 
 h2,
@@ -119,7 +130,7 @@ h4 {
 }
 
 .tg .tg-selti {
-  background-color: #f7e8e8;
+  background-color: #e8f7ff;
   border: 1px solid #bbb;
   color: #493f3f;
   font-size: 16px;
@@ -127,10 +138,11 @@ h4 {
   text-align: center;
   vertical-align: top;
   padding: 10px 12px;
+  white-space: nowrap;
 }
 
 .tg .tg-qnamanage {
-  background-color: #f7e8e8;
+  background-color: #e8f7ff;
   border: 1px solid #bbb;
   color: #493f3f;
   font-size: 16px;
@@ -150,10 +162,11 @@ h4 {
   overflow: hidden;
   padding: 10px 12px;
   vertical-align: top;
+  white-space: nowrap;
 }
 
 .tg .tg-db-lineeven {
-  background-color: #e8f7ff;
+  background-color: #f7e8e898;
   text-align: center;
   border: 1px solid #bbb;
   color: #000;
@@ -162,6 +175,13 @@ h4 {
   overflow: hidden;
   padding: 10px 12px;
   vertical-align: top;
+  white-space: wrap;
+}
+.tg .tg-db-lineeven:not(:nth-child(2)) {
+  white-space: nowrap;
+}
+#sth-manage1 .tg button {
+  width: 100% !important;
 }
 
 ul {
@@ -189,15 +209,25 @@ ul {
 #sth-manage1 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   text-align: center;
   border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
-  width: 100%;
-  height: 14500px;
+  width: 120%;
   margin-bottom: 50px;
+  max-height: 800px;
+  overflow-y: scroll;
+}
+
+#sth-manage2 {
+  height: 500px;
+  overflow-y: hidden;
+}
+
+.fa-person-skiing {
+  width: 10%;
 }
 
 #regi-before {
@@ -255,19 +285,6 @@ ul {
   justify-content: space-between;
 }
 
-#pojang {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 1.3rem;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-  border: 1px solid #aaa;
-  border-radius: 2px;
-  background: transparent;
-  font-size: 0.9rem;
-}
-
 #item-1-2 {
   display: flex;
   flex-direction: column;
@@ -287,20 +304,21 @@ ul {
   border-radius: 1em;
   color: black;
   width: 55vw;
-  height: 40vh;
   margin-bottom: 50px;
 }
 
 #category-manage2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 20px;
   text-align: center;
   border: 1px dashed gainsboro;
   border-radius: 1em;
   color: black;
   width: 600px;
-  height: 100px;
+  padding: 50px 0px;
 }
 
 #category-big {
@@ -332,10 +350,6 @@ ul {
 .dropdown-item a {
   display: flex;
   justify-content: space-between;
-}
-
-#bigcatip {
-  display: none;
 }
 
 #b-cat-save {
@@ -387,7 +401,6 @@ ul {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
   margin-bottom: 50px;
 }
 
@@ -469,7 +482,6 @@ ul {
   border-radius: 1em;
   color: black;
   width: 700px;
-  height: 400px;
   margin-bottom: 50px;
 }
 
@@ -508,6 +520,89 @@ ul {
   opacity: 0.3;
 }
 
+/* #sth-manage1 {
+  display: none;
+}
+
+.product-active {
+  display: block;
+  justify-content: center;
+  align-items: center;
+} */
+
 #uparrow:hover {
   background: white;
+}
+
+#ask-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset rgb(0, 0, 0, 0.3) 0px 0px 100px 500px;
+}
+.modal-window {
+  width: 500px;
+  background-color: #a5c9ca;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #2c3333;
+}
+.close-area {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #395b64;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: bold;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.modal-window .title {
+  padding-left: 40px;
+}
+.modal-window .content {
+  padding-left: 40px;
+  padding-top: 20px;
+  color: #2c3333;
+}
+#ask-modal.off {
+  display: none;
+}
+#modal-ask-area {
+  resize: none;
+  width: 80%;
+  margin: auto;
+}
+#modal-ask-area:focus {
+  outline: none;
+}
+#submit {
+  display: flex;
+  justify-content: end;
+}
+.submit-area {
+  position: relative;
+  width: 120px;
+  margin: 20px;
+  padding: 10px 20px;
+}
+#modal-name {
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.off {
+  display: none;
 }

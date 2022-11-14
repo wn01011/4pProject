@@ -6,6 +6,8 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const path = require("path");
+const multer = require("multer");
+const fs = require("fs");
 dotenv.config();
 
 const api = require("./routes/index.js");
@@ -54,8 +56,39 @@ sequelize
     console.error(err);
   });
 
+let fileLength = 0;
+let fileExt = ".png";
+const storage = multer.diskStorage({
+  destination(req, file, callback) {
+    callback(null, "Images/");
+  },
+  filename(req, file, callback) {
+    file.originalname = Buffer.from(file.originalname, "latin1").toString(
+      "utf8"
+    );
+    const ext = ".jpg";
+    fs.readdir("Images", (err, files) => {
+      fileLength = files.length + 1;
+      fileExt = ext;
+      // 파일이름 중복안되게 Date.now로 차별화를 둠 필요없으면 그냥 file.originalname 쓰면됨
+      callback(null, `${files.length + 1}${ext}`);
+    });
+  },
+});
+
+const uploadWithOriginalFilename = multer({ storage: storage });
+app.post(
+  "/uploadFileWithOriginalFilename",
+  uploadWithOriginalFilename.single("attachment"),
+  function (req, res) {
+    res.send({ file: req.file, files: null, length: fileLength, ext: fileExt });
+  }
+);
+
 app.use("/api", api);
 
 app.listen(app.get("port"), () => {
+  const dir = "./Images";
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
   console.log(app.get("port") + "서버 열렸다");
 });
