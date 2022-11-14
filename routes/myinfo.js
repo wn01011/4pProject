@@ -15,6 +15,7 @@ router.route("/").post(async (req, res) => {
 router.route("/orderhistory").post(async (req, res) => {
   console.log("orderhistory 라우터 접근");
   console.log("req.body.userid : ", req.body.userid);
+  let orderSave = [];
   const tempOrderhistoryList = await db.OrderTable.findAll({
     userId: req.body.userid,
   });
@@ -22,6 +23,7 @@ router.route("/orderhistory").post(async (req, res) => {
     orderSave.push(tempOrderhistoryList[index].product);
   });
   console.log("orderSave : ", orderSave);
+  let imgList = [];
   for (let i = 0; i < orderSave.length; i++) {
     const imgBox = await db.ProductTable.findOne({
       where: {
