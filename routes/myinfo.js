@@ -39,7 +39,14 @@ router.route("/getReview").post(async (req, res) => {
   console.log("tempReview : ", tempReview);
   res.send({ reviewList: tempReview });
 });
-
+router.route("/setReview").post(async (req, res) => {
+  const tempReview = await db.ReviewTable.create({
+    userId: req.body.userid,
+    productName: req.body.productName,
+    text: req.body.text,
+  });
+  res.send();
+});
 router.route("/getInquire").post(async (req, res) => {
   console.log("/getInquire 라우터 접근");
   console.log("getInquire req.body.userid : ", req.body.userid);

@@ -158,7 +158,10 @@ let loop = setInterval(() => {
       cartBtn.onclick = function () {
         if (document.cookie) {
           location.href = "/Cart";
-        } else console.log("로그인이 안되어있네");
+        } else {
+          location.href = "/SigIn";
+          console.log("로그인이 안되어있네");
+        }
       };
       modalExit.onclick = async function () {
         const data = await axios.post("/api/user/setAddress", {
@@ -173,15 +176,19 @@ let loop = setInterval(() => {
         modal.classList.remove("show");
       };
       setAddress.onclick = async () => {
-        console.log(
-          'document.cookie.split("=")[0] : ',
-          document.cookie.split("=")[0]
-        );
-        const data = await axios.post("/api/user/getAddress", {
-          id: document.cookie.split("=")[0],
-        });
-        modalText.innerText = data.data.address;
-        modal.classList.add("show");
+        if (document.cookie) {
+          console.log(
+            'document.cookie.split("=")[0] : ',
+            document.cookie.split("=")[0]
+          );
+          const data = await axios.post("/api/user/getAddress", {
+            id: document.cookie.split("=")[0],
+          });
+          modalText.innerText = data.data.address;
+          modal.classList.add("show");
+        } else {
+          location.href = "/SignIn";
+        }
       };
       addressChangeBtn.onclick = () => {
         new daum.Postcode({
