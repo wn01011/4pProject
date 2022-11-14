@@ -5,6 +5,7 @@ const path = require("path");
 const { sequelize, ProductaskTable } = require("../models/index.js");
 const router = Router();
 const seq = require("sequelize");
+const { send } = require("process");
 
 console.log("관리자페이지 라우트 안이다!!!!!!");
 // "/api/adminpage"
@@ -94,5 +95,20 @@ router // 리뷰 관리
     });
     res.send(adminSendReview);
   });
+
+router.route("/qnaAnswer").post((req, res) => {
+  db.ProductaskTable.findOne({ where: { id: req.body.id } }).then((data) => {
+    db.ProductaskTable.update(
+      { answerText: req.body.text, isAnswer: 1 },
+      {
+        where: {
+          id: req.body.id,
+        },
+      }
+    ).then((data) => {
+      res.send(data);
+    });
+  });
+});
 
 module.exports = router;

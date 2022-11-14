@@ -105,8 +105,9 @@ router.route("/getImage").post(async (req, res) => {
       where: {
         name: req.body.data[i],
       },
+    }).then((data) => {
+      imgList.push(data?.img);
     });
-    imgList.push(productBox.img);
   }
   res.send({ list: imgList });
 });
@@ -322,20 +323,20 @@ router.route("/destroyCategory").post((req, res) => {
 router.route("/newData").post((req, res) => {
   console.log(" : " + req.body[1]);
   db.ProductTable.create(req.body[0]).then(() => {
-    fs.readdir("./Images", (err, datas) => {
-      len = datas.length;
+    // fs.readdir("./Images", (err, datas) => {
+    //   len = datas.length;
 
-      router.get(`/download${len}`, (req, res) => {
-        fs.readFile("./Images/" + len + encodeURI(req.body[1]), (err, data) => {
-          res.writeHead(200, {
-            "Content-Type": `image/jpg`,
-            charset: `utf-8`,
-          });
-          res.end(data);
-        });
-      });
-    });
-    res.send();
+    //   router.get(`/download${len}`, (req, res) => {
+    //     fs.readFile("./Images/" + len + encodeURI(req.body[1]), (err, data) => {
+    //       res.writeHead(200, {
+    //         "Content-Type": `image/jpg`,
+    //         charset: `utf-8`,
+    //       });
+    //       res.end(data);
+    //     });
+    //   });
+    // });
+    setImages();
   });
 });
 

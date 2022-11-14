@@ -100,7 +100,6 @@ router.route("/deduplication").post(async (req, res) => {
 });
 
 router.route("/regist").post((req, res) => {
-  console.log(req.body);
   db.UserTable.create({
     userId: req.body.id,
     pw: crypto.SHA256(req.body.pw).toString(),
