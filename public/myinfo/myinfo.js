@@ -9,6 +9,13 @@ const orderhistoryList = document.getElementById(
   "myinfo_main_orderhistory_list"
 );
 
+const reviewModal = document.getElementById("review_modal");
+const reviewModalTitle = document.getElementById("review_modal_body_title");
+const reviewModalBody = document.getElementById("review_modal_body");
+const reviewModalText = document.getElementById("review_modal_body_text");
+const reviewModalExit = document.getElementById("review_modal_body_exit");
+const reviewModalCancel = document.getElementById("review_modal_body_cancel");
+
 async function orderhistoryGetList() {
   orderhistory.classList.add("on");
   try {
@@ -38,7 +45,7 @@ async function orderhistoryGetList() {
       const orderhistoryAddressCreatedAtBox = document.createElement("div");
       const orderhistoryAddress = document.createElement("span");
       const orderhistoryCreatedAt = document.createElement("span");
-
+      const orderhistoryReviewBtn = document.createElement("button");
       orderhistoryImg.setAttribute(
         "src",
         `/api/product/download${data.data.imgList[index]}`
@@ -50,7 +57,7 @@ async function orderhistoryGetList() {
       orderhistoryAddress.innerText = data.data.orderList[index].address;
       orderhistoryCreatedAt.innerText =
         data.data.orderList[index].createdAt.split("T")[0];
-
+      orderhistoryReviewBtn.innerText = "리뷰 작성";
       orderhistoryItem.classList.add("myinfo_main_orderhistory_list_item");
       orderhistoryItem.setAttribute(
         "id",
@@ -124,6 +131,9 @@ async function orderhistoryGetList() {
         "id",
         `myinfo_main_orderhistory_list_item_createdAt${index}`
       );
+      orderhistoryReviewBtn.classList.add(
+        "myinfo_main_orderhistory_list_item_reviewBtn"
+      );
 
       orderhistoryImgBox.append(orderhistoryImg);
       orderhistoryTextBox.append(orderhistoryProductName);
@@ -132,15 +142,40 @@ async function orderhistoryGetList() {
       orderhistoryPriceCountBox.append(orderhistoryCount);
       orderhistoryAddressCreatedAtBox.append(orderhistoryAddress);
       orderhistoryAddressCreatedAtBox.append(orderhistoryCreatedAt);
+      orderhistoryAddressCreatedAtBox.append(orderhistoryReviewBtn);
       orderhistoryItem.append(orderhistoryImgBox);
       orderhistoryItem.append(orderhistoryTextBox);
       orderhistoryItem.append(orderhistoryAddressCreatedAtBox);
       orderhistoryList.append(orderhistoryItem);
+
+      orderhistoryReviewBtn.onclick = function () {
+        reviewModalTitle.innerText = data.data.orderList[index].product;
+        reviewModal.classList.add("show");
+      };
+      reviewModalExit.onclick = async function () {
+        if (reviewModalText.value.length > 10) {
+          const data = await axios.post("/api/myinfo/setReview", {
+            userid: document.cookie.split("=")[0],
+            productName: reviewModalTitle.innerText,
+            text: reviewModalText.value,
+          });
+          thebody.classList.remove("body_onmodal");
+          reviewModal.classList.remove("show");
+          window.location.reload();
+        } else {
+          alert("리뷰는 10글자 이상으로 입력해주세요.");
+        }
+      };
+      reviewModalCancel.onclick = async function () {
+        thebody.classList.remove("body_onmodal");
+        reviewModal.classList.remove("show");
+      };
     });
   } catch (error) {
     console.error(error);
   }
 }
+
 const reviewTitle = document.getElementById("myinfo_main_review_title");
 const reviewTitleInnerBox = document.getElementById(
   "myinfo_main_reviewInquire_title_innerBox"

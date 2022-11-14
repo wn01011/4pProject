@@ -138,7 +138,14 @@ ul {
 }
 .myinfo_main_orderhistory_list_item_createdAt {
   padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 14px;
+}
+.myinfo_main_orderhistory_list_item_reviewBtn {
+  background-color: transparent;
+  border: 1px solid #205c37;
+  border-radius: 3px;
+  padding-top: 5px;
 }
 #myInfo_main_reviewInquire_title {
   display: flex;
@@ -671,6 +678,81 @@ input[type="radio"]:focus-visible {
   display: block;
   height: 25%;
   border: 1px;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 2px solid gainsboro;
+  font-size: 20px;
+  color: #c2eaec;
+}
+#review_modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+#review_modal.show {
+  display: block;
+}
+body:hover #review_modal.show {
+  overflow: hidden;
+}
+#review_modal_body {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 450px;
+  /* height: 200  px; */
+
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+}
+#review_modal_body_text {
+  margin: 10px;
+  padding: 10px;
+  height: 75%;
+  min-height: 300px;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: none;
+}
+#review_modal_body_btnCase {
+  display: flex;
+}
+#review_modal_body_exit {
+  display: block;
+  padding: 15 0 15 0px;
+  height: 25%;
+  border: 1px;
+  flex: 1;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 2px solid gainsboro;
+  font-size: 20px;
+  color: #c2eaec;
+}
+#review_modal_body_cancel {
+  display: block;
+  padding: 15 0 15 0px;
+  height: 25%;
+  border: 1px;
+  flex: 1;
   background-color: transparent;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
