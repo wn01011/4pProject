@@ -485,6 +485,7 @@ document.body.onload = () => {
   };
 
   // 상품 등록에서 카테고리 등록
+
   const categoryBtn = document.getElementsByClassName("big btn")[0];
   const dropdownCategoryList = document.getElementById(
     "regi-dropdown-category"
@@ -561,6 +562,21 @@ document.body.onload = () => {
   // img multer uploadBtn
   const imgMulterUploadBtn = document.getElementById("originBtn");
   const originInput = document.getElementById("originInput");
+  originInput.onchange = function (e) {
+    // 미리보기
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById("preview").src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      } else {
+        document.getElementById("preview").src = "";
+      }
+    }
+    readURL(originInput);
+  };
   let curExt;
   imgMulterUploadBtn.onclick = () => {
     const form = new FormData();

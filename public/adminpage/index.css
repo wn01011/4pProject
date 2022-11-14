@@ -285,9 +285,6 @@ ul {
   justify-content: space-between;
 }
 
-#pojang {
-}
-
 #item-1-2 {
   display: flex;
   flex-direction: column;
