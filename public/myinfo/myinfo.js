@@ -142,6 +142,9 @@ async function orderhistoryGetList() {
   }
 }
 const reviewTitle = document.getElementById("myinfo_main_review_title");
+const reviewTitleInnerBox = document.getElementById(
+  "myinfo_main_reviewInquire_title_innerBox"
+);
 const reviewTip = document.getElementById("myinfo_main_review_tip");
 const inquireTitle = document.getElementById("myinfo_main_inquire_title");
 const inquireTip = document.getElementById("myinfo_main_inquire_tip");
@@ -151,6 +154,7 @@ const reviewNone = document.getElementById("myinfo_main_review_list_none");
 const inquireNone = document.getElementById("myinfo_main_inquire_list_none");
 
 reviewTitle.onclick = function () {
+  reviewTitleInnerBox.classList.remove("on");
   inquireTitle.classList.remove("on");
   reviewTitle.classList.add("on");
   inquireTip.classList.remove("on");
@@ -159,6 +163,7 @@ reviewTitle.onclick = function () {
   reviewList.classList.add("on");
 };
 inquireTitle.onclick = function () {
+  reviewTitleInnerBox.classList.add("on");
   reviewTitle.classList.remove("on");
   inquireTitle.classList.add("on");
   reviewTip.classList.remove("on");
@@ -245,18 +250,63 @@ async function getInquireList() {
     data?.data?.inquireList?.forEach((item, index) => {
       const inquireItem = document.createElement("li");
       const inquireTitleBox = document.createElement("div");
-      const inquireTitle = document.createElement("div");
+      const inquireTitle = document.createElement("h5");
       const inquireProductNameCreatedAtBox = document.createElement("div");
       const inquireProductName = document.createElement("span");
       const inquireCreatedAt = document.createElement("span");
       const inquireTextBox = document.createElement("div");
       const inquireText = document.createElement("div");
-
-      inquireTitle.innerText = data.data.inquire[index].name;
-      inquireProductName.innerText = data.data.inquire[index].productName;
+      console.log(
+        "data.data.inquire[index].name",
+        data.data.inquireList[index].name
+      );
+      inquireTitle.innerText = data.data.inquireList[index].name;
+      inquireProductName.innerText = data.data.inquireList[index].productName;
       inquireCreatedAt.innerText =
         data.data.inquireList[index].createdAt.split("T")[0];
       inquireText.innerText = data.data.inquireList[index].text;
+
+      inquireItem.classList.add("myinfo_main_inquire_list_item");
+      inquireItem.setAttribute("id", `myinfo_main_inquire_list_item${index}`);
+      inquireTitleBox.classList.add("myinfo_main_inquire_list_item_titleBox");
+      inquireTitleBox.setAttribute(
+        "id",
+        `myinfo_main_inquire_list_item_titleBox${index}`
+      );
+      inquireTitle.classList.add("myinfo_main_inquire_list_item_title");
+      inquireTitle.setAttribute(
+        "id",
+        `myinfo_main_inquire_list_item_title${index}`
+      );
+      inquireProductNameCreatedAtBox.classList.add(
+        "myinfo_main_inquire_list_item_ProductNameCreatedAtBox"
+      );
+      inquireProductNameCreatedAtBox.setAttribute(
+        "id",
+        `myinfo_main_inquire_list_item_ProductNameCreatedAtBox"${index}`
+      );
+      inquireProductName.classList.add(
+        "myinfo_main_inquire_list_item_ProductName"
+      );
+      inquireProductName.setAttribute(
+        "id",
+        `myinfo_main_inquire_list_item_ProductName${index}`
+      );
+      inquireCreatedAt.classList.add("myinfo_main_inquire_list_item_createdAt");
+      inquireCreatedAt.setAttribute(
+        "id",
+        `myinfo_main_inquire_list_item_createdAt${index}`
+      );
+      inquireTextBox.classList.add("myinfo_main_inquire_list_item_textBox");
+      inquireTextBox.setAttribute(
+        "id",
+        `myinfo_main_inquire_list_item_textBox${index}`
+      );
+      inquireText.classList.add("myinfo_main_inquire_list_item_text");
+      inquireText.setAttribute(
+        "id",
+        `myinfo_main_inquire_list_item_text${index}`
+      );
 
       inquireTitleBox.append(inquireTitle);
       inquireProductNameCreatedAtBox.append(inquireProductName);
@@ -266,12 +316,17 @@ async function getInquireList() {
       inquireItem.append(inquireProductNameCreatedAtBox);
       inquireItem.append(inquireTextBox);
       inquireList.append(inquireItem);
+
+      inquireItem.onclick = function () {
+        inquireTextBox.classList.toggle("on");
+      };
     });
   } catch (error) {
     console.error(error);
   }
 }
 getInquireList();
+
 const inputId = document.getElementById(
   "myinfo_main_infoupdate_list_id_input_input"
 );

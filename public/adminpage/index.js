@@ -30,17 +30,18 @@ document.body.onload = () => {
   bCatInput.addEventListener("click", function () {
     bigCatIp.classList.add("bigdirinput");
   });
-function deleteCookie(name) {
-  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
-  // console.log((document.cookie = cookie), cookie, document.cookie);
-  location.href = "http://localhost:8080/";
-}
+  function deleteCookie(name) {
+    document.cookie =
+      name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;";
+    // console.log((document.cookie = cookie), cookie, document.cookie);
+    location.href = "http://localhost:8080/";
+  }
 
-function getUserId() {
-  let userId = document.cookie?.split(";")[0].split("=")[0];
-  console.log(userId);
-  return userId;
-}
+  function getUserId() {
+    let userId = document.cookie?.split(";")[0].split("=")[0];
+    console.log(userId);
+    return userId;
+  }
 
   bCatInput.addEventListener("click", function () {
     bCatSave.classList.add("bigdirsave");
@@ -228,5 +229,4 @@ function getUserId() {
 //   // == axios.get("/api/adminpage/product?page=");
 //   res.send(req.route + "get으로 받음");
 // });
-  // logout.addEventListener("click", temp());
-}
+// logout.addEventListener("click", temp());

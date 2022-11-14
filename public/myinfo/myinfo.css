@@ -145,6 +145,13 @@ ul {
   margin-bottom: 20px;
   border-bottom: 2px solid black;
 }
+#myinfo_main_reviewInquire_title_innerBox {
+  display: flex;
+  flex-direction: row;
+}
+#myinfo_main_reviewInquire_title_innerBox.on {
+  flex-direction: row-reverse;
+}
 #myinfo_main_review {
   display: none;
 }
@@ -242,6 +249,37 @@ ul {
   display: none;
 }
 #myinfo_main_inquire_list_none.on {
+  display: block;
+}
+.myinfo_main_inquire_list_item {
+  padding: 10px;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+.myinfo_main_inquire_list_item_title {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.myinfo_main_inquire_list_item_ProductNameCreatedAtBox {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.myinfo_main_inquire_list_item_ProductName {
+  font-size: 14px;
+}
+.myinfo_main_inquire_list_item_createdAt {
+  font-size: 14px;
+}
+.myinfo_main_inquire_list_item_textBox {
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  background-color: #f6fbfa;
+  padding: 20px;
+  display: none;
+}
+.myinfo_main_inquire_list_item_textBox.on {
   display: block;
 }
 #myinfo_main_infoupdate {

@@ -114,6 +114,29 @@ router.route("/regist").post((req, res) => {
   });
 });
 
+router.route("/getAddress").post(async (req, res) => {
+  console.log("req.body.id : ", req.body.id);
+  const data = await db.UserTable.findOne({
+    where: { userId: req.body.id },
+  });
+  console.log("data : ", data);
+  res.send({ address: data.address });
+});
+
+router.route("/setAddress").post(async (req, res) => {
+  console.log("req.body.userid : ", req.body.userid);
+  await db.UserTable.update(
+    {
+      address: req.body.address,
+    },
+    {
+      where: {
+        userId: req.body.userid,
+      },
+    }
+  );
+  res.send({});
+});
 // 로그인에 대한 토큰일 필요해 보여서 토큰 여기에 생성
 // 토큰에 대한 키.. 일단 만들어둠
 let jwtKey = "abcd";
