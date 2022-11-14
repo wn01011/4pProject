@@ -647,6 +647,7 @@ document.body.onload = () => {
     });
   };
 };
+
 function makeCategoryList() {
   axios.post("/api/product/categoryType").then((data) => {
     categoryBox.innerHTML = "";

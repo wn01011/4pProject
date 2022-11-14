@@ -20,7 +20,8 @@ li {
   list-style-type: none;
 }
 .marketClearLogo {
-  width: 110px;
+  width: 100px;
+  border-radius: 50%;
 }
 
 .icon_small {
@@ -84,8 +85,8 @@ li {
 #user_info_dropdown {
   display: none;
   width: 130px;
-  right: 0px;
-  top: 20px;
+  /* right: 0px; */
+  top: 30px;
   padding: 7px;
   background: white;
   position: absolute;
@@ -107,7 +108,7 @@ li {
 .service_center_dropdown {
   display: none;
   width: 130px;
-  top: 20px;
+  top: 30px;
   right: 0px;
   padding: 7px;
   background: white;
@@ -158,7 +159,7 @@ li {
 }
 #header_icons {
   display: flex;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
 
 #header_icons > div {
@@ -207,7 +208,7 @@ li {
   position: absolute;
   border: 2px solid gainsboro;
   font-size: 16px;
-  top: 30px;
+  top: 18px;
   z-index: 999;
 }
 #category_dropdown > li {
@@ -616,6 +617,103 @@ audio::-webkit-media-controls-fullscreen-volume-max-button {
   border: none;
   cursor: pointer;
 }
+#shipping_address_change {
+  padding: 20px;
+  display: none;
+}
+#shipping_address_change.on {
+  display: block;
+}
+#shipping_address_change_btn {
+  border: 2px solid #c2eaec;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  background: transparent;
+  font-size: 18px;
+  display: flex;
+}
+#shipping_address_change_btn_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+#modal.show {
+  display: block;
+}
+body:hover #modal.show {
+  overflow: hidden;
+}
+#modal_body {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 450px;
+  /* height: 200  px; */
+
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+}
+#modal_body_text {
+  padding: 40px;
+  height: 75%;
+  border: 1px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#shipping_address_change_btn {
+  z-index: 300;
+  margin: 0 20 20 20px;
+}
+#modal_body_btnCase {
+  display: flex;
+}
+#modal_body_exit {
+  display: block;
+  padding: 15 0 15 0px;
+  height: 25%;
+  border: 1px;
+  flex: 1;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 2px solid gainsboro;
+  font-size: 20px;
+  color: #c2eaec;
+}
+#modal_body_cancel {
+  display: block;
+  padding: 15 0 15 0px;
+  height: 25%;
+  border: 1px;
+  flex: 1;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 2px solid gainsboro;
+  font-size: 20px;
+  color: #c2eaec;
 .category_Btn > button {
   border: none;
   display: flex;

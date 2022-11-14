@@ -14,6 +14,7 @@ router.route("/").post(async (req, res) => {
   console.log(tempNoticeList);
   res.send({ list: tempNoticeList });
 });
+
 router
   .route("/askRequest")
   .get((req, res) => {

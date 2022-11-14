@@ -154,6 +154,15 @@ let userinfo;
 let userinfotext;
 let myinfo;
 let logout;
+let modal;
+let modalBody;
+let modalText;
+let modalExit;
+let modalCancel;
+let setAddress;
+let thebody;
+let addressChangeBtn;
+
 let loop = setInterval(() => {
   let cookieResult = document.cookie;
   signup = document.getElementById("sign_up");
@@ -162,9 +171,26 @@ let loop = setInterval(() => {
   userinfotext = document.getElementById("user_info_text");
   myinfo = document.getElementById("user_info_dropdown_myinfo");
   logout = document.getElementById("user_info_dropdown_logout");
+  setAddress = document.getElementById("shipping_address");
+  modal = document.getElementById("modal");
+  modalBody = document.getElementById("modal_body");
+  modalText = document.getElementById("modal_body_text");
+  modalExit = document.getElementById("modal_body_exit");
+  modalCancel = document.getElementById("modal_body_cancel");
+  thebody = document.getElementById("thebody");
+  addressChangeBtn = document.getElementById("shipping_address_change_btn");
   if (cookieResult) {
-    if (signup && signin && userinfo && userinfotext && logout && cartBtn) {
-      // console.log("조건 맞췄당!");
+    if (
+      signup &&
+      signin &&
+      userinfo &&
+      userinfotext &&
+      logout &&
+      cartBtn &&
+      setAddress &&
+      modal
+    ) {
+      console.log("조건 맞췄당!");
       signup.classList.add("off");
       signin.classList.add("off");
       userinfo.classList.add("on");
@@ -205,17 +231,56 @@ let loop = setInterval(() => {
           location.href = "/Cart";
         } else console.log("로그인이 안되어있네");
       };
+      modalExit.onclick = async function () {
+        const data = await axios.post("/api/user/setAddress", {
+          userid: document.cookie.split("=")[0],
+          address: modalText.innerText,
+        });
+        thebody.classList.remove("body_onmodal");
+        modal.classList.remove("show");
+      };
+      modalCancel.onclick = async function () {
+        thebody.classList.remove("body_onmodal");
+        modal.classList.remove("show");
+      };
+      setAddress.onclick = async () => {
+        console.log(
+          'document.cookie.split("=")[0] : ',
+          document.cookie.split("=")[0]
+        );
+        const data = await axios.post("/api/user/getAddress", {
+          id: document.cookie.split("=")[0],
+        });
+        modalText.innerText = data.data.address;
+        modal.classList.add("show");
+      };
+      addressChangeBtn.onclick = () => {
+        new daum.Postcode({
+          oncomplete: function (data) {
+            console.log(
+              'JSON.stringify(data.address).replace(/"/gi, "");',
+              JSON.stringify(data.address).replace(/\"/gi, "")
+            );
+            modalText.innerText = JSON.stringify(data.address).replace(
+              /\"/gi,
+              ""
+            );
+          },
+        }).open();
+      };
+
       clearInterval(loop);
     }
+
+    // document.getElementById("user_info_dropdown_logout").onclick =
+    //   async function () {
+    //     try {
+    //       const data = await axios.get("/api/user/logout");
+    //     } catch (error) {
+    //       console.error(error.response.data.message);
+    //     }
+    //   };
   }
-  // document.getElementById("user_info_dropdown_logout").onclick =
-  //   async function () {
-  //     try {
-  //       const data = await axios.get("/api/user/logout");
-  //     } catch (error) {
-  //       console.error(error.response.data.message);
-  //     }
-  //   };
 }, 50);
 
 function deleteCookie(name) {

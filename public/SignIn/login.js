@@ -31,3 +31,8 @@ document.getElementById("sign_in_btn").onclick = async function (e) {
 document.getElementById("sign_up_btn").onclick = function () {
   location.href = "/SignUp/index.html";
 };
+window.onload = () => {
+  if (document.cookie) {
+    location.href = "/";
+  }
+};

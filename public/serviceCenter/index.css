@@ -93,24 +93,41 @@
   border-bottom: lightgrey solid 1px;
 }
 
-.noticeList_item {
+.noticeList_titleBox {
   display: flex;
   text-align: center;
-  padding: 15px 0px;
+  padding: 15 0 15 0px;
   border-bottom: 1px black gainsboro;
   font-size: 0.7rem;
   display: flex;
   justify-content: space-between;
 }
-.noticeList_item :first-child {
+.noticeList_titleBox :first-child {
   width: 10%;
 }
-.noticeList_item :nth-child(2) {
+.noticeList_titleBox :nth-child(2) {
   width: 60%;
 }
-.noticeList_item :nth-child(3) {
+.noticeList_titleBox :nth-child(3) {
   width: 15%;
 }
-.noticeList_item :last-child {
+.noticeList_titleBox :last-child {
   width: 15%;
+}
+.noticeList_textBox {
+  display: none;
+  padding: 10 20 10 20px;
+  margin: 0 10 0 10px;
+
+  border-bottom: 1px solid gainsboro;
+}
+.noticeList_textBox.on {
+  display: block;
+}
+.noticeList_text {
+  border: 1px solid gainsboro;
+  padding: 10 20 10 20px;
+  margin: 0 10 0 10px;
+  font-size: 0.7rem;
+  border-radius: 3px;
 }
