@@ -87,7 +87,7 @@ function getItemList(img, name, price, manufacturer) {
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
-            name +
+            encodeURI(name) +
             "&userId=" +
             getUserId() +
             "&price=" +
@@ -652,3 +652,9 @@ axios
   .catch((err) => {
     console.error(err);
   });
+
+function getUserId() {
+  let userId = document.cookie?.split(";")[0].split("=")[0];
+  console.log(userId);
+  return userId;
+}
