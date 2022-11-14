@@ -84,10 +84,12 @@ function getItemList(img, name, price, manufacturer) {
     // 카트 기능으로 넘기기
     tempItemCartBtn.onclick = (e) => {
       e.preventDefault();
+      console.log(getUserId());
+      // if (!getUserId()) location.href = "/SignIn";
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
-            name +
+            encodeURI(name) +
             "&userId=" +
             getUserId() +
             "&price=" +
@@ -640,3 +642,9 @@ axios
   .catch((err) => {
     console.error(err);
   });
+
+function getUserId() {
+  let userId = document.cookie?.split(";")[0].split("=")[0];
+  console.log(userId);
+  return userId;
+}

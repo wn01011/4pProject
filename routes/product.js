@@ -261,7 +261,8 @@ router.route("/search").post((req, res) => {
 });
 
 router.route("/cartDamgi").post((req, res) => {
-  if (req.query.productName) {
+  console.log(req.query.productName);
+  if (encodeURI(req.query.productName)) {
     db.UserTable.findOne({
       where: {
         userId: req.query.userId,
@@ -269,10 +270,10 @@ router.route("/cartDamgi").post((req, res) => {
     }).then((data) => {
       db.CartTable.create({
         userId: req.query.userId,
-        name: req.query.productName,
+        name: encodeURI(req.query.productName),
         amount: 1,
         price: req.query.price,
-        address: data.address,
+        address: data?.address,
       });
     });
   } else {
@@ -302,19 +303,19 @@ router.route("/delProduct").post((req, res) => {
 });
 
 router.route("/categoryType").post((req, res) => {
-  db.CartegoryTable.findAll().then((data) => {
+  db.CategoryTable.findAll().then((data) => {
     res.send(data);
   });
 });
 
 router.route("/addCategory").post((req, res) => {
-  db.CartegoryTable.create({ name: req.body.name }).then(() => {
+  db.CategoryTable.create({ name: req.body.name }).then(() => {
     res.send();
   });
 });
 
 router.route("/destroyCategory").post((req, res) => {
-  db.CartegoryTable.destroy({ where: { name: req.body.name } }).then(() => {
+  db.CategoryTable.destroy({ where: { name: req.body.name } }).then(() => {
     res.send();
   });
 });
