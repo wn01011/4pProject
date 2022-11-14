@@ -6,7 +6,8 @@
 // 이에 대해 원하는 응답을 담당자에게 전달해주시면 담당자가 해당 응답을 전해주게 됩니다.
 // 응답은 then 이후의 data 에 담겨서 정달 되게 됩니다.
 // 응답 예시 data.data = {data : "로그인 가능"}
-
+let currItemName = "";
+let currUserId = getUserId();
 // 로그아웃 기능
 // document.getElementById("user_info_dropdown_logout").onclick =
 //   async function () {
@@ -16,6 +17,12 @@
 //       console.error(error.response.data.message);
 //     }
 //   };
+
+function getUserId() {
+  for (let i = 0; i < document.cookie.split(";").length; ++i) {
+    return document.cookie.split(";")[i].split("=")[0];
+  }
+}
 
 const itemHowDiv = document.getElementById("item-how");
 
@@ -72,18 +79,11 @@ function getItemList(img, name, price, manufacturer) {
       e.preventDefault();
       detailItem();
     };
-    // function cartGo() {
-    //   location.href =
-    //     "/api/product/cartDamgi?productName=" +
-    //     name +
-    //     "&userId=" +
-    //     getUserId() +
-    //     "&price=" +
-    //     price;
-    // }
+
     // 카트 기능으로 넘기기
     tempItemCartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
@@ -191,8 +191,11 @@ const getPickItemList = function (img, name, price, manufacturer) {
       e.preventDefault();
       detailItem();
     };
+
+    // 카트 기능으로 넘기기
     tempPickCartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
@@ -304,8 +307,11 @@ const getPickItem2List = function (img, name, price, manufacturer) {
       e.preventDefault();
       detailItem();
     };
+
+    // 카트 기능으로 넘기기
     tempPick2CartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
@@ -417,8 +423,11 @@ const getPickItem3List = function (img, name, price, manufacturer) {
       e.preventDefault();
       detailItem();
     };
+
+    // 카트 기능으로 넘기기
     tempPick3CartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
@@ -529,8 +538,11 @@ const getPickItem4List = function (img, name, price, manufacturer) {
       e.preventDefault();
       detailItem();
     };
+
+    // 카트 기능으로 넘기기
     tempPick4CartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
