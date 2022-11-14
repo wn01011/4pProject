@@ -22,7 +22,7 @@ router.route("/address").post(async (req, res) => {
       user_id: req.body.userid,
     },
   });
-  res.send({ address: tempAddress.address });
+  res.send({ address: tempAddress?.address });
 });
 router.route("/order").post(async (req, res) => {
   // req.body.orderlist.forEach(async (item, index) => {

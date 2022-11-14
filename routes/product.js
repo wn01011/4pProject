@@ -261,16 +261,17 @@ router.route("/search").post((req, res) => {
 });
 
 router.route("/cartDamgi").post((req, res) => {
-  console.log(req.query.productName);
-  if (encodeURI(req.query.productName)) {
+  if (encodeURIComponent(req.query.productName)) {
     db.UserTable.findOne({
       where: {
         userId: req.query.userId,
       },
     }).then((data) => {
+      const productName = decodeURIComponent(req.query.productName);
+      console.log("만들기 전이다", productName);
       db.CartTable.create({
         userId: req.query.userId,
-        name: encodeURI(req.query.productName),
+        name: productName,
         amount: 1,
         price: req.query.price,
         address: data?.address,
