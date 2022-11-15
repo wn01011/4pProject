@@ -210,18 +210,19 @@ router.route("/search").post((req, res) => {
 });
 
 router.route("/cartDamgi").post((req, res) => {
-  if (encodeURIComponent(req.query.productName)) {
+  console.log(req.body);
+  if (req.body.productName) {
     db.UserTable.findOne({
       where: {
-        userId: req.query.userId,
+        userId: req.body.userId,
       },
     }).then((data) => {
       const productName = decodeURIComponent(req.query.productName);
       db.CartTable.create({
-        userId: req.query.userId,
+        userId: req.body.userId,
         name: productName,
         amount: 1,
-        price: req.query.price,
+        price: req.body.price,
         address: data?.address,
       });
     });

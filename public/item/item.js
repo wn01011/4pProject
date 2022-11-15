@@ -377,10 +377,16 @@ cartDamgi.onclick = () => {
   if (currUserId == "") return (location.href = "/SignIn");
   axios.post("/api/product/cartDamgi", {
     name: currItemName,
-    userId: currUserId,
+    userId: getUserId(),
     amount: +itemEa.innerText,
     price: +itemPrice.innerText.replace(/[^0-9]/g, ""),
   });
   window.alert("장바구니에 담겼습니다.");
   window.location.reload();
 };
+
+function getUserId() {
+  for (let i = 0; i < document.cookie.split(";").length; ++i) {
+    return document.cookie.split(";")[i].split("=")[0];
+  }
+}
