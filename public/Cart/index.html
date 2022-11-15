@@ -1,0 +1,108 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
+    <link rel="stylesheet" href="/Cart/index.css" />
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/footer.css" />
+    <link
+      rel="shortcut icon"
+      href="/Assets/IMG/clear.ico"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  </head>
+  <body id="thebody">
+    <div id="header_include"></div>
+    <div id="cart_contents">
+      <div id="cart_contents_center">
+        <div id="cart_title"><h2>장바구니</h2></div>
+        <div id="cart_main">
+          <div id="cart_basket">
+            <div id="cart_basket_top">
+              <button id="cart_basket_top_all">전체선택</button>
+              <span class="wall"></span>
+              <button id="cart_basket_top_delete">선택삭제</button>
+            </div>
+            <div id="cart_basket_bottom">
+              <!-- <div class="cart_basket_bottom_item">
+                <div class="cart_basket_bottom_item_checkBox">
+                  <input
+                    type="checkbox"
+                    class="cart_basket_bottom_item_check"
+                  />
+                </div>
+                <div class="cart_basket_bottom_item_imgBox">
+                  <img src="" alt="" class="cart_basket_bottom_item_img" />
+                </div>
+                <div class="cart_basket_bottom_item_title"></div>
+                <div class="cart_basket_bottom_item_amountBox">
+                  <button class="cart_basket_bottom_item_amountMinus"></button>
+                  <div class="cart_basket_bottom_item_amount"></div>
+                  <button class="cart_basket_bottom_item_amountPlus"></button>
+                </div>
+                <div class="cart_basket_bottom_item_price"></div>
+                <div class="cart_basket_bottom_item_delete"></div>
+              </div> -->
+              <div id="cart_basket_bottom_none">
+                장바구니에 담긴 상품이 없습니다.
+              </div>
+            </div>
+          </div>
+          <div id="cart_order">
+            <div id="cart_order_cover">
+              <div id="checklist">
+                <div id="checklist_shipping_address">
+                  <div id="checklist_shipping_address_title">배송지</div>
+                  <div id="checklist_shipping_address_address">
+                    배송지를 등록하십시오
+                  </div>
+                  <button id="checklist_shipping_address_btn">
+                    배송지 변경
+                  </button>
+                </div>
+                <div id="checklist_amount">
+                  <div class="checklist_amount_moneylist">
+                    <div>상품금액</div>
+                    <div>
+                      <span id="checklist_amount_price"></span>
+                      <span>원</span>
+                    </div>
+                  </div>
+                  <div class="checklist_amount_moneylist">
+                    <div>배송비</div>
+                    <div>
+                      <span id="checklist_amount_cost"></span>
+                      <span>원</span>
+                    </div>
+                  </div>
+                  <div class="checklist_amount_moneylist">
+                    <div>결제예정금액</div>
+                    <div>
+                      <span id="checklist_amount_amountdue"></span>
+                      <span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div></div>
+              </div>
+              <button id="cart_order_orderbutton">주문하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer_include"></div>
+    <div id="cart_modal">
+      <div id="cart_modal_body">
+        <div id="cart_modal_body_text">주문이 완료되었습니다.</div>
+        <button id="cart_modal_body_exit">확인</button>
+      </div>
+    </div>
+    <script src="/Assets/Scripts/JS/includehtml.js"></script>
+    <script src="/Cart/index.js"></script>
+  </body>
+</html>

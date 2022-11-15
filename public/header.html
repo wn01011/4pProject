@@ -1,0 +1,435 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <style>
+      .category_Btn > button {
+        border: none;
+        display: flex;
+        font-size: 15px;
+        align-items: center;
+        background-color: white;
+        cursor: pointer;
+      }
+      .category_Btn button > span:hover {
+        color: rgb(139, 185, 185);
+      }
+      .category_Btn button > span {
+        margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div id="header_customers">
+        <div id="header_customers_center">
+          <div id="sign_up">
+            <a href="/SignUp/index.html">회원가입</a>
+          </div>
+          <div id="sign_in">
+            <a href="/SignIn/index.html">로그인</a>
+          </div>
+          <div id="user_info">
+            <div id="user_info_text"></div>
+            <div id="user_info_dropdown">
+              <div id="user_info_dropdown_myinfo">내 정보</div>
+              <div id="user_info_dropdown_logout">로그아웃</div>
+            </div>
+          </div>
+          <div class="service_center">
+            <a href="/serviceCenter">고객센터</a>
+            <div class="service_center_dropdown">
+              <div class="service_center_dropdown_notice">
+                <a href="/serviceCenter">공지사항</a>
+              </div>
+              <div class="service_center_dropdown_askanswer">
+                <a href="/serviceCenter/askanswer">1:1 질문</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="header_main">
+        <div id="header_main_center">
+          <div id="header_logo">
+            <a href="/index.html"
+              ><img src="/Assets/IMG/logo.png" alt="" class="marketClearLogo"
+            /></a>
+          </div>
+          <div id="search">
+            <input
+              type="text"
+              id="search_input"
+              placeholder="검색어를 입력해주세요."
+            />
+            <div id="search_icon">
+              <a href="#">
+                <img
+                  src="/Assets/IMG/search.png"
+                  alt="search"
+                  class="icon_small"
+              /></a>
+            </div>
+          </div>
+          <div id="header_icons">
+            <div id="shipping_address">
+              <a href="#"
+                ><img src="/Assets/IMG/map.png" alt="map" class="icon_small"
+              /></a>
+            </div>
+            <div id="shopping_basket">
+              <button id="cartBtn">
+                <img
+                  src="/Assets/IMG/shopping-cart.png"
+                  alt="shopping_basket"
+                  class="icon_small"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="header_item">
+        <div id="header_item_center">
+          <div id="category">
+            <div id="category_menuicon">
+              <img src="/Assets/IMG/menu.png" alt="" class="icon_small" />
+            </div>
+            <div id="category_text">카테고리</div>
+            <ul id="category_dropdown">
+              <li>
+                <div class="category_Btn">
+                  <button id="vegiBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/vegetable.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>채소</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="fruitBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/fruit.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>과일·견과·쌀</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="fishBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/fish.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>수산·해산물·건어물</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="meatBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/meat.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>정육·계란</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="soupBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/pan.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>국·반찬·메인요리</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="saladBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/salad.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>샐러드·간편식</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="noodleBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/salt.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>면·양념·오일</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="drinkBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/tea.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>생수·음료·우유·커피</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="cookieBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/cookie.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>간식·과자·떡</span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="audioBox">
+            <audio src="/api/audio" controls loop></audio>
+            <p>If_I_Had_a_Chicken</p>
+          </div>
+        </div>
+      </div>
+      <!-- 헤더 스크롤 내렸을 경우 -->
+      <div id="header_scroll">
+        <div id="header_scroll_center">
+          <div id="header_scroll_category">
+            <div id="header_scroll_category_menuicon">
+              <img src="/Assets/IMG/menu.png  " alt="" class="icon_small" />
+            </div>
+            <div id="header_scroll_category_text">카테고리</div>
+            <ul id="header_scroll_category_dropdown">
+              <li>
+                <div class="category_Btn">
+                  <button id="scrollVegiBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/vegetable.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>채소</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="scrollFruitBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/fruit.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>과일·견과·쌀</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="scrollFishBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/fish.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>수산·해산물·건어물</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="scrollMeatBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/meat.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>정육·계란</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="scrollSoupBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/pan.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>국·반찬·메인요리</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="scrollSaladBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/salad.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>샐러드·간편식</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="scrollNoodleBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/salt.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>면·양념·오일</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="scrollDrinkBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/tea.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>생수·음료·우유·커피</span>
+                  </button>
+                </div>
+              </li>
+              <li>
+                <div class="category_Btn">
+                  <button id="scrollCookieBtn">
+                    <div>
+                      <img
+                        src="/Assets/IMG/cookie.png"
+                        alt=""
+                        class="icon_small"
+                      />
+                    </div>
+                    <span>간식·과자·떡</span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="header_scroll_search">
+            <input
+              type="text"
+              id="header_scroll_search_input"
+              placeholder="검색어를 입력해주세요."
+            />
+            <div id="header_scroll_search_icon">
+              <img
+                src="/Assets/IMG/search.png"
+                alt="search"
+                class="icon_small"
+              />
+            </div>
+          </div>
+          <div id="header_scroll_icons">
+            <div id="header_scroll_shipping_address">
+              <a href="#"
+                ><img src="/Assets/IMG/map.png" alt="map" class="icon_small"
+              /></a>
+            </div>
+            <div id="header_scroll_shopping_basket">
+              <img
+                src="/Assets/IMG/shopping-cart.png"
+                alt="shopping_basket"
+                class="icon_small"
+              /><a href="#"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal">
+        <div id="modal_body">
+          <div id="modal_body_text"></div>
+          <button id="shipping_address_change_btn">
+            <div id="shipping_address_change_btn_icon">
+              <?xml version="1.0"?>
+              <svg
+                fill="#000000"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24px"
+                height="24px"
+              >
+                <path
+                  d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"
+                />
+              </svg>
+            </div>
+            주소 검색
+          </button>
+          <div id="modal_body_btnCase">
+            <button id="modal_body_exit">확인</button>
+            <button id="modal_body_cancel">취소</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

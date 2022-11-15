@@ -1,0 +1,732 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 222;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+li {
+  list-style-type: none;
+}
+.marketClearLogo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.icon_small {
+  width: 25px;
+}
+/* ---------------------------------------- */
+#header {
+  box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
+  padding-top: 10px;
+}
+#header > div {
+  margin: 0 auto;
+}
+#header_customers {
+  display: flex;
+  padding-top: 10px;
+  justify-content: end;
+  width: 1050px;
+}
+
+#header_customers_center {
+  display: flex;
+  justify-content: end;
+  font-size: 14px;
+}
+#header_customers_center > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vertical_center_alignment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#sign_up {
+  border-right: 1px solid gainsboro;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#sign_up.off {
+  display: none;
+}
+#sign_in {
+  border-right: 1px solid gainsboro;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#sign_in.off {
+  display: none;
+}
+#user_info {
+  display: none;
+}
+#user_info.on {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+#user_info_dropdown {
+  display: none;
+  width: 130px;
+  top: 20px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 12px;
+  font-weight: bold;
+}
+#user_info.on:hover #user_info_dropdown {
+  display: block;
+}
+#user_info_dropdown > div {
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.service_center {
+  padding-left: 20px;
+  position: relative;
+}
+.service_center_dropdown {
+  display: none;
+  width: 130px;
+  top: 30px;
+  right: 0px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 12px;
+  font-weight: bold;
+}
+.service_center:hover .service_center_dropdown {
+  display: block;
+}
+
+.service_center_dropdown_notice {
+  padding-bottom: 10px;
+}
+#header_main {
+  display: flex;
+  justify-content: center;
+}
+
+#header_main_center {
+  display: flex;
+  width: 1050px;
+  justify-content: space-between;
+}
+
+#header_logo {
+  padding-right: 30px;
+}
+
+#search {
+  border: 2px solid #c2eaec;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  margin: 30px;
+}
+
+#search_input {
+  border: none;
+  width: 500px;
+}
+
+#search_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#header_icons {
+  display: flex;
+}
+
+#header_icons > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+#shipping_address {
+  padding-right: 20px;
+}
+#dibs {
+  padding-right: 20px;
+}
+#header_item {
+  display: flex;
+  justify-content: center;
+}
+
+#header_item_center {
+  display: flex;
+  justify-content: left;
+  column-gap: 140px;
+  width: 1050px;
+}
+#category {
+  display: flex;
+  position: relative;
+  padding-bottom: 10px;
+}
+#category_menuicon {
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#category_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#category_dropdown {
+  display: none;
+  width: 250px;
+  left: 0px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 16px;
+  top: 18px;
+  z-index: 999;
+}
+#category_dropdown > li {
+  padding: 10px;
+}
+#category_dropdown_bonus {
+  display: none;
+  width: 130px;
+  right: -130px;
+  top: -2px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 12px;
+  font-weight: bold;
+}
+#category_dropdown > li:hover #category_dropdown_bonus {
+  display: block;
+}
+#category:hover #category_dropdown {
+  display: block;
+}
+#category_dropdown a {
+  display: flex;
+  justify-content: space-between;
+}
+#header_list {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header_list > div {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+#shipping_info_text {
+  border: 2px solid #c2eaec;
+  border-radius: 20px;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 14px;
+}
+#header_scroll {
+  background-color: white;
+  margin: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
+}
+#header_scroll.on {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+#header_scroll_center {
+  display: flex;
+  width: 1050px;
+  justify-content: space-between;
+}
+#header_scroll_center span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#header_scroll_category {
+  display: flex;
+  position: relative;
+}
+#header_scroll_category_menuicon {
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#header_scroll_category_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#header_scroll_category_dropdown {
+  display: none;
+  width: 250px;
+  top: 25px;
+  left: 0px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 16px;
+}
+#header_scroll_category_dropdown > li {
+  padding: 10px;
+}
+#header_scroll_category_dropdown a {
+  display: flex;
+}
+#header_scroll_category:hover #header_scroll_category_dropdown {
+  display: block;
+}
+#header_scroll_category_dropdown_bonus {
+  display: none;
+  width: 130px;
+  right: -130px;
+  top: -2px;
+  padding: 7px;
+  background: white;
+  position: absolute;
+  border: 2px solid gainsboro;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+#header_scroll_category_dropdown
+  > li:hover
+  #header_scroll_category_dropdown_bonus {
+  display: block;
+}
+
+#header_scroll_list {
+  display: flex;
+}
+#header_scroll_list > div {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#header_scroll_search {
+  background-color: gainsboro;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+#header_scroll_search_input {
+  border: none;
+  background: none;
+  width: 250px;
+}
+
+#header_scroll_search_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#header_scroll_icons {
+  display: flex;
+}
+#header_scroll_icons > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+#audioBox {
+  display: flex;
+  position: relative;
+  bottom: 10px;
+}
+audio {
+  width: 400px;
+  height: 30px;
+  position: relative;
+  left: 100px;
+}
+audio + p {
+  position: relative;
+  color: white;
+  display: block;
+  padding-top: 5px;
+  align-items: center;
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  left: -100px;
+  height: 30px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+audio::-webkit-media-controls {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  direction: ltr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+audio::-webkit-media-controls-enclosure {
+  width: 100%;
+  max-width: 800px;
+  height: 30px;
+  flex-shrink: 0;
+  bottom: 0;
+  text-indent: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+audio::-webkit-media-controls-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* We use flex-start here to ensure that the play button is visible even
+   * if we are too small to show all controls.
+   */
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  text-align: right;
+  bottom: auto;
+  height: 30px;
+  background-color: rgba(20, 20, 20, 0.8);
+  border-radius: 5px;
+  /* The duration is also specified in MediaControlElements.cpp and LayoutTests/media/media-controls.js */
+  transition: opacity 0.3s;
+}
+video:-webkit-full-page-media {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+audio:-webkit-full-page-media {
+  max-height: 100%;
+  max-width: 100%;
+}
+audio:-webkit-full-page-media::-webkit-media-controls-panel {
+  bottom: 0px;
+}
+audio::-webkit-media-controls-mute-button {
+  display: flex;
+  flex: none;
+  border: none;
+  box-sizing: border-box;
+  width: 35px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 6px 0 0;
+  padding: 0;
+  background-color: initial;
+  color: inherit;
+}
+audio::-webkit-media-controls-overlay-enclosure {
+  display: none;
+}
+video::-webkit-media-controls-overlay-enclosure {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 1;
+  width: 100%;
+  max-width: 800px;
+  text-indent: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+video::-webkit-media-controls-overlay-play-button {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+}
+audio::-webkit-media-controls-play-button {
+  display: flex;
+  flex: none;
+  border: none;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 9px;
+  margin-right: 9px;
+  padding: 0;
+  background-color: initial;
+  color: inherit;
+}
+audio::-webkit-media-controls-timeline-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1;
+  height: 16px;
+  min-width: 0;
+}
+audio::-webkit-media-controls-current-time-display
+  audio::-webkit-media-controls-time-remaining-display {
+  flex: none;
+  display: flex;
+  border: none;
+  cursor: default;
+  height: 30px;
+  margin: 0 9px 0 0;
+  padding: 0;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: normal;
+  color: white;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-decoration: none;
+}
+audio::-webkit-media-controls-timeline {
+  display: none;
+  flex: 1 1 auto;
+  height: 8px;
+  padding: 0;
+  background-color: transparent;
+  min-width: 25px;
+  border: initial;
+  color: inherit;
+}
+audio::-webkit-media-controls-volume-slider {
+  display: flex;
+  position: absolute;
+  height: 8px;
+  max-width: 70px;
+  padding: 0;
+  top: 12px;
+  right: 40px;
+  background-color: transparent;
+  min-width: 15px;
+  border: initial;
+  color: inherit;
+}
+input[type="range" i]::-webkit-media-slider-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgba(230, 230, 230, 0.35);
+  border-radius: 4px;
+  background-color: transparent;
+}
+input[type="range" i]::-webkit-media-slider-container > div {
+  margin-right: -14px;
+}
+input[type="range" i]::-webkit-media-slider-thumb {
+  margin-left: -7px;
+  margin-right: -7px;
+}
+audio::-webkit-media-controls-fullscreen-button {
+  display: flex;
+  flex: none;
+  border: none;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: -5px;
+  margin-right: 9px;
+  padding: 0;
+  background-color: initial;
+  color: inherit;
+}
+audio::-webkit-media-controls-toggle-closed-captions-button {
+  display: none;
+}
+
+audio::-webkit-media-controls-fullscreen-volume-slider {
+  display: none;
+}
+audio::-webkit-media-controls-fullscreen-volume-min-button {
+  display: none;
+}
+audio::-webkit-media-controls-fullscreen-volume-max-button {
+  display: none;
+}
+#cartBtn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#shipping_address_change {
+  padding: 20px;
+  display: none;
+}
+#shipping_address_change.on {
+  display: block;
+}
+#shipping_address_change_btn {
+  border: 2px solid #c2eaec;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  background: transparent;
+  font-size: 18px;
+  display: flex;
+}
+#shipping_address_change_btn_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+#modal.show {
+  display: block;
+}
+body:hover #modal.show {
+  overflow: hidden;
+}
+#modal_body {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 450px;
+  /* height: 200  px; */
+
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+}
+#modal_body_text {
+  padding: 40px;
+  height: 75%;
+  border: 1px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#shipping_address_change_btn {
+  z-index: 300;
+  margin: 0 20 20 20px;
+}
+#modal_body_btnCase {
+  display: flex;
+}
+#modal_body_exit {
+  display: block;
+  padding: 15 0 15 0px;
+  height: 25%;
+  border: 1px;
+  flex: 1;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 2px solid gainsboro;
+  font-size: 20px;
+  color: #c2eaec;
+}
+#modal_body_cancel {
+  display: block;
+  padding: 15 0 15 0px;
+  height: 25%;
+  border: 1px;
+  flex: 1;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 2px solid gainsboro;
+  font-size: 20px;
+  color: #c2eaec;
+}
+.category_Btn > button {
+  border: none;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+.category_Btn button > span:hover {
+  color: rgb(139, 185, 185);
+}
+.category_Btn button > span {
+  margin-left: 30px;
+}

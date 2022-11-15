@@ -1,0 +1,7079 @@
+[
+  {
+    "img": "1",
+    "manufacturer": "브로드카세",
+    "name": "부드러운 비엔나 쿠키 4종",
+    "price": 5500,
+    "description": "버터 풍미의 쿠키와 부드러운 여유",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1봉",
+    "weight": "100g",
+    "origin": "상세페이지 별도 표기",
+    "allergy": "밀, 우유, 난류",
+    "category": [{ "0": "쿠키" }]
+  },
+  {
+    "img": "2",
+    "manufacturer": "",
+    "name": "친환경 깐 생강 50g",
+    "price": 2990,
+    "description": "요리의 풍미를 더하는 간편 향신채(1봉/50g)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "50g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "친환경" }]
+  },
+  {
+    "img": "3",
+    "manufacturer": "",
+    "name": "무농약 머쉬밥 80g",
+    "price": 12000,
+    "description": "무농약 표고, 새송이, 흰목이버섯을 조각내어 건조한 머쉬밥",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "100g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "친환경" }]
+  },
+  {
+    "img": "4",
+    "manufacturer": "",
+    "name": "무농약 연근 2종",
+    "price": 6490,
+    "description": "용도에 맞게 골라쓰는 무농약 연근(통연근 400g, 연근채 300g)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "400g(통연근)300g(연근채)",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "친환경", "2": "고구마", "3": "감자", "4": "당근" }
+    ]
+  },
+  {
+    "img": "5",
+    "manufacturer": "",
+    "name": "유기농 딜 10g",
+    "price": 2400,
+    "description": "깃털 같은 잎의 섬세한 유혹(10g/1팩)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "10g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "친환경" }]
+  },
+  {
+    "img": "6",
+    "manufacturer": "담채원",
+    "name": "유기농 절임 배추 10kg(예약일 수령)",
+    "price": 43553,
+    "description": "김장의 수고로움을 반으로 줄여줄 절임 배추, 안심하고 만나보세요. 담채원은 바로 김장에 사용할 수 있는 절임 배추를 '유기농'으로 준비했습니다.",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1박스",
+    "weight": "10kg(4~5포기)",
+    "origin": "배추:국내산, 소금:국내산 천일염",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "친환경" }]
+  },
+  {
+    "img": "7",
+    "manufacturer": "",
+    "name": "친환경 양파 1kg",
+    "price": 3990,
+    "description": "단단하고 아삭한 필수 채소",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1망",
+    "weight": "1kg",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "친환경" }]
+  },
+  {
+    "img": "8",
+    "manufacturer": "리더브랜드",
+    "name": "베이비 비트 250g",
+    "price": 6400,
+    "description": "작지만 강력함으로 똘돌 뭉친 수퍼푸드 베이비 비트",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "250g(4~6개)",
+    "origin": "뉴질랜드",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "고구마", "2": "감자", "3": "당근" }]
+  },
+  {
+    "img": "9",
+    "manufacturer": "달콘",
+    "name": "초당옥수수 (레토르트) 1입",
+    "price": 3690,
+    "description": "간단히 데워 즐기는 달콤 옥수수",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "250g 내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "고구마", "2": "감자", "3": "당근" }]
+  },
+  {
+    "img": "10",
+    "manufacturer": "",
+    "name": "해남 호박고구마 1.5kg",
+    "price": 10900,
+    "description": "해풍이 기른 달콤 촉촉 고구마",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1박스",
+    "weight": "1.5kg",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "고구마", "2": "감자", "3": "당근" }]
+  },
+  {
+    "img": "11",
+    "manufacturer": "",
+    "name": "친환경 알감자 500g",
+    "price": 3500,
+    "description": "손쉽게 요리하는 작은 감자",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "고구마", "2": "감자", "3": "당근" }]
+  },
+  {
+    "img": "12",
+    "manufacturer": "KF365",
+    "name": "호박고구마 800g",
+    "price": 6980,
+    "description": "더욱 촉촉하고 달콤한 호박고구마 (1봉/800g)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "800g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "고구마", "2": "감자", "3": "당근" }]
+  },
+  {
+    "img": "13",
+    "manufacturer": "",
+    "name": "유채나물 150g",
+    "price": 2790,
+    "description": "미각을 깨우는 신선한 맛 (1봉/150g)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "150g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "시금치", "2": "쌈채소", "3": "나물" }]
+  },
+  {
+    "img": "14",
+    "manufacturer": "",
+    "name": "달래 60g",
+    "price": 2690,
+    "description": "봄을 알리는 똑 쏘는 향긋한 봄나물",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "60g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "시금치", "2": "쌈채소", "3": "나물" }]
+  },
+  {
+    "img": "15",
+    "manufacturer": "",
+    "name": "친환경 고사리 300g",
+    "price": 11900,
+    "description": "편하게 요리하는 고소한 나물",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "",
+    "weight": "300g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "시금치", "2": "쌈채소", "3": "나물" }]
+  },
+  {
+    "img": "16",
+    "manufacturer": "",
+    "name": "컷팅 부추 100g",
+    "price": 1450,
+    "description": "먹기 쉽게 컷팅된 소용량 부추(1봉/100g)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "100g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "시금치", "2": "쌈채소", "3": "나물" }]
+  },
+  {
+    "img": "17",
+    "manufacturer": "",
+    "name": "청도 미나리 300g",
+    "price": 5490,
+    "description": "생으로 즐기면 더 좋은 향긋한 미나리",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "300g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "시금치", "2": "쌈채소", "3": "나물" }]
+  },
+  {
+    "img": "18",
+    "manufacturer": "",
+    "name": "친환경 베이비 비타민 50g",
+    "price": 1900,
+    "description": "비타민 A를 함유한",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "50g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "시금치", "2": "쌈채소", "3": "나물", "4": "친환경" }
+    ]
+  },
+  {
+    "img": "19",
+    "manufacturer": "",
+    "name": "유기농 이탈리안 파슬리 15g",
+    "price": 3190,
+    "description": "넓은 잎이 품은 은은한 향",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "15g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "브로콜리", "2": "파프리카", "3": "양배추" }
+    ]
+  },
+  {
+    "img": "20",
+    "manufacturer": "다노",
+    "name": "호박선식 25gX10입",
+    "price": 28000,
+    "description": "늙은 호박의 부드러운 풍미",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "250g(25gX10개)",
+    "origin": "상세페이지 별도 표기",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "브로콜리", "2": "파프리카", "3": "양배추" }
+    ]
+  },
+  {
+    "img": "21",
+    "manufacturer": "KF365",
+    "name": "파프리카 2입",
+    "price": 3480,
+    "description": "믿고 먹을 수 있는 상품을 합리적인 가격에,KF365",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "2입",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "브로콜리", "2": "파프리카", "3": "양배추" }
+    ]
+  },
+  {
+    "img": "22",
+    "manufacturer": "",
+    "name": "한통 양배추",
+    "price": 3990,
+    "description": "아삭한 잎에 깃든 달콤함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "900g 내외",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "브로콜리", "2": "파프리카", "3": "양배추" }
+    ]
+  },
+  {
+    "img": "23",
+    "manufacturer": "KF365",
+    "name": "국산 브로콜리 1입",
+    "price": 3600,
+    "description": "믿고 먹을 수 있는 상품을 합리적인 가격에, KF365",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "1송이",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "브로콜리", "2": "파프리카", "3": "양배추" }
+    ]
+  },
+  {
+    "img": "24",
+    "manufacturer": "",
+    "name": "조각 양배추 500g",
+    "price": 2390,
+    "description": "신선하게 즐기는 아삭 달큰한 채소",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1입",
+    "weight": "500g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "브로콜리", "2": "파프리카", "3": "양배추" }
+    ]
+  },
+  {
+    "img": "25",
+    "manufacturer": "",
+    "name": "김장용 알타리 무 1.5kg",
+    "price": 7490,
+    "description": "총각김치를 위한 필수재료",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1단",
+    "weight": "1.5kg",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "양파", "2": "대파", "3": "마늘", "4": "배추" }
+    ]
+  },
+  {
+    "img": "26",
+    "manufacturer": "",
+    "name": "김장용 다발 무 5kg",
+    "price": 12900,
+    "description": "아삭함이 오래가는 싱싱한 무",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1단",
+    "weight": "5kg(5~7입)",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "양파", "2": "대파", "3": "마늘", "4": "배추" }
+    ]
+  },
+  {
+    "img": "27",
+    "manufacturer": "",
+    "name": "김장용 미나리 500g",
+    "price": 6990,
+    "description": "기분 좋게 입맛 돋우는",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "500g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "양파", "2": "대파", "3": "마늘", "4": "배추" }
+    ]
+  },
+  {
+    "img": "28",
+    "manufacturer": "",
+    "name": "김장용 청갓 300g",
+    "price": 6990,
+    "description": "입맛을 깨우는 알싸한 풍미",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "300g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "양파", "2": "대파", "3": "마늘", "4": "배추" }
+    ]
+  },
+  {
+    "img": "29",
+    "manufacturer": "",
+    "name": "통마늘 1kg",
+    "price": 12900,
+    "description": "단단하고 아삭한 햇마늘",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1망",
+    "weight": "1kg",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "양파", "2": "대파", "3": "마늘", "4": "배추" }
+    ]
+  },
+  {
+    "img": "30",
+    "manufacturer": "햇님마을",
+    "name": "국산 태양초 햇 건고추 1.8kg",
+    "price": 69000,
+    "description": "정성껏 말려 완성한 진한 풍미(22년산 '햇'건고추)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "1.8kg",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [
+      { "0": "채소", "1": "양파", "2": "대파", "3": "마늘", "4": "배추" }
+    ]
+  },
+  {
+    "img": "31",
+    "manufacturer": "",
+    "name": "땅콩호박",
+    "price": 4990,
+    "description": "땅콩을 쏙 빼다 닮은 호박",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "500g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "오이", "2": "호박", "3": "고추" }]
+  },
+  {
+    "img": "32",
+    "manufacturer": "",
+    "name": "냉동 그릴드 바밤 단호박 320g",
+    "price": 4990,
+    "description": "불에 구워 달콤함이 살아있는",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "320g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "오이", "2": "호박", "3": "고추" }]
+  },
+  {
+    "img": "33",
+    "manufacturer": "",
+    "name": "미인 보라 (가지)고추 150g",
+    "price": 2490,
+    "description": "아삭아삭 달큰함을 가득 품은",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "150g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "오이", "2": "호박", "3": "고추" }]
+  },
+  {
+    "img": "34",
+    "manufacturer": "",
+    "name": "오이지3입",
+    "price": 6990,
+    "description": "국산 천일염만으로 절여진",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "3입",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "오이", "2": "호박", "3": "고추" }]
+  },
+  {
+    "img": "35",
+    "manufacturer": "KF365",
+    "name": "애호박 1개",
+    "price": 1480,
+    "description": "믿고 먹을 수 있는 상품을 합리적인 가격에, KF365",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "오이", "2": "호박", "3": "고추" }]
+  },
+  {
+    "img": "36",
+    "manufacturer": "KF365",
+    "name": "다다기오이 3입",
+    "price": 3690,
+    "description": "믿고 먹을 수 있는 상품을 합리적인 가격에, KF365",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "3개입",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "오이", "2": "호박", "3": "고추" }]
+  },
+  {
+    "img": "37",
+    "manufacturer": "",
+    "name": "그린빈스 (줄기콩)",
+    "price": 4600,
+    "description": "고소하고 많이 먹어도 질리지 않는 건강한 주머니 그린빈스 (1팩 100g)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "100g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "냉동", "2": "이색", "3": "간편채소" }]
+  },
+  {
+    "img": "38",
+    "manufacturer": "저스트그린",
+    "name": "그린샐러드 셀러리&앵배추&당근 200g",
+    "price": 4990,
+    "description": "신선함 가득한 간편 샐러드",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "알류, 우유, 메밀, 땅콩, 대두, 밀, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 쇠고기, 오징어, 조개류, 잣을 사용한 제품과 같은 제조 시설에서 제조하고 있습니다.",
+    "category": [{ "0": "채소", "1": "냉동", "2": "이색", "3": "간편채소" }]
+  },
+  {
+    "img": "39",
+    "manufacturer": "ardo",
+    "name": "냉동 컷그린빈 400g",
+    "price": 3290,
+    "description": "넉넉하게 요리하는 간편 껍질 콩",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "400g",
+    "origin": "제품 별도 표기",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "냉동", "2": "이색", "3": "간편채소" }]
+  },
+  {
+    "img": "40",
+    "manufacturer": "Better me",
+    "name": "국내산 그릴드 단호박(6개입)",
+    "price": 9500,
+    "description": "넉넉하게 잘라낸 달달 단호박",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "6개입",
+    "origin": "제품 별도 표기",
+    "allergy": "알류, 우유, 메밀, 땅콩, 대두, 밀, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 쇠고기, 오징어, 조개류(굴,전복,홍합 포함), 잣을 사용한 제품과 같은 제조 시설에서 제조하고 있습니다., 혼입가능",
+    "category": [{ "0": "채소", "1": "냉동", "2": "이색", "3": "간편채소" }]
+  },
+  {
+    "img": "41",
+    "manufacturer": "",
+    "name": "곁들임 채소 2종",
+    "price": 2990,
+    "description": "입맛을 산뜻하게 돋워줄 채소",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "제품 별도 표기",
+    "origin": "제품 별도 표기",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "냉동", "2": "이색", "3": "간편채소" }]
+  },
+  {
+    "img": "42",
+    "manufacturer": "권영원 소담정찬",
+    "name": "냉동 삶은 곤드레나물 150gX2입",
+    "price": 10990,
+    "description": "손쉽게 요리하는 곤드레나물",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g(150gx2입)",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "냉동", "2": "이색", "3": "간편채소" }]
+  },
+  {
+    "img": "43",
+    "manufacturer": "",
+    "name": "건 포르치니 버섯 40g",
+    "price": 9900,
+    "description": "근사한 양식을 완성하는 이색 건버섯",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "40g",
+    "origin": "상세페이지",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "콩나물", "2": "버섯" }]
+  },
+  {
+    "img": "44",
+    "manufacturer": "온담",
+    "name": "건강가득 약용버섯 혼합 세트",
+    "price": 49900,
+    "description": "상황버섯25g*2/영지버섯 30g/차가버섯 90g/대추 70g/대추채 80g",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "기타(종이포장)",
+    "unit": "1박스",
+    "weight": "제품 별도 표기",
+    "origin": "제품 별도 표기",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "콩나물", "2": "버섯" }]
+  },
+  {
+    "img": "45",
+    "manufacturer": "KF365",
+    "name": "김구원선생 국내산 무농약 콩나물 300g",
+    "price": 1280,
+    "description": "믿고 먹을 수 있는 상품을 합리적인 가격에,KF365",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "300g",
+    "origin": "국내산",
+    "allergy": "대두",
+    "category": [{ "0": "채소", "1": "콩나물", "2": "버섯" }]
+  },
+  {
+    "img": "46",
+    "manufacturer": "KF365",
+    "name": "팽이버섯 2입",
+    "price": 1590,
+    "description": "믿고 먹을 수 있는 상품을 합리적인 가격에,KF365",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "2입",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "콩나물", "2": "버섯" }]
+  },
+  {
+    "img": "47",
+    "manufacturer": "KF365",
+    "name": "새송이버섯 400g",
+    "price": 3480,
+    "description": "믿고 먹을 수 있는 상품을 합리적인 가격에,KF365",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "400g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "콩나물", "2": "버섯" }]
+  },
+  {
+    "img": "48",
+    "manufacturer": "",
+    "name": "양송이버섯 140g",
+    "price": 3990,
+    "description": "단백질과 식이섬유가 풍부한",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "6~9입",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "콩나물", "2": "버섯" }]
+  },
+  {
+    "img": "48",
+    "manufacturer": "",
+    "name": "양송이버섯 140g",
+    "price": 3990,
+    "description": "단백질과 식이섬유가 풍부한",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "6~9입",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "채소", "1": "콩나물", "2": "버섯" }]
+  },
+  {
+    "img": "49",
+    "manufacturer": "",
+    "name": "유기농 공주 햇 옥광밥 800g",
+    "price": 14900,
+    "description": "2022년 수확한 햇 밤으로 뛰어난 단맛의 유기농 옥광밤 (1팩 800g)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "800g",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "친환경" }]
+  },
+  {
+    "img": "50",
+    "manufacturer": "",
+    "name": "무농약 제주 청레몬 450g (3~5입)",
+    "price": 8500,
+    "description": "인공 처리를 하지 않아 더 신선한",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "450g내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "친환경" }]
+  },
+  {
+    "img": "51",
+    "manufacturer": "",
+    "name": "냉동 국산 유기농 블루베리 500g",
+    "price": 20000,
+    "description": "냉동실에서 간편하게 꺼내먹는 '국산' 유기농 냉동 블루베리(1봉/500g)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "500g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "친환경" }]
+  },
+  {
+    "img": "52",
+    "manufacturer": "",
+    "name": "무농약 제주 청레몬 2kg",
+    "price": 31900,
+    "description": "제주도에서 안전하게 기른",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "2kg내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "친환경" }]
+  },
+  {
+    "img": "53",
+    "manufacturer": "",
+    "name": "유기농 냉동 스위트 체리 500g (미국산)",
+    "price": 14000,
+    "description": "일 년 내내 즐기는 달콤한 체리",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "500g",
+    "origin": "상품별 별도표기",
+    "allergy": "이 제품은 계란, 우유, 메밀, 땅콩, 대두, 밀, 게, 새우, 고등어, 복숭아, 토마토, 돼지고기, 아황산류, 호두, 쇠고기, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함) 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "친환경" }]
+  },
+  {
+    "img": "54",
+    "manufacturer": "",
+    "name": "유기농 신고배 1.4kg",
+    "price": 16800,
+    "description": "깨끗하게 길러낸 황금빛 선물",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1박스",
+    "weight": "1.4kg 내외 / 2 - 3입",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "친환경" }]
+  },
+  {
+    "img": "55",
+    "manufacturer": "",
+    "name": "저탄소 GAP 청도 반시 1.4kg (10~12입)",
+    "price": 11900,
+    "description": "제철에 즐기는 말랑한 달콤함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1박스",
+    "weight": "10-12입",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "제철과일" }]
+  },
+  {
+    "img": "56",
+    "manufacturer": "",
+    "name": "저탄소 GAP 황금향 1kg",
+    "price": 11900,
+    "description": "한라봉과 천혜향의 맛을 동시에",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1kg/6~8입",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "제철과일" }]
+  },
+  {
+    "img": "57",
+    "manufacturer": "",
+    "name": "GAP 감홍 사과 1kg (3입)",
+    "price": 12900,
+    "description": "녹진하게 번지는 달콤함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "3입 /1kg 내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "제철과일" }]
+  },
+  {
+    "img": "58",
+    "manufacturer": "",
+    "name": "국산 레드키위 350g (4~5입)",
+    "price": 5800,
+    "description": "상큼한 키위 속 붉은빛 터치",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "3입 /1kg 내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "제철과일" }]
+  },
+  {
+    "img": "59",
+    "manufacturer": "",
+    "name": "시나노골드 (금사과) 1.3kg (5~7입)",
+    "price": 16400,
+    "description": "달콤함과 새콤함의 적절한 조화, 황금빛 시나노골드",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "1.3kg내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "제철과일" }]
+  },
+  {
+    "img": "60",
+    "manufacturer": "",
+    "name": "엔비사과 1.3kg (5입)",
+    "price": 14900,
+    "description": "특별한 향긋함 가득",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "1.3kg내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "제철과일" }]
+  },
+  {
+    "img": "61",
+    "manufacturer": "",
+    "name": "국산 비올레 머스캣 2송이 800g",
+    "price": 17800,
+    "description": "컬리에서 선보이는 국산 신품종 홍주 포도",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1송이",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "국산과일" }]
+  },
+  {
+    "img": "62",
+    "manufacturer": "",
+    "name": "단감 1kg (4~5입)",
+    "price": 5500,
+    "description": "아삭하고 부드러운 제철 단감",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉지",
+    "weight": "4-5입",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "국산과일" }]
+  },
+  {
+    "img": "63",
+    "manufacturer": "",
+    "name": "마이하트 포도 500g",
+    "price": 21900,
+    "description": "탐스럽게 차오른 선홍빛 하트",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉지",
+    "weight": "500g 내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "국산과일" }]
+  },
+  {
+    "img": "64",
+    "manufacturer": "",
+    "name": "익혀먹는 청도 반시 5kg (30과 내외)",
+    "price": 29900,
+    "description": "기다림 끝에 달콤한 결실",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1박스 / 2단",
+    "weight": "5kg 내외",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "국산과일" }]
+  },
+  {
+    "img": "65",
+    "manufacturer": "KF365",
+    "name": "유명산지 고당도사과 1.5kg (5~6입)",
+    "price": 9900,
+    "description": "아삭아삭 달콤한 제철과일",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1.5kg 내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "국산과일" }]
+  },
+  {
+    "img": "66",
+    "manufacturer": "귤림원",
+    "name": "당도선별 GAP 하우스 감귤 1kg",
+    "price": 10900,
+    "description": "기분 좋은 주황빛 달콤함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1kg 내외",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "국산과일" }]
+  },
+  {
+    "img": "67",
+    "manufacturer": "",
+    "name": "칠레산 블루베리 2종",
+    "price": 6500,
+    "description": "톡톡 번져가는 상큼함 가득",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "옵션별 상이",
+    "origin": "칠레산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "수입과일" }]
+  },
+  {
+    "img": "68",
+    "manufacturer": "",
+    "name": "베트남산 코끼리 망고 1.2kg (2입)",
+    "price": 25800,
+    "description": "푸짐하게 맛보는 달콤한 과육 (1팩/1.2kg내외)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "2개 1.2kg 내외",
+    "origin": "수입산(베트남)",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "수입과일" }]
+  },
+  {
+    "img": "69",
+    "manufacturer": "",
+    "name": "남아공 자몽 960g (3입)",
+    "price": 7800,
+    "description": "자꾸만 손이 가는 쌉쌀한 매력",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "3개",
+    "origin": "남아공",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "수입과일" }]
+  },
+  {
+    "img": "70",
+    "manufacturer": "",
+    "name": "필리핀 카라바오 망고 500g 2입",
+    "price": 11950,
+    "description": "새콤함이 도드라지는 이색 망고",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g 내외",
+    "origin": "필리핀",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "수입과일" }]
+  },
+  {
+    "img": "71",
+    "manufacturer": "",
+    "name": "미국산 씨없는 적포도 (크림슨) 500g",
+    "price": 10900,
+    "description": "껍질째 즐기는 아삭 달콤함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g 내외",
+    "origin": "미국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "수입과일" }]
+  },
+  {
+    "img": "72",
+    "manufacturer": "",
+    "name": "브라질 애플망고 450g (1개)",
+    "price": 10900,
+    "description": "사과처럼 붉은빛을 띠어 '애플'이라는 이름이 붙은 망고. 붉은 껍질을 벗기고 나면 샛노란 속살이 나타납니다.",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "450g 내외",
+    "origin": "브라질",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "수입과일" }]
+  },
+  {
+    "img": "73",
+    "manufacturer": "작은언니네 과수원",
+    "name": "조치원 복숭아 황도 450g",
+    "price": 13600,
+    "description": "아삭한 과육이 살아있는",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "450g",
+    "origin": "상세페이지 별도 표기",
+    "allergy": "복숭아",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "간편과일" }]
+  },
+  {
+    "img": "74",
+    "manufacturer": "작은언니네 과수원",
+    "name": "조치원 복숭아 황도 450g",
+    "price": 13600,
+    "description": "아삭한 과육이 살아있는",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "450g",
+    "origin": "상세페이지 별도 표기",
+    "allergy": "복숭아",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "간편과일" }]
+  },
+  {
+    "img": "75",
+    "manufacturer": "Dole",
+    "name": "스위티오 파인애플 슬라이스 540g",
+    "price": 8490,
+    "description": "더 이상 손질할 필요가 없는 파인애플 슬라이스(540g/팩)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "540g",
+    "origin": "파인애플: 필리핀산/제조국: 대한민국",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "간편과일" }]
+  },
+  {
+    "img": "76",
+    "manufacturer": "fruit salon",
+    "name": "컷팅 파인애플 1kg",
+    "price": 10900,
+    "description": "온가족이 함께 맛보는 간편과일",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1kg",
+    "origin": "필리핀산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "간편과일" }]
+  },
+  {
+    "img": "77",
+    "manufacturer": "올프레쉬",
+    "name": "컷팅 메론 330g (대)",
+    "price": 9900,
+    "description": "뚜껑만 열어 바로 먹는 간편 멜론",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "330g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "간편과일" }]
+  },
+  {
+    "img": "78",
+    "manufacturer": "fruit salon",
+    "name": "간편 컷팅과일 150g",
+    "price": 2990,
+    "description": "손쉽게 즐기는 5가지 과일",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "150g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "간편과일" }]
+  },
+  {
+    "img": "79",
+    "manufacturer": "설빙",
+    "name": "아이스망고 60g * 5개입",
+    "price": 5950,
+    "description": "달콤하고 부드러운",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "300g (60g * 5개입)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "밀, 우유, 새우, 계란, 대두",
+    "category": [
+      { "0": "과일", "1": "견과", "2": "쌀", "3": "냉동", "4": "건과일" }
+    ]
+  },
+  {
+    "img": "80",
+    "manufacturer": "",
+    "name": "냉동 간편 람부탄 750g (250gX3봉) (베트남산)",
+    "price": 12000,
+    "description": "손질 없이 누리는 달콤함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "250gX3봉",
+    "origin": "베트남산",
+    "allergy": "",
+    "category": [
+      { "0": "과일", "1": "견과", "2": "쌀", "3": "냉동", "4": "건과일" }
+    ]
+  },
+  {
+    "img": "81",
+    "manufacturer": "GAP",
+    "name": "청도 감말랭이 500g",
+    "price": 13900,
+    "description": "말랑촉촉 쫄깃하게 즐기는 간식",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "500g 내외",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [
+      { "0": "과일", "1": "견과", "2": "쌀", "3": "냉동", "4": "건과일" }
+    ]
+  },
+  {
+    "img": "81",
+    "manufacturer": "GAP",
+    "name": "청도 감말랭이 500g",
+    "price": 13900,
+    "description": "말랑촉촉 쫄깃하게 즐기는 간식",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "500g 내외",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [
+      { "0": "과일", "1": "견과", "2": "쌀", "3": "냉동", "4": "건과일" }
+    ]
+  },
+  {
+    "img": "82",
+    "manufacturer": "",
+    "name": "냉동 국산 블루베리 400g",
+    "price": 15200,
+    "description": "믿고 즐기는 블루베리",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "400g 내외",
+    "origin": "국산",
+    "allergy": "호두, 땅콩, 밀, 잣, 이산화황",
+    "category": [
+      { "0": "과일", "1": "견과", "2": "쌀", "3": "냉동", "4": "건과일" }
+    ]
+  },
+  {
+    "img": "83",
+    "manufacturer": "담과연",
+    "name": "아이스 홍시 1.5kg",
+    "price": 16000,
+    "description": "입안 가득 사르르 녹는 달콤함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "1.5kg 내외",
+    "origin": "상세페이지 별도표기",
+    "allergy": "복숭아",
+    "category": [
+      { "0": "과일", "1": "견과", "2": "쌀", "3": "냉동", "4": "건과일" }
+    ]
+  },
+  {
+    "img": "84",
+    "manufacturer": "감골",
+    "name": "치즈호두곶감말이 300g",
+    "price": 25900,
+    "description": "쫀득한 곶감과 산뜻한 치즈의 만남",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g 내외",
+    "origin": "상세페이지 별도표기",
+    "allergy": "호두, 우유",
+    "category": [
+      { "0": "과일", "1": "견과", "2": "쌀", "3": "냉동", "4": "건과일" }
+    ]
+  },
+  {
+    "img": "85",
+    "manufacturer": "",
+    "name": "원데이노블너츠세트 950g",
+    "price": 58000,
+    "description": "다양하게 하루 하루 즐길 수 있는 고소함 가득 6종 견과류 세트",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "하단 제품 라벨 참조",
+    "origin": "상품별 별도표기",
+    "allergy": " 본 제품은 난류, 우유, 메밀, 잣, 땅콩, 대두, 밀, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 닭고기, 쇠고기, 오징어, 조개류(굴, 전복, 홍합 포함), 아황산류를 사용한 제품과 같은 생산시설에서 포장하였습니다.",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "견과류" }]
+  },
+  {
+    "img": "86",
+    "manufacturer": "머거본",
+    "name": "머거본 스테디셀러 6종 세트",
+    "price": 28950,
+    "description": "깔끔한 캔에 담은 다채로운 견과",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "135g*6종",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-칼몬드: 밀, 대두 함유 -믹스너트: 땅콩, 대두, 호두 함유 -꿀땅콩: 밀, 땅콩 함유 -커피땅콩: 땅콩 함유 -허니로스티드땅콩: 땅콩 함유",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "견과류" }]
+  },
+  {
+    "img": "87",
+    "manufacturer": "머거본",
+    "name": "머거본 프리미어 선물세트",
+    "price": 39100,
+    "description": "경쾌한 식감과 쫄깃하게 씹는 재미",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-칼몬드: 밀, 대두 함유 -믹스너트: 땅콩, 대두, 호두 함유 -꿀땅콩: 밀, 땅콩 함유 -커피땅콩: 땅콩 함유 -허니로스티드땅콩: 땅콩 함유",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "견과류" }]
+  },
+  {
+    "img": "88",
+    "manufacturer": "머거본",
+    "name": "머거본 스테디셀러 10종 세트",
+    "price": 49800,
+    "description": "간식부터 안주까지 다양하게",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "135g*10종",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-칼몬드: 밀, 대두 함유 -믹스너트: 땅콩, 대두, 호두 함유 -꿀땅콩: 밀, 땅콩 함유 -커피땅콩: 땅콩 함유 -허니로스티드땅콩: 땅콩 함유",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "견과류" }]
+  },
+  {
+    "img": "89",
+    "manufacturer": "HBAF",
+    "name": "넛츠앤스낵스 허브솔트 믹스넛 30gX6봉",
+    "price": 8900,
+    "description": "허브의 향긋한 풍미 가득",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1박스",
+    "weight": "30g*6봉",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 땅콩, 대두, 밀, 우유 함유 - 계란, 복숭아, 토마토, 호두, 쇠고기 혼입 가능",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "견과류" }]
+  },
+  {
+    "img": "90",
+    "manufacturer": "HBAF",
+    "name": "넛츠앤스낵스 메이플 믹스넛 30gX6봉",
+    "price": 8900,
+    "description": "그윽한 단맛을 입은 견과류",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1박스",
+    "weight": "30g*6봉",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두 함유 - 땅콩, 밀, 계란, 복숭아, 토마토, 호두, 쇠고기, 우유 혼입 가능",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "견과류" }]
+  },
+  {
+    "img": "91",
+    "manufacturer": "",
+    "name": "유기농 늘보리 500g",
+    "price": 3490,
+    "description": "추억의 꽁보리밥용 보리",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "500g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "잡곡" }]
+  },
+  {
+    "img": "92",
+    "manufacturer": "",
+    "name": "현미 2kg",
+    "price": 6900,
+    "description": "꼭꼭 씹어 먹는 대표 영양 곡식",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1포",
+    "weight": "2kg",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "잡곡" }]
+  },
+  {
+    "img": "93",
+    "manufacturer": "",
+    "name": "꽃보다 아름다운 쌀 2kg",
+    "price": 9900,
+    "description": "가장 빨리 만나볼 수 있는 2021년 햅쌀",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1포",
+    "weight": "2kg",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "잡곡" }]
+  },
+  {
+    "img": "94",
+    "manufacturer": "영호진미",
+    "name": "대왕님표 여주쌀 2종",
+    "price": 24000,
+    "description": "우리 쌀이 전하는 근사한 밥맛(10kg/4kg/1포)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1포",
+    "weight": "10kg/4kg",
+    "origin": "국산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "잡곡" }]
+  },
+  {
+    "img": "95",
+    "manufacturer": "영호진미",
+    "name": "저탄소 유기농 영호진미 4kg",
+    "price": 19900,
+    "description": "식은 후에도 탄력있는 밥알",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1포",
+    "weight": "4kg",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "잡곡" }]
+  },
+  {
+    "img": "96",
+    "manufacturer": "",
+    "name": "유기농 10곡 미숫가루 500g",
+    "price": 8700,
+    "description": "재료부터 믿음직한 미숫가루",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "500g",
+    "origin": "제품 별도표기",
+    "allergy": "- 대두 함유 - 본 제품은 우유, 메밀, 땅콩, 밀, 새우, 호두, 토마토, 조개류(홍합) 잣, 게, 복숭아를 사용한 제품과 같은 시설에서 제조하였습니다.",
+    "category": [{ "0": "과일", "1": "견과", "2": "쌀", "3": "잡곡" }]
+  },
+  {
+    "img": "97",
+    "manufacturer": "바른생선",
+    "name": "절단 낙지 400g (냉동)",
+    "price": 10300,
+    "description": "오동통한 부위만 모아 냉동",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "400g",
+    "origin": "베트남",
+    "allergy": "본 제품은 고등어, 오징어, 게, 새우를 취급하는 시설에서 제조",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "제철수산" }]
+  },
+  {
+    "img": "98",
+    "manufacturer": "바른생선",
+    "name": "노르웨이 고등어 750g (5쪽) (냉동)",
+    "price": 11900,
+    "description": "오동통한 부위만 모아 냉동",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "750g",
+    "origin": "노르웨이산",
+    "allergy": "본 제품은 고등어, 오징어, 게, 새우를 취급하는 제조시설에서 제조",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "제철수산" }]
+  },
+  {
+    "img": "99",
+    "manufacturer": "바비엔",
+    "name": "국산 수꽃게 4미 800g (냉동)",
+    "price": 16900,
+    "description": "통통하게 살이 오른",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1개",
+    "weight": "800g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 게 함유",
+    "category": [
+      { "0": "수산", "1": "해산", "2": "건어물", "3": "제철수산", "4": "게" }
+    ]
+  },
+  {
+    "img": "100",
+    "manufacturer": "바비엔",
+    "name": "국산 꽃게 3미 (냉동)",
+    "price": 9000,
+    "description": "소가구도 부담 없는 국산 꽃게",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "500g/ 3미",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 게 함유 - 이 제품은 난류, 우유, 메밀, 땅콩, 대두, 밀 , 고등어, 새우, 돼지고기,복숭아, 토마토, 아황산류, 호두 , 닭고기, 쇠고기 ,오징어, 조개류(굴, 전복, 홍합포함), 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      { "0": "수산", "1": "해산", "2": "건어물", "3": "제철수산", "4": "게" }
+    ]
+  },
+  {
+    "img": "101",
+    "manufacturer": "삼삼해물",
+    "name": "동해안 오징어 600g (냉동)",
+    "price": 12900,
+    "description": "부드러운 살과 고소한 내장",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "2마리 (600g 내외)",
+    "origin": "국내산",
+    "allergy": "",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "제철수산" }]
+  },
+  {
+    "img": "102",
+    "manufacturer": "생선파는 언니",
+    "name": "순살 고등어 300g (냉동)",
+    "price": 7500,
+    "description": "쉽고 즐거운 고등어 요리 시간",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1박스",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 고등어 함유 - 본 제품은 새우, 게, 오징어, 조개류를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "제철수산" }]
+  },
+  {
+    "img": "103",
+    "manufacturer": "덕화명란",
+    "name": "튜브 명란 110g (냉동)",
+    "price": 5900,
+    "description": "간편하게 더하는 명란의 감칠맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1개",
+    "weight": "110g",
+    "origin": "미국산",
+    "allergy": "- 우유, 밀, 대두 함유",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "생선류" }]
+  },
+  {
+    "img": "104",
+    "manufacturer": "덕화명란",
+    "name": "프리미엄명란 200g",
+    "price": 14300,
+    "description": "명장의 비법 담긴 오동통한 감칠맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유, 밀, 대두 함유",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "생선류" }]
+  },
+  {
+    "img": "105",
+    "manufacturer": "동원",
+    "name": "참치회 다랑어 속살 380g (냉동)",
+    "price": 13900,
+    "description": "부드럽고 고소한 다랑어 횟감",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "380g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-이 상품은 대두, 밀을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "생선류" }]
+  },
+  {
+    "img": "106",
+    "manufacturer": "동원",
+    "name": "참다랑어 대뱃살 200g (냉동)",
+    "price": 32900,
+    "description": "사르르 녹는 듯 고소한 감칠맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-이 상품은 대두, 밀을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "생선류" }]
+  },
+  {
+    "img": "107",
+    "manufacturer": "맛의명태자",
+    "name": " 짜먹는 명란젓 80g(냉동)",
+    "price": 4800,
+    "description": "맛있게 톡톡 입맛 돋우는",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "80g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "생선류" }]
+  },
+  {
+    "img": "108",
+    "manufacturer": "맛의명태자",
+    "name": "냉장 명란 120g",
+    "price": 7900,
+    "description": "자꾸 손이 가는 밥도둑",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "120g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 이 제품은 밀, 우유, 오징어, 쇠고기, 계란을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [{ "0": "수산", "1": "해산", "2": "건어물", "3": "생선류" }]
+  },
+  {
+    "img": "109",
+    "manufacturer": "법성포참맛",
+    "name": "프리미엄 영광굴비 180g 내외 (2마리) (냉동)",
+    "price": 9900,
+    "description": "고소하고 부드러운 굴비의 참맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1박스",
+    "weight": "90g내외*2마리",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      { "0": "수산", "1": "해산", "2": "건어물", "3": "굴비", "4": "반건류" }
+    ]
+  },
+  {
+    "img": "110",
+    "manufacturer": "법성포참맛",
+    "name": "대용량 영광굴비 1.4kg (20마리) (냉동)",
+    "price": 39000,
+    "description": "고소하고 부드러운 굴비의 참맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "70g 내외 X 20마리",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      { "0": "수산", "1": "해산", "2": "건어물", "3": "굴비", "4": "반건류" }
+    ]
+  },
+  {
+    "img": "111",
+    "manufacturer": "우주",
+    "name": "자연산 민어굴비 400g (냉동)",
+    "price": 19900,
+    "description": "민어로 만든 짭조름한 굴비",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "400g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-난류(계란), 대두, 밀, 고등어, 게, 새우, 닭고기, 오징어, 조개류(가리비, 관자, 홍합, 굴, 바지락, 전복, 재첩 포함)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      { "0": "수산", "1": "해산", "2": "건어물", "3": "굴비", "4": "반건류" }
+    ]
+  },
+  {
+    "img": "112",
+    "manufacturer": "삼삼해물",
+    "name": "반건조 서대 230g 내외 (2마리) (냉동)",
+    "price": 8800,
+    "description": "담백하고 부드러운 반건조 서대",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "2마리 (230g 내외)",
+    "origin": "기니산",
+    "allergy": "",
+    "category": [
+      { "0": "수산", "1": "해산", "2": "건어물", "3": "굴비", "4": "반건류" }
+    ]
+  },
+  {
+    "img": "113",
+    "manufacturer": "생선파는 언니",
+    "name": "손질 코다리살 500g (냉동)",
+    "price": 8700,
+    "description": "뼈와 가시를 제거해 더욱 간편히 요리하는",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-새우, 게, 오징어, 고등어, 조개류를 사용한 제품과 같은 시설에서 제조",
+    "category": [
+      { "0": "수산", "1": "해산", "2": "건어물", "3": "굴비", "4": "반건류" }
+    ]
+  },
+  {
+    "img": "114",
+    "manufacturer": "이호",
+    "name": "참조기 550g 내외 (6~8마리) (냉장)",
+    "price": 9900,
+    "description": "맛이 꽉 들어찬 한 끼 반찬",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "6~8미(550g 내외)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-고등어, 새우, 게, 오징어, 조개류(굴,전복,홍합 등)를 이용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      { "0": "수산", "1": "해산", "2": "건어물", "3": "굴비", "4": "반건류" }
+    ]
+  },
+  {
+    "img": "115",
+    "manufacturer": "우주",
+    "name": "국산 주꾸미 500g (생물)",
+    "price": 22900,
+    "description": "쫄깃함이 살아있는 큼지막한 주꾸미",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g 내외",
+    "origin": "국산",
+    "allergy": "- 본 제품은 고등어, 새우, 오징어, 게, 조개류(굴, 전복, 홍합)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "오징어",
+        "4": "낙지",
+        "5": "문어"
+      }
+    ]
+  },
+  {
+    "img": "116",
+    "manufacturer": "",
+    "name": "자연산 돌문어 1kg 내외 (1~2마리) ",
+    "price": 39900,
+    "description": "입 안 가득 쫄깃한 풍미",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1kg 내외(1~2마리)",
+    "origin": "국산",
+    "allergy": "- 본 제품은 고등어, 새우, 오징어, 게, 조개류(굴, 전복, 홍합)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "오징어",
+        "4": "낙지",
+        "5": "문어"
+      }
+    ]
+  },
+  {
+    "img": "117",
+    "manufacturer": "어보선",
+    "name": "간편한 손질오징어 1kg (냉동)",
+    "price": 17500,
+    "description": "다양하게 요리하는 간편 오징어",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "1kg",
+    "origin": "원양산",
+    "allergy": "- 본 제품은 고등어, 새우, 오징어, 게, 조개류(굴, 전복, 홍합)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "오징어",
+        "4": "낙지",
+        "5": "문어"
+      }
+    ]
+  },
+  {
+    "img": "118",
+    "manufacturer": "KF365",
+    "name": "두툼한 국산 오징어채 600g (냉동)",
+    "price": 10900,
+    "description": "두루 활용하기 좋은 오징어채",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉ehd(종이포장)",
+    "unit": "1팩",
+    "weight": "600g",
+    "origin": "국산",
+    "allergy": "- 이 제품은 고등어, 새우, 게, 오징어, 조개류(굴, 전복, 홍합 등)를 이용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "오징어",
+        "4": "낙지",
+        "5": "문어"
+      }
+    ]
+  },
+  {
+    "img": "119",
+    "manufacturer": "어보선",
+    "name": "국산 순살 오징어몸통채 300g (냉동)",
+    "price": 8980,
+    "description": "야들야들 부드러운 식감",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "국산",
+    "allergy": "- 본 제품은 고등어, 새우, 오징어, 게, 조개류(굴, 전복, 홍합)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "오징어",
+        "4": "낙지",
+        "5": "문어"
+      }
+    ]
+  },
+  {
+    "img": "120",
+    "manufacturer": "",
+    "name": "생물 낙지 2미 (생물)",
+    "price": 10900,
+    "description": "바로 요리하는 싱싱함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "2미(200g~300g)",
+    "origin": "중국산",
+    "allergy": "- 이 제품은 고등어, 새우, 게, 오징어, 조개류(굴, 전복, 홍합 등)를 이용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "오징어",
+        "4": "낙지",
+        "5": "문어"
+      }
+    ]
+  },
+  {
+    "img": "121",
+    "manufacturer": "다이아몬드",
+    "name": "대용량 생칵테일새우 900g (냉동)",
+    "price": 28900,
+    "description": "큼직한 사이즈로 엄선",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "900g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 새우 함유",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "새우",
+        "4": "게",
+        "5": "랍스터"
+      }
+    ]
+  },
+  {
+    "img": "122",
+    "manufacturer": "다이아몬드",
+    "name": "흰다리새우 500g (냉동)",
+    "price": 13900,
+    "description": "고소한 감칠맛을 더해줄",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "베트남산",
+    "allergy": "- 새우 함유",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "새우",
+        "4": "게",
+        "5": "랍스터"
+      }
+    ]
+  },
+  {
+    "img": "123",
+    "manufacturer": "모현상회",
+    "name": "아르헨티나 자연산 홍새우 L사이즈 300g(냉동)",
+    "price": 11500,
+    "description": "껍질이 쉽게 벗겨지는 손질 새우",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g 내외 /12마리 내외",
+    "origin": "아르헨티나산",
+    "allergy": "- 새우 함유",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "새우",
+        "4": "게",
+        "5": "랍스터"
+      }
+    ]
+  },
+  {
+    "img": "124",
+    "manufacturer": "모현상회",
+    "name": "생새우 2종(냉동)",
+    "price": 10000,
+    "description": "깔끔한 손질, 다양한 쓰임새",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 새우 함유",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "새우",
+        "4": "게",
+        "5": "랍스터"
+      }
+    ]
+  },
+  {
+    "img": "125",
+    "manufacturer": "미소프레쉬",
+    "name": "칼칼한 대구탕 (냉동)",
+    "price": 12800,
+    "description": "시원한 국물과 오동통한 대구",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "825g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀, 새우, 쇠고기, 오징어, 조개류(굴, 홍합) 함유 - 본 제품은 돼지고기, 토마토 ,고등어, 게, 메밀을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "해산물",
+        "4": "조개류"
+      }
+    ]
+  },
+  {
+    "img": "126",
+    "manufacturer": "대흥",
+    "name": "서해안 동죽조개 1kg (냉장)",
+    "price": 12800,
+    "description": "활용도 높은 만능 조개",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "1kg",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "해산물",
+        "4": "조개류"
+      }
+    ]
+  },
+  {
+    "img": "126",
+    "manufacturer": "대흥",
+    "name": "서해안 동죽조개 1kg (냉장)",
+    "price": 12800,
+    "description": "활용도 높은 만능 조개",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "1kg",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "해산물",
+        "4": "조개류"
+      }
+    ]
+  },
+  {
+    "img": "127",
+    "manufacturer": "기장물산",
+    "name": "간편한끼 한봉씩 기장미역 80g 8개입",
+    "price": 6980,
+    "description": "계량 필요 없는 고품질 미역",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩(8봉)",
+    "weight": "80g(10g X 8봉)",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "해산물",
+        "4": "조개류"
+      }
+    ]
+  },
+  {
+    "img": "128",
+    "manufacturer": "대흥",
+    "name": "서해안 참바지락 800g (냉장)",
+    "price": 8900,
+    "description": "작지만 쫄깃하고 고소한 육질",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "800g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "해산물",
+        "4": "조개류"
+      }
+    ]
+  },
+  {
+    "img": "129",
+    "manufacturer": "기장물산",
+    "name": "간편한끼 한봉씩 기장다시마 8개입",
+    "price": 8900,
+    "description": "한 봉씩 꺼내 쓰는 다시마",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩(8봉)",
+    "weight": "120g(15g X 8봉)",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "해산물",
+        "4": "조개류"
+      }
+    ]
+  },
+  {
+    "img": "130",
+    "manufacturer": "모현상회",
+    "name": "생연어 횟감 200g (냉장)",
+    "price": 11790,
+    "description": "다채롭게 활용하는 생연어",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 본 제품은 대두, 밀, 우유, 토마토, 닭고기, 계란, 쇠고기, 새우, 오징어, 조개류(굴, 전복)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "해산물",
+        "4": "조개류"
+      }
+    ]
+  },
+  {
+    "img": "131",
+    "manufacturer": "게방식당",
+    "name": "간장 새우 2종",
+    "price": 13000,
+    "description": "먹기 좋게 숙성된 쫀득쫀득한 새우",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "옵션별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀, 새우 함유 - 이 제품은 게, 조개류(전복,꼬막),계란을 사용한 제품과 같은 시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "수산가공품"
+      }
+    ]
+  },
+  {
+    "img": "132",
+    "manufacturer": "게방식당",
+    "name": "간장 전복 2종",
+    "price": 17000,
+    "description": "밥반찬으로 환생한 완도산 전복",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "옵션별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀, 새우 조개류(전복) 함유 - 이 제품은 게, 조개류(꼬막),계란을 사용한 제품과 같은 시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "수산가공품"
+      }
+    ]
+  },
+  {
+    "img": "133",
+    "manufacturer": "게방식당",
+    "name": "간장 연어",
+    "price": 18000,
+    "description": "비법 간장이 스며든 노르웨이 연어",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "옵션별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀, 새우 조개류(전복) 함유 - 이 제품은 게, 조개류(꼬막),계란을 사용한 제품과 같은 시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "수산가공품"
+      }
+    ]
+  },
+  {
+    "img": "134",
+    "manufacturer": "고래미",
+    "name": "날치알 골드 2종 (냉동)",
+    "price": 6400,
+    "description": "제대로 맛보는 황금빛 날치알",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1통/1박스",
+    "weight": "옵션별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 이 제품은 알류, 우유, 메밀, 땅콩, 대두, 밀, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 쇠고기, 오징어, 조개류(꼬막, 소라, 바지락, 가리비, 홍합, 전복, 대합, 굴, 백합), 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "수산가공품"
+      }
+    ]
+  },
+  {
+    "img": "135",
+    "manufacturer": "계곡가든",
+    "name": "암꽃게장 750g (냉동)",
+    "price": 39000,
+    "description": "제대로 맛보는 황금빛 날치알",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1통",
+    "weight": "750g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-게, 대두, 밀 함유",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "수산가공품"
+      }
+    ]
+  },
+  {
+    "img": "136",
+    "manufacturer": "게방식당",
+    "name": "새우 비빔",
+    "price": 13000,
+    "description": "매콤한 양념장에 숨은 탱글한 속살",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "360g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀, 새우 함유 - 이 제품은 게, 조개류(전복, 꼬막), 계란을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "수산가공품"
+      }
+    ]
+  },
+  {
+    "img": "137",
+    "manufacturer": "광천김",
+    "name": "광천 파래김 (도시락김) 16개입",
+    "price": 5000,
+    "description": "고소한 내음 가득한 국민 밥도둑",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1봉",
+    "weight": "4g*16봉입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "김",
+        "4": "미역",
+        "5": "해조류"
+      }
+    ]
+  },
+  {
+    "img": "137",
+    "manufacturer": "광천김",
+    "name": "광천 파래김 (도시락김) 16개입",
+    "price": 5000,
+    "description": "고소한 내음 가득한 국민 밥도둑",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1봉",
+    "weight": "4g*16봉입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "김",
+        "4": "미역",
+        "5": "해조류"
+      }
+    ]
+  },
+  {
+    "img": "138",
+    "manufacturer": "광천김",
+    "name": "재래 도시락 김 4g*16봉",
+    "price": 5000,
+    "description": "입맛을 돋우어주는 밥반찬",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1봉",
+    "weight": "4g*16개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "김",
+        "4": "미역",
+        "5": "해조류"
+      }
+    ]
+  },
+  {
+    "img": "139",
+    "manufacturer": "기장물산",
+    "name": "해녀가 인정한 기장미역",
+    "price": 8900,
+    "description": "쫄깃한 식감으로 만나보는 실미역",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1봉",
+    "weight": "130g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "김",
+        "4": "미역",
+        "5": "해조류"
+      }
+    ]
+  },
+  {
+    "img": "140",
+    "manufacturer": "기장물산",
+    "name": "비빔밥용 해초샐러드 5입",
+    "price": 13500,
+    "description": "물에 불려즐기는 7가지 해초",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "해초(5봉/각 10g), 양념장(5봉/각 50g)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- (증정용) 비빔양념장 : 밀 함유/ 난류(계란),우유,땅콩,메밀,대두,고등어,게,새우,돼지고기,복숭아,토마토,아황산류,호두,닭고기,오징어,조개류,소고기,잣과 같은 시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "김",
+        "4": "미역",
+        "5": "해조류"
+      }
+    ]
+  },
+  {
+    "img": "141",
+    "manufacturer": "기장물산",
+    "name": "유기인증 자른미역 25g (10인분 내외)",
+    "price": 2200,
+    "description": "간편하게 사용하는 유기농 미역",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1봉",
+    "weight": "25g",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "김",
+        "4": "미역",
+        "5": "해조류"
+      }
+    ]
+  },
+  {
+    "img": "142",
+    "manufacturer": "바다숲",
+    "name": "한입에 감태 도시락 2종",
+    "price": 8000,
+    "description": "간편하게 꺼내어 놓는 바다의 별미",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "옵션별 상이",
+    "origin": "국산",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "김",
+        "4": "미역",
+        "5": "해조류"
+      }
+    ]
+  },
+  {
+    "img": "143",
+    "manufacturer": "강릉상회",
+    "name": "염도를 줄인 볶음용멸치 120g",
+    "price": 7900,
+    "description": "짜지 않고 맛있는 멸치",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "120g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "건어물",
+        "4": "다시팩"
+      }
+    ]
+  },
+  {
+    "img": "144",
+    "manufacturer": "강릉상회",
+    "name": "손질멸치 100g",
+    "price": 9900,
+    "description": "손쉬운 멸치 활용을 위한 선택",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "100g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "건어물",
+        "4": "다시팩"
+      }
+    ]
+  },
+  {
+    "img": "145",
+    "manufacturer": "건어물상회",
+    "name": "조미오징어 진미채 300g",
+    "price": 10900,
+    "description": "간식부터 밥반찬까지",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 오징어 함유 - 본 제품은 우유, 게, 새우, 오징어, 땅콩, 호두, 조개류(홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "건어물",
+        "4": "다시팩"
+      }
+    ]
+  },
+  {
+    "img": "146",
+    "manufacturer": "건어물상회",
+    "name": "조미오징어 진미채 500g",
+    "price": 16900,
+    "description": "넉넉하게 활용하는 진미채",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 오징어 함유 - 본 제품은 우유, 게, 새우, 오징어, 땅콩, 호두, 조개류(홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "건어물",
+        "4": "다시팩"
+      }
+    ]
+  },
+  {
+    "img": "147",
+    "manufacturer": "건어물상회",
+    "name": "국물용멸치 600g",
+    "price": 9900,
+    "description": "깊은 국물 맛의 완성",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "600g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 본 제품은 게, 새우, 오징어, 땅콩, 호두, 조개류(홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "건어물",
+        "4": "다시팩"
+      }
+    ]
+  },
+  {
+    "img": "148",
+    "manufacturer": "건어물상회",
+    "name": "한입에 쏙 치즈 오징어 40g",
+    "price": 5400,
+    "description": "고소한 치즈에 오징어가 쏙",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "40g (4g X 10봉)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 오징어, 우유, 대두, 밀 함유 - 이 제품은 메밀, 땅콩, 고등어, 게, 쇠고기, 새우, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 알류(가금류), 조개류(굴, 전복, 홍합 포함), 잣, 아황산류를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "수산",
+        "1": "해산",
+        "2": "건어물",
+        "3": "건어물",
+        "4": "다시팩"
+      }
+    ]
+  },
+  {
+    "img": "149",
+    "manufacturer": "남도우애",
+    "name": "무항생제 1++ 한우 등심 구이용 200g (냉장)",
+    "price": 37900,
+    "description": "100g당 가격: 18,950원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "국산",
+    "allergy": "- 소고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "국내산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "150",
+    "manufacturer": "녹색한우",
+    "name": "무항생제 1+ 한우 등심 구이용 200g (냉장)",
+    "price": 28900,
+    "description": "100g당 판매가 : 14,450원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "국내산",
+    "allergy": "- 소고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "국내산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "151",
+    "manufacturer": "녹색한우",
+    "name": "무항생제 1+ 한우 양지 국거리용 200g 2종 (냉장)",
+    "price": 16700,
+    "description": "100g당 가격: 8,350원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "국내산",
+    "allergy": "- 소고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "국내산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "152",
+    "manufacturer": "녹색한우",
+    "name": "무항생제 1+ 한우 꽃등심 구이용 200g (냉장)",
+    "price": 29900,
+    "description": "100g당 가격: 14,950원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "국내산",
+    "allergy": "- 소고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "국내산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "153",
+    "manufacturer": "녹색한우",
+    "name": "무항생제 1+ 한우 안심 구이용 200g (냉장)",
+    "price": 36900,
+    "description": "100g당 가격: 18,450원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "국내산",
+    "allergy": "- 소고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "국내산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "154",
+    "manufacturer": "남도우애",
+    "name": "무항생제 1++ 한우 꽃등심 200g (냉장)",
+    "price": 38900,
+    "description": "100g당 가격: 18,450원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "국내산",
+    "allergy": "- 소고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "국내산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "155",
+    "manufacturer": "델리치오",
+    "name": "호주산 목초육 안심 스테이크 250g (냉장)",
+    "price": 22900,
+    "description": "100g 당 9160원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "250g",
+    "origin": "호주산",
+    "allergy": "- 소고기 함유 - 대두, 밀, 돼지고기, 우유, 토마토, 새우, 아황산류, 닭고기, 조개류(굴, 홍합, 전복), 오징어, 잣, 알류, 게, 복숭아, 땅콩, 호두, 고등어, 메밀과 동일 제조시설에서 제조",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "수입산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "156",
+    "manufacturer": "델리치오",
+    "name": "호주산 채끝 스테이크 300g (냉장)",
+    "price": 17900,
+    "description": "100g 당 : 5966원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "호주산",
+    "allergy": "- 소고기 함유 - 대두, 밀, 돼지고기, 우유, 토마토, 새우, 아황산류, 닭고기, 조개류(굴, 홍합, 전복), 오징어, 잣, 알류, 게, 복숭아, 땅콩, 호두, 고등어, 메밀과 동일 제조시설에서 제조",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "수입산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "157",
+    "manufacturer": "델리치오",
+    "name": "호주산 안심 찹스테이크 250g (냉장)",
+    "price": 19900,
+    "description": "100g 당 7960원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "250g",
+    "origin": "호주산",
+    "allergy": "- 소고기 함유 - 대두, 밀, 돼지고기, 우유, 토마토, 새우, 아황산류, 닭고기, 조개류(굴, 홍합, 전복), 오징어, 잣, 알류, 게, 복숭아, 땅콩, 호두, 고등어, 메밀과 동일 제조시설에서 제조",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "수입산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "158",
+    "manufacturer": "레인저스벨리",
+    "name": "호주산 블랙앵거스 윗등심 스테이크 300g (냉장)",
+    "price": 18900,
+    "description": "100g 당 6,300원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "호주산",
+    "allergy": "- 소고기 함유 - 대두, 밀, 소고기, 우유, 토마토, 새우, 아황산류, 닭고기, 조개류(굴, 홍합, 전복), 오징어, 잣, 알류, 게, 복숭아, 땅콩, 호두, 고등어, 메밀이 함유된 제품과 동일라인에서 생산",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "수입산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "159",
+    "manufacturer": "마켓컬리 X 울워스",
+    "name": "호주산 안심 스테이크 200g",
+    "price": 20500,
+    "description": "100g 10,250원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "호주산",
+    "allergy": "- 본 상품은 알류,우유,메밀,땅콩,대두,밀,고등어,게,새우,돼지고기,복숭아,토마토,아황산류,호두,닭고기,오징어,조개류(굴,전복,홍합포함),잣 혼입이 가능하며 같은 시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "수입산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "160",
+    "manufacturer": "델리치오",
+    "name": "목초육 안심 구이용 250g",
+    "price": 21900,
+    "description": "100g 당 8760원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "250g",
+    "origin": "호주산",
+    "allergy": "- 쇠고기 함유 - 본 상품은 대두, 밀, 돼지고기, 우유, 토마토, 새우, 아황산류, 닭고기, 조개류(굴,홍합, 전복), 오징어, 잣, 알류, 게, 복숭아, 땅콩, 호두, 고등어, 메밀이 함유된 제품과 동일라인에서 생산되고 있습니다.",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "수입산 소고기"
+      }
+    ]
+  },
+  {
+    "img": "161",
+    "manufacturer": "돈마루",
+    "name": "한돈 항정살 300g (냉장)",
+    "price": 18100,
+    "description": "100g 당 판매가: 6,033원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "국내산",
+    "allergy": "- 돼지고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "돼지고기"
+      }
+    ]
+  },
+  {
+    "img": "162",
+    "manufacturer": "돈마루",
+    "name": "한돈 삼겹살 2종 (냉장)",
+    "price": 21050,
+    "description": "100g 당 판매가: 구이용 4,550원 / 수육용 4,210원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "용도별 상이",
+    "origin": "국내산",
+    "allergy": "- 돼지고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "돼지고기"
+      }
+    ]
+  },
+  {
+    "img": "163",
+    "manufacturer": "돈마루",
+    "name": "한돈 앞다리살 불고기용 300g (냉장)",
+    "price": 6300,
+    "description": "100g당 가격: 2,100원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "국내산",
+    "allergy": "- 돼지고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "돼지고기"
+      }
+    ]
+  },
+  {
+    "img": "164",
+    "manufacturer": "돈마루",
+    "name": "한돈 갈비 찜용 500g (냉장)",
+    "price": 8700,
+    "description": "100g 당 판매가: 1,740원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "국내산",
+    "allergy": "- 돼지고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "돼지고기"
+      }
+    ]
+  },
+  {
+    "img": "165",
+    "manufacturer": "버크셔세상",
+    "name": "버크셔K 흑돼지 앞다리살 500g (냉장)",
+    "price": 15000,
+    "description": "100g당 판매가 3,000원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "국내산",
+    "allergy": "- 돼지고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "돼지고기"
+      }
+    ]
+  },
+  {
+    "img": "166",
+    "manufacturer": "버크셔세상",
+    "name": "버크셔K 흑돼지 목살 500g (냉장)",
+    "price": 25000,
+    "description": "촉촉하고 쫀듯한 감칠맛 (100g 당 5,000원)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 돼지고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "돼지고기"
+      }
+    ]
+  },
+  {
+    "img": "167",
+    "manufacturer": "가농바이오",
+    "name": "비타플러스에그 무항생제 1+등급 특란 10구",
+    "price": 4200,
+    "description": "1구 당 판매가 : 420원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1팩(10구)",
+    "origin": "국내산",
+    "allergy": "- 달걀 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "계란류"
+      }
+    ]
+  },
+  {
+    "img": "168",
+    "manufacturer": "가농바이오",
+    "name": "비타플러스에그 무항생제 1+등급 특란 20구",
+    "price": 8000,
+    "description": "1구 당 판매가 : 400원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "20구",
+    "origin": "국내산",
+    "allergy": "- 달걀 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "계란류"
+      }
+    ]
+  },
+  {
+    "img": "169",
+    "manufacturer": "제주애월아빠들",
+    "name": "구엄닭 방목 유정란",
+    "price": 12000,
+    "description": "제주 자연을 품은 재래닭의 선물",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "10구",
+    "origin": "국내산",
+    "allergy": "- 달걀 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "계란류"
+      }
+    ]
+  },
+  {
+    "img": "170",
+    "manufacturer": "가농바이오",
+    "name": "비타플러스에그 무항생제 1+등급 대란 20구",
+    "price": 7700,
+    "description": "1구 당 판매가 : 385원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1팩(20구)",
+    "origin": "국내산",
+    "allergy": "- 달걀 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "계란류"
+      }
+    ]
+  },
+  {
+    "img": "171",
+    "manufacturer": "가농바이오",
+    "name": "촉촉하게 구워낸 오메가3 구운란 20구",
+    "price": 11000,
+    "description": "20구로 풍성하게 누리는",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1팩(20구)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 달걀 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "계란류"
+      }
+    ]
+  },
+  {
+    "img": "172",
+    "manufacturer": "상하농원",
+    "name": "순갈색 동물복지 유정란 15구",
+    "price": 9200,
+    "description": "자연을 품은 영양 듬뿍 달걀",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "1팩(15구)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 달걀 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "계란류"
+      }
+    ]
+  },
+  {
+    "img": "173",
+    "manufacturer": "더오담",
+    "name": "생오리로스 (200gX2)",
+    "price": 8590,
+    "description": "쫄깃한 식감과 고소한 풍미가 일품인 오리고기를 더욱 안심하고 만나보세요.",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1개",
+    "weight": "400g",
+    "origin": "국내산",
+    "allergy": "- 이 제품은 메밀, 고등어, 새우, 게, 땅콩, 토마토, 복숭아, 아황산류, 호두, 닭고기, 돼지고기, 쇠고기, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "닭",
+        "3": "오리고기"
+      }
+    ]
+  },
+  {
+    "img": "174",
+    "manufacturer": "더오담",
+    "name": "훈제오리 400g",
+    "price": 9980,
+    "description": "무항생제 훈제오리로 만든",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "400g",
+    "origin": "상세페이지 별도 표기",
+    "allergy": "-우유,대두,밀,쇠고기,닭고기,계란 함유 *이 제품은 메밀,고등어,새우,게,땅콩,토마토,복숭아,아황산류,호두,닭고기,돼지고기,쇠고기,조개류(굴,전,홍합 포함)를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "닭",
+        "3": "오리고기"
+      }
+    ]
+  },
+  {
+    "img": "175",
+    "manufacturer": "다향오리",
+    "name": "훈제오리 슬라이스 150g X 3개입",
+    "price": 9900,
+    "description": "안심하고 즐기는 쫄깃한 식감",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩 (3개입)",
+    "weight": "150g x 3개입",
+    "origin": "상세페이지 별도 표기",
+    "allergy": "- 우유, 대두, 밀, 쇠고기 함유 - 본 제품은 알류, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 오징어, 조개류(굴,전복,홍합 포함), 아황산류, 잣을 사용한 제조시설에서 같이 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "닭",
+        "3": "오리고기"
+      }
+    ]
+  },
+  {
+    "img": "176",
+    "manufacturer": "마니커",
+    "name": "IQF 닭가슴살 2kg (냉동)",
+    "price": 13990,
+    "description": "100g당 699.5원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "2kg",
+    "origin": "국내산",
+    "allergy": "본 제품은 비살균 제품이므로 충분히 열을 가하여 조리 후 섭취하십시오",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "닭",
+        "3": "오리고기"
+      }
+    ]
+  },
+  {
+    "img": "177",
+    "manufacturer": "그리너스",
+    "name": "동물복지 생 닭 1050g (냉장)",
+    "price": 9500,
+    "description": "100g 당 판매가 : 905원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1050g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 닭고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "닭",
+        "3": "오리고기"
+      }
+    ]
+  },
+  {
+    "img": "178",
+    "manufacturer": "그리너스",
+    "name": "동물복지 닭 안심살 300g (냉장)",
+    "price": 5900,
+    "description": "100g 당 판매가 : 1,967원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 닭고기 함유",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "닭",
+        "3": "오리고기"
+      }
+    ]
+  },
+  {
+    "img": "179",
+    "manufacturer": "경복궁 BLACK",
+    "name": "양념 소 불고기 600g",
+    "price": 15900,
+    "description": "100g당 가격: 2,650원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "600g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 쇠고기, 대두, 밀, 우유 함유 - 난류, 토마토, 복숭아 ,돼지고기, 닭고기, 땅콩, 아황산류, 메밀, 게, 새우, 고등어 ,호두, 오징어, 조개류(굴,전복,홍합 포함), 잣과 같은 시설에서 제조",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양념육",
+        "3": "돈까스"
+      }
+    ]
+  },
+  {
+    "img": "180",
+    "manufacturer": "강남면옥",
+    "name": "소갈비찜",
+    "price": 29800,
+    "description": "보는 맛과 먹는 맛 모두 푸짐",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "1000g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀, 소고기 함유 - 본 제품은 알류(가금류에 한함), 메밀, 우유, 땅콩, 돼지고기, 고등어, 게, 복숭아, 토마토, 아황산류, 호두, 오징어, 조개류(전복, 홍합, 굴 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양념육",
+        "3": "돈까스"
+      }
+    ]
+  },
+  {
+    "img": "181",
+    "manufacturer": "기와",
+    "name": "양념LA갈비 600g (냉장)",
+    "price": 25900,
+    "description": "100g당 가격: 4,316원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "600g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 소고기, 대두, 밀, 토마토, 우유, 조개류(굴) 함유 - 돼지고기, 닭고기, 계란, 게, 조개류(홍합), 복숭아, 새우, 오징어, 호두와 같은 시설에서 제조",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양념육",
+        "3": "돈까스"
+      }
+    ]
+  },
+  {
+    "img": "182",
+    "manufacturer": "기와",
+    "name": "양념소불고기 500g(냉장)",
+    "price": 12900,
+    "description": "간편하게 준비하는 고기 반찬",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 소고기, 대두, 밀, 토마토, 우유, 조개류(굴) 함유 - 본 제품은 돼지고기, 닭고기,계란, 게, 조개류(홍합), 복숭아, 새우, 오징어, 호두를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양념육",
+        "3": "돈까스"
+      }
+    ]
+  },
+  {
+    "img": "183",
+    "manufacturer": "고메공방",
+    "name": "미친 더블 치즈 돈까스",
+    "price": 14900,
+    "description": "간편하게 준비하는 고기 반찬",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "480g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 돼지고기, 우유, 밀, 대두 함유 - 이 제품은 계란, 메밀, 땅콩, 고등어, 게, 새우, 복숭아, 토마토, 아황산류, 호두, 닭고기, 쇠고기 ,오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양념육",
+        "3": "돈까스"
+      }
+    ]
+  },
+  {
+    "img": "184",
+    "manufacturer": "경주천년한우",
+    "name": "한우 육포",
+    "price": 7600,
+    "description": "등산, 낚시 갈 때 영양 간식",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "50g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 쇠고기, 대두, 밀, 우유 함유 - 이 제품은 알류, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 오징어, 조개류(굴,전복,홍합 포함), 아황산류, 잣을 사용한 제품과 같은 시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양념육",
+        "3": "돈까스"
+      }
+    ]
+  },
+  {
+    "img": "185",
+    "manufacturer": "그리츠 시그니처 램",
+    "name": "뉴질랜드산 프렌치 랙 300g (냉동)",
+    "price": 24900,
+    "description": "어린 양의 부드러운 갈빗살",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "프렌치랙(300g) + 시즈닝(10g)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양고기"
+      }
+    ]
+  },
+  {
+    "img": "186",
+    "manufacturer": "그리츠 시그니처 램",
+    "name": "뉴질랜드산 양갈비 300g (냉동)",
+    "price": 16900,
+    "description": "호텔 레스토랑의 시그니처 메뉴",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양고기"
+      }
+    ]
+  },
+  {
+    "img": "187",
+    "manufacturer": "그리츠 시그니처 램",
+    "name": "양꼬치 400g",
+    "price": 18900,
+    "description": "호텔 레스토랑의 시그니처 메뉴",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "400g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 본 제품은 돼지고기, 고등어, 게, 새우, 계란, 닭고기, 오징어, 복숭아, 호두, 메밀, 땅콩, 아황산류, 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다. (알레르기 유발물질: 우유, 대두, 밀, 토마토, 쇠고기, 조개류(굴), 함유)",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양고기"
+      }
+    ]
+  },
+  {
+    "img": "188",
+    "manufacturer": "토마스푸드",
+    "name": "호주산 숄더랙 300g (냉장)",
+    "price": 23900,
+    "description": "100g 당 7966원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "호주산",
+    "allergy": "대두, 밀, 돼지고기, 소고기, 우유, 토마토, 새우, 아황산류, 닭고기, 조개류(굴,홍합,전복), 오징어, 잣, 알류, 게, 복숭아, 땅콩, 호두, 고등어, 메밀이 함유된 제품과 동일라인에서 생산",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양고기"
+      }
+    ]
+  },
+  {
+    "img": "189",
+    "manufacturer": "그리츠 시그니처 램",
+    "name": "뉴질랜드산 양꽃갈비살 300g (냉동)",
+    "price": 15900,
+    "description": "호텔 레스토랑의 시그니처 메뉴",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양고기"
+      }
+    ]
+  },
+  {
+    "img": "190",
+    "manufacturer": "그리츠 시그니처 램",
+    "name": "크라운 프렌치랙 스테이크",
+    "price": 54900,
+    "description": "호텔 레스토랑의 시그니처 메뉴",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "680g",
+    "origin": "뉴질랜드",
+    "allergy": "- 본 제품은 대두, 밀, 우유, 돼지고기, 쇠고기, 토마토, 고등어, 게, 새우, 계란, 닭고기, 오징어, 복숭아, 호두, 조개류, 메밀, 땅콩, 아황산류, 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다. - 본 제품은 냉동제품이오니 보관 온도에 유의하시기 바랍니다.",
+    "category": [
+      {
+        "0": "정육",
+        "1": "계란",
+        "2": "양고기"
+      }
+    ]
+  },
+  {
+    "img": "191",
+    "manufacturer": "경복궁 BLACK",
+    "name": "사골 도가니탕",
+    "price": 11000,
+    "description": "한우로 끓인 깊고 진한 국물",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "700g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 쇠고기 함유 - 이 제품은 대두, 밀, 돼지고기, 닭고기, 새우, 게, 오징어, 조개류(바지락, 굴, 홍합), 우유 등을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "국",
+        "4": "탕",
+        "5": "찌개"
+      }
+    ]
+  },
+  {
+    "img": "192",
+    "manufacturer": "강창구찹쌀진순대",
+    "name": "찹쌀 진순대국",
+    "price": 6000,
+    "description": "얼큰한 국물에 담긴 진한 풍미",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "600g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-돼지고기, 소고기, 닭고기, 새우, 대두, 밀, 우유, 토마토, 조개류(굴) 함유 -이 제품은 난류, 우유, 대두, 밀, 고등어, 새우, 돼지고기, 소고기, 닭고기, 토마토, 조개류(굴)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "국",
+        "4": "탕",
+        "5": "찌개"
+      }
+    ]
+  },
+  {
+    "img": "193",
+    "manufacturer": "거대곰탕",
+    "name": "곰탕",
+    "price": 14500,
+    "description": "한우로 깊게 우려낸 국물",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-쇠고기, 새우, 대두, 밀 함유 -이 제품은 돼지고기, 게, 조개, 복숭아, 무수아황산을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "국",
+        "4": "탕",
+        "5": "찌개"
+      }
+    ]
+  },
+  {
+    "img": "194",
+    "manufacturer": "경복궁 BLACK",
+    "name": "양곰탕",
+    "price": 9900,
+    "description": "얼큰한 매력을 더한 양곰탕",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "600g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유, 대두, 밀, 쇠고기, 조개류(홍합) 함유 - 본 제품은 알레르기 유발 물질인 알류, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 오징어, 조개류(굴, 전복 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "국",
+        "4": "탕",
+        "5": "찌개"
+      }
+    ]
+  },
+  {
+    "img": "195",
+    "manufacturer": "경복궁 BLACK",
+    "name": "한우 사골 고기 곰탕",
+    "price": 11000,
+    "description": "한우로 완성한 프리미엄 곰탕",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "700g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 쇠고기 함유 - 이 제품은 대두, 밀, 돼지고기, 닭고기, 새우, 게, 오징어, 조개류(바지락, 굴, 홍합), 우유 등을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "국",
+        "4": "탕",
+        "5": "찌개"
+      }
+    ]
+  },
+  {
+    "img": "196",
+    "manufacturer": "갤러리아 고메이494",
+    "name": "한우 미역국",
+    "price": 5500,
+    "description": "부드럽고도 깊은 감칠맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀, 쇠고기 함유 - 이 제품은 알류, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 오징어, 조개류(굴,전복,홍합 포함)를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "국",
+        "4": "탕",
+        "5": "찌개"
+      }
+    ]
+  },
+  {
+    "img": "197",
+    "manufacturer": "고메공방",
+    "name": "쫄면주는 통등심돈까스",
+    "price": 12500,
+    "description": "한 번에 즐기는 인기 조합",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1개",
+    "weight": "690g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 돼지고기, 밀, 대두 함유 - 본 제품은 돼지고기, 닭고기, 쇠고기, 난류, 메밀, 땅콩, 잣, 호두, 고등어, 게, 새우, 오징어, 우유, 복숭아, 토마토, 조개류(굴, 전복, 홍합 포함), 아황산류 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밀키트",
+        "4": "메인요리"
+      }
+    ]
+  },
+  {
+    "img": "198",
+    "manufacturer": "강남면옥",
+    "name": "사골떡만두국",
+    "price": 8800,
+    "description": "따뜻하고 든든한 한 그릇",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1개",
+    "weight": "644g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 계란, 우유, 대두, 밀, 새우, 돼지고기, 쇠고기, 닭고기 함유",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밀키트",
+        "4": "메인요리"
+      }
+    ]
+  },
+  {
+    "img": "199",
+    "manufacturer": "김구원선생",
+    "name": "우삼겹 순두부찌개",
+    "price": 7950,
+    "description": "국산 두부와 우삼겹의 고소한 만남",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "870g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-대두, 소고기, 밀 함유 제품 -이 제품은 계란, 우유, 소고기, 돼지고기 등을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밀키트",
+        "4": "메인요리"
+      }
+    ]
+  },
+  {
+    "img": "200",
+    "manufacturer": "광화문 미진",
+    "name": "들기름 메밀국수 (2인분)",
+    "price": 7950,
+    "description": "슴슴한 감칠맛이 매력",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "413g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "메밀생면 -밀, 메밀, 난류 함유 -이 제품은 대두를 사용한 제품과 같은 제조시설에서 제조 참깨김가루 -이 제품은 복숭아, 고등어, 메밀, 잣, 밀, 새우, 대두, 쇠고기, 호두, 토마토, 알류, 우유, 아황산류, 돼지고기, 땅콩, 게, 오징어, 닭고기, 조개류(바지락, 홍합, 굴) 등을 사용한 제품과 같은 제조시설에서 제조 맛간장소스 -대두, 밀, 쇠고기, 우유, 토마토 함유 -이 제품은 복숭아, 고등어, 호두, 잣, 메밀, 알류, 땅콩, 새우, 게, 돼지고기, 닭고기, 오징어, 아황산류, 조개류(홍합, 굴, 바지락) 등을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밀키트",
+        "4": "메인요리"
+      }
+    ]
+  },
+  {
+    "img": "201",
+    "manufacturer": "교촌",
+    "name": "리얼 크리스피 텐더 450g",
+    "price": 7980,
+    "description": "콘 플레이크를 묻혀 더욱 바삭한",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "450g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-닭고기, 대두, 밀 함유 -이 제품은 알류, 우유, 메밀, 땅콩, 고등어, 게, 새우, 쇠고기, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밀키트",
+        "4": "메인요리"
+      }
+    ]
+  },
+  {
+    "img": "202",
+    "manufacturer": "김구원선생",
+    "name": "두부 프리미엄 버섯 샤브샤브",
+    "price": 19500,
+    "description": "10가지 버섯으로 푸짐하게 완성",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "1700g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-쇠고기, 대두, 밀, 우유, 달걀, 돼지고기, 토마토, 이산화황 함유 -이 제품은 메밀, 땅콩, 고등어, 게, 새우, 복숭아, 호두, 닭고기, 오징어, 아황산류, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밀키트",
+        "4": "메인요리"
+      }
+    ]
+  },
+  {
+    "img": "203",
+    "manufacturer": "도리깨침",
+    "name": "건나물 비빔밥세트",
+    "price": 10900,
+    "description": "향긋한 나물의 맛깔나는 조화",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 계란, 밀, 소고기 함유 - 이 제품은 우유, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밑반찬"
+      }
+    ]
+  },
+  {
+    "img": "204",
+    "manufacturer": "도리깨침",
+    "name": "열무 들기름볶음",
+    "price": 5500,
+    "description": "아삭하고 고소한 별미 반찬",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "200g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀 함유 - 이 제품은 계란, 우유, 메밀, 땅콩, 고등어, 게, 새우, 소고기, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밑반찬"
+      }
+    ]
+  },
+  {
+    "img": "205",
+    "manufacturer": "누리웰",
+    "name": "비빔 반숙 계란장",
+    "price": 3900,
+    "description": "간편하게 즐기는 짜지않고 고소한 계란장",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "400g(4알)",
+    "origin": "국내산",
+    "allergy": "-알류(계란), 대두, 밀 함유 -이 제품은 알류(메추리알), 우유, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 쇠고기, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 아황산류, 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밑반찬"
+      }
+    ]
+  },
+  {
+    "img": "206",
+    "manufacturer": "누리웰",
+    "name": "메추리알 장조림 350g",
+    "price": 3900,
+    "description": "온 가족을 위한 밑반찬",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "350g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-알류(메추리알), 대두, 밀, 조개류(굴) 함유 -이 제품은 알류(계란), 우유, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 쇠고기, 닭고기, 오징어, 조개류(전복, 홍합 포함), 아황산류, 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밑반찬"
+      }
+    ]
+  },
+  {
+    "img": "207",
+    "manufacturer": "마마리",
+    "name": "들깨 미역국",
+    "price": 3900,
+    "description": "완도산 건미역으로 끓인",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "2개",
+    "weight": "500g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀 함유 - 이 제품은 알류, 우유, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 쇠고기, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 아황산류, 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밑반찬"
+      }
+    ]
+  },
+  {
+    "img": "208",
+    "manufacturer": "더반찬",
+    "name": "오이지무침 (170g)",
+    "price": 4900,
+    "description": "새콤달콤 입맛 돋우는",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "170g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-대두,밀 함유 -본 제품은 난류,우유,메밀,땅콩,밀,고등어,게,새우,돼지고기,복숭아,토마토,아황산류,호두.닭고기,쇠고기,오징어,조개류,잣을 사용한 제품과 같은 제조시설에서 제조하고있습니다",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "밑반찬"
+      }
+    ]
+  },
+  {
+    "img": "209",
+    "manufacturer": "벽제갈비",
+    "name": "벽제명품김치 500g",
+    "price": 10000,
+    "description": "고급스러운 식탁의 완성",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 소고기, 새우 함유 - 본 제품은 소고기를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "김치",
+        "4": "젓갈",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "210",
+    "manufacturer": "권영원 소담정찬",
+    "name": "궁채장아찌",
+    "price": 6210,
+    "description": "강원도 향토 음식의 대가, 권영원 장인의 손길이 닿은 요리로 장아찌를 빼놓을 수 없어요",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "",
+    "weight": "",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "김치",
+        "4": "젓갈",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "211",
+    "manufacturer": "권영원 소담정찬",
+    "name": "간장깻잎 장아찌",
+    "price": 7900,
+    "description": "강원도 향토 음식의 대가, 권영원 장인의 손길이 닿은 요리로 장아찌를 빼놓을 수 없어요",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "",
+    "weight": "",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "김치",
+        "4": "젓갈",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "212",
+    "manufacturer": "권영원 소담정찬",
+    "name": "양념깻잎 장아찌",
+    "price": 8600,
+    "description": "강원도 향토 음식의 대가, 권영원 장인의 손길이 닿은 요리로 장아찌를 빼놓을 수 없어요",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "",
+    "weight": "",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "김치",
+        "4": "젓갈",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "213",
+    "manufacturer": "권영원 소담정찬",
+    "name": "고추 장아찌",
+    "price": 8500,
+    "description": "강원도 향토 음식의 대가, 권영원 장인의 손길이 닿은 요리로 장아찌를 빼놓을 수 없어요",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "",
+    "weight": "",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "김치",
+        "4": "젓갈",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "214",
+    "manufacturer": "빚고담고",
+    "name": "쪽파 장아찌",
+    "price": 5940,
+    "description": "입안 가득 퍼지는 쪽파의 향긋함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "200g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀 함유",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "김치",
+        "4": "젓갈",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "215",
+    "manufacturer": "종가집",
+    "name": "국산콩 두부 반모 200g (부침/찌개 겸용)",
+    "price": 2400,
+    "description": "남김 없이 활용하는 반모 두부",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두 함유",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "두부",
+        "4": "어묵",
+        "5": "부침개"
+      }
+    ]
+  },
+  {
+    "img": "216",
+    "manufacturer": "농협두부",
+    "name": "내린천 원당 연두부 160g*6개입",
+    "price": 6980,
+    "description": "1등급 국산 콩으로 완성한 탱글함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "160g*6ea",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두 함유",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "두부",
+        "4": "어묵",
+        "5": "부침개"
+      }
+    ]
+  },
+  {
+    "img": "217",
+    "manufacturer": "김구원선생",
+    "name": "냉동 국산 유부 슬라이스 250g",
+    "price": 6950,
+    "description": "다양하게 활용하는 유부 토핑",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1개",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두 함유 - 이 제품은 알류, 우유, 메밀, 밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 쇠고기, 오징어, 조개류(굴), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "두부",
+        "4": "어묵",
+        "5": "부침개"
+      }
+    ]
+  },
+  {
+    "img": "218",
+    "manufacturer": "맑은물에",
+    "name": "빠르게한끼 국산콩 간편 연두부 8입 2종",
+    "price": 7990,
+    "description": "스푼 동봉) 간편하고 고소한 한 끼",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1세트",
+    "weight": "연두부 125g*8팩/소스 9g*8팩/스푼 8개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-연두부 : 대두 함유 -참깨소스 : 계란, 대두, 밀, 쇠고기 함유 -오리엔탈 소스 : 대두, 밀, 아황산류 함유 -이 제품은 우유, 계란, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 쇠고기, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "두부",
+        "4": "어묵",
+        "5": "부침개"
+      }
+    ]
+  },
+  {
+    "img": "219",
+    "manufacturer": "더플랜",
+    "name": "목련 사각꼬치 어묵 (5입)",
+    "price": 4900,
+    "description": "[극한직업 어묵편 방송] 입안 가득 채워지는 탱글한 식감",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1개",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "밀,대두,우유,새우 함유",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "두부",
+        "4": "어묵",
+        "5": "부침개"
+      }
+    ]
+  },
+  {
+    "img": "220",
+    "manufacturer": "농민식품",
+    "name": "묵 2종",
+    "price": 5800,
+    "description": "명인의 순수 국내산 묵",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "",
+    "weight": "",
+    "origin": "상세페이지 별도표기",
+    "allergy": "밀, 메밀과 같은 시설에서 생산",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "두부",
+        "4": "어묵",
+        "5": "부침개"
+      }
+    ]
+  },
+  {
+    "img": "221",
+    "manufacturer": "그릭슈바인",
+    "name": "고단백 닭가슴살 김밥햄 2종",
+    "price": 3980,
+    "description": "담백한 김밥을 위한 이색 재료",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "220g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-우유, 밀, 대두, 돼지고기, 닭고기, 쇠고기 함유 이 제품은 알류(달걀), 메밀, 땅콩, 고등어, 게, 새우, 복숭아, 토마토, 아황산류, 호두, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 생산하였습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "베이컨",
+        "4": "햄",
+        "5": "통조림"
+      }
+    ]
+  },
+  {
+    "img": "222",
+    "manufacturer": "그릭슈바인",
+    "name": "닭가슴살 비엔나",
+    "price": 5980,
+    "description": "탱글하면서도 부드러운",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "400g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-우유, 밀, 대두, 돼지고기, 닭고기, 쇠고기 함유 이 제품은 알류(달걀), 메밀, 땅콩, 고등어, 게, 새우, 복숭아, 토마토, 아황산류, 호두, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 생산하였습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "베이컨",
+        "4": "햄",
+        "5": "통조림"
+      }
+    ]
+  },
+  {
+    "img": "223",
+    "manufacturer": "그릭슈바인",
+    "name": "닭가슴살 후랑크 청양고추",
+    "price": 5980,
+    "description": "매콤하고 깔끔한 맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1묶음",
+    "weight": "550g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-우유, 밀, 대두, 닭고기, 쇠고기 함유 - 이 제품은 알류(달걀), 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 생산하였습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "베이컨",
+        "4": "햄",
+        "5": "통조림"
+      }
+    ]
+  },
+  {
+    "img": "224",
+    "manufacturer": "그릭슈바인",
+    "name": "육즙가득 부어스트 소시지 3종",
+    "price": 7980,
+    "description": "식감과 육즙을 그대로",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1묶음 (2팩)",
+    "weight": "1묶음(275g X 2팩)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-스모크 : 돼지고기, 쇠고기 함유 -바질 : 돼지고기, 쇠고기 함유 -치즈 : 돼지고기, 쇠고기, 알류(달걀), 우유, 대두 함유 - 이 제품은 알류(달걀), 우유, 밀, 대두, 땅콩, 고등어, 게, 새우, 복숭아, 토마토, 아황산류, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 생산하였습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "베이컨",
+        "4": "햄",
+        "5": "통조림"
+      }
+    ]
+  },
+  {
+    "img": "225",
+    "manufacturer": "더오담",
+    "name": "훈제오리 400g",
+    "price": 9980,
+    "description": "무항생제 훈제오리로 만든",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "400g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-우유,대두,밀,쇠고기,닭고기,계란 함유 - 이 제품은 메밀,고등어,새우,게,땅콩,토마토,복숭아,아황산류,호두,닭고기,돼지고기,쇠고기,조개류(굴,전,홍합 포함)를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "베이컨",
+        "4": "햄",
+        "5": "통조림"
+      }
+    ]
+  },
+  {
+    "img": "226",
+    "manufacturer": "더건강한",
+    "name": "샌드위치 햄",
+    "price": 2380,
+    "description": "그대로 먹어도 맛있는",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "90g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 돼지고기,쇠고기,우유,대두,밀 함유",
+    "category": [
+      {
+        "0": "국",
+        "1": "반찬",
+        "2": "메인요리",
+        "3": "베이컨",
+        "4": "햄",
+        "5": "통조림"
+      }
+    ]
+  },
+  {
+    "img": "227",
+    "manufacturer": "도리깨침",
+    "name": "미니 월남쌈 (1인분)",
+    "price": 9700,
+    "description": "혼자서도 부담 없는 양",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "350g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 땅콩, 대두, 밀, 계란, 소고기 함유 - 이 제품은 우유, 메밀, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "샐러드",
+        "3": "닭가슴살"
+      }
+    ]
+  },
+  {
+    "img": "228",
+    "manufacturer": "굽네",
+    "name": "닭가슴살 김치볶음밥(4개입)",
+    "price": 11600,
+    "description": "매콤한 감칠맛이 가득",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "",
+    "weight": "800g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 쇠고기, 돼지고기, 닭고기, 대두, 밀, 우유, 조개류(굴), 토마토 함유 - 이 제품은 오징어, 게, 조개류(전복, 홍합 포함), 새우, 복숭아, 메밀, 고등어, 호두, 땅콩, 난류(계란), 아황산류를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "샐러드",
+        "3": "닭가슴살"
+      }
+    ]
+  },
+  {
+    "img": "229",
+    "manufacturer": "굽네",
+    "name": "닭가슴살 야채볶음밥(4개입)",
+    "price": 11600,
+    "description": "담백하고 부담 없는 한 끼",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "",
+    "weight": "800g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 쇠고기, 닭고기, 대두, 밀, 오징어, 조개류(굴, 바지락), 난류(계란) 함유 - 이 제품은 오징어, 게, 조개류(전복, 홍합 포함), 새우, 복숭아, 메밀, 고등어, 호두, 땅콩, 난류(계란), 아황산류를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "샐러드",
+        "3": "닭가슴살"
+      }
+    ]
+  },
+  {
+    "img": "230",
+    "manufacturer": "그린밤",
+    "name": "샐러드 샌드위치 6종",
+    "price": 4700,
+    "description": "꽉 찬 단면이 흐뭇한 샌드위치",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "품목별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 크랩&참치 샐러드 샌드위치: 우유, 대두, 난류, 밀, 쇠고기, 토마토, 게, 조개류(홍합) 함유 - 에그 샐러드 샌드위치: 우유, 대두, 계란, 밀 함유 - 크랜베리&치킨 샐러드 샌드위치 : 우유, 대두, 계란, 밀, 토마토 함유 - 바질치킨 샐러드 샌드위치 : 닭고기, 대두, 우유, 밀, 토마토, 쇠고기 함유 - 당근라페 샐러드 샌드위치 : 대두, 우유, 밀, 아황산류 함유 - 햄&포테이토 샐러드 샌드위치 : 우유, 대두, 계란, 밀, 돼지고기 함유 - 샌드위치 공통) 메밀,땅콩,고등어,게,새우,돼지고기,복숭아,아황산류,호두,닭고기,오징어,조개류(굴,전복,홍합 포함),잣과 같은 시설에서 제조 - 치폴레 마요 소스: 대두, 계란, 토마토 함유 / 게,새우,아황산류,밀,우유,돼지고기,땅콩,복숭아,쇠고기,닭고기,잣,오징어,조개류(홍합,굴 포함)와 같은 시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "샐러드",
+        "3": "닭가슴살"
+      }
+    ]
+  },
+  {
+    "img": "231",
+    "manufacturer": "가농바이오",
+    "name": "에그틴",
+    "price": 8680,
+    "description": "삶은 달걀 흰자와 동일한 식감과 맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1봉",
+    "weight": "600g(60g*10개입)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 계란 함유 - 이 제품은 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 쇠고기, 오징어, 밀, 잣, 닭고기, 우유, 조개류(굴, 전복, 홍합포함)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "샐러드",
+        "3": "닭가슴살"
+      }
+    ]
+  },
+  {
+    "img": "232",
+    "manufacturer": "누리웰",
+    "name": "에그 스프레드",
+    "price": 2800,
+    "description": "에그 샐러드가 생각날 때",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "200g",
+    "origin": "계란(국산)",
+    "allergy": "-알류(계란), 대두, 쇠고기 함유 -이 제품은 알류(메추리알), 우유, 메밀, 땅콩, 밀, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 아황산류, 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "도시락",
+        "3": "밥류"
+      }
+    ]
+  },
+  {
+    "img": "233",
+    "manufacturer": "그로서리서울",
+    "name": "배부른 현미 곤약밥 2종",
+    "price": 10000,
+    "description": "속을 든든하게, 마음은 가볍게 즐기는!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개입/4개입",
+    "weight": "140g/140gx4개",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 본 제품은 우유, 대두, 밀, 오징어, 조개류(굴, 바지락)를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "도시락",
+        "3": "밥류"
+      }
+    ]
+  },
+  {
+    "img": "234",
+    "manufacturer": "고온어다이어트",
+    "name": "시즌3 도시락 5종",
+    "price": 3700,
+    "description": "맛과 식감을 모두 고려한 메뉴 구성",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "옵션별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "린베이커소시지 & 렌틸콩고구마밥 -계란, 메밀, 대두, 밀, 돼지고기 함유 -이 제품은 우유, 게, 새우, 토마토, 닭고기, 쇠고기, 오징어, 조개류(굴)를 사용한 제품과 같은 제조시설에서 제조 버섯불고기스크램블 & 야채필라프 -계란, 우유, 대두, 밀, 돼지고기, 아황산류, 쇠고기, 조개류(굴) 함유 -이 제품은 메밀, 게, 새우, 토마토, 닭고기, 오징어를 사용한 제품과 같은 제조시설에서 제조 미트볼 & 퀴노아영양밥 -계란, 메밀, 대두, 밀, 돼지고기, 토마토, 쇠고기 함유 -이 제품은 우유, 게, 새우, 닭고기, 오징어, 조개류(굴)를 사용한 제품과 같은 제조시설에서 제조 떡갈비 & 현미영양밥 -대두, 밀, 돼지고기, 쇠고기 함유 -이 제품은 난류(계란), 우유, 메밀, 게, 새우, 토마토, 닭고기, 오징어, 조개류(굴)를 사용한 제품과 같은 제조시설에서 제조 함박스테이크 & 새우필라프 -우유, 대두, 밀, 게, 새우, 돼지고기, 토마토, 쇠고기 함유 -이 제품은 난류(계란), 메밀, 닭고기, 오징어, 조개류(굴)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "도시락",
+        "3": "밥류"
+      }
+    ]
+  },
+  {
+    "img": "235",
+    "manufacturer": "리틀넥",
+    "name": "바질 크림 리조또",
+    "price": 11900,
+    "description": "산뜻하면서도 고소한 맛과 향",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "382g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 리조또베이스밥: 대두, 새우, 돼지고기, 닭고기 함유 - 이 제품은 알류, 우유, 메밀, 땅콩, 밀, 고등어, 게, 복숭아, 토마토, 아황산류, 호두, 쇠고기, 오징어, 잣, 조개류(굴, 전복 홍합 포함) 등을 사용한 제품과 같은 제조시설에서 제조하고 있습니다. - 바질크림소스: 대두, 밀, 우유, 계란, 닭고기 함유 - 이 제품은 쇠고기, 돼지고기, 토마토, 아황산류, 메밀, 고등어, 게, 새우, 복숭아, 홍두, 오징어, 조개류(굴, 전복, 홍합 포함), 잣, 땅콩을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "도시락",
+        "3": "밥류"
+      }
+    ]
+  },
+  {
+    "img": "236",
+    "manufacturer": "고온어다이어트",
+    "name": "시즌4 도시락 4종",
+    "price": 3900,
+    "description": "식단 조절의 지루함을 달래줄",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "옵션별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "시래기보리밥&떡갈비 -우유, 대두, 밀, 새우, 돼지고기, 닭고기, 쇠고기, 조개류(굴) 함유 -이 제품은 난류(계란), 메밀, 땅콩, 게, 오징어를 사용한 제품과 같은 제조시설에서 제조 단호박밥&토마토미트볼 -계란, 우유, 대두, 밀, 새우, 돼지고기, 토마토, 닭고기, 쇠고기 함유 -이 제품은 메밀, 땅콩, 게, 오징어, 조개류(굴)를 사용한 제품과 같은 제조시설에서 제조 코코넛 커리&갈릭 소세지 -계란, 우유, 대두, 밀, 땅콩, 돼지고기, 토마토, 닭고기, 쇠고기 함유 -이 제품은 메밀, 게, 새우, 오징어, 조개류를 사용한 제품과 같은 제조시설에서 제조 빠에야&등심간장볶음 -우유, 대두, 밀, 돼지고기, 쇠고기, 닭고기, 조개류(굴) 함유 -이 제품은 메밀, 땅콩, 게, 새우, 토마토, 닭고기, 오징어를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "도시락",
+        "3": "밥류"
+      }
+    ]
+  },
+  {
+    "img": "237",
+    "manufacturer": "그로서리서울",
+    "name": "찰보리 흑미 곤약밥 2종",
+    "price": 10000,
+    "description": "찰보리와 곤약쌀로 즐기는 가벼운 밥 한끼!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개입/4개입",
+    "weight": "140g/140gx4개",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 본 제품은 우유, 대두, 밀, 오징어, 조개류(굴, 바지락), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "도시락",
+        "3": "밥류"
+      }
+    ]
+  },
+  {
+    "img": "238",
+    "manufacturer": "나가타니엔",
+    "name": "오토나노 후리카케 3종",
+    "price": 3500,
+    "description": "밥 위에 뿌려 먹는 감칠맛 토핑",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩(5개입)",
+    "weight": "12.5g (2.5gX5포)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 가다랑어맛:밀,대두 함유 - 연어맛:우유,밀,대두 함유 - 명란맛:우유,밀,오징어,대두 함유",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "도시락",
+        "3": "밥류"
+      }
+    ]
+  },
+  {
+    "img": "239",
+    "manufacturer": "곤미방",
+    "name": "떡볶이곤약 (180g X 4입)",
+    "price": 5500,
+    "description": "칼로리 걱정 없이 만드는 떡볶이",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "180g X 4입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "파스타",
+        "3": "면류"
+      }
+    ]
+  },
+  {
+    "img": "240",
+    "manufacturer": "곤미방",
+    "name": "실곤약 (180g X 4입)",
+    "price": 5500,
+    "description": "밀가루 면 대신 활용하기 좋은",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "180g X 4입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "파스타",
+        "3": "면류"
+      }
+    ]
+  },
+  {
+    "img": "241",
+    "manufacturer": "고래사어묵",
+    "name": "김치 우동 전골",
+    "price": 10500,
+    "description": "뜨끈한 국물이 필요할 때",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "640g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-어묵 : 대두, 밀, 고등어 함유 -면 : 밀 함유 -이 제품은 달걀, 우유, 메밀, 땅콩, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 쇠고기, 오징어, 조개류(굴, 전복, 홍합 등), 잣을 사용한 시설에서 제조되고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "파스타",
+        "3": "면류"
+      }
+    ]
+  },
+  {
+    "img": "242",
+    "manufacturer": "광화문 미진",
+    "name": "메밀국수 (2인분)",
+    "price": 9900,
+    "description": "집에서 만나는 메밀 명가",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "1022g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "미진 메밀면 -밀, 메밀, 대두 함유 -이 제품은 난류를 사용한 제품과 같은 제조시설에서 제조 미진 메밀소스 -대두, 밀, 쇠고기, 우유, 토마토 함유 -이 제품은 복숭아, 고등어, 호두, 잣, 메밀, 알류, 땅콩, 새우, 게, 돼지고기, 닭고기, 오징어, 아황산류, 조개류(홍합, 굴, 바지락)을 사용한 제품과 같은 제조시설에서 제조 미진 김깨고명 -이 제품은 우유, 계란, 메밀, 대두, 땅콩, 밀, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 쇠고기, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조 미진 면요리용무우 -이 제품은 잣, 밀, 대두, 호두, 메밀, 땅콩, 우유, 알류, 복숭아, 토마토, 게, 새우, 고등어, 오징어, 조개류(바지락, 홍합, 굴), 닭고기, 돼지고기, 쇠고기, 아황산류를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "파스타",
+        "3": "면류"
+      }
+    ]
+  },
+  {
+    "img": "243",
+    "manufacturer": "강남면옥",
+    "name": "사골만두칼국수",
+    "price": 8800,
+    "description": "푸짐하게 넣어 따뜻하게 먹는 한끼",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "834g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 계란, 우유, 대두, 밀, 새우, 돼지고기, 쇠고기, 닭고기 함유 - 본 제품은 메밀, 땅콩, 고등어, 게, 복숭아, 토마토, 아황산류, 호두, 오징어, 조개류(굴, 홍합, 전복 포함), 잣을 사용한 제품과 동일한 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "파스타",
+        "3": "면류"
+      }
+    ]
+  },
+  {
+    "img": "244",
+    "manufacturer": "광화문 미진",
+    "name": "비빔메밀 (2인분)",
+    "price": 9900,
+    "description": "메밀 맛집의 스테디셀러 메뉴",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "462g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "미진 비빔면 -밀, 메밀, 대두 함유 -이 제품은 난류를 사용한 제품과 같은 제조시설에서 제조 미진 비빔메밀소스 -대두, 밀, 쇠고기, 닭고기 함유 -이 제품은 복숭아, 고등어, 호두, 잣, 메밀, 알류, 땅콩, 새우, 게, 돼지고기, 토마토, 우유, 오징어, 아황산류, 조개류(홍합, 굴, 바지락)를 사용한 제품과 같은 제조시설에서 제조 미진 참맑고고소한비빔유 -대두 함유 미진 김깨고명 -이 제품은 우유, 계란, 메밀, 대두, 땅콩, 밀, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 쇠고기, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "파스타",
+        "3": "면류"
+      }
+    ]
+  },
+  {
+    "img": "245",
+    "manufacturer": "금미옥",
+    "name": "닭볶이 (닭갈비 떡볶이)",
+    "price": 12400,
+    "description": "노릇하게 즐기는 닭갈비 떡볶이",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "770g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 닭볶이매콤양념닭다리살: 닭고기, 대두, 밀, 이산화황 함유 - 이 제품은 알류(가금류만 해당), 우유, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 쇠고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다. - 닭볶이밀떡: 밀, 대두 함유 - 닭볶이소스: 대두, 밀, 닭고기 함유 - 본 제품은 알류, 우유, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 쇠고기, 잣, 오징어, 조개류(굴, 전복, 홍합 포함), 아황산류를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "떡볶이",
+        "3": "튀김",
+        "4": "순대"
+      }
+    ]
+  },
+  {
+    "img": "246",
+    "manufacturer": "금미옥",
+    "name": "쌀 떡볶이",
+    "price": 5500,
+    "description": "학교 앞 분식집에서 먹던 그 맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "440g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 쇠고기, 밀, 대두, 우유, 조개류(굴), 새우 함유 - 이 제품은 알류, 메밀, 땅콩, 고등어, 게, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 오징어, 조개류(전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "떡볶이",
+        "3": "튀김",
+        "4": "순대"
+      }
+    ]
+  },
+  {
+    "img": "247",
+    "manufacturer": "금미옥",
+    "name": "깻잎 김말이",
+    "price": 3300,
+    "description": "깻잎의 향긋함이 더해진",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1개",
+    "weight": "350g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀 함유 - 본 제품은 돼지고기, 알류, 메밀, 땅콩, 게, 새우, 토마토, 우유, 호두, 쇠고기, 닭고기, 오징어, 조개류(굴, 홍합 포함)을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "떡볶이",
+        "3": "튀김",
+        "4": "순대"
+      }
+    ]
+  },
+  {
+    "img": "248",
+    "manufacturer": "대구 반할만떡",
+    "name": "반야월 할매 만두와 떡볶이",
+    "price": 7500,
+    "description": "1973년부터 이어져 온 달인의 맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "919g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "핫이슈밀떡그대로 -밀, 대두 함유 반할만떡 떡볶이소스 오리지널 -이 제품은 쇠고기, 알류, 우유, 밀, 대두, 돼지고기, 닭고기, 토마토, 아황산류, 새우, 땅콩, 게, 오징어, 조개류(굴, 바지락, 홍합), 메밀, 고등어, 복숭아, 호두, 잣 등을 사용한 제품과 같은 제조시설에서 제조 반할만떡 간장소스 -밀, 대두 함유 -이 제품은 알류, 복숭아, 고등어, 호두, 잣, 메밀, 땅콩, 토마토, 우유, 쇠고기, 돼지고기, 닭고기, 새우, 아황산류, 게, 오징어, 조개류(굴, 바지락, 홍합) 등을 사용한 제품과 같은 제조시설에서 제조 파향솔솔 대파블럭 -이 제품은 계란, 밀, 우유, 대두, 게, 오징어, 새우, 닭고기, 돼지고기, 토마토, 쇠고기, 조개류(굴, 전복, 홍합 포함) 등을 사용한 제품과 같은 제조시설에서 제조 반할만떡 당면만두 -밀, 대두 함유 -이 제품은 알류, 우유, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 잣, 호두, 닭고기, 쇠고기, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "떡볶이",
+        "3": "튀김",
+        "4": "순대"
+      }
+    ]
+  },
+  {
+    "img": "249",
+    "manufacturer": "더플랜",
+    "name": "매콤 오징어 얇은튀김",
+    "price": 9900,
+    "description": "바삭하고 쫄깃한 맥주 안주",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-오징어, 밀, 대두 함유 - 본 제품어, 밀, 대두 함유 - 본 제품은 난류(가금류), 우유, 메밀, 땅콩, 대두, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 소고기, 조개류(굴,전복,홍합포함)가 함유된 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "떡볶이",
+        "3": "튀김",
+        "4": "순대"
+      }
+    ]
+  },
+  {
+    "img": "250",
+    "manufacturer": "더플랜",
+    "name": "목련 짜장 오당볶이",
+    "price": 5900,
+    "description": "[극한직업 어묵편 방송] 맛도 재료도 색다른 떢볶이",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "470g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "본 제품은 메밀,게,새우,계란,오징어,쇠고기,땅콩,고등어,복숭아,토마토,아황산류,호두,잣,조개류(굴,전복,홍합 포함)를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "떡볶이",
+        "3": "튀김",
+        "4": "순대"
+      }
+    ]
+  },
+  {
+    "img": "251",
+    "manufacturer": "굽네",
+    "name": "닭가슴살 만두 3종",
+    "price": 2450,
+    "description": "닭가슴살로 만든 이색 만두 (갈비맛 추가)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "180g",
+    "origin": "제품 별도 표기",
+    "allergy": "- 닭가슴살 오리지널 만두 : 돼지고기, 닭고기, 밀, 대두, 메밀, 조개류(굴) 함유 - 닭가슴살 김치 만두 : 돼지고기, 닭고기, 대두, 새우, 메밀, 계란, 쇠고기, 우유, 조개류(굴) 함유 - 닭가슴살 갈비맛 만두 : 돼지고기, 닭고기, 밀, 대두, 메밀, 새우, 토마토, 쇠고기, 우유, 조개류(굴) 함유 각 상품별 알레르기 함유 가능성 물질은 상세페이지 참고 바랍니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "피자",
+        "3": "핫도그",
+        "4": "만두"
+      }
+    ]
+  },
+  {
+    "img": "252",
+    "manufacturer": "고메공방",
+    "name": "대구식 납작만두 300g (15g x 20입)",
+    "price": 4400,
+    "description": "색다른 매력의 별미 만두",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 닭가슴살 오리지널 만두 : 돼지고기, 닭고기, 밀, 대두, 메밀, 조개류(굴) 함유 - 닭가슴살 김치 만두 : 돼지고기, 닭고기, 대두, 새우, 메밀, 계란, 쇠고기, 우유, 조개류(굴) 함유 - 닭가슴살 갈비맛 만두 : 돼지고기, 닭고기, 밀, 대두, 메밀, 새우, 토마토, 쇠고기, 우유, 조개류(굴) 함유 각 상품별 알레르기 함유 가능성 물질은 상세페이지 참고 바랍니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "피자",
+        "3": "핫도그",
+        "4": "만두"
+      }
+    ]
+  },
+  {
+    "img": "253",
+    "manufacturer": "고메공방",
+    "name": "미친 치즈돈까스",
+    "price": 14900,
+    "description": "치즈가 쭉쭉 늘어나는 돈까스",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "480g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-돼지고기,우유,밀,대두 함유 -계란,메밀,땅콩,고등어,게,새우,복숭아,토마토,아황산류,호두,닭고기,쇠고기,오징어,조개류(굴,전복,홍합 포함),잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "피자",
+        "3": "핫도그",
+        "4": "만두"
+      }
+    ]
+  },
+  {
+    "img": "254",
+    "manufacturer": "그릭슈바인",
+    "name": "미니핫도그 10입",
+    "price": 8900,
+    "description": "뽀득한 소시지가 든 간식(10입/1봉)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "10입",
+    "weight": "1봉",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 돼지고기, 쇠고기, 밀, 대두, 우유, 알류(계란) 함유 - 메밀, 땅콩, 고등어, 게, 새우, 복숭아, 토마토, 아황산류, 호두, 잣, 닭고기, 오징어, 조개류(굴,전복,홍합 포함)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "피자",
+        "3": "핫도그",
+        "4": "만두"
+      }
+    ]
+  },
+  {
+    "img": "255",
+    "manufacturer": "고메",
+    "name": "통등심 돈카츠",
+    "price": 9980,
+    "description": "한 번 튀겨 속까지 익은 맛있는 돈카츠!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "450g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 돼지고기,밀,대두,우유,달걀 함유 - 이 제품은 메밀,땅콩,고등어,게,새우,복숭아,토마토,아황산류,호두,닭고기,쇠고기,오징어,조개류(굴,전복,홍합 포함) , 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "피자",
+        "3": "핫도그",
+        "4": "만두"
+      }
+    ]
+  },
+  {
+    "img": "256",
+    "manufacturer": "그릭슈바인",
+    "name": "프랑크푸르터 핫도그",
+    "price": 9980,
+    "description": "소시지의 식감이 남다른 핫도그!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "85gx4개입",
+    "origin": "별도표기",
+    "allergy": "- 본 제품은 땅콩, 복숭아, 토마토, 메밀, 게, 새우, 고등어, 아황산류, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 이용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "피자",
+        "3": "핫도그",
+        "4": "만두"
+      }
+    ]
+  },
+  {
+    "img": "257",
+    "manufacturer": "델리치오",
+    "name": "와규 함박 스테이크",
+    "price": 14500,
+    "description": "와규 80% 함유로 더 맛있게 즐기는 경양식 한 상",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g / 2개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 본 제품은 돼지고기, 우유, 토마토, 새우, 아황산류, 닭고기, 조개류(굴,홍합,전복), 오징어, 잣, 알류, 게, 복숭아, 땅콩, 호두, 고등어, 메밀이 함유된 제품과 동일라인에서 생산되고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "폭립",
+        "3": "떡갈비",
+        "4": "안주"
+      }
+    ]
+  },
+  {
+    "img": "258",
+    "manufacturer": "더플랜",
+    "name": "왕의안주 - 모듬 꼬치 세트",
+    "price": 10900,
+    "description": "집에서 즐기는 근사한 안주",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "330g (꼬치300g + 소스30g)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-모듬 꼬치 : 닭고기, 돼지고기, 은행 함유 -더플랜 간장소스 : 밀, 대두, 계란, 닭고기, 고등어 함유 -이 제품은 난류(가금류), 우유, 메밀, 땅콩, 조개류, 오징어, 소고기, 새우 등을 함유한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "폭립",
+        "3": "떡갈비",
+        "4": "안주"
+      }
+    ]
+  },
+  {
+    "img": "259",
+    "manufacturer": "달구지막창",
+    "name": "훈제 돼지막창 620g",
+    "price": 17500,
+    "description": "소스와 함께 즐기는 훈제 막창",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "620g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 훈제 돼지막창 : 우유, 대두, 밀, 돼지고기, 쇠고기 함유 - 막창소스 : 땅콩, 대두, 밀 함유 - 참간장소스 : 대두, 밀 함유 - 이 제품은 알라르기 발생 가능성이 있는 알류(가금류만 해당), 메밀, 고등어, 게, 새우, 복숭아, 토마토, 아황산류, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "폭립",
+        "3": "떡갈비",
+        "4": "안주"
+      }
+    ]
+  },
+  {
+    "img": "260",
+    "manufacturer": "델리치오",
+    "name": "와규 햄버거 패티",
+    "price": 14990,
+    "description": "와규 98.9% 함유로 진한 육향이 가득한",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g (2개입)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 본 제품은 돼지고기, 우유, 토마토, 새우, 아황산류, 닭고기, 조개류(굴,홍합,전복), 오징어, 잣, 알류, 게, 복숭아, 땅콩, 호두, 고등어, 메밀이 함유된 제품과 동일라인에서 생산되고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "폭립",
+        "3": "떡갈비",
+        "4": "안주"
+      }
+    ]
+  },
+  {
+    "img": "261",
+    "manufacturer": "달구지막창",
+    "name": "초벌 돼지막창 620g",
+    "price": 16500,
+    "description": "2가지 소스에 찍어 먹는 돼지 막창",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "620g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 훈제 돼지막창 : 우유, 대두, 밀, 돼지고기, 쇠고기 함유 - 막장소스 : 땅콩, 대두, 밀 함유 - 참간장소스 : 대두, 밀 함유 - 이 제품은 알레르기 발생 가능성이 있는 알류(가금류만 해당), 우유, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "폭립",
+        "3": "떡갈비",
+        "4": "안주"
+      }
+    ]
+  },
+  {
+    "img": "262",
+    "manufacturer": "달구지막창",
+    "name": "훈제 불막창 600g",
+    "price": 17500,
+    "description": "숯불 향을 머금은 매콤한 불막창",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "600g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유, 땅콩, 대두, 밀, 돼지고기, 토마토, 쇠고기 함유 - 이 제품은 알라르기 발생 가능성이 있는 알류(가금류만 해당), 메밀, 고등어, 게, 새우, 복숭아, 토마토, 아황산류, 호두, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "폭립",
+        "3": "떡갈비",
+        "4": "안주"
+      }
+    ]
+  },
+  {
+    "img": "263",
+    "manufacturer": "두수고방",
+    "name": "프리미엄죽 4종",
+    "price": 4500,
+    "description": "편안하게 맛보는 채식 죽",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-된장보리죽 : 계란, 우유, 게, 새우, 돼지고기, 토마토, 아황산류, 닭고기, 쇠고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣 혼입가능 -수수팥범벅죽 : 계란, 우유, 대두, 밀, 게, 새우, 돼지고기, 토마토, 아황산류, 닭고기, 쇠고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣 혼입가능 -들깨버섯죽 : 계란, 우유, 게, 새우, 돼지고기, 토마토, 아황산류, 닭고기, 쇠고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣 혼입가능 -흑임자죽 : 계란, 우유, 대두, 밀, 게, 새우, 돼지고기, 토마토, 아황산류, 닭고기, 쇠고기, 오징어, 조개류(굴, 전복, 홍합 포함), 잣 혼입가능",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "죽",
+        "3": "스프",
+        "4": "카레"
+      }
+    ]
+  },
+  {
+    "img": "264",
+    "manufacturer": "깔리또",
+    "name": "스프 5종 (60g X2통)",
+    "price": 3800,
+    "description": "간편하게 즐기는 컵 스프",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1묶음",
+    "weight": "120g (60g X 2통)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 프렌치 어니언스프 : 우유, 밀, 대두, 계란, 쇠고기 함유 - 본 제품은 토마토, 아황산류, 오징어를 사용한 제품과 같은 제조시설에서 제조하고 있습니다. - 스위트 콘스프 : 우유, 밀, 대두, 계란, 쇠고기 함유 - 본 제품은 토마토, 아황산류, 오징어를 사용한 제품과 같은 제조시설에서 제조하고 있습니다. - 단호박 크림스프 : 우유, 밀, 대두, 계란 함유 - 본 제품은 쇠고기, 토마토, 아황산류, 오징어를 사용한 제품과 같은 제조시설에서 제조하고 있습니다. - 까망베르 감자스프 : 우유, 밀, 대두, 계란, 쇠고기 함유 - 본 제품은 토마토, 아황산류, 오징어를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "죽",
+        "3": "스프",
+        "4": "카레"
+      }
+    ]
+  },
+  {
+    "img": "265",
+    "manufacturer": "갤러리아 고메이494",
+    "name": "치킨 마크니 카레",
+    "price": 5400,
+    "description": "부드럽고 진한 프리미엄 인도식 카레",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-계란,우유,대두,밀,돼지고기,토마토,닭고기,쇠고기,조개류 함유",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "죽",
+        "3": "스프",
+        "4": "카레"
+      }
+    ]
+  },
+  {
+    "img": "266",
+    "manufacturer": "갤러리아 고메이494",
+    "name": "백리향 유니 짜장",
+    "price": 5200,
+    "description": "[63빌딩 백리향] 은은하게 맴도는 깊은 감칠맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "200g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-돼지고기,대두,밀,새우, 함유 -이 제품은 알류,우유,메밀,땅콩,고등어,게,복숭아,토마토,아황산류,호두,닭고기,쇠고기,오징어,조개류(굴,전복,홍합 포함)를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "죽",
+        "3": "스프",
+        "4": "카레"
+      }
+    ]
+  },
+  {
+    "img": "267",
+    "manufacturer": "뉴델리 :진한 인도 커리의 맛",
+    "name": "인도 난 2종",
+    "price": 4500,
+    "description": "쫄깃한 식감이 살아있는 난",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "180g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 버터난 : 밀, 계란, 우유 함유 - 갈릭난 : 밀, 계란, 우유 함유 - 본 제품은 우유, 닭고기, 양고기, 새우, 토마토, 밀가루를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "죽",
+        "3": "스프",
+        "4": "카레"
+      }
+    ]
+  },
+  {
+    "img": "268",
+    "manufacturer": "갤러리아 고메이494",
+    "name": "아카마루 비프 카레",
+    "price": 5400,
+    "description": "일본 본토 레시피 그대로 만든 한 끼",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-계란,우유,대두,밀,돼지고기,토마토,닭고기,쇠고기,조개류 함유",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "죽",
+        "3": "스프",
+        "4": "카레"
+      }
+    ]
+  },
+  {
+    "img": "269",
+    "manufacturer": "그래놀라 하우스",
+    "name": "그래놀라 5종",
+    "price": 13500,
+    "description": "도톰하게 뭉쳐 만든 수제 그래놀라",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1통",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 오리지널 : 호두 함유 - 마카다미아&카카오: 대두 함유 - 본 제품은 우유, 메밀, 땅콩, 대두, 밀, 새우, 호두, 토마토, 조개류(홍합), 잣, 게, 복숭아를 사용한 제품과 같은 시설에서 제조하였습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "선식",
+        "3": "시리얼"
+      }
+    ]
+  },
+  {
+    "img": "270",
+    "manufacturer": "네이쳐패스",
+    "name": "유기농 그래놀라 2종",
+    "price": 9980,
+    "description": "하루의 시작을 든든하고 건강하게!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "325g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 다크초코 앤 피넛버터 : 땅콩 함유 - 러브크런치 베리 : 대두 함유 - 우유, 견과류, 밀, 땅콩, 대두와 같은 시설에서 생산",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "선식",
+        "3": "시리얼"
+      }
+    ]
+  },
+  {
+    "img": "271",
+    "manufacturer": "그라놀로지",
+    "name": "그래놀라 150g 5종",
+    "price": 11000,
+    "description": "철학이 담긴 그래놀라, 청담동 그라놀로지 새롭게 리뉴얼!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "150g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "선식",
+        "3": "시리얼"
+      }
+    ]
+  },
+  {
+    "img": "272",
+    "manufacturer": "네슬레",
+    "name": "시리얼 6종",
+    "price": 6980,
+    "description": "취향 따라 골라 즐기는 시리얼",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "제품별상이(하단참조)",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-네스퀵 초코볼 : 밀 함유 -네스퀵 크런치 초코맛 : 밀 함유 -씨니미니스 : 대두, 밀 함유 -씨니미니스 애플크러쉬 : 대두, 밀 함유 -치리오스 허니시리얼 : 밀, 대두 함유 -치리오스 멀티그레인 : 밀, 대두 함유 - 위 제품들은 견과류, 우유를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "선식",
+        "3": "시리얼"
+      }
+    ]
+  },
+  {
+    "img": "273",
+    "manufacturer": "그라놀로지",
+    "name": "그래놀라 시그니처 패키지 7종",
+    "price": 25000,
+    "description": "그라놀로지스트의 노하우를 담은",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "440g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 더블 카카오 - 대두 함유 - 우유, 밀 혼입가능 - 블랙 세서미 스트리트 흑임자, 카카올로지, 시나몬스터 - 우유, 대두, 밀 혼입가능 - 크런치 코코넛 - 우유, 토마토, 호두, 잣 혼입가능 - 베리 뱅 띠오리 - 우유, 밀 혼입가능 - 시그니처 - 우유, 땅콩, 대두, 밀, 토마토, 호두, 잣 혼입가능",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "선식",
+        "3": "시리얼"
+      }
+    ]
+  },
+  {
+    "img": "274",
+    "manufacturer": "그릭데이",
+    "name": "리얼카카오 그래놀라 150g",
+    "price": 9000,
+    "description": "카카오의 진한 달콤함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "150g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 계란, 우유, 땅콩, 대두, 밀, 호두 혼입가능",
+    "category": [
+      {
+        "0": "샐러드",
+        "1": "간편식",
+        "2": "선식",
+        "3": "시리얼"
+      }
+    ]
+  },
+  {
+    "img": "275",
+    "manufacturer": "디벨라",
+    "name": "통밀 파스타 4종",
+    "price": 4700,
+    "description": "[청동 브론즈 파스타] 최적의 알 단테를 자랑하는 황금빛 면",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "500g",
+    "origin": "이탈리아",
+    "allergy": "- 밀 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "파스타",
+        "4": "면류"
+      }
+    ]
+  },
+  {
+    "img": "276",
+    "manufacturer": "남향푸드",
+    "name": "우리밀 또띠아 (냉동)",
+    "price": 5950,
+    "description": "신선한 야채와 맛있는 고기를 말아 간편하게!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1봉",
+    "weight": "400g / 10장",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 밀 함유 - 난류, 메밀, 땅콩, 잣, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 아황산류, 호두, 닭고기, 쇠고기, 오징어, 조개류(굴, 전복, 홍합 포함), 대두, 우유와 같은 시설에서 생산",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "파스타",
+        "4": "면류"
+      }
+    ]
+  },
+  {
+    "img": "277",
+    "manufacturer": "단백질제면소",
+    "name": "식단면 생면 (3개입)",
+    "price": 9000,
+    "description": "부드러운 식감의 고단백 면",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "300g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 밀, 메밀, 대두 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "파스타",
+        "4": "면류"
+      }
+    ]
+  },
+  {
+    "img": "278",
+    "manufacturer": "네니아",
+    "name": "우리밀 냉동 우동면",
+    "price": 5800,
+    "description": "탱글탱글한 면발",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1팩",
+    "weight": "230g*5개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 밀 함유 - 메밀, 대두 원료를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "파스타",
+        "4": "면류"
+      }
+    ]
+  },
+  {
+    "img": "279",
+    "manufacturer": "달라코스타",
+    "name": "귀여운 이탈리아 파스타 6종",
+    "price": 2900,
+    "description": "[청동 브론즈 파스타] 재미있는 식사 시간을 위한 파스타",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "파스타",
+        "4": "면류"
+      }
+    ]
+  },
+  {
+    "img": "280",
+    "manufacturer": "달라코스타",
+    "name": "유기농 파스타 3종",
+    "price": 3500,
+    "description": "[청동 브론즈 파스타] 상상력을 자극할 조그마한 파스타",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "200g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "파스타",
+        "4": "면류"
+      }
+    ]
+  },
+  {
+    "img": "281",
+    "manufacturer": "기꼬만",
+    "name": "폰즈 유즈카",
+    "price": 7850,
+    "description": "유자의 상큼함을 더한 폰즈",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식초",
+        "4": "소스",
+        "5": "드레싱"
+      }
+    ]
+  },
+  {
+    "img": "282",
+    "manufacturer": "다담",
+    "name": "우렁강된장양념 140g*4",
+    "price": 5980,
+    "description": "구수한 감칠맛 가득",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "140g X 4개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-대두, 밀, 새우, 게, 오징어, 쇠고기, 우유, 조개류(홍합 포함) 함유 - 이 제품은 알류, 메밀, 땅콩, 고등어, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식초",
+        "4": "소스",
+        "5": "드레싱"
+      }
+    ]
+  },
+  {
+    "img": "283",
+    "manufacturer": "다담",
+    "name": "바지락순두부찌개양념 140g*4",
+    "price": 5980,
+    "description": "시원하고 칼칼한 국물 맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "140g X 4개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-대두, 밀, 새우, 조개류(굴 포함), 쇠고기, 오징어 함유 - 이 제품은 알류, 우유, 메밀, 땅콩, 고등어, 게, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식초",
+        "4": "소스",
+        "5": "드레싱"
+      }
+    ]
+  },
+  {
+    "img": "284",
+    "manufacturer": "다담",
+    "name": "부대찌개양념 140g*5",
+    "price": 6480,
+    "description": "손쉽게 더하는 진하고 칼칼한 맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "140g X 5개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-대두, 밀, 우유, 쇠고기 함유 - 이 제품은 알류, 메밀, 땅콩, 고등어, 게, 새우, 돼지고기, 복숭아, 토마토, 호두, 닭고기, 오징어, 조개류, 잣을 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식초",
+        "4": "소스",
+        "5": "드레싱"
+      }
+    ]
+  },
+  {
+    "img": "285",
+    "manufacturer": "닌교초 이마한",
+    "name": "스키야키 소스",
+    "price": 12000,
+    "description": "[컬리 Only] 일본 120년 전통의 스키야키 전문점 '이마한' 의 비법 소스!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1병",
+    "weight": "460g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-대두, 밀 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식초",
+        "4": "소스",
+        "5": "드레싱"
+      }
+    ]
+  },
+  {
+    "img": "286",
+    "manufacturer": "나가타니엔",
+    "name": "오토나노 후리카케 미니 29.2g (20개입)",
+    "price": 4500,
+    "description": "다양하게 경험하는 후리가케",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1세트",
+    "weight": "29.2g(가다랑어맛1.2gX4봉,연어맛 1.7gX4봉,와사비맛1.4gX4봉,구운명란맛1.",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-밀,대두,우유,오징어,계란 함유 - 유전자변형 대두 포함가능성 있음",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식초",
+        "4": "소스",
+        "5": "드레싱"
+      }
+    ]
+  },
+  {
+    "img": "287",
+    "manufacturer": "나가타니엔",
+    "name": "오토나노 후리카케 3종",
+    "price": 3500,
+    "description": "밥 위에 뿌려 먹는 감칠맛 토핑",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩(5개입)",
+    "weight": "하단 참조",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 가다랑어맛:밀,대두 함유 - 연어맛:우유,밀,대두 함유 - 명란맛:우유,밀,오징어,대두 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "양념",
+        "4": "액젓",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "288",
+    "manufacturer": "기꼬만",
+    "name": "혼쯔유 (코이다시) 500ml",
+    "price": 6980,
+    "description": "손쉽게 더하는 진한 감칠맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "500mL",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 밀, 대두 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "양념",
+        "4": "액젓",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "289",
+    "manufacturer": "나가타니엔",
+    "name": "후리카케 볶음밥 양념 3종",
+    "price": 3500,
+    "description": "간편한 요리를 위한 볶음밥 양념",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩(3개입)",
+    "weight": "하단 참조",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 에비 차항노 모토:우유,새우,밀,닭고기,대두,돼지고기 함유 - 가니 차항노 모토:우유,게,밀,계란,대두 함유 - 갈릭 차항노 모토:대두,밀,돼지고기 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "양념",
+        "4": "액젓",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "290",
+    "manufacturer": "김구원선생",
+    "name": "장단콩으로 만든 청국장",
+    "price": 4500,
+    "description": "파주 장단콩이 전하는 구수한 맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "180g",
+    "origin": "국산",
+    "allergy": "대두 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "양념",
+        "4": "액젓",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "291",
+    "manufacturer": "기꼬만",
+    "name": "혼쯔유 라이트 500ml (저염)",
+    "price": 6980,
+    "description": "감칠맛을 살리는 만능 쯔유",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "500ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "양념",
+        "4": "액젓",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "292",
+    "manufacturer": "델링",
+    "name": "국산 고춧가루로 만든 닭볶음탕소스 250g",
+    "price": 3900,
+    "description": "깊은 풍미의 닭볶음탕 소스!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1팩",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두, 밀, 쇠고기, 조개류(굴) 함유 - 이 제품은 우유, 땅콩, 게, 복숭아, 아황산류, 오징어, 달걀, 새우, 닭고기, 토마토, 돼지고기를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "양념",
+        "4": "액젓",
+        "5": "장류"
+      }
+    ]
+  },
+  {
+    "img": "293",
+    "manufacturer": "꼬손",
+    "name": "국산 들기름 180ml",
+    "price": 16500,
+    "description": "100% 국산 통들깨의 진한 고소함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "180ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식용유",
+        "4": "참기름",
+        "5": "오일"
+      }
+    ]
+  },
+  {
+    "img": "294",
+    "manufacturer": "까사데알바",
+    "name": "아트콜렉션 고야 피쿠알 엑스트라버진 500ml (틴케이스) 2021-2022햇올리브",
+    "price": 58000,
+    "description": "(2021-2022햇올리브) 스페인 명문 귀족의 엑스트라버진",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "500ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식용유",
+        "4": "참기름",
+        "5": "오일"
+      }
+    ]
+  },
+  {
+    "img": "295",
+    "manufacturer": "고야",
+    "name": "엑스트라버진 올리브오일250ml",
+    "price": 6900,
+    "description": "올리브의 신선한 풍미를 그대로",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "250ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식용유",
+        "4": "참기름",
+        "5": "오일"
+      }
+    ]
+  },
+  {
+    "img": "296",
+    "manufacturer": "구스티",
+    "name": "유기농 아마씨 오일",
+    "price": 10200,
+    "description": "100% 유기농 아마씨 오일(냉압착방식)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "250ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식용유",
+        "4": "참기름",
+        "5": "오일"
+      }
+    ]
+  },
+  {
+    "img": "297",
+    "manufacturer": "구스티",
+    "name": "유기농 호두 오일",
+    "price": 19100,
+    "description": "신선하고 짙은 호두향",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "250ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식용유",
+        "4": "참기름",
+        "5": "오일"
+      }
+    ]
+  },
+  {
+    "img": "298",
+    "manufacturer": "고야",
+    "name": "유니코 프리미엄 엑스트라버진 올리브오일250ml",
+    "price": 11900,
+    "description": "스페인 올리브의 풍미를 그대로",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "250ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "식용유",
+        "4": "참기름",
+        "5": "오일"
+      }
+    ]
+  },
+  {
+    "img": "299",
+    "manufacturer": "게랑드",
+    "name": "프랑스 토판 천일염 2종",
+    "price": 7150,
+    "description": "갯벌에서 전통 천일제염법으로 생산하는 토판염",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "굵은 소금 125g, 가는 소금 250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "소금",
+        "4": "설탕",
+        "5": "향신료"
+      }
+    ]
+  },
+  {
+    "img": "300",
+    "manufacturer": "라빠르쉐",
+    "name": "비정제 가루설탕 750g",
+    "price": 9500,
+    "description": "맛과 향, 실용성을 고루 갖춘",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "750g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "소금",
+        "4": "설탕",
+        "5": "향신료"
+      }
+    ]
+  },
+  {
+    "img": "301",
+    "manufacturer": "김소영 아티장의 안단테",
+    "name": "노블 토닉 메이플 시럽 2종",
+    "price": 7500,
+    "description": "오크통에서 1년 이상 숙성한",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "옵션별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "소금",
+        "4": "설탕",
+        "5": "향신료"
+      }
+    ]
+  },
+  {
+    "img": "302",
+    "manufacturer": "드로게리아",
+    "name": "히말라야 핑크솔트 그라인더",
+    "price": 9800,
+    "description": "매일 사용하는 핑크솔트",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "190g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "소금",
+        "4": "설탕",
+        "5": "향신료"
+      }
+    ]
+  },
+  {
+    "img": "303",
+    "manufacturer": "드로게리아",
+    "name": "흑후추 그라인더",
+    "price": 9500,
+    "description": "신선하게 즐기는 알싸한 향기",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "95g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "소금",
+        "4": "설탕",
+        "5": "향신료"
+      }
+    ]
+  },
+  {
+    "img": "304",
+    "manufacturer": "라빠르쉐",
+    "name": "브라운 각설탕 250g",
+    "price": 6500,
+    "description": "황금빛 프리미엄 각설탕",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1상자",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "소금",
+        "4": "설탕",
+        "5": "향신료"
+      }
+    ]
+  },
+  {
+    "img": "305",
+    "manufacturer": "니신",
+    "name": "핫케익 믹스",
+    "price": 8500,
+    "description": "폭신폭신함에 반하게 되는 일본풍 핫케이크!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1봉",
+    "weight": "180g X 3개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 밀, 계란, 우유, 대두 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "밀가루",
+        "4": "가루",
+        "5": "믹스"
+      }
+    ]
+  },
+  {
+    "img": "306",
+    "manufacturer": "밀가루대신",
+    "name": "핫케익 아몬드 가루 250g",
+    "price": 6980,
+    "description": "만능 분말, 아몬드 가루!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1봉",
+    "weight": "250g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 본 제품은 우유, 난류, 대두, 메밀, 땅콩, 밀, 복숭아, 토마토, 아황산류, 호두, 닭고기를 사용한 제품과 같은 시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "밀가루",
+        "4": "가루",
+        "5": "믹스"
+      }
+    ]
+  },
+  {
+    "img": "307",
+    "manufacturer": "그린스",
+    "name": "오리지널 팬케이크 쉐이크(375g)",
+    "price": 7980,
+    "description": "간편하게 완성하는 팬케이크",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1통",
+    "weight": "375g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 밀, 우유 함유 - 이 제품은 대두, 견과류(땅콩,호두,잣)를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "밀가루",
+        "4": "가루",
+        "5": "믹스"
+      }
+    ]
+  },
+  {
+    "img": "308",
+    "manufacturer": "니신",
+    "name": "팬케익 믹스",
+    "price": 8500,
+    "description": "보드랍고 촉촉하게 즐기는 팬케이크!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1봉",
+    "weight": "180g X 3개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 밀, 계란, 우유, 대두 함유",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "밀가루",
+        "4": "가루",
+        "5": "믹스"
+      }
+    ]
+  },
+  {
+    "img": "309",
+    "manufacturer": "리켄",
+    "name": "규슈 오코노미야끼 분말",
+    "price": 6500,
+    "description": "손쉽게 완성하는 일본 전통 요리",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "500g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 밀 함유 - 이 제품은 계란, 우유, 대두를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "밀가루",
+        "4": "가루",
+        "5": "믹스"
+      }
+    ]
+  },
+  {
+    "img": "310",
+    "manufacturer": "브레드가든",
+    "name": "슈가파우더 210g",
+    "price": 3790,
+    "description": "홈베이킹의 달달한 마무리",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "210g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "-이 제품은 난류, 호두, 땅콩, 우유, 대두, 밀, 복숭아, 돼지고기, 쇠고기를 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "면",
+        "1": "양념",
+        "2": "오일",
+        "3": "밀가루",
+        "4": "가루",
+        "5": "믹스"
+      }
+    ]
+  },
+  {
+    "img": "311",
+    "manufacturer": "백산수",
+    "name": "생수 (500mL X 20개)",
+    "price": 8490,
+    "description": "500ml X 20개입 (개당 425원)",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1세트 / 1인당 2개까지 구매가능",
+    "weight": "500ml X 20개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- - 생수/탄산수의 1일 구매 최대 용량은 36리터 혹은 3개까지입니다.  - - 용량 혹은 수량 초과 상품은 배송 되지 않을 수 있으며, 배송 되지 않은 상품은 익일(주말/공휴일제외) 환불 해 드리겠습니다. - - 본 정책은 배송 매니저님의 안전과 건강을 위해 시행하게 되었습니다. 고객님의 양해를 부탁 드립니다.",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "생수",
+        "5": "탄산수"
+      }
+    ]
+  },
+  {
+    "img": "312",
+    "manufacturer": "트레비",
+    "name": "무라벨 라임 (350mL X 20개)",
+    "price": 11900,
+    "description": "은은하게 전해지는 라임향",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "350mLX20입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유, 메밀, 땅콩, 대두, 밀, 복숭아, 토마토, 아황산류, 호두, 잣을 사용한 제품과 같은시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "생수",
+        "5": "탄산수"
+      }
+    ]
+  },
+  {
+    "img": "313",
+    "manufacturer": "아이시스8.0",
+    "name": "ECO 생수 (1.5L X 6개)",
+    "price": 4400,
+    "description": "1.5L X 6개입 (1박스) / 개당 733원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "1.5LX6개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- - 생수/탄산수의 1일 구매 최대 용량은 36리터 혹은 3개까지입니다. - - 용량 혹은 수량 초과 상품은 배송 되지 않을 수 있으며, 배송 되지 않은 상품은 익일(주말/공휴일제외) 환불 해 드리겠습니다. - - 본 정책은 배송 매니저님의 안전과 건강을 위해 시행하게 되었습니다. 고객님의 양해를 부탁 드립니다.",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "생수",
+        "5": "탄산수"
+      }
+    ]
+  },
+  {
+    "img": "314",
+    "manufacturer": "트레비",
+    "name": "무라벨 플레인 (350mL X 20개)",
+    "price": 11900,
+    "description": "마지막까지 깔끔한 한 모금",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "350mLX20입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유, 메밀, 땅콩, 대두, 밀, 복숭아, 토마토, 아황산류, 호두, 잣을 사용한 제품과 같은시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "생수",
+        "5": "탄산수"
+      }
+    ]
+  },
+  {
+    "img": "315",
+    "manufacturer": "아이시스8.0",
+    "name": "생수 (200mL X 20개)",
+    "price": 5800,
+    "description": "200ml X 20개입(1박스) / 개당 275원",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "200ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유, 메밀, 땅콩, 대두, 밀, 복숭아, 토마토, 아황산류, 호두, 잣을 사용한 제품과 같은시설에서 제조하고 있습니다.",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "생수",
+        "5": "탄산수"
+      }
+    ]
+  },
+  {
+    "img": "316",
+    "manufacturer": "닥터유",
+    "name": "제주 용암수 (530mL X 20개)",
+    "price": 8980,
+    "description": "제주 깊은 곳에서 온 용암수",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "530ml x 20개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "생수",
+        "5": "탄산수"
+      }
+    ]
+  },
+  {
+    "img": "316",
+    "manufacturer": "닥터유",
+    "name": "제주 용암수 (530mL X 20개)",
+    "price": 8980,
+    "description": "제주 깊은 곳에서 온 용암수",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "530ml x 20개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "음료",
+        "5": "주스"
+      }
+    ]
+  },
+  {
+    "img": "317",
+    "manufacturer": "나탈리스",
+    "name": "프리미엄 착즙 오렌지 주스 2종",
+    "price": 3600,
+    "description": "플로리다 오렌지의 신선함이 가득",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1병",
+    "weight": "250mL / 1L",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "음료",
+        "5": "주스"
+      }
+    ]
+  },
+  {
+    "img": "318",
+    "manufacturer": "그린몬스터",
+    "name": "헐리우드 48시간 947mL",
+    "price": 35000,
+    "description": "2일간 챙겨 먹는 가벼운 클렌즈 쥬스",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1통",
+    "weight": "947mL",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 복숭아 함유",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "음료",
+        "5": "주스"
+      }
+    ]
+  },
+  {
+    "img": "319",
+    "manufacturer": "갈바니나",
+    "name": "유기농 과일 탄산음료 355mL 4종",
+    "price": 3200,
+    "description": "새콤달콤 과일의 풍미가 가득 담긴",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "355mL",
+    "origin": "이탈리아",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "음료",
+        "5": "주스"
+      }
+    ]
+  },
+  {
+    "img": "320",
+    "manufacturer": "나탈리스",
+    "name": "프리미엄 착즙 자몽 주스 1L",
+    "price": 10900,
+    "description": "신선하게 맛보는 자몽의 매력",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1병",
+    "weight": "250mL / 1L",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "음료",
+        "5": "주스"
+      }
+    ]
+  },
+  {
+    "img": "321",
+    "manufacturer": "고려전통식품",
+    "name": "기순도 전통 쌀식혜 1L (냉동)",
+    "price": 7000,
+    "description": "360년 정성으로 빚은 단술",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1통",
+    "weight": "1000ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "음료",
+        "5": "주스"
+      }
+    ]
+  },
+  {
+    "img": "322",
+    "manufacturer": "나탈리스",
+    "name": "프리미엄 착즙 오렌지망고 주스 2종",
+    "price": 11900,
+    "description": "상큼하고 부드러운 이색 주스!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1병",
+    "weight": "250mL/1L",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "음료",
+        "5": "주스"
+      }
+    ]
+  },
+  {
+    "img": "322",
+    "manufacturer": "나탈리스",
+    "name": "프리미엄 착즙 오렌지망고 주스 2종",
+    "price": 11900,
+    "description": "상큼하고 부드러운 이색 주스!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉동(종이포장)",
+    "unit": "1병",
+    "weight": "250mL/1L",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "음료",
+        "5": "주스"
+      }
+    ]
+  },
+  {
+    "img": "323",
+    "manufacturer": "곰표x콜린스그린",
+    "name": "그래놀라 요거트",
+    "price": 2900,
+    "description": "번거로움 없는 간편한 구성",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "100g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 요거트: 우유 함유 / 계란, 대두를 사용한 제품과 같은 제조시설에서 제조 - 그래놀라: 밀, 대두 함유 / 우유, 땅콩, 토마토, 호두, 잣을 사용한 제품과 같은 제조시설에서 제조",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "우유",
+        "5": "두유",
+        "6": "요거트"
+      }
+    ]
+  },
+  {
+    "img": "324",
+    "manufacturer": "데본",
+    "name": "클로티드 크림 2종",
+    "price": 3100,
+    "description": "스콘과 함께 곁들여 우아한 티타임을 즐겨보세요",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1병",
+    "weight": "상품 별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 클로티드 크림 170g : 우유 함유 - 클로티드 크림 28g : 우유 함유",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "우유",
+        "5": "두유",
+        "6": "요거트"
+      }
+    ]
+  },
+  {
+    "img": "325",
+    "manufacturer": "디어파인",
+    "name": "블루베리 그릭요거트",
+    "price": 4600,
+    "description": "달콤한 퓌레로 더한 향긋함",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "100g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유 함유",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "우유",
+        "5": "두유",
+        "6": "요거트"
+      }
+    ]
+  },
+  {
+    "img": "326",
+    "manufacturer": "디어파인",
+    "name": "시그니처 그릭요거트",
+    "price": 3800,
+    "description": "꾸덕하고 단단한 질감",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "100g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유 함유",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "우유",
+        "5": "두유",
+        "6": "요거트"
+      }
+    ]
+  },
+  {
+    "img": "327",
+    "manufacturer": "디어파인",
+    "name": "라즈베리 그릭요거트",
+    "price": 4600,
+    "description": "새콤달콤 꾸덕한 요거트",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1통",
+    "weight": "100g",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유 함유",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "우유",
+        "5": "두유",
+        "6": "요거트"
+      }
+    ]
+  },
+  {
+    "img": "328",
+    "manufacturer": "뉴오리진",
+    "name": "A2 멸균우유 1L",
+    "price": 5900,
+    "description": "속이 편한 프리미엄 멸균우유",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "1L",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유 함유",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "우유",
+        "5": "두유",
+        "6": "요거트"
+      }
+    ]
+  },
+  {
+    "img": "329",
+    "manufacturer": "노티드",
+    "name": "콜드브루 캔커피 235mL 2종",
+    "price": 3800,
+    "description": "기분을 전환시키는 산뜻한 한 모금",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1개",
+    "weight": "235ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "커피"
+      }
+    ]
+  },
+  {
+    "img": "330",
+    "manufacturer": "노티드",
+    "name": "콜드브루 1000ml",
+    "price": 31000,
+    "description": "오래도록 만족스러운 커피",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "냉장(종이포장)",
+    "unit": "1박스",
+    "weight": "1000ml",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "커피"
+      }
+    ]
+  },
+  {
+    "img": "331",
+    "manufacturer": "네스카페 돌체구스토",
+    "name": "캡슐 15종 (돌체구스토 호환)",
+    "price": 8700,
+    "description": "NEW 디카페인 아메리카노 신규 출시!",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1개",
+    "weight": "옵션별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "커피"
+      }
+    ]
+  },
+  {
+    "img": "332",
+    "manufacturer": "다비도프",
+    "name": "캡슐 커피 3종 (네스프레소 호환)",
+    "price": 6480,
+    "description": "일상에 향기를 남기는 커피",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1줄",
+    "weight": "10개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "커피"
+      }
+    ]
+  },
+  {
+    "img": "333",
+    "manufacturer": "네스카페",
+    "name": "수프리모 오리지널 110개입",
+    "price": 13900,
+    "description": "캐러멜향이 기분 좋은",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "11.7g*100개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "커피"
+      }
+    ]
+  },
+  {
+    "img": "334",
+    "manufacturer": "노티드",
+    "name": "커피 캡슐 2종 (10개입) (네스프레소 호환)",
+    "price": 7200,
+    "description": "편안하게 경험하는 노티드의 커피",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1상자",
+    "weight": "5g X 10개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "커피"
+      }
+    ]
+  },
+  {
+    "img": "335",
+    "manufacturer": "기린",
+    "name": "오후의 홍차 밀크티 1.5L",
+    "price": 5980,
+    "description": "깔끔하게 향긋한 풍미",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1병",
+    "weight": "1.5L",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유 함유",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "차"
+      }
+    ]
+  },
+  {
+    "img": "336",
+    "manufacturer": "광동",
+    "name": "옥수수 수염차",
+    "price": 1710,
+    "description": "구수한 옥수수의 맛과 향을 담은 차음료",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1통",
+    "weight": "1.5L",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 우유, 대두, 땅콩, 토마토, 메밀, 밀, 복숭아, 게, 호두, 난류, 아황산류와 같은 시설에서 제조",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "차"
+      }
+    ]
+  },
+  {
+    "img": "337",
+    "manufacturer": "낫띵베럴",
+    "name": "이너워터팩 10개입 7종",
+    "price": 15900,
+    "description": "가볍고 상큼한 수분 충전",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1팩",
+    "weight": "옵션 별 상이",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "차"
+      }
+    ]
+  },
+  {
+    "img": "338",
+    "manufacturer": "낫띵베럴",
+    "name": "럽티 팥차",
+    "price": 8900,
+    "description": "구수하고 달큰한 팥차",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "2g x 15티백",
+    "origin": "상세페이지 별도표기",
+    "allergy": "",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "차"
+      }
+    ]
+  },
+  {
+    "img": "339",
+    "manufacturer": "네슬레",
+    "name": "네스퀵 초콜릿맛 2종",
+    "price": 4060,
+    "description": "추억이 담긴 달콤한 맛",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "옵션 별 상이",
+    "weight": "400g / 13.5g X 80개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 대두 함유 - 우유를 사용하여 제조된 제품과 동일한 생산설비에서 제조",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "차"
+      }
+    ]
+  },
+  {
+    "img": "340",
+    "manufacturer": "네스티",
+    "name": "복숭아 아이스티 20개입",
+    "price": 3690,
+    "description": "부드럽고 달콤한 한 잔",
+    "delivery": "샛별배송",
+    "seller": "컬리",
+    "package": "상온(종이포장)",
+    "unit": "1박스",
+    "weight": "12.5g X 20개입",
+    "origin": "상세페이지 별도표기",
+    "allergy": "- 복숭아 함유 - 우유를 사용하여 제조된 제품과 동일한 생산설비에서 제조",
+    "category": [
+      {
+        "0": "생수",
+        "1": "음료",
+        "2": "우유",
+        "3": "커피",
+        "4": "차"
+      }
+    ]
+  }
+]
