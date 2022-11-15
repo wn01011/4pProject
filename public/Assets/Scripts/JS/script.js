@@ -609,3 +609,9 @@ axios
   .catch((err) => {
     console.error(err);
   });
+
+function getUserId() {
+  for (let i = 0; i < document.cookie.split(";").length; ++i) {
+    return document.cookie.split(";")[i].split("=")[0];
+  }
+}

@@ -265,3 +265,9 @@ const pricesFilter = function () {
       break;
   }
 };
+
+function getUserId() {
+  for (let i = 0; i < document.cookie.split(";").length; ++i) {
+    return document.cookie.split(";")[i].split("=")[0];
+  }
+}

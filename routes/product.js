@@ -211,7 +211,7 @@ router.route("/search").post((req, res) => {
 
 router.route("/cartDamgi").post((req, res) => {
   console.log(req.body);
-  if (req.body.productName) {
+  if (req.query.productName) {
     db.UserTable.findOne({
       where: {
         userId: req.body.userId,
@@ -232,9 +232,10 @@ router.route("/cartDamgi").post((req, res) => {
         userId: req.body.userId,
       },
     }).then((data) => {
+      const productName = decodeURIComponent(req.body.name);
       db.CartTable.create({
         userId: req.body.userId,
-        name: req.body.name,
+        name: productName,
         amount: req.body.amount,
         price: req.body.price,
         address: data.address,
