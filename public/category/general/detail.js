@@ -110,9 +110,7 @@ const getList = function (
           location.href = "/Cart";
         });
     };
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 const categoryList = [
@@ -239,9 +237,7 @@ function vegiCategories(category) {
       `;
       itemInner.appendChild(tempDiv);
     });
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 }
 // 필터 사이드바 (브랜드명)
 const brandFilter = document.getElementById("filter-brand");
@@ -325,9 +321,7 @@ const getFilter = function (manufacturer) {
     filterA.append(filterImg);
     filterLi.append(filterA);
     filterLi.append(filterAa);
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 // 카테고리 데이터 요청
@@ -350,9 +344,6 @@ function searchFunc() {
       totalCount.innerText = "총 " + data.data.length + "건";
       vegiCategories(currCategory);
       data.data.forEach((item) => {
-        // 카테고리별 아이템 추출
-        // console.log(vegiCategories);
-
         const category = Object.values(item.category[0]);
         getList(
           item.img,
@@ -363,7 +354,6 @@ function searchFunc() {
           item.manufacturer,
           category
         );
-        // 브랜드 추출
         if (!brandSet.has(item.manufacturer) && item.manufacturer != "") {
           brandSet.add(item.manufacturer);
           getFilter(item.manufacturer);

@@ -27,7 +27,6 @@ function getCookie(cookieName) {
     if (end === -1) end = cookieData.length;
     cookieValue = cookieData.substring(start, end);
   }
-  console.log("unescape : ", unescape(cookieValue));
   return cookieValue;
 }
 
@@ -55,6 +54,17 @@ let saladBtn;
 let noodleBtn;
 let drinkBtn;
 let cookieBtn;
+let scrollSearch;
+let scrollCartBtn;
+let scrollVegiBtn;
+let scrollFruitBtn;
+let scrollFishBtn;
+let scrollMeatBtn;
+let scrollSoupBtn;
+let scrollSaladBtn;
+let scrollNoodleBtn;
+let scrollDrinkBtn;
+let scrollCookieBtn;
 
 window.onload = () => {
   const id = setInterval(() => {
@@ -70,6 +80,17 @@ window.onload = () => {
     noodleBtn = document.getElementById("noodleBtn");
     drinkBtn = document.getElementById("drinkBtn");
     cookieBtn = document.getElementById("cookieBtn");
+    scrollSearch = document.getElementById("header_scroll_search_input");
+    scrollCartBtn = document.getElementById("header_scroll_shopping_basket");
+    scrollVegiBtn = document.getElementById("scrollVegiBtn");
+    scrollFruitBtn = document.getElementById("scrollFruitBtn");
+    scrollFishBtn = document.getElementById("scrollFishBtn");
+    scrollMeatBtn = document.getElementById("scrollMeatBtn");
+    scrollSoupBtn = document.getElementById("scrollSoupBtn");
+    scrollSaladBtn = document.getElementById("scrollSaladBtn");
+    scrollNoodleBtn = document.getElementById("scrollNoodleBtn");
+    scrollDrinkBtn = document.getElementById("scrollDrinkBtn");
+    scrollCookieBtn = document.getElementById("scrollCookieBtn");
 
     if (
       currAudio &&
@@ -84,7 +105,19 @@ window.onload = () => {
       saladBtn &&
       noodleBtn &&
       drinkBtn &&
-      cookieBtn
+      cookieBtn &&
+      scrollSearch &&
+      scrollVegiBtn &&
+      scrollFruitBtn &&
+      scrollFishBtn &&
+      scrollMeatBtn &&
+      scrollSoupBtn &&
+      scrollSaladBtn &&
+      scrollSaladBtn &&
+      scrollNoodleBtn &&
+      scrollDrinkBtn &&
+      scrollCookieBtn &&
+      scrollCartBtn
     ) {
       OnLoadCallBack();
       clearInterval(id);
@@ -102,7 +135,18 @@ function OnLoadCallBack() {
     location.href = "/search?sword=" + search.value;
   };
 
+  scrollSearch.onchange = () => {
+    location.href = "/search?sword=" + scrollSearch.value;
+  };
+
   cartBtn.onclick = () => {
+    if (document.cookie) {
+      location.href = "/Cart";
+    } else {
+      location.href = "/SignIn";
+    }
+  };
+  scrollCartBtn.onclick = () => {
     if (document.cookie) {
       location.href = "/Cart";
     } else {
@@ -114,36 +158,72 @@ function OnLoadCallBack() {
     const currText = vegiBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
   };
+  scrollVegiBtn.onclick = () => {
+    const currText = scrollVegiBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
   fruitBtn.onclick = () => {
     const currText = fruitBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  scrollFruitBtn.onclick = () => {
+    const currText = scrollFruitBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
   };
   fishBtn.onclick = () => {
     const currText = fishBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
   };
+  scrollFishBtn.onclick = () => {
+    const currText = scrollFishBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
   meatBtn.onclick = () => {
     const currText = meatBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  scrollMeatBtn.onclick = () => {
+    const currText = scrollMeatBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
   };
   soupBtn.onclick = () => {
     const currText = soupBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
   };
+  scrollSoupBtn.onclick = () => {
+    const currText = scrollSoupBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
   saladBtn.onclick = () => {
     const currText = saladBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  scrollSaladBtn.onclick = () => {
+    const currText = scrollSaladBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
   };
   noodleBtn.onclick = () => {
     const currText = noodleBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
   };
+  scrollNoodleBtn.onclick = () => {
+    const currText = scrollNoodleBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
   drinkBtn.onclick = () => {
     const currText = drinkBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
   };
+  scrollDrinkBtn.onclick = () => {
+    const currText = scrollDrinkBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
   cookieBtn.onclick = () => {
     const currText = cookieBtn.children[1].innerText.replaceAll("·", "-");
+    location.href = "/category/general?pick=" + currText;
+  };
+  scrollCookieBtn.onclick = () => {
+    const currText = scrollCookieBtn.children[1].innerText.replaceAll("·", "-");
     location.href = "/category/general?pick=" + currText;
   };
 }
@@ -190,7 +270,6 @@ let loop = setInterval(() => {
       setAddress &&
       modal
     ) {
-      console.log("조건 맞췄당!");
       signup.classList.add("off");
       signin.classList.add("off");
       userinfo.classList.add("on");
@@ -204,17 +283,14 @@ let loop = setInterval(() => {
       }
       userinfotext.innerText =
         document.cookie.split("=")[0] + " 님 어서오십시오.";
-      // console.log("로드 완료");
       myinfo.onclick = function () {
         location.href = "/myinfo";
       };
       logout.onclick = async function () {
         try {
-          console.log(document.cookie.split("=")[0]);
           await axios.post("/api/user/logout", {
             userId: document.cookie.split("=")[0],
           });
-          console.log("액시오스 보냈음");
           signup.classList.remove("off");
           signin.classList.remove("off");
           userinfo.classList.remove("on");
@@ -231,7 +307,6 @@ let loop = setInterval(() => {
           location.href = "/Cart";
         } else {
           location.href = "/SigIn";
-          console.log("로그인이 안되어있네");
         }
       };
       modalExit.onclick = async function () {
@@ -248,10 +323,6 @@ let loop = setInterval(() => {
       };
       setAddress.onclick = async () => {
         if (document.cookie) {
-          console.log(
-            'document.cookie.split("=")[0] : ',
-            document.cookie.split("=")[0]
-          );
           const data = await axios.post("/api/user/getAddress", {
             id: document.cookie.split("=")[0],
           });
@@ -264,10 +335,6 @@ let loop = setInterval(() => {
       addressChangeBtn.onclick = () => {
         new daum.Postcode({
           oncomplete: function (data) {
-            console.log(
-              'JSON.stringify(data.address).replace(/"/gi, "");',
-              JSON.stringify(data.address).replace(/\"/gi, "")
-            );
             modalText.innerText = JSON.stringify(data.address).replace(
               /\"/gi,
               ""
@@ -278,15 +345,6 @@ let loop = setInterval(() => {
 
       clearInterval(loop);
     }
-
-    // document.getElementById("user_info_dropdown_logout").onclick =
-    //   async function () {
-    //     try {
-    //       const data = await axios.get("/api/user/logout");
-    //     } catch (error) {
-    //       console.error(error.response.data.message);
-    //     }
-    //   };
   }
 }, 50);
 
@@ -302,23 +360,11 @@ function getUserId() {
 }
 
 function logoutFunction() {
-  console.log("로그아웃");
-  // logout.onclick = logoutFunction2();
-  // logout.addEventListener("click", logoutFunction2());
   deleteCookie(getUserId());
-  // logout.addEventListener("click", temp());
 }
 async function logoutFunction2() {
-  console.log("쿠키제거하러 갔다.");
-
   await axios.post("/api/user/logout", {
     userId: document.cookie.split("=")[0],
   });
-  console.log("쿠키 제거하고 왔다.");
   location.href = "/index.html";
 }
-
-// const vegiLink = document.getElementById("cate-vegi")
-// const fruitLink = document.getElementById("cate-fruit")
-
-// vegiLink

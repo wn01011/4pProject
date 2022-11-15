@@ -25,17 +25,6 @@ router.route("/address").post(async (req, res) => {
   res.send({ address: tempAddress?.address });
 });
 router.route("/order").post(async (req, res) => {
-  // req.body.orderlist.forEach(async (item, index) => {
-  //   const aaa = {
-  //     user_id: req.body.orderlist[index].userid,
-  //     price: req.body.orderlist[index].price,
-  //     product: req.body.orderlist[index].product,
-  //     count: req.body.orderlist[index].count,
-  //     address: req.body.orderlist[index].address,
-  //   };
-  //   console.log("aaa : ", aaa);
-  // });
-
   req.body.orderlist.forEach(async (item, index) => {
     const tempOrder = await db.OrderTable.create({
       userId: req.body.orderlist[index].userid,

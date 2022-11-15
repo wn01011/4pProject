@@ -4,9 +4,6 @@ const inputConfirmpw = document.getElementById(
   "signup_board_confirmpw_input_input"
 );
 const inputName = document.getElementById("signup_board_name_input_input");
-// const inputAddress = document.getElementById(
-//   "signup_board_address_input_input"
-// ).value;
 const inputGender = document.querySelector(
   'input[name="gender_radio"]:checked'
 );
@@ -79,7 +76,6 @@ let regPwTestOkay = false;
 const pwReg = document.getElementById("signup_board_pw_reg");
 const pwRegText = document.getElementById("signup_board_pw_reg_text");
 inputPw.onchange = function (e) {
-  console.log(inputPw.value);
   if (e.target.value.length > 0) {
     if (regTest.test(e.target.value)) {
       if (startEng.test(e.target.value)) {
@@ -136,7 +132,6 @@ const confirmpwText = document.getElementById(
 );
 
 inputConfirmpw.onchange = function (e) {
-  console.log(inputConfirmpw.value);
   if (inputConfirmpw.value.length > 0) {
     if (inputPw.value == inputConfirmpw.value) {
       confirmpwText.classList.add("okay");
@@ -157,24 +152,26 @@ inputConfirmpw.onchange = function (e) {
   }
 };
 
-const modal = document.getElementById("deduplication_modal");
-const modalBody = document.getElementById("deduplication_modal_body");
-const modalText = document.getElementById("deduplication_modal_body_text");
-const modalExit = document.getElementById("deduplication_modal_exit");
+const signUpModal = document.getElementById("deduplication_modal");
+const signUpModalBody = document.getElementById("deduplication_modal_body");
+const signUpModalText = document.getElementById(
+  "deduplication_modal_body_text"
+);
+const signUpModalExit = document.getElementById("deduplication_modal_exit");
 let availableId = 0;
 document.getElementById("signup_board_id_deduplication").onclick =
   async function () {
     if (!inputId.value) {
       document.getElementById("thebody").classList.add("body_onmodal");
-      modalText.innerText = "아이디를 입력하십시오";
-      modal.classList.add("show");
+      signUpModalText.innerText = "아이디를 입력하십시오";
+      signUpModal.classList.add("show");
       availableId = 0;
       return;
     }
     if (!regIdTestOkay) {
       document.getElementById("thebody").classList.add("body_onmodal");
-      modalText.innerText = "아이디를 형식에 맞게 작성하십시오.";
-      modal.classList.add("show");
+      signUpModalText.innerText = "아이디를 형식에 맞게 작성하십시오.";
+      signUpModal.classList.add("show");
       availableId = 0;
       return;
     }
@@ -182,16 +179,15 @@ document.getElementById("signup_board_id_deduplication").onclick =
       const data = await axios.post("/api/user/deduplication", {
         id: inputId.value,
       });
-      console.log("data.data.status : ", data.data.status);
       if (data.data.status == 200) {
         document.getElementById("thebody").classList.add("body_onmodal");
-        modalText.innerText = "사용 가능한 아이디입니다.";
-        modal.classList.add("show");
+        signUpModalText.innerText = "사용 가능한 아이디입니다.";
+        signUpModal.classList.add("show");
         availableId = 1;
       } else if (data.data.status == 401) {
         document.getElementById("thebody").classList.add("body_onmodal");
-        modalText.innerText = "이미 있는 아이디입니다.";
-        modal.classList.add("show");
+        signUpModalText.innerText = "이미 있는 아이디입니다.";
+        signUpModal.classList.add("show");
         availableId = 0;
       }
     } catch (error) {
@@ -200,13 +196,13 @@ document.getElementById("signup_board_id_deduplication").onclick =
   };
 document.getElementById("deduplication_modal_body_exit").onclick = () => {
   document.getElementById("thebody").classList.remove("body_onmodal");
-  modal.deduplication_modal_bodyinnerText == "";
-  modal.classList.remove("show");
+  signUpModal.deduplication_modal_bodyinnerText == "";
+  signUpModal.classList.remove("show");
 };
 document.getElementById("deduplication_modal").onclick = () => {
   document.getElementById("thebody").classList.remove("body_onmodal");
-  modal.deduplication_modal_bodyinnerText == "";
-  modal.classList.remove("show");
+  signUpModal.deduplication_modal_bodyinnerText == "";
+  signUpModal.classList.remove("show");
 };
 
 const onlyNum = /[^0-9]+/;
@@ -233,7 +229,6 @@ inputDay.onchange = function (e) {
 document.getElementById("signup_btn_btn").onclick = async () => {
   if (!inputId.value) {
     alert("아이디를 입력하십시오.");
-    console.log(inputId.value);
     inputId.focus();
     return;
   }
@@ -258,19 +253,12 @@ document.getElementById("signup_btn_btn").onclick = async () => {
     return;
   }
 
-  // if (!inputAddress)) {
-  //   alert("주소를 입력하십시오.");
-  //   document.getElementById("signup_board_address_input_input").focus();
-  //   return;
-  // }
-  console.log(inputPw.value, inputConfirmpw.value);
   if (inputPw.value != inputConfirmpw.value) {
     alert("비밀번호를 확인하십시오.");
     inputPw == "";
     return;
   }
   try {
-    console.log(myAddress);
     const data = await axios.post("/api/user/regist", {
       id: inputId.value,
       pw: inputPw.value,
@@ -283,11 +271,8 @@ document.getElementById("signup_btn_btn").onclick = async () => {
         day: inputDay.value,
       },
     });
-    console.log(data);
     location.href = "/SignUp/signupclear.html";
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {}
 };
 
 const addressCover = document.getElementById("signup_board_address_result");
