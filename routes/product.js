@@ -221,7 +221,7 @@ router.route("/cartDamgi").post((req, res) => {
         userId: req.query.userId,
         name: productName,
         amount: 1,
-        price: req.body.price,
+        price: req.query.price,
         address: data?.address,
       });
     });
