@@ -16,6 +16,10 @@ const reviewModalText = document.getElementById("review_modal_body_text");
 const reviewModalExit = document.getElementById("review_modal_body_exit");
 const reviewModalCancel = document.getElementById("review_modal_body_cancel");
 
+function loginCheck() {
+  if (!document.cookie) location.href = "/SignIn";
+}
+loginCheck();
 async function orderhistoryGetList() {
   orderhistory.classList.add("on");
   try {

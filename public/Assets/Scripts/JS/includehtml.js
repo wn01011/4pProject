@@ -31,17 +31,6 @@ function getCookie(cookieName) {
   return cookieValue;
 }
 
-window.onscroll = function () {
-  if (
-    document.body.scrollTop > 180 ||
-    document.documentElement.scrollTop > 180
-  ) {
-    document.getElementById("header_scroll").classList.add("on");
-  } else {
-    document.getElementById("header_scroll").classList.remove("on");
-  }
-};
-
 let currAudio;
 let search;
 let cartBtn;
@@ -179,6 +168,17 @@ let loop = setInterval(() => {
   modalCancel = document.getElementById("modal_body_cancel");
   thebody = document.getElementById("thebody");
   addressChangeBtn = document.getElementById("shipping_address_change_btn");
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 180 ||
+      document.documentElement.scrollTop > 180
+    ) {
+      document.getElementById("header_scroll").classList.add("on");
+    } else {
+      document.getElementById("header_scroll").classList.remove("on");
+    }
+    console.log("마우스 움직인다.");
+  };
   if (cookieResult) {
     if (
       signup &&
