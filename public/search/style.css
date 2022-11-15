@@ -40,9 +40,16 @@ a {
 .item-inner {
   width: 1050px;
   border: 1px solid black;
-  padding: 20px;
+  padding: 20px 49px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px 50px;
+  flex-wrap: wrap;
+}
+.item-inner > div {
+  display: flex;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -155,27 +162,19 @@ a {
 }
 
 .list-header ul:last-child li:first-child {
-  width: 60px;
+  width: 70px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.list-header ul:last-child li:nth-child(2) {
-  width: 60px;
-}
-
-.list-header ul:last-child li:nth-child(3) {
-  width: 60px;
-}
-
-.list-header ul:last-child li:nth-child(4) {
-  width: 58px;
+.list-header ul:last-child li {
+  width: 80px;
 }
 
 .list-header ul:last-child li:first-child img {
-  width: 15px;
+  width: 16px;
   display: flex;
-  padding-left: 7px;
+  padding-left: 8px;
   opacity: 0.5;
 }
 
@@ -203,21 +202,18 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   width: 250px;
-  row-gap: 80px;
 }
 
-.item p {
+.item img {
   width: 250px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
 }
 
 .item > span img {
   width: 30px;
   position: relative;
+  top: -116px;
+  left: 90px;
 }
-
 #check img {
   opacity: 0.3;
   border-radius: 50%;
@@ -233,4 +229,69 @@ a {
   justify-content: center;
   align-items: flex-start;
   padding-top: 250px;
+}
+
+/* subslide css */
+.goodsItemDiv {
+  width: 250px;
+  height: 320px;
+  margin: 0 30 20 0;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.goodsImg {
+  display: flex;
+  flex-wrap: wrap;
+  width: 249px;
+  height: 320px;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.goodsImg:hover {
+  transform: scale(1.05);
+}
+.goods > div > p {
+  display: flex;
+  justify-content: flex-start;
+}
+.goodsCartBtn {
+  position: absolute;
+  background-image: url("/imges/cart3.svg");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(109, 174, 182, 0.5);
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  margin: 260px 190px;
+}
+.goodsTxt {
+  display: block;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.goodsInfoTxt {
+  padding-bottom: 10px;
+}
+.nameTxt {
+  width: 240px;
+  cursor: pointer;
+}
+.priceTxt {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 2;
+}
+.deliveryTxt {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: 14px;
 }

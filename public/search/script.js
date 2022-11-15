@@ -47,100 +47,99 @@ function searchFunc() {
 }
 searchFunc();
 
-const getList = function (img, delivery, name, description, price) {
+const getList = function (
+  img,
+  delivery,
+  name,
+  description,
+  price,
+  manufacturer
+) {
   try {
     const tempGoodsDiv = document.createElement("div");
-    const tempGoodsA = document.createElement("a");
+    const tempGoodsImgDiv = document.createElement("div");
+    const tempGoodsTxtDiv = document.createElement("div");
     const tempGoodsImg = document.createElement("img");
     const tempGoodsDel = document.createElement("p");
     const tempGoodsText = document.createElement("p");
     const tempGoodsPrice = document.createElement("p");
     const tempGoodsInfo = document.createElement("p");
-    const tempGoodsCart = document.createElement("img");
+    const tempGoodsCart = document.createElement("button");
 
     tempGoodsImg.src = `/api/product/download${img}`;
     tempGoodsDel.innerText = `${delivery}`;
-    tempGoodsText.innerText = `${name}`;
+    tempGoodsText.innerText = `[${manufacturer}]` + `${name}`;
     tempGoodsPrice.innerText = `${price.toLocaleString("ko-KR")}원`;
     tempGoodsInfo.innerText = `${description}`;
-    tempGoodsCart.src = `/imges/cart3.svg`;
 
-    tempGoodsCart.style = `
-    box-sizing: border-box;
-    width: 30px;
-    height : 30px;
-    flex: 1;
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    justify-content: end;
-    top: 270px;
-    right: 50px;
-    background-color: purple;
-    border-radius: 50%;
-    box-shadow: 0 0 0px 8px purple;
-    `;
+    if (!manufacturer) {
+      tempGoodsText.innerText = `${name}`;
+    }
 
-    tempGoodsText.style = `
-    display:block;
-    line-height: 1.5;
-    margin-top: 8px;
-    `;
-
-    tempGoodsPrice.style = `
-    margin-top: 8px;
-    `;
-    tempGoodsInfo.style = `
-    padding-bottom: 10px;
-    `;
+    tempGoodsCart.classList.add(`goodsCartBtn`);
+    tempGoodsText.classList.add(`goodsTxt`);
+    tempGoodsPrice.classList.add(`priceTxt`);
+    tempGoodsInfo.classList.add(`goodsInfoTxt`);
 
     goods.style = `
     display: flex;
-    width: 900px;
+    width: 837px;
     `;
-
-    tempGoodsImg.style = `
-    width: 249px;
-    `;
-
     tempGoodsDiv.style = `
     display:flex;
     flex-wrap:wrap;
     width:279px
     `;
-
     tempGoodsInfo.style = `
     font-size: 12px;
     color: rgb(205, 204, 204);
     `;
-
-    tempGoodsPrice.style = `
-    font-weight: bold;
+    tempGoodsTxtDiv.style = `
+    width : 250px;
+    `;
+    tempGoodsCart.style = `
+    cursor: pointer;
     `;
 
-    tempGoodsDel.style = `
-    font-size: 14px;
-    `;
+    tempGoodsDel.classList.add(`deliveryTxt`);
+    tempGoodsImg.classList.add(`goodsImg`);
+    tempGoodsImgDiv.classList.add(`goodsItemDiv`);
 
     goods.appendChild(tempGoodsDiv);
-    tempGoodsDiv.append(tempGoodsA);
-    // tempGoodsImg.append(tempGoodsA);
-    tempGoodsA.append(tempGoodsImg);
-    tempGoodsDiv.append(tempGoodsDel);
-    tempGoodsDiv.append(tempGoodsText);
-    tempGoodsDiv.append(tempGoodsPrice);
-    tempGoodsDiv.append(tempGoodsInfo);
+    tempGoodsDiv.append(tempGoodsImgDiv);
+    tempGoodsImgDiv.append(tempGoodsImg);
+    tempGoodsDiv.append(tempGoodsTxtDiv);
+    tempGoodsTxtDiv.append(tempGoodsDel);
+    tempGoodsTxtDiv.append(tempGoodsText);
+    tempGoodsTxtDiv.append(tempGoodsPrice);
+    tempGoodsTxtDiv.append(tempGoodsInfo);
     tempGoodsDiv.append(tempGoodsCart);
-    tempGoodsA.after(tempGoodsCart);
 
-    // 상세페이지로 이동
+    // 제품 상세페이지로 이동
     function detailItem() {
       location.href = "/item?product=" + img;
     }
     // 이미지 클릭시
-    tempGoodsA.onclick = (e) => {
+    tempGoodsImgDiv.onclick = (e) => {
       e.preventDefault();
       detailItem();
+    };
+
+    tempGoodsCart.onclick = (e) => {
+      e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
+      axios
+        .post(
+          "/api/product/cartDamgi?productName=" +
+            name +
+            "&userId=" +
+            getUserId() +
+            "&price=" +
+            price
+        )
+        .then((data) => {
+          location.href = "/Cart";
+        });
     };
   } catch (error) {}
 };

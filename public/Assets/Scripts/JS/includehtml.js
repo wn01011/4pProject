@@ -249,6 +249,7 @@ let loop = setInterval(() => {
   signin = document.getElementById("sign_in");
   userinfo = document.getElementById("user_info");
   userinfotext = document.getElementById("user_info_text");
+  myinfoDrop = document.getElementById("user_info_dropdown");
   myinfo = document.getElementById("user_info_dropdown_myinfo");
   logout = document.getElementById("user_info_dropdown_logout");
   setAddress = document.getElementById("shipping_address");
@@ -282,7 +283,7 @@ let loop = setInterval(() => {
         location.href = "/adminpage";
       }
       userinfotext.innerText =
-        document.cookie.split("=")[0] + " 님 어서오십시오.";
+        document.cookie.split("=")[0] + " 님 어서오십시오. ▼";
       myinfo.onclick = function () {
         location.href = "/myinfo";
       };

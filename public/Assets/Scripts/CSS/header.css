@@ -45,7 +45,7 @@ li {
 #header_customers_center {
   display: flex;
   justify-content: end;
-  font-size: 14px;
+  font-size: 12px;
 }
 #header_customers_center > div {
   display: flex;
@@ -96,6 +96,9 @@ li {
 #user_info.on:hover #user_info_dropdown {
   display: block;
 }
+#user_info_dropdown:hover #user_info_dropdown {
+  display: block;
+}
 #user_info_dropdown > div {
   padding-bottom: 10px;
   cursor: pointer;
@@ -107,7 +110,7 @@ li {
 .service_center_dropdown {
   display: none;
   width: 130px;
-  top: 30px;
+  top: 20px;
   right: 0px;
   padding: 7px;
   background: white;
@@ -119,7 +122,9 @@ li {
 .service_center:hover .service_center_dropdown {
   display: block;
 }
-
+.service_center_dropdown:hover .service_center_dropdown {
+  display: block;
+}
 .service_center_dropdown_notice {
   padding-bottom: 10px;
 }
@@ -207,7 +212,7 @@ li {
   position: absolute;
   border: 2px solid gainsboro;
   font-size: 16px;
-  top: 18px;
+  top: 25px;
   z-index: 999;
 }
 #category_dropdown > li {

@@ -462,3 +462,9 @@ switch (originName) {
     banner.src = "/category/imges/banner/cookie_banner.jpg";
     break;
 }
+
+const pageUp = document.getElementById("pageUp");
+
+pageUp.onclick = () => {
+  window.scrollTo(0, 0);
+};

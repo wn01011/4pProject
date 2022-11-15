@@ -107,8 +107,6 @@ p {
   transition: 4s ease-in-out;
 }
 
-/* ===================== */
-
 h1 {
   display: flex;
   justify-content: center;
@@ -275,11 +273,6 @@ h1 {
   cursor: pointer;
 }
 
-/* .left {
-  display: none;
-} */
-/* ============= */
-
 #banner {
   width: 100%;
   display: flex;
@@ -289,8 +282,6 @@ h1 {
 #banner img {
   width: 1090px;
 }
-
-/* ============= */
 
 #item-head p {
   color: rgb(135, 135, 135);
@@ -408,7 +399,6 @@ h1 {
   box-shadow: 1px 1px 3px #ccc;
   cursor: pointer;
 }
-
 #sub-all-btn3 {
   display: flex;
   justify-content: center;
@@ -419,7 +409,6 @@ h1 {
   background-color: white;
   margin-bottom: 70px;
 }
-
 /* subslide css */
 .imgDiv {
   width: 250px;
