@@ -1,3 +1,6 @@
+let currItemName = "";
+let currUserId = getUserId();
+
 const itemHowDiv = document.getElementById("item-how");
 
 function getItemList(img, name, price, manufacturer) {
@@ -55,6 +58,7 @@ function getItemList(img, name, price, manufacturer) {
     // 카트 기능으로 넘기기
     tempItemCartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
@@ -164,6 +168,7 @@ const getPickItemList = function (img, name, price, manufacturer) {
     };
     tempPickCartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
@@ -277,6 +282,7 @@ const getPickItem2List = function (img, name, price, manufacturer) {
     };
     tempPick2CartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
@@ -390,6 +396,7 @@ const getPickItem3List = function (img, name, price, manufacturer) {
     };
     tempPick3CartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
@@ -502,6 +509,7 @@ const getPickItem4List = function (img, name, price, manufacturer) {
     };
     tempPick4CartBtn.onclick = (e) => {
       e.preventDefault();
+      if (currUserId == "") return (location.href = "/SignIn");
       axios
         .post(
           "/api/product/cartDamgi?productName=" +
