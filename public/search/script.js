@@ -142,9 +142,7 @@ const getList = function (img, delivery, name, description, price) {
       e.preventDefault();
       detailItem();
     };
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 // 필터 사이드바 (브랜드명)
@@ -227,9 +225,7 @@ const getFilter = function (manufacturer) {
     filterA.append(filterImg);
     filterLi.append(filterA);
     filterLi.append(filterAa);
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 const pricesFilter = function () {

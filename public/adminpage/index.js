@@ -471,6 +471,7 @@ document.body.onload = () => {
   const productAdd = document.getElementById("productAdd");
   let img;
   productAdd.onsubmit = (e) => {
+    console.log(e);
     let brandName = e.srcElement[0].value;
     let productName = e.srcElement[1].value;
     let delivery = e.srcElement[2].value;
@@ -482,6 +483,20 @@ document.body.onload = () => {
     let price = e.srcElement[8].value;
     let categoryName = selectedCategory.innerText.split(": ")[1];
     if (categoryName == "(없음)") categoryName = undefined;
+    console.log(
+      brandName,
+      productName,
+      delivery,
+      seller,
+      package,
+      unit,
+      weight,
+      origin,
+      price,
+      categoryName,
+      img
+    );
+
     if (
       !brandName ||
       !productName ||
@@ -536,16 +551,21 @@ document.body.onload = () => {
     const form = new FormData();
     curExt = "." + originInput.files[0].name.split(".")[1];
     form.append("attachment", originInput.files[0]);
-    axios.post("/uploadFileWithOriginalFilename", form, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    axios
+      .post("/uploadFileWithOriginalFilename", form, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((data) => {
+        img = data.data.length;
+      });
   };
 
   const originImg = document.getElementById("originImg");
 
   function onSubmitFunction(data, ext) {
+    console.log("온섭밋", data);
     axios
       .post("/api/product/newData", [
         {

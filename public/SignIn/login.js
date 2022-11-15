@@ -8,12 +8,10 @@ document.getElementById("sign_in_btn").onclick = async function (e) {
     return;
   }
   // try {
-  console.log("아이디와 비밀번호 둘다 있음");
   const data = await axios.post("/api/user/login", {
     id: document.getElementById("login_input_id").value,
     pw: document.getElementById("login_input_pw").value,
   });
-  console.log(data.data);
   if (data.data.status != 200) {
     // 로그인 실패 시
     document.getElementById("login_input_id").value = document.getElementById(

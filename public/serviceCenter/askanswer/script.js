@@ -13,7 +13,6 @@ function popup() {
     "width = 800, height = 800, top =100, left = 200, location = no";
   const curWindow = window.open(url, name, option);
   curWindow.onbeforeunload = () => {
-    console.log("닫겼다.");
     location.reload();
   };
 }

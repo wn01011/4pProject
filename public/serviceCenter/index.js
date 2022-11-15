@@ -2,9 +2,7 @@ const noticeList = document.getElementById("noticeList");
 async function getList() {
   try {
     const result = await axios.post("/api/notice/");
-    console.log(result);
     result?.data?.list?.forEach((item) => {
-      console.log(item);
       const boardItem = document.createElement("div");
       const boardTitleBox = document.createElement("div");
       const boardNumber = document.createElement("span");

@@ -168,7 +168,7 @@ router.route("/search").post((req, res) => {
         JSON.stringify(item.dataValues.category).toString().includes(sword) ||
         item.manufacturer.match(sword)
       ) {
-        if (req.body.brand.length > 0) {
+        if (req.body.brand?.length > 0) {
           if (req.body.brand.includes(item.manufacturer)) sendAry.push(item);
         } else {
           sendAry.push(item);

@@ -399,7 +399,6 @@ const pwRegText = document.getElementById(
   "myinfo_main_infoupdate_list_pw_reg_text"
 );
 inputPw.onchange = function (e) {
-  console.log(inputPw.value);
   if (e.target.value.length > 0) {
     if (regTest.test(e.target.value)) {
       if (startEng.test(e.target.value)) {
@@ -458,7 +457,6 @@ const confirmpwText = document.getElementById(
 );
 
 inputConfirmpw.onchange = function (e) {
-  console.log(inputConfirmpw.value);
   if (inputConfirmpw.value.length > 0) {
     if (inputPw.value == inputConfirmpw.value) {
       confirmpwText.classList.add("okay");
@@ -532,14 +530,12 @@ document.getElementById("update_btn_btn").onclick = async () => {
     alert("주소를 입력하십시오.");
     return;
   }
-  console.log(inputPw.value, inputConfirmpw.value);
   if (inputPw.value != inputConfirmpw.value) {
     alert("비밀번호를 확인하십시오.");
     inputPw == "";
     return;
   }
   try {
-    console.log(myAddress);
     const data = await axios.post("/api/myinfo/update", {
       id: document.cookie.split("=")[0],
       pw: inputPw.value,
@@ -552,8 +548,6 @@ document.getElementById("update_btn_btn").onclick = async () => {
         day: inputDay.value,
       },
     });
-    console.log("data : ", data);
-    console.log("data.data.status : ", data.data.status);
     if (data.data.status == 200) {
       document.getElementById("thebody").classList.add("body_onmodal");
       myinfoModalText.innerText = "수정이 완료되었습니다.";

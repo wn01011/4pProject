@@ -268,7 +268,6 @@ checkList[3].onclick = () => {
   pricesFilter();
   searchFunc();
 };
-// let filterSet = new Set();
 
 // 필터리스트
 const getFilter = function (manufacturer) {

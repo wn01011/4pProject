@@ -11,7 +11,6 @@ function getUserId() {
 sendBtn.onclick = () => {
   if (textArea.value == "" || nameInput.value == "") return;
   let curUserId = getUserId();
-  console.log(curUserId);
   if (curUserId) {
     axios
       .post("/api/notice/askRequest", {
