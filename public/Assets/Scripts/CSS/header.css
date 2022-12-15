@@ -714,6 +714,7 @@ body:hover #modal.show {
   border-top: 2px solid gainsboro;
   font-size: 20px;
   color: #c2eaec;
+}
 .category_Btn > button {
   border: none;
   display: flex;
