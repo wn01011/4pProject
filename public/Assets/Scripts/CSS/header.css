@@ -85,8 +85,7 @@ li {
 #user_info_dropdown {
   display: none;
   width: 130px;
-  /* right: 0px; */
-  top: 30px;
+  top: 20px;
   padding: 7px;
   background: white;
   position: absolute;
@@ -159,7 +158,6 @@ li {
 }
 #header_icons {
   display: flex;
-  /* padding-left: 30px; */
 }
 
 #header_icons > div {
@@ -181,7 +179,8 @@ li {
 
 #header_item_center {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
+  column-gap: 140px;
   width: 1050px;
 }
 #category {
@@ -378,6 +377,8 @@ li {
 }
 #audioBox {
   display: flex;
+  position: relative;
+  bottom: 10px;
 }
 audio {
   width: 400px;

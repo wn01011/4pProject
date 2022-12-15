@@ -6,14 +6,26 @@
     <title>Header</title>
     <link rel="stylesheet" href="/Assets/Scripts/CSS/header.css" />
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <style>
+      .category_Btn > button {
+        border: none;
+        display: flex;
+        font-size: 15px;
+        align-items: center;
+        background-color: white;
+        cursor: pointer;
+      }
+      .category_Btn button > span:hover {
+        color: rgb(139, 185, 185);
+      }
+      .category_Btn button > span {
+        margin-left: 30px;
+      }
+    </style>
   </head>
   <body>
     <div id="header">
       <div id="header_customers">
-        <div id="audioBox">
-          <audio src="/api/audio" controls loop muted></audio>
-          <p>If_I_Had_a_Chicken</p>
-        </div>
         <div id="header_customers_center">
           <div id="sign_up">
             <a href="/SignUp/index.html">회원가입</a>
@@ -45,10 +57,7 @@
         <div id="header_main_center">
           <div id="header_logo">
             <a href="/index.html"
-              ><img
-                src="/Assets/IMG/marketClearLogo.jpg"
-                alt=""
-                class="marketClearLogo"
+              ><img src="/Assets/IMG/logo.png" alt="" class="marketClearLogo"
             /></a>
           </div>
           <div id="search">
@@ -72,11 +81,6 @@
                 ><img src="/Assets/IMG/map.png" alt="map" class="icon_small"
               /></a>
             </div>
-            <!-- <div id="dibs">
-              <a href="#"
-                ><img src="/Assets/IMG/heart.png" alt="dibs" class="icon_small"
-              /></a>
-            </div> -->
             <div id="shopping_basket">
               <button id="cartBtn">
                 <img
@@ -94,7 +98,7 @@
         <div id="header_item_center">
           <div id="category">
             <div id="category_menuicon">
-              <img src="/Assets/IMG/menu.png  " alt="" class="icon_small" />
+              <img src="/Assets/IMG/menu.png" alt="" class="icon_small" />
             </div>
             <div id="category_text">카테고리</div>
             <ul id="category_dropdown">
@@ -224,28 +228,11 @@
                   </button>
                 </div>
               </li>
-              <!--
-                <li class="category_dropdown_항목명">
-                  <div>
-                    <a href="#">
-                      <div>
-                        <img src="/Assets/IMG/이름" alt="" class="icon_small" />
-                      </div>
-                      <span>항목 명</span
-                    </a>
-                  </div>
-                </li>
-                DB와 접목할 경우 위의 div 모음은 제거하고 바로 위의 양식으로 반복 구현할 예정
-               -->
             </ul>
           </div>
-          <div id="header_list">
-            <div><a href="#">신상품</a></div>
-            <div><a href="#">베스트</a></div>
-            <div><a href="#">알뜰상품</a></div>
-          </div>
-          <div id="shipping_info">
-            <a href="#"><span id="shipping_info_text">Clear 배송안내</span></a>
+          <div id="audioBox">
+            <audio src="/api/audio" controls loop></audio>
+            <p>If_I_Had_a_Chicken</p>
           </div>
         </div>
       </div>
@@ -260,7 +247,7 @@
             <ul id="header_scroll_category_dropdown">
               <li>
                 <div class="category_Btn">
-                  <button id="vegiBtn">
+                  <button id="scrollVegiBtn">
                     <div>
                       <img
                         src="/Assets/IMG/vegetable.png"
@@ -274,7 +261,7 @@
               </li>
               <li>
                 <div class="category_Btn">
-                  <button id="fruitBtn">
+                  <button id="scrollFruitBtn">
                     <div>
                       <img
                         src="/Assets/IMG/fruit.png"
@@ -288,7 +275,7 @@
               </li>
               <li>
                 <div class="category_Btn">
-                  <button id="fishBtn">
+                  <button id="scrollFishBtn">
                     <div>
                       <img
                         src="/Assets/IMG/fish.png"
@@ -302,7 +289,7 @@
               </li>
               <li>
                 <div class="category_Btn">
-                  <button id="meatBtn">
+                  <button id="scrollMeatBtn">
                     <div>
                       <img
                         src="/Assets/IMG/meat.png"
@@ -316,7 +303,7 @@
               </li>
               <li>
                 <div class="category_Btn">
-                  <button id="soupBtn">
+                  <button id="scrollSoupBtn">
                     <div>
                       <img
                         src="/Assets/IMG/pan.png"
@@ -330,7 +317,7 @@
               </li>
               <li>
                 <div class="category_Btn">
-                  <button id="saladBtn">
+                  <button id="scrollSaladBtn">
                     <div>
                       <img
                         src="/Assets/IMG/salad.png"
@@ -344,7 +331,7 @@
               </li>
               <li>
                 <div class="category_Btn">
-                  <button id="noodleBtn">
+                  <button id="scrollNoodleBtn">
                     <div>
                       <img
                         src="/Assets/IMG/salt.png"
@@ -358,7 +345,7 @@
               </li>
               <li>
                 <div class="category_Btn">
-                  <button id="drinkBtn">
+                  <button id="scrollDrinkBtn">
                     <div>
                       <img
                         src="/Assets/IMG/tea.png"
@@ -372,7 +359,7 @@
               </li>
               <li>
                 <div class="category_Btn">
-                  <button id="cookieBtn">
+                  <button id="scrollCookieBtn">
                     <div>
                       <img
                         src="/Assets/IMG/cookie.png"
@@ -384,32 +371,9 @@
                   </button>
                 </div>
               </li>
-              <!--
-                  <li class="category_dropdown_항목명">
-                    <div>
-                      <a href="#">
-                        <div>
-                          <img src="/Assets/IMG/이름" alt="" class="icon_small" />
-                        </div>
-                        <span>항목 명</span
-                      </a>
-                  </div>
-                  </li>
-                  DB와 접목할 경우 위의 div 모음은 제거하고 바로 위의 양식으로 반복 구현할 예정
-                 -->
             </ul>
           </div>
-          <div id="header_scroll_list">
-            <div>
-              <a href="#"><span>신상품</span></a>
-            </div>
-            <div>
-              <a href="#"><span>베스트</span></a>
-            </div>
-            <div>
-              <a href="#"><span>알뜰상품</span></a>
-            </div>
-          </div>
+
           <div id="header_scroll_search">
             <input
               type="text"
@@ -428,11 +392,6 @@
             <div id="header_scroll_shipping_address">
               <a href="#"
                 ><img src="/Assets/IMG/map.png" alt="map" class="icon_small"
-              /></a>
-            </div>
-            <div id="header_scroll_dibs">
-              <a href="#"
-                ><img src="/Assets/IMG/heart.png" alt="dibs" class="icon_small"
               /></a>
             </div>
             <div id="header_scroll_shopping_basket">

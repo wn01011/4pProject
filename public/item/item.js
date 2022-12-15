@@ -139,9 +139,7 @@ async function itemDetailList(
         total.innerText = `${price * count}`;
         itemTotal.append(itemTotalPrice);
       } else if (count > 100) {
-        alert(
-          "대량으로 살꺼면 할인해줄테니까 고객센터 문의해라~ 답변은 생략한다"
-        );
+        alert("진정하고 장바구니에 담아라");
         return;
       }
     };
@@ -154,9 +152,7 @@ async function itemDetailList(
         itemTotal.append(itemTotalPrice);
       }
     };
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 }
 const itemLink = decodeURI(location.href.split("?")[1].split("=")[1]);
 
@@ -166,7 +162,6 @@ axios
     itemLink: location.href.split("?")[1].split("=")[1],
   })
   .then((itemData) => {
-    // data.data.forEach((item) => {
     itemDetailList(
       itemData.data.img,
       itemData.data.delivery,
@@ -181,10 +176,8 @@ axios
     );
 
     currItemName = itemData.data.name;
-    // console.log(itemData);
     currItemcategory = itemData.data.category[0];
 
-    // 상품 문의쪽 정보 불러오는 곳
     axios
       .post("/api/notice/productask", { productName: currItemName })
       .then((data) => {
@@ -382,13 +375,6 @@ function makeReview(userId, productName, text) {
 // 장바구니 담기
 cartDamgi.onclick = () => {
   if (currUserId == "") return (location.href = "/SignIn");
-  console.log(
-    currItemName,
-    currUserId,
-    +itemEa.innerText,
-    +itemPrice.innerText.replace(/[^0-9]/g, ""),
-    +itemTotal.innerText.replace(/[^0-9]/g, "")
-  );
   axios.post("/api/product/cartDamgi", {
     name: currItemName,
     userId: currUserId,

@@ -23,7 +23,6 @@ loginCheck();
 async function orderhistoryGetList() {
   orderhistory.classList.add("on");
   try {
-    console.log("쿠키 : ", document.cookie.split("=")[0]);
     if (!document.cookie) {
       location.href = "/SignIn";
     }
@@ -31,8 +30,6 @@ async function orderhistoryGetList() {
       userid: document.cookie.split("=")[0],
     });
 
-    console.log("data?.data?.imgList : ", data?.data?.imgList);
-    console.log("data?.data?.orderList : ", data?.data?.orderList);
     if (data?.data?.imgList?.length == 0) {
       orderhistoryNone.classList.add("on");
     }
@@ -212,12 +209,10 @@ inquireTitle.onclick = function () {
 };
 
 async function getReviewList() {
-  console.log("getReviewList 실행");
   try {
     const data = await axios.post("/api/myinfo/getReview", {
       userid: document.cookie.split("=")[0],
     });
-    console.log("review data.data.reviewList", data.data.reviewList);
     if (data?.data?.reviewList?.length == 0) {
       reviewNone.classList.add("on");
     }
@@ -277,12 +272,10 @@ async function getReviewList() {
 }
 getReviewList();
 async function getInquireList() {
-  console.log("getInquireList 실행");
   try {
     const data = await axios.post("/api/myinfo/getInquire", {
       userid: document.cookie.split("=")[0],
     });
-    console.log("inquire data.data.inquireList : ", data.data.inquireList);
     if (data?.data?.inquireList?.length == 0) {
       inquireNone.classList.add("on");
     }
@@ -295,10 +288,6 @@ async function getInquireList() {
       const inquireCreatedAt = document.createElement("span");
       const inquireTextBox = document.createElement("div");
       const inquireText = document.createElement("div");
-      console.log(
-        "data.data.inquire[index].name",
-        data.data.inquireList[index].name
-      );
       inquireTitle.innerText = data.data.inquireList[index].name;
       inquireProductName.innerText = data.data.inquireList[index].productName;
       inquireCreatedAt.innerText =

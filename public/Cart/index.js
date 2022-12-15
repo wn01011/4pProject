@@ -3,14 +3,11 @@ let cartData;
 const noneCart = document.getElementById("cart_basket_bottom_none");
 let imgNum = [];
 async function getProductImg(nametoImgNum) {
-  console.log("getProductImg 실행");
   try {
     const data = await axios.post("/api/product/getImage", {
       data: nametoImgNum,
     });
-    console.log("getProductImg() data.data.list : ", data.data.list);
     imgNum = [...data.data.list];
-    console.log("imgNum :", imgNum);
     callback();
   } catch (error) {
     console.error(error);
@@ -37,9 +34,7 @@ function amountCalculate() {
 // amountCalculate();
 
 function callback() {
-  console.log(imgNum);
   cartData?.data?.list?.forEach((item, index) => {
-    console.log("item : ", item);
     const listItem = document.createElement("div");
     const listCheckBox = document.createElement("div");
     const listCheck = document.createElement("input");
@@ -53,9 +48,6 @@ function callback() {
     const listAmount = document.createElement("div");
     const listPrice = document.createElement("div");
     const listDelete = document.createElement("div");
-    console.log("index : ", index);
-    console.log("imgNum : ", imgNum);
-    // console.log("imgNum : ", imgNum[index]);
     listCheck.setAttribute("type", "checkbox");
     listImg.setAttribute("src", `/api/product/download${imgNum[index]}`);
     listTitle.innerText = cartData.data.list[index].name;
@@ -122,28 +114,11 @@ function callback() {
         amountCalculate();
       }
     };
-    console.log(cartData);
-    // btnDelete.onclick = function () {
-    //   // const productName =
-    //   axios
-    //     .post("/api/cart/delete", {
-    //       name: cartData.data.list[index].name,
-    //     })
-    //     .then((result) => {
-    //       console.log("result : ",  result);
-    //       getCartList();
-    //     })
-    //     .catch((error) => {
-    //       console.error(error);
-    //     });
-    // };
     btnDelete.onclick = async function () {
-      // const productName =
       try {
         const productName = await axios.post("/api/cart/delete", {
           name: cartData.data.list[index].name,
         });
-        console.log("productName : ", productName);
         getCartList();
       } catch (error) {
         console.error(error);
@@ -163,9 +138,6 @@ async function getCartList() {
       userid: document.cookie.split("=")[0],
     });
     cartBoard.innerHTML = "";
-    console.log("불러왔다구~");
-    console.log("cartData.data.list", cartData.data.list);
-    console.log("cartData.data.list.length : ", cartData.data.list.length);
     if (cartData.data.list.length == 0) {
       noneCart.classList.add("on");
     } else {
@@ -208,10 +180,10 @@ document.getElementById("checklist_shipping_address_btn").onclick = () => {
 
 getAddress();
 
-const modal = document.getElementById("cart_modal");
-const modalBody = document.getElementById("cart_modal_body");
-const modalText = document.getElementById("cart_modal_body_text");
-const modalExit = document.getElementById("cart_modal_exit");
+const cartModal = document.getElementById("cart_modal");
+const cartModalBody = document.getElementById("cart_modal_body");
+const cartModalText = document.getElementById("cart_modal_body_text");
+const cartModalExit = document.getElementById("cart_modal_exit");
 
 document.getElementById("cart_order_orderbutton").onclick = async () => {
   let orderlist = [];
@@ -225,15 +197,14 @@ document.getElementById("cart_order_orderbutton").onclick = async () => {
       address: address.innerText,
     });
   });
-  console.log("orderlist : ", orderlist);
   const data = await axios.post("/api/cart/order", {
     orderlist: orderlist,
   });
   document.getElementById("thebody").classList.add("body_onmodal");
-  modal.classList.add("show");
+  cartModal.classList.add("show");
 };
 
 document.getElementById("cart_modal").onclick = () => {
   window.location.reload();
-  modal.classList.remove("show");
+  cartModal.classList.remove("show");
 };

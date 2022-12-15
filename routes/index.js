@@ -8,7 +8,6 @@ const adminpage = require("./adminpage.js");
 const cart = require("./cart.js");
 const myinfo = require("./myinfo.js");
 router.use("/", (req, res, next) => {
-  console.log("routes/index.js : " + req.url);
   next();
 });
 

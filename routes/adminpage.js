@@ -7,15 +7,13 @@ const router = Router();
 const seq = require("sequelize");
 const { send } = require("process");
 
-console.log("관리자페이지 라우트 안이다!!!!!!");
 // "/api/adminpage"
 
 router // 상품 목록
   .route("/product")
   .get(async (req, res) => {
     res.send();
-  }) //{status: 200, list: adproductPL.slice(5 * (req.query.count - 1)),
-  // maxCount: parseInt(5 * req.query.count)}
+  })
   .post(async (req, res) => {
     const adminSendProduct = [];
     const data = await db.ProductTable.findAll();
@@ -25,11 +23,6 @@ router // 상품 목록
     res.send(adminSendProduct);
   });
 
-// router // 카테고리 관리
-
-// router // 주문 내역
-
-// router // 배송 관리
 router
   .route("/order")
   .get(async (req, res) => {
@@ -44,7 +37,6 @@ router
     res.send(adminSendOrder);
   });
 
-// router // 배송 관리
 router
   .route("/delivery")
   .get(async (req, res) => {
@@ -56,7 +48,7 @@ router
     });
   });
 
-router // 회원 목록
+router
   .route("/user")
   .get((req, res) => {
     res.send();
@@ -70,7 +62,7 @@ router // 회원 목록
     res.send(adminSendUser);
   });
 
-router // 문의 관리
+router
   .route("/qna")
   .get((req, res) => {
     res.send();
@@ -84,7 +76,7 @@ router // 문의 관리
     res.send(adminSendAsk);
   });
 
-router // 리뷰 관리
+router
   .route("/review")
   .get((req, res) => {
     res.send();

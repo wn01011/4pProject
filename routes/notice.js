@@ -1,17 +1,11 @@
 const { Router } = require("express");
 const db = require("../models/index.js");
-const fs = require("fs");
-const path = require("path");
-const { rejects } = require("assert");
 const router = Router();
 
-// "/api/notice"
 router.route("/").post(async (req, res) => {
-  console.log("라우터 접근");
   const tempNoticeList = await db.NoticeTable.findAll({
     order: [["id", "ASC"]],
   });
-  console.log(tempNoticeList);
   res.send({ list: tempNoticeList });
 });
 
@@ -36,17 +30,6 @@ router
     res.send();
   })
   .post(async (req, res) => {
-    //   db.AskanswerTable.create({
-    //     userId: req.body.userId,
-    //     name: req.body.name,
-    //     isAnswer: 0,
-    //   });
-    //   res.send({
-    //     userId: req.body.userId,
-    //     name: req.body.name,
-    //     isAnswer: 0,
-    //     createdDate: getToday(),
-    //   });
     if (req.body.userId) {
       const tempData = await db.AskanswerTable.findAll({
         where: { userId: req.body.userId.toString() },
@@ -91,24 +74,8 @@ function getAskAnswerTable(userId) {
   db.AskanswerTable.findAll({
     where: { userId: userId.toString() },
   }).then((data) => {
-    console.log(data);
     return data;
   });
 }
-// askanswer create 양식
-
-// db.AskanswerTable.create({
-//   userId: "1",
-//   name: "내가유저다",
-//   isAnswer: 0,
-// });
-
-// userdb select 양식
-
-// db.userdb.UserTable.findOne({ where: { id: 1 } })
-//   .then((data) => {
-//     console.log(data.dataValues);
-//   })
-//   .catch((err) => console.error(err));
 
 module.exports = router;
