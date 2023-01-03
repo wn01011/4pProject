@@ -61,7 +61,7 @@ const storage = multer.diskStorage({
       "utf8"
     );
     const ext = ".jpg";
-    fs.readdir("Images", (err, files) => {
+    fs.readdir("/Images", (err, files) => {
       fileLength = files.length + 1;
       fileExt = ext;
       callback(null, `${files.length + 1}${ext}`);

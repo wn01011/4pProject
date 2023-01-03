@@ -79,6 +79,9 @@ router.route("/deduplication").post(async (req, res) => {
         res.send({ status: 200, data: "available" });
       }
     }
+    if (tempIdArr.length == 0) {
+      res.send({ status: 200, data: "available" });
+    }
   } catch (error) {
     console.error(error);
   }

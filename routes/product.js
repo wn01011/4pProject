@@ -125,21 +125,19 @@ router.route("/productReview").post((req, res) => {
 });
 
 // product.json 파일 넣는 곳
-fs.readFile("./product.json", "utf-8", function (err, data) {
-  if (err) {
-    console.error(err.message);
-  } else {
-    if (data && JSON.parse(data).length < 10) {
-      JSON.parse(data).forEach((item) => {
-        try {
-          db.ProductTable.create(item);
-        } catch (err) {
-          console.error(err);
-        }
-      });
-    }
-  }
-});
+// fs.readFile("./product.json", "utf-8", function (err, data) {
+//   if (err) {
+//     console.error(err.message);
+//   } else {
+//     JSON.parse(data).forEach((item) => {
+//       try {
+//         db.ProductTable.create(item);
+//       } catch (err) {
+//         console.error(err);
+//       }
+//     });
+//   }
+// });
 
 async function setImages() {
   let len = 0;
