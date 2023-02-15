@@ -20,8 +20,8 @@
   - 다음 프로젝트에선 이런 부분에 대한 고려가 필요하다 느꼈습니다.
  
 
-<img src="./public/imges/CodeClear1.png" alt="Img" width="20%"></img>
-<img src="./public/imges/CodeClear2.png" alt="Img" width="20%"></img>
-<img src="./public/imges/CodeClear3.png" alt="Img" width="20%"></img>
-<img src="./public/imges/CodeClear4.png" alt="Img" width="20%"></img><br />
+<img src="./public/imges/CodeClear1.png" alt="Img" width="45%"></img>
+<img src="./public/imges/CodeClear2.png" alt="Img" width="45%"></img>
+<img src="./public/imges/CodeClear3.png" alt="Img" width="45%"></img>
+<img src="./public/imges/CodeClear4.png" alt="Img" width="45%"></img><br />
 
